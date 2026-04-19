@@ -1,4 +1,4 @@
-<![CDATA[<div align="center">
+<div align="center">
 
 # 🔭 VISTA
 
@@ -672,4 +672,3 @@ This project is for **research purposes only**. The ValuesML dataset has specifi
 *Built with [Antigravity](https://github.com/google-deepmind) + [Claude Code Agent Teams](https://code.claude.com/docs/agent-teams)*
 
 </div>
-]]>
