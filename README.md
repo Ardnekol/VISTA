@@ -53,7 +53,7 @@ VISTA explores a fundamental question in value-aligned AI:
 
 The framework answers this by implementing a two-stage pipeline:
 
-1. **Stage 1 — Value Inference**: A DeBERTa-v3-large multi-label classifier trained on the [ValuesML (Touché 2024)](https://touche.webis.de/clef24/touche24-web/human-value-detection.html) dataset extracts a 38-dimensional value distribution vector $V_{\text{dist}}$ from any text.
+1. **Stage 1 — Value Inference**: An **ensemble of RoBERTa-large and DeBERTa-v3-large**, both fine-tuned on the [ValuesML (Touché 2024)](https://touche.webis.de/clef24/touche24-web/human-value-detection.html) dataset, extracts a 38-dimensional value distribution vector $V_{\text{dist}}$ from any text via weighted logit fusion.
 
 2. **Stage 2 — Action Selection**: A utility-based selector uses a dot-product formulation $U(a, P) = \sum_{i} V_{a,i} \cdot P_i$ to rank candidate actions from the [Moral Stories](https://huggingface.co/datasets/demelin/moral_stories) dataset, selecting the action that maximizes alignment with a given persona vector $P$.
 
@@ -75,58 +75,70 @@ By swapping the persona vector $P$ while holding the scenario $C$ constant, VIST
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                         VISTA FRAMEWORK                             │
-│                                                                     │
-│  ┌───────────────────────────────────────────────────────────────┐  │
-│  │                  STAGE 1: VALUE INFERENCE                     │  │
-│  │                                                               │  │
-│  │   Input Text ──► DeBERTa-v3-large ──► Sigmoid ──► V_dist     │  │
-│  │                  (38-label head)       (threshold)  (38-dim)  │  │
-│  │                                                               │  │
-│  │   Training Data: ValuesML / Touché24 (44,758 sentences)       │  │
-│  │   Labels: 19 Schwartz values × {attained, constrained}        │  │
-│  └───────────────────────────────────────────────────────────────┘  │
-│                              │                                      │
-│                              ▼                                      │
-│  ┌───────────────────────────────────────────────────────────────┐  │
-│  │                STAGE 2: ACTION SELECTION                      │  │
-│  │                                                               │  │
-│  │   For each candidate action a:                                │  │
-│  │     V_a = Stage1.predict(a)        ← value-tag the action     │  │
-│  │                                                               │  │
-│  │   For a given persona P:                                      │  │
-│  │     U(a, P) = Σ (V_a,i · P_i)     ← compute utility          │  │
-│  │     A* = argmax_a U(a, P)          ← select best action       │  │
-│  │                                                               │  │
-│  │   Candidate Actions: Moral Stories (12,000 narratives)        │  │
-│  └───────────────────────────────────────────────────────────────┘  │
-│                              │                                      │
-│                              ▼                                      │
-│  ┌───────────────────────────────────────────────────────────────┐  │
-│  │                   PROOF / SIMULATION                           │  │
-│  │                                                               │  │
-│  │   For each scenario C in {1..100}:                            │  │
-│  │     A_explorer = select(candidates, P_explorer)               │  │
-│  │     A_guardian  = select(candidates, P_guardian)               │  │
-│  │     shift = (A_explorer ≠ A_guardian)                         │  │
-│  │                                                               │  │
-│  │   Output: decision_shift_report.md + audit_trail.json         │  │
-│  └───────────────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────┐
+│                           VISTA FRAMEWORK                                │
+│                                                                          │
+│  ┌────────────────────────────────────────────────────────────────────┐  │
+│  │            STAGE 1: VALUE INFERENCE (ENSEMBLE)                     │  │
+│  │                                                                    │  │
+│  │                  ┌─► RoBERTa-large ────► logits_R ─┐               │  │
+│  │   Input Text ────┤                                 ├─► Fuse ──►   │  │
+│  │                  └─► DeBERTa-v3-large ─► logits_D ─┘    │         │  │
+│  │                                                         ▼         │  │
+│  │              α·logits_R + (1−α)·logits_D ──► softmax ──► V_dist   │  │
+│  │                     (α = 0.5)                (T=0.5)    (38-dim)  │  │
+│  │                                                                    │  │
+│  │   Training Data: ValuesML / Touché24 (44,758 sentences)            │  │
+│  │   Labels: 19 Schwartz values × {attained, constrained}             │  │
+│  └────────────────────────────────────────────────────────────────────┘  │
+│                              │                                           │
+│                              ▼                                           │
+│  ┌────────────────────────────────────────────────────────────────────┐  │
+│  │                STAGE 2: ACTION SELECTION                           │  │
+│  │                                                                    │  │
+│  │   For each candidate action a:                                     │  │
+│  │     V_a = Ensemble.predict(a)       ← value-tag the action         │  │
+│  │                                                                    │  │
+│  │   For a given persona P:                                           │  │
+│  │     U(a, P) = Σ (V_a,i · P_i)      ← compute utility              │  │
+│  │     A* = argmax_a U(a, P)           ← select best action           │  │
+│  │                                                                    │  │
+│  │   Candidate Actions: Moral Stories (12,000 narratives)             │  │
+│  └────────────────────────────────────────────────────────────────────┘  │
+│                              │                                           │
+│                              ▼                                           │
+│  ┌────────────────────────────────────────────────────────────────────┐  │
+│  │                   PROOF / SIMULATION                               │  │
+│  │                                                                    │  │
+│  │   For each scenario C in {1..12000}:                               │  │
+│  │     A_explorer = select(candidates, P_explorer)                    │  │
+│  │     A_guardian  = select(candidates, P_guardian)                    │  │
+│  │     shift = (A_explorer ≠ A_guardian)                              │  │
+│  │                                                                    │  │
+│  │   Output: decision_shift_report.md + audit_trail.json              │  │
+│  └────────────────────────────────────────────────────────────────────┘  │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Stage 1: Value Inference
+### Stage 1: Value Inference (Ensemble)
 
-The value inference module uses **DeBERTa-v3-large** (`microsoft/deberta-v3-large`, 304M parameters) configured for multi-label classification:
+The value inference module uses an **ensemble of RoBERTa-large + DeBERTa-v3-large** via weighted logit fusion for multi-label classification:
 
 ```python
-model = AutoModelForSequenceClassification.from_pretrained(
-    "microsoft/deberta-v3-large",
-    num_labels=38,                              # 19 values × 2 states
-    problem_type="multi_label_classification",  # BCEWithLogitsLoss
+# Ensemble fuses logits from both models before normalization:
+#   logits_fused = α · logits_roberta + (1 - α) · logits_deberta
+#   V_dist = softmax(logits_fused / T)
+
+# Individual models:
+roberta = AutoModelForSequenceClassification.from_pretrained(
+    "roberta-large", num_labels=38, problem_type="multi_label_classification"
+)
+deberta = AutoModelForSequenceClassification.from_pretrained(
+    "microsoft/deberta-v3-large", num_labels=38, problem_type="multi_label_classification"
 )
 ```
+
+**Why Ensemble?** RoBERTa (standard attention) and DeBERTa (disentangled attention with ELECTRA-style pre-training) learn complementary representations. Ensembling reduces variance, captures richer value signals, and produces more discriminative 38-dim vectors — directly increasing the decision shift rate.
 
 **Input**: Any natural language text (scenario description, action description, etc.)  
 **Output**: A 38-dimensional probability vector $V_{\text{dist}} \in [0, 1]^{38}$
@@ -146,25 +158,31 @@ Given a set of candidate actions (e.g., the moral and immoral actions from Moral
 ### Pipeline Flow
 
 ```
-Scenario (C)                    Persona Vector (P)
-    │                                  │
-    ▼                                  │
-┌──────────────┐                       │
-│ Candidate    │                       │
-│ Actions      │                       │
-│  • moral     │──► Value Tagger ──►┐  │
-│  • immoral   │    (Stage 1)      │  │
-└──────────────┘                   ▼  ▼
-                              ┌─────────────┐
-                              │ U(a,P) =    │
-                              │ Σ V_a,i·P_i │
-                              │             │
-                              │ A* = argmax │
-                              └──────┬──────┘
-                                     │
-                                     ▼
-                              Selected Action (A)
-                              + Justification
+Scenario (C)                              Persona Vector (P)
+    │                                            │
+    ▼                                            │
+┌──────────────┐                                 │
+│ Candidate    │     ┌────────────────────┐       │
+│ Actions      │     │ ENSEMBLE TAGGER    │       │
+│  • moral     │──►  │                    │       │
+│  • immoral   │     │ RoBERTa  ──► log_R │       │
+└──────────────┘     │ DeBERTa  ──► log_D │       │
+                     │      │         │   │       │
+                     │      └── fuse ──┘   │       │
+                     │          │         │       │
+                     │     V_a (38-dim)   │       │
+                     └─────────┬──────────┘       │
+                               ▼                  ▼
+                         ┌─────────────┐
+                         │ U(a,P) =    │
+                         │ Σ V_a,i·P_i │
+                         │             │
+                         │ A* = argmax │
+                         └──────┬──────┘
+                                │
+                                ▼
+                         Selected Action (A)
+                         + Justification
 ```
 
 ---
@@ -173,11 +191,14 @@ Scenario (C)                    Persona Vector (P)
 
 ### Core Equations
 
-**Value Distribution (Stage 1):**
+**Value Distribution (Stage 1 - Ensemble):**
 
-$$V_{\text{dist}} = \sigma\big(\text{DeBERTa}(x)\big) \in [0, 1]^{38}$$
+The ensemble fuses raw logits from RoBERTa-large and DeBERTa-v3-large:
 
-where $\sigma$ is the element-wise sigmoid function and $x$ is the input text.
+$$L_{\text{fused}} = \alpha \cdot \text{RoBERTa}(x) + (1 - \alpha) \cdot \text{DeBERTa}(x)$$
+$$V_{\text{dist}} = \text{softmax}(L_{\text{fused}} / T) \in [0, 1]^{38}$$
+
+where $\alpha$ is the fusion weight (default 0.5) and $T$ is the temperature scaling factor (default 0.5).
 
 **Utility Function (Stage 2):**
 
@@ -309,8 +330,9 @@ VISTA/
 ├── stage1_value_inference/                # STAGE 1: Value Inference Pipeline
 │   ├── __init__.py
 │   ├── data_loader.py                     # ValuesML dataset loading & preprocessing
-│   ├── model.py                           # DeBERTa-v3-large classifier wrapper
-│   ├── train.py                           # Fine-tuning script (HF Trainer)
+│   ├── model.py                           # Single-model classifier (RoBERTa/DeBERTa)
+│   ├── ensemble_model.py                  # Ensemble classifier (RoBERTa + DeBERTa)
+│   ├── train.py                           # Fine-tuning script (--model roberta/deberta)
 │   └── predict.py                         # Inference API: text → V_dist (38-dim)
 │
 ├── stage2_action_selection/               # STAGE 2: Action Selection Pipeline
@@ -331,7 +353,8 @@ VISTA/
 │   └── audit_trail.json                   # Per-decision justifications (100 entries)
 │
 ├── checkpoints/                           # Saved model weights (after fine-tuning)
-│   └── best_model/                        # Best DeBERTa checkpoint
+│   ├── best_model/                        # Fine-tuned RoBERTa-large checkpoint
+│   └── deberta_best_model/               # Fine-tuned DeBERTa-v3-large checkpoint
 │
 ├── Touché24-ValueEval/                    # TRAINING DATA (pre-existing)
 │   ├── value-categories.json              # 19 Schwartz value definitions
@@ -371,7 +394,7 @@ pip install -r requirements.txt
 | Package | Version | Purpose |
 |:--------|:--------|:--------|
 | `torch` | ≥ 2.6.0 | Deep learning framework (MPS/CUDA/CPU) |
-| `transformers` | ≥ 4.49.0 | DeBERTa-v3-large model |
+| `transformers` | ≥ 4.49.0 | RoBERTa-large and DeBERTa-v3-large models |
 | `datasets` | ≥ 2.18.0 | HuggingFace data loading |
 | `pandas` | ≥ 2.0.0 | TSV data processing |
 | `numpy` | ≥ 1.24.0 | Numerical operations |
@@ -405,10 +428,14 @@ Expected runtime: **~5-7 minutes** (first run with model download).
 
 ### Fine-Tune the Value Classifier
 
-To significantly improve the shift rate, fine-tune DeBERTa on the ValuesML data:
+To significantly improve the shift rate, fine-tune both models on the ValuesML data:
 
 ```bash
+# Train RoBERTa-large (default)
 python3 -m stage1_value_inference.train
+
+# Train DeBERTa-v3-large
+python3 -m stage1_value_inference.train --model deberta
 ```
 
 | Parameter | Value |
@@ -418,9 +445,9 @@ python3 -m stage1_value_inference.train
 | Batch size | 8 |
 | Loss | BCEWithLogitsLoss |
 | Metric | Macro F1 |
-| Estimated time | ~2-4 hours (MPS) |
+| Estimated time | ~2-4 hours per model (GPU) |
 
-The best model is saved to `checkpoints/best_model/`. Subsequent simulation runs will automatically load it.
+RoBERTa saves to `checkpoints/best_model/`, DeBERTa saves to `checkpoints/deberta_best_model/`. When `ENSEMBLE_ENABLED=True` in `config.py`, simulation runs automatically load and ensemble both models.
 
 ### Run Inference on Custom Text
 
@@ -624,9 +651,12 @@ claude  # Start Claude Code
 
 4. **Schwartz Refined Theory**: Schwartz, S. H. (2012). *An Overview of the Schwartz Theory of Basic Values.* Online Readings in Psychology and Culture, 2(1).
 
-### Model
+### Models
 
-5. **DeBERTa-v3**: He, P., Gao, J., & Chen, W. (2023). *DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with Gradient-Disentangled Embedding Sharing.* ICLR 2023.
+5. **RoBERTa**: Liu, Y., et al. (2019). *RoBERTa: A Robustly Optimized BERT Pretraining Approach.* arXiv:1907.11692.
+   - [HuggingFace](https://huggingface.co/roberta-large)
+
+6. **DeBERTa-v3**: He, P., Gao, J., & Chen, W. (2023). *DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with Gradient-Disentangled Embedding Sharing.* ICLR 2023.
    - [HuggingFace](https://huggingface.co/microsoft/deberta-v3-large)
 
 ---

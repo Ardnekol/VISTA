@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.py[cod]
+__pycache__/
+venv/
+checkpoints/
+*.swp
+*.swo
+.idea/
+.vscode/

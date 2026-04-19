@@ -1,8 +1,11 @@
 """
-DeBERTa-v3-large Multi-Label Classifier for Value Detection
+RoBERTa Multi-Label Classifier for Value Detection
 ============================================================
 Wraps AutoModelForSequenceClassification with multi_label_classification
 problem type. Provides convenience methods for loading, saving, and inference.
+
+Value vectors are normalized using temperature-scaled softmax to create
+proper probability distributions aligned with Schwartz circumplex theory.
 """
 
 import os
@@ -69,20 +72,21 @@ class ValueClassifier:
             problem_type="multi_label_classification",
             id2label=ID2LABEL,
             label2id=LABEL2ID,
-            ignore_mismatched_sizes=True,
         )
         self.model.to(self.device)
         self.model.eval()
 
-    def predict(self, text: str, return_labels: bool = False) -> np.ndarray:
-        """Predict value distribution for a single text.
+    def predict_logits(self, text: str) -> np.ndarray:
+        """Predict raw logits for a single text (pre-normalization).
+
+        Used by the ensemble to fuse logits from multiple models before
+        applying temperature-scaled softmax.
 
         Args:
             text: Input text string.
-            return_labels: If True, return binary labels instead of probabilities.
 
         Returns:
-            numpy array of shape (38,) — probabilities or binary labels.
+            numpy array of shape (38,) — raw logits.
         """
         inputs = self.tokenizer(
             text,
@@ -94,8 +98,74 @@ class ValueClassifier:
 
         with torch.no_grad():
             outputs = self.model(**inputs)
-            logits = outputs.logits
-            probs = torch.sigmoid(logits).cpu().numpy()[0]
+            return outputs.logits.cpu().numpy()[0]
+
+    def predict_batch_logits(
+        self,
+        texts: list[str],
+        batch_size: int = 16,
+    ) -> np.ndarray:
+        """Predict raw logits for a batch of texts.
+
+        Args:
+            texts: List of input text strings.
+            batch_size: Batch size for inference.
+
+        Returns:
+            numpy array of shape (N, 38) — raw logits.
+        """
+        all_logits = []
+
+        for i in range(0, len(texts), batch_size):
+            batch_texts = texts[i : i + batch_size]
+            inputs = self.tokenizer(
+                batch_texts,
+                truncation=True,
+                max_length=MAX_SEQ_LENGTH,
+                padding="max_length",
+                return_tensors="pt",
+            ).to(self.device)
+
+            with torch.no_grad():
+                outputs = self.model(**inputs)
+                all_logits.append(outputs.logits.cpu().numpy())
+
+        return np.concatenate(all_logits, axis=0)
+
+    @staticmethod
+    def logits_to_probs(logits: np.ndarray, temperature: float = 0.5) -> np.ndarray:
+        """Convert raw logits to probabilities via temperature-scaled softmax.
+
+        Temperature-scaled softmax creates a probability distribution where
+        values compete (Schwartz circumplex). T=0.5 sharpens the distribution
+        to amplify learned differences.
+
+        Args:
+            logits: Raw logits, shape (38,) or (N, 38).
+            temperature: Softmax temperature. Lower = sharper.
+
+        Returns:
+            Probability array with same shape as input.
+        """
+        if logits.ndim == 1:
+            shifted = logits - logits.max()
+            return np.exp(shifted / temperature) / np.exp(shifted / temperature).sum()
+        else:
+            shifted = logits - logits.max(axis=1, keepdims=True)
+            return np.exp(shifted / temperature) / np.exp(shifted / temperature).sum(axis=1, keepdims=True)
+
+    def predict(self, text: str, return_labels: bool = False) -> np.ndarray:
+        """Predict value distribution for a single text.
+
+        Args:
+            text: Input text string.
+            return_labels: If True, return binary labels instead of probabilities.
+
+        Returns:
+            numpy array of shape (38,) — probabilities or binary labels.
+        """
+        logits = self.predict_logits(text)
+        probs = self.logits_to_probs(logits)
 
         if return_labels:
             return (probs >= SIGMOID_THRESHOLD).astype(np.float32)
@@ -118,26 +188,8 @@ class ValueClassifier:
         Returns:
             numpy array of shape (N, 38).
         """
-        all_probs = []
-
-        for i in range(0, len(texts), batch_size):
-            batch_texts = texts[i : i + batch_size]
-            inputs = self.tokenizer(
-                batch_texts,
-                truncation=True,
-                max_length=MAX_SEQ_LENGTH,
-                padding="max_length",
-                return_tensors="pt",
-            ).to(self.device)
-
-            with torch.no_grad():
-                outputs = self.model(**inputs)
-                logits = outputs.logits
-                probs = torch.sigmoid(logits).cpu().numpy()
-
-            all_probs.append(probs)
-
-        result = np.concatenate(all_probs, axis=0)
+        logits = self.predict_batch_logits(texts, batch_size=batch_size)
+        result = self.logits_to_probs(logits)
 
         if return_labels:
             return (result >= SIGMOID_THRESHOLD).astype(np.float32)

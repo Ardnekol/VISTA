@@ -75,16 +75,32 @@ for i, v in enumerate(SCHWARTZ_VALUES):
 # ─────────────────────────────────────────────────────────────
 # Model Configuration
 # ─────────────────────────────────────────────────────────────
-MODEL_NAME = "microsoft/deberta-v3-large"
+MODEL_NAME = "roberta-large"
+DEBERTA_MODEL_NAME = "microsoft/deberta-v3-base"
 MAX_SEQ_LENGTH = 256
 
+# ─────────────────────────────────────────────────────────────
+# Ensemble Configuration
+# ─────────────────────────────────────────────────────────────
+# When ENSEMBLE_ENABLED is True, Stage 1 uses both RoBERTa-large
+# and DeBERTa-v3-large and fuses their logits with weighted average.
+# Falls back to single-model (RoBERTa) if DeBERTa checkpoint is missing.
+ENSEMBLE_ENABLED = True
+ENSEMBLE_ALPHA = 0.5  # Weight for RoBERTa; DeBERTa gets (1 - α)
+
+# Checkpoint directories per model
+ROBERTA_CHECKPOINT_DIR = os.path.join(CHECKPOINT_DIR, "best_model")
+DEBERTA_CHECKPOINT_DIR = os.path.join(CHECKPOINT_DIR, "deberta_best_model")
+
 # Training hyperparameters
-LEARNING_RATE = 2e-5
+LEARNING_RATE = 7e-6
 WEIGHT_DECAY = 0.01
-NUM_EPOCHS = 5
+NUM_EPOCHS = 3
 BATCH_SIZE = 8
+GRADIENT_ACCUMULATION_STEPS = 2  # Effective batch size = 8 * 2 = 16
 EVAL_BATCH_SIZE = 16
-WARMUP_RATIO = 0.1
+WARMUP_RATIO = 0.2
+ADAM_EPSILON = 1e-6
 EARLY_STOPPING_PATIENCE = 2
 
 # Inference
@@ -93,5 +109,5 @@ SIGMOID_THRESHOLD = 0.5
 # ─────────────────────────────────────────────────────────────
 # Simulation
 # ─────────────────────────────────────────────────────────────
-NUM_SIMULATION_SCENARIOS = 100
+NUM_SIMULATION_SCENARIOS = 12000
 RANDOM_SEED = 42

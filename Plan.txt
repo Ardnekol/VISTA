@@ -1,0 +1,51 @@
+Let me check the existing plans and data to give you precise answers.
+
+Viewed implementation_plan.md:1-340
+Viewed walkthrough.md:1-138
+Viewed MEETING_BRIEF.md:1-582
+
+Now let me also quickly check how many scenarios are actually available in the dataset:
+
+Viewed scenario_sampler.py:1-67
+
+Here's the clear picture:
+
+---
+
+## Scenario Numbers
+
+| Metric | Count |
+|:-------|------:|
+| **Total stories in Moral Stories dataset** | **12,000** |
+| **Valid scenarios (after filtering incomplete stories)** | **~12,000** |
+| **Scenarios tested in simulation** | **100** (configured in `config.py` as `NUM_SIMULATION_SCENARIOS = 100`) |
+| **Scenarios where decisions shifted** | **22** (22% shift rate) |
+
+So you've tested **100 out of ~12,000 available scenarios** — less than 1% of the dataset.
+
+---
+
+## What's Next?
+
+Based on the [walkthrough.md](file:///Users/lokimandloi/Documents/TDL/VISTA/walkthrough.md) and the current state of the project, here's the prioritized roadmap:
+
+### 🔴 Priority 1: Fine-Tune DeBERTa (Critical)
+This is the **single most impactful** next step. The current 22% shift rate uses an **unfine-tuned** model (random classification head), which produces near-uniform value vectors. After fine-tuning on the 44,758 ValuesML sentences, the shift rate should jump to **40–70%+**.
+
+```bash
+python3 -m stage1_value_inference.train  # ~2-4 hours on MPS
+python3 -m simulation.run_simulation      # Re-run with fine-tuned model
+```
+
+### 🟡 Priority 2: Scale Up Scenarios
+After fine-tuning, increase the simulation from 100 → **500 or 1,000 scenarios** to get statistically stronger proof (just change `NUM_SIMULATION_SCENARIOS` in `config.py`).
+
+### 🟢 Priority 3: Add a Third Persona ("The Diplomat")
+Add a universalism-focused persona to show **three-way** decision divergence.
+
+### 🔵 Priority 4: Integrate ValueActionLens
+Expand beyond binary moral/immoral to **14,784 multi-action scenarios** across 12 cultures.
+
+---
+
+Would you like me to proceed with any of these — starting with the fine-tuning?

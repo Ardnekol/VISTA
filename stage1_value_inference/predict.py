@@ -3,6 +3,9 @@ Inference Module for VISTA Value Classifier
 ============================================
 Provides a simple API to load a trained checkpoint and predict
 38-dim value distributions for arbitrary text.
+
+Supports both single-model and ensemble (RoBERTa + DeBERTa) modes,
+controlled by ENSEMBLE_ENABLED in config.py.
 """
 
 import os
@@ -12,41 +15,49 @@ import numpy as np
 
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from config import CHECKPOINT_DIR, MODEL_NAME, LABEL_NAMES
+from config import CHECKPOINT_DIR, MODEL_NAME, LABEL_NAMES, ENSEMBLE_ENABLED
 from stage1_value_inference.model import ValueClassifier
 
 
-# Module-level singleton for the classifier
-_classifier: Optional[ValueClassifier] = None
+# Module-level singleton for the classifier (works for both single and ensemble)
+_classifier = None
 
 
-def get_classifier(checkpoint_path: Optional[str] = None) -> ValueClassifier:
-    """Get or create the singleton ValueClassifier instance.
+def get_classifier(checkpoint_path: Optional[str] = None):
+    """Get or create the singleton classifier instance.
 
-    Tries to load from a fine-tuned checkpoint first; falls back to
-    the pretrained DeBERTa model if no checkpoint exists.
+    When ENSEMBLE_ENABLED is True (default), returns an EnsembleValueClassifier
+    that fuses RoBERTa-large and DeBERTa-v3-large logits.
+    Otherwise returns a single ValueClassifier.
 
     Args:
         checkpoint_path: Optional explicit path to a checkpoint.
+                         Only used in single-model mode.
 
     Returns:
-        Initialized ValueClassifier.
+        Initialized classifier (ValueClassifier or EnsembleValueClassifier).
     """
     global _classifier
 
     if _classifier is not None:
         return _classifier
 
-    if checkpoint_path is None:
-        best_model_dir = os.path.join(CHECKPOINT_DIR, "best_model")
-        if os.path.isdir(best_model_dir):
-            checkpoint_path = best_model_dir
-            print(f"Loading fine-tuned model from: {checkpoint_path}")
-        else:
-            checkpoint_path = MODEL_NAME
-            print(f"No fine-tuned checkpoint found. Using pretrained: {checkpoint_path}")
+    if ENSEMBLE_ENABLED:
+        from stage1_value_inference.ensemble_model import EnsembleValueClassifier
+        print("[VISTA] Ensemble mode enabled — loading both models...")
+        _classifier = EnsembleValueClassifier()
+    else:
+        if checkpoint_path is None:
+            best_model_dir = os.path.join(CHECKPOINT_DIR, "best_model")
+            if os.path.isdir(best_model_dir):
+                checkpoint_path = best_model_dir
+                print(f"Loading fine-tuned model from: {checkpoint_path}")
+            else:
+                checkpoint_path = MODEL_NAME
+                print(f"No fine-tuned checkpoint found. Using pretrained: {checkpoint_path}")
 
-    _classifier = ValueClassifier(model_name_or_path=checkpoint_path)
+        _classifier = ValueClassifier(model_name_or_path=checkpoint_path)
+
     return _classifier
 
 

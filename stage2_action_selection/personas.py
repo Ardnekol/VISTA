@@ -22,12 +22,12 @@ def _make_persona_vector(value_weights: dict[str, tuple[float, float]]) -> np.nd
 
     Args:
         value_weights: Dict mapping value name → (attained_weight, constrained_weight).
-            Values not specified default to (0.50, 0.50).
+            Values not specified default to (0.25, 0.25) — neutral baseline.
 
     Returns:
         numpy array of shape (38,).
     """
-    persona = np.full(NUM_LABELS, 0.50, dtype=np.float32)
+    persona = np.full(NUM_LABELS, 0.25, dtype=np.float32)
 
     for value_name, (attained_w, constrained_w) in value_weights.items():
         if value_name in VALUE_TO_INDICES:
@@ -45,26 +45,27 @@ def _make_persona_vector(value_weights: dict[str, tuple[float, float]]) -> np.nd
 # ─────────────────────────────────────────────────────────────
 # High: Curiosity (Self-direction + Stimulation), Freedom
 # Low:  Security, Conformity
+# Amplified for maximum persona divergence
 EXPLORER_WEIGHTS = {
-    "Self-direction: thought":   (0.95, 0.05),  # Curiosity → high attainment, low constraint
-    "Self-direction: action":    (0.90, 0.05),
-    "Stimulation":               (0.90, 0.05),
-    "Hedonism":                  (0.70, 0.30),
-    "Achievement":               (0.60, 0.40),
-    "Power: dominance":          (0.30, 0.60),
-    "Power: resources":          (0.30, 0.60),
-    "Face":                      (0.40, 0.50),
-    "Security: personal":        (0.10, 0.80),  # Low security preference
-    "Security: societal":        (0.10, 0.75),
-    "Tradition":                 (0.15, 0.70),
-    "Conformity: rules":         (0.05, 0.90),  # Strongly anti-conformity
-    "Conformity: interpersonal": (0.20, 0.60),
-    "Humility":                  (0.30, 0.50),
-    "Benevolence: caring":       (0.60, 0.30),
-    "Benevolence: dependability": (0.50, 0.40),
-    "Universalism: concern":     (0.65, 0.30),
-    "Universalism: nature":      (0.55, 0.35),
-    "Universalism: tolerance":   (0.80, 0.15),  # High tolerance
+    "Self-direction: thought":   (1.00, 0.00),  # Maximum curiosity
+    "Self-direction: action":    (0.95, 0.00),
+    "Stimulation":               (0.95, 0.00),
+    "Hedonism":                  (0.80, 0.15),
+    "Achievement":               (0.55, 0.35),
+    "Power: dominance":          (0.15, 0.70),
+    "Power: resources":          (0.15, 0.70),
+    "Face":                      (0.25, 0.50),
+    "Security: personal":        (0.00, 0.95),  # Actively rejects security
+    "Security: societal":        (0.00, 0.90),
+    "Tradition":                 (0.00, 0.85),
+    "Conformity: rules":         (0.00, 1.00),  # Maximum anti-conformity
+    "Conformity: interpersonal": (0.05, 0.75),
+    "Humility":                  (0.15, 0.50),
+    "Benevolence: caring":       (0.60, 0.20),
+    "Benevolence: dependability": (0.40, 0.35),
+    "Universalism: concern":     (0.65, 0.20),
+    "Universalism: nature":      (0.55, 0.25),
+    "Universalism: tolerance":   (0.90, 0.05),  # Very high tolerance
 }
 
 PERSONA_EXPLORER = _make_persona_vector(EXPLORER_WEIGHTS)
@@ -76,25 +77,25 @@ PERSONA_EXPLORER = _make_persona_vector(EXPLORER_WEIGHTS)
 # High: Security, Conformity, Tradition
 # Low:  Curiosity (Self-direction), Stimulation
 GUARDIAN_WEIGHTS = {
-    "Self-direction: thought":   (0.10, 0.70),  # Low curiosity
-    "Self-direction: action":    (0.15, 0.65),
-    "Stimulation":               (0.05, 0.80),
-    "Hedonism":                  (0.20, 0.60),
-    "Achievement":               (0.50, 0.40),
-    "Power: dominance":          (0.60, 0.30),
-    "Power: resources":          (0.55, 0.35),
-    "Face":                      (0.70, 0.20),
-    "Security: personal":        (0.30, 0.10),  # High security (note: low constraint = actively desires it)
-    "Security: societal":        (0.85, 0.05),  # Very high societal security
-    "Tradition":                 (0.85, 0.10),
-    "Conformity: rules":         (0.90, 0.05),  # Strongly pro-conformity
-    "Conformity: interpersonal": (0.80, 0.10),
-    "Humility":                  (0.70, 0.20),
-    "Benevolence: caring":       (0.65, 0.25),
-    "Benevolence: dependability": (0.75, 0.15),
-    "Universalism: concern":     (0.50, 0.40),
-    "Universalism: nature":      (0.40, 0.45),
-    "Universalism: tolerance":   (0.30, 0.55),  # Lower tolerance for difference
+    "Self-direction: thought":   (0.00, 0.85),  # Actively rejects curiosity
+    "Self-direction: action":    (0.05, 0.80),
+    "Stimulation":               (0.00, 0.95),
+    "Hedonism":                  (0.10, 0.75),
+    "Achievement":               (0.45, 0.35),
+    "Power: dominance":          (0.65, 0.20),
+    "Power: resources":          (0.60, 0.25),
+    "Face":                      (0.75, 0.10),
+    "Security: personal":        (0.40, 0.05),
+    "Security: societal":        (0.95, 0.00),  # Maximum societal security
+    "Tradition":                 (0.95, 0.00),  # Maximum tradition
+    "Conformity: rules":         (1.00, 0.00),  # Maximum conformity
+    "Conformity: interpersonal": (0.90, 0.00),
+    "Humility":                  (0.80, 0.10),
+    "Benevolence: caring":       (0.65, 0.15),
+    "Benevolence: dependability": (0.85, 0.05),
+    "Universalism: concern":     (0.45, 0.40),
+    "Universalism: nature":      (0.30, 0.50),
+    "Universalism: tolerance":   (0.15, 0.70),  # Low tolerance
 }
 
 PERSONA_GUARDIAN = _make_persona_vector(GUARDIAN_WEIGHTS)
