@@ -1,0 +1,108 @@
+VISTA — Full Conference Paper Roadmap
+======================================
+Goal: Publish at EMNLP 2026 or AAAI 2027
+Date created: 2026-05-13
+
+═══════════════════════════════════════════════════════
+CURRENT STATE
+═══════════════════════════════════════════════════════
+✅ Llama 3.1 8B  — all 100 profiles × 10 scenarios × 9 conditions (9,000 rows)
+✅ Gemma4 31B    — only 1to10 profiles (900 rows) in Dataset/llm_decision_analysis_1to10.csv
+✅ Dot-product baseline — all 100 profiles (decision_analysis_*.csv in outputs/)
+❌ Gemma4 31B   — 11to100 profiles not yet run
+❌ Human study  — not done
+❌ Statistical analysis — not done
+❌ Multi-model merge — not done
+
+═══════════════════════════════════════════════════════
+STEP 1 — START GEMMA4 RUN (today, takes ~8 days)
+═══════════════════════════════════════════════════════
+- Change LLM_MODEL = "gemma4:31b" in llm_decision_analysis.py
+- Run in tmux session "gemma_run":
+    for f in Dataset/profile_description_*.json; do
+        echo "=== $f ===" && python3 llm_decision_analysis.py --profiles $f
+    done
+- Save Gemma4 outputs separately (rename with _gemma4 suffix)
+- Why: multi-model validation → findings are model-agnostic claim
+
+═══════════════════════════════════════════════════════
+STEP 2 — MERGE & STATISTICAL ANALYSIS (this week)
+═══════════════════════════════════════════════════════
+- Merge all 10 Llama CSVs into one master file
+- Compute:
+    - Flip rate by modifier axis (authority vs danger vs social vs time pressure)
+    - Flip rate by profile strength (number of HIGH values)
+    - Which scenarios are most susceptible to modifiers
+    - LLM vs dot-product agreement rate per modifier type
+- Write analysis script (merge_and_analyze.py)
+- Key expected finding: authority_signal = highest flip rate across all profiles
+
+═══════════════════════════════════════════════════════
+STEP 3 — HUMAN STUDY DESIGN (weeks 2-3)
+═══════════════════════════════════════════════════════
+- Platform: Prolific.co
+- Participants: 150 people (~$400 budget)
+- Measure real Schwartz values: PVQ-57 questionnaire (validated)
+- Show each participant: 20 scenarios (subset of batch1)
+  - Group A: baseline only (no modifier)
+  - Group B: baseline + modifier (between-subjects design)
+- Record A0/A1 choices
+- This gives ground truth to validate LLM predictions against
+- Why this is critical: without human data, reviewers reject as
+  "we don't know if this reflects actual human behavior"
+
+═══════════════════════════════════════════════════════
+STEP 4 — RUN HUMAN STUDY (month 2)
+═══════════════════════════════════════════════════════
+- Launch on Prolific
+- Collect ~150 responses
+- Compare: do Gemma4/Llama predictions match human decisions?
+- Compute prediction accuracy per modifier type and profile strength
+- Key metric: does LLM accuracy improve for high-value-strength profiles?
+
+═══════════════════════════════════════════════════════
+STEP 5 — FULL ANALYSIS & PAPER (month 3-4)
+═══════════════════════════════════════════════════════
+Paper title: "When Situation Overrides Values: LLM-Simulated
+              Decision Making Under Contextual Pressure"
+
+Core claim: Situational modifiers shift value-based decisions in LLMs,
+            and this shift is moderated by profile strength —
+            people with strong values resist situational pressure more
+            than people with weak values.
+
+Paper structure:
+  1. Introduction     — values alone don't predict decisions, situation matters
+  2. Related Work     — Schwartz values, moral stories, ValueActionLens
+  3. Method           — profile encoding → scenario → modifier → LLM decision
+  4. Experiment 1     — Llama vs Gemma4: modifier flip rates, model comparison
+  5. Experiment 2     — Human study: do LLM predictions match real humans?
+  6. Analysis         — which modifier types matter most, moderated by profile strength
+  7. Conclusion       — LLMs can simulate value-contextual decision making
+
+Ablations needed:
+  - Profile only (no modifier) vs modifier only (no profile) vs both
+  - Different temperature settings for LLM
+  - Scenario domain effects (workplace vs community vs personal)
+
+═══════════════════════════════════════════════════════
+TARGET VENUES
+═══════════════════════════════════════════════════════
+1. EMNLP 2026     — deadline ~June 2026    ★★★★ Best fit
+2. AAAI 2027      — deadline ~August 2026  ★★★★ Strong fit
+3. NeurIPS 2026   — deadline ~May 2026     ★★★  Hard but possible
+4. ACL 2027       — deadline ~Feb 2027     ★★★★ Backup
+
+═══════════════════════════════════════════════════════
+CURRENT RATING
+═══════════════════════════════════════════════════════
+Workshop paper:         5/10  (can submit now)
+Full conference paper:  3/10  (needs human study + multi-model)
+After human study:      8/10  (publishable at EMNLP/AAAI)
+
+═══════════════════════════════════════════════════════
+IMMEDIATE TODO (pick one to start)
+═══════════════════════════════════════════════════════
+[ ] 1. Start Gemma4 run in tmux (8 days compute, do in background)
+[ ] 2. Build merge_and_analyze.py for Llama results
+[ ] 3. Design PVQ-57 human study protocol for Prolific

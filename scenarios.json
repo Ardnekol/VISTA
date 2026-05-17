@@ -1,0 +1,122 @@
+[
+  {
+    "scenario_id": "SC001_1",
+    "theme_id": "TH001",
+    "description": "Your company introduces a new internal software system that changes how employees complete daily tasks. Some coworkers are adapting quickly, while others prefer the existing process because it feels more predictable and familiar. Management allows employees to either begin using the new system immediately or continue using the old process during a temporary transition period.",
+    "actor": "you",
+    "A0": "start using the new system",
+    "A1": "continue using the existing process",
+    "latent_value_tensions": [
+      ["Self-Direction", "Security"],
+      ["Stimulation", "Tradition"]
+    ]
+  },
+  {
+    "scenario_id": "SC001_2",
+    "theme_id": "TH001",
+    "description": "A community organization begins offering digital tools for coordinating volunteer activities and sharing updates. Some members are interested in trying the new platform because it provides more flexibility and customization, while others prefer the traditional methods that the group has used for years. You are asked whether you want to adopt the new platform or continue participating through the existing process.",
+    "actor": "you",
+    "A0": "adopt the digital platform",
+    "A1": "continue with traditional coordination",
+    "latent_value_tensions": [
+      ["Self-Direction", "Security"],
+      ["Stimulation", "Tradition"]
+    ]
+  },
+  {
+    "scenario_id": "SC002_1",
+    "theme_id": "TH002",
+    "description": "Your team is working on a project that requires collaboration and open communication. Some team members are hesitant to share their ideas because they fear criticism, while others believe that sharing should be more spontaneous and flexible. You must decide between establishing clear guidelines for feedback or encouraging more freedom in communication.",
+    "actor": "you",
+    "A0": "establish clear guidelines for feedback",
+    "A1": "encourage more freedom in communication",
+    "latent_value_tensions": [
+      ["Achievement", "Benevolence"],
+      ["Power", "Universalism"]
+    ]
+  },
+  {
+    "scenario_id": "SC002_2",
+    "theme_id": "TH002",
+    "description": "Your team is working on a project that requires collaboration and open communication. Some team members are hesitant to share their ideas because they fear criticism, while others believe that sharing should be more spontaneous and flexible. You must decide between establishing clear guidelines for feedback or encouraging more freedom in communication.",
+    "actor": "you",
+    "A0": "establish clear guidelines for feedback",
+    "A1": "encourage more freedom in communication",
+    "latent_value_tensions": [
+      ["Achievement", "Benevolence"],
+      ["Power", "Universalism"]
+    ]
+  },
+  {
+    "scenario_id": "SC003_1",
+    "theme_id": "TH003",
+    "description": "Your community is organizing a charity event to raise funds for a local cause. Some volunteers are enthusiastic about using social media to promote the event, while others prefer traditional methods like flyers and word-of-mouth. You must decide between using digital tools or sticking with more traditional approaches.",
+    "actor": "you",
+    "A0": "use social media to promote the event",
+    "A1": "stick with traditional promotional methods",
+    "latent_value_tensions": [
+      ["Universalism", "Conformity"],
+      ["Benevolence", "Tradition"]
+    ]
+  },
+  {
+    "scenario_id": "SC003_2",
+    "theme_id": "TH003",
+    "description": "Your community is organizing a charity event to raise funds for a local cause. Some volunteers are enthusiastic about using social media to promote the event, while others prefer traditional methods like flyers and word-of-mouth. You must decide between using digital tools or sticking with more traditional approaches.",
+    "actor": "you",
+    "A0": "use social media to promote the event",
+    "A1": "stick with traditional promotional methods",
+    "latent_value_tensions": [
+      ["Universalism", "Conformity"],
+      ["Benevolence", "Tradition"]
+    ]
+  },
+  {
+    "scenario_id": "SC004_1",
+    "theme_id": "TH004",
+    "description": "You are considering a career change to pursue a field that aligns more closely with your personal values. Some colleagues are supportive of your decision, while others believe you should stick with what you know. You must decide between pursuing a new career path or staying in your current role.",
+    "actor": "you",
+    "A0": "pursue a new career path",
+    "A1": "stay in your current role",
+    "latent_value_tensions": [
+      ["Hedonism", "Achievement"],
+      ["Self-Direction", "Power"]
+    ]
+  },
+  {
+    "scenario_id": "SC004_2",
+    "theme_id": "TH004",
+    "description": "You are considering a career change to pursue a field that aligns more closely with your personal values. Some colleagues are supportive of your decision, while others believe you should stick with what you know. You must decide between pursuing a new career path or staying in your current role.",
+    "actor": "you",
+    "A0": "pursue a new career path",
+    "A1": "stay in your current role",
+    "latent_value_tensions": [
+      ["Hedonism", "Achievement"],
+      ["Self-Direction", "Power"]
+    ]
+  },
+  {
+    "scenario_id": "SC005_1",
+    "theme_id": "TH005",
+    "description": "Your family is discussing the importance of respecting traditional customs and values. Some members believe that these customs should be followed strictly, while others think they should be more flexible and adaptable to changing circumstances. You must decide between upholding tradition or embracing change.",
+    "actor": "you",
+    "A0": "uphold tradition",
+    "A1": "embrace change",
+    "latent_value_tensions": [
+      ["Tradition", "Stimulation"],
+      ["Conformity", "Self-Direction"]
+    ]
+  },
+  {
+    "scenario_id": "SC005_2",
+    "theme_id": "TH005",
+    "description": "Your family is discussing the importance of respecting traditional customs and values. Some members believe that these customs should be followed strictly, while others think they should be more flexible and adaptable to changing circumstances. You must decide between upholding tradition or embracing change.",
+    "actor": "you",
+    "A0": "uphold tradition",
+    "A1": "embrace change",
+    "latent_value_tensions": [
+      ["Tradition", "Stimulation"],
+      ["Conformity", "Self-Direction"]
+    ]
+  }
+]

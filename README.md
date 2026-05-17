@@ -53,7 +53,7 @@ VISTA explores a fundamental question in value-aligned AI:
 
 The framework answers this by implementing a two-stage pipeline:
 
-1. **Stage 1 — Value Inference**: An **ensemble of RoBERTa-large and DeBERTa-v3-large**, both fine-tuned on the [ValuesML (Touché 2024)](https://touche.webis.de/clef24/touche24-web/human-value-detection.html) dataset, extracts a 38-dimensional value distribution vector $V_{\text{dist}}$ from any text via weighted logit fusion.
+1. **Stage 1 — Value Inference**: An **ensemble of RoBERTa-large and DeBERTa-v3-base**, both fine-tuned on the [ValuesML (Touché 2024)](https://touche.webis.de/clef24/touche24-web/human-value-detection.html) dataset, extracts a 38-dimensional value distribution vector $V_{\text{dist}}$ from any text via weighted logit fusion.
 
 2. **Stage 2 — Action Selection**: A utility-based selector uses a dot-product formulation $U(a, P) = \sum_{i} V_{a,i} \cdot P_i$ to rank candidate actions from the [Moral Stories](https://huggingface.co/datasets/demelin/moral_stories) dataset, selecting the action that maximizes alignment with a given persona vector $P$.
 
@@ -83,7 +83,7 @@ By swapping the persona vector $P$ while holding the scenario $C$ constant, VIST
 │  │                                                                    │  │
 │  │                  ┌─► RoBERTa-large ────► logits_R ─┐               │  │
 │  │   Input Text ────┤                                 ├─► Fuse ──►   │  │
-│  │                  └─► DeBERTa-v3-large ─► logits_D ─┘    │         │  │
+│  │                  └─► DeBERTa-v3-base ─► logits_D ─┘    │         │  │
 │  │                                                         ▼         │  │
 │  │              α·logits_R + (1−α)·logits_D ──► softmax ──► V_dist   │  │
 │  │                     (α = 0.5)                (T=0.5)    (38-dim)  │  │
@@ -122,7 +122,7 @@ By swapping the persona vector $P$ while holding the scenario $C$ constant, VIST
 
 ### Stage 1: Value Inference (Ensemble)
 
-The value inference module uses an **ensemble of RoBERTa-large + DeBERTa-v3-large** via weighted logit fusion for multi-label classification:
+The value inference module uses an **ensemble of RoBERTa-large + DeBERTa-v3-base** via weighted logit fusion for multi-label classification:
 
 ```python
 # Ensemble fuses logits from both models before normalization:
@@ -134,7 +134,7 @@ roberta = AutoModelForSequenceClassification.from_pretrained(
     "roberta-large", num_labels=38, problem_type="multi_label_classification"
 )
 deberta = AutoModelForSequenceClassification.from_pretrained(
-    "microsoft/deberta-v3-large", num_labels=38, problem_type="multi_label_classification"
+  "microsoft/deberta-v3-base", num_labels=38, problem_type="multi_label_classification"
 )
 ```
 
@@ -193,7 +193,7 @@ Scenario (C)                              Persona Vector (P)
 
 **Value Distribution (Stage 1 - Ensemble):**
 
-The ensemble fuses raw logits from RoBERTa-large and DeBERTa-v3-large:
+The ensemble fuses raw logits from RoBERTa-large and DeBERTa-v3-base:
 
 $$L_{\text{fused}} = \alpha \cdot \text{RoBERTa}(x) + (1 - \alpha) \cdot \text{DeBERTa}(x)$$
 $$V_{\text{dist}} = \text{softmax}(L_{\text{fused}} / T) \in [0, 1]^{38}$$
@@ -344,17 +344,17 @@ VISTA/
 │
 ├── simulation/                            # SIMULATION & PROOF
 │   ├── __init__.py
-│   ├── scenario_sampler.py                # Sample 100 scenarios from Moral Stories
+│   ├── scenario_sampler.py                # Sample scenarios from Moral Stories (configurable)
 │   ├── run_simulation.py                  # Full pipeline orchestrator
 │   └── report_generator.py                # Generate report & audit trail
 │
 ├── outputs/                               # GENERATED ARTIFACTS
 │   ├── decision_shift_report.md           # Verifiable proof report
-│   └── audit_trail.json                   # Per-decision justifications (100 entries)
+│   └── audit_trail.json                   # Per-decision justifications (up to 12,000 entries)
 │
 ├── checkpoints/                           # Saved model weights (after fine-tuning)
 │   ├── best_model/                        # Fine-tuned RoBERTa-large checkpoint
-│   └── deberta_best_model/               # Fine-tuned DeBERTa-v3-large checkpoint
+│   └── deberta_best_model/               # Fine-tuned DeBERTa-v3-base checkpoint
 │
 ├── Touché24-ValueEval/                    # TRAINING DATA (pre-existing)
 │   ├── value-categories.json              # 19 Schwartz value definitions
@@ -394,7 +394,7 @@ pip install -r requirements.txt
 | Package | Version | Purpose |
 |:--------|:--------|:--------|
 | `torch` | ≥ 2.6.0 | Deep learning framework (MPS/CUDA/CPU) |
-| `transformers` | ≥ 4.49.0 | RoBERTa-large and DeBERTa-v3-large models |
+| `transformers` | ≥ 4.49.0 | RoBERTa-large and DeBERTa-v3-base models |
 | `datasets` | ≥ 2.18.0 | HuggingFace data loading |
 | `pandas` | ≥ 2.0.0 | TSV data processing |
 | `numpy` | ≥ 1.24.0 | Numerical operations |
@@ -410,7 +410,7 @@ pip install -r requirements.txt
 
 ### Quick Start: Run the Simulation
 
-Run the full 100-scenario proof simulation out of the box:
+Run the full proof simulation out of the box (default: 12,000 scenarios):
 
 ```bash
 python3 -m simulation.run_simulation
@@ -418,13 +418,13 @@ python3 -m simulation.run_simulation
 
 This will:
 1. Download Moral Stories from HuggingFace (~8MB)
-2. Download DeBERTa-v3-large weights (~874MB, first run only)
-3. Sample 100 scenarios
-4. Tag 200 candidate actions with 38-dim value vectors
+2. Download DeBERTa-v3-base weights (~370MB, first run only)
+3. Evaluate up to 12,000 scenarios (set by `NUM_SIMULATION_SCENARIOS` in `config.py`)
+4. Tag up to 24,000 candidate actions with 38-dim value vectors
 5. Compare Explorer vs. Guardian action selection
 6. Generate `outputs/decision_shift_report.md` and `outputs/audit_trail.json`
 
-Expected runtime: **~5-7 minutes** (first run with model download).
+Expected runtime: **~4-10 minutes** (first run with model download; subsequent runs are faster).
 
 ### Fine-Tune the Value Classifier
 
@@ -434,18 +434,24 @@ To significantly improve the shift rate, fine-tune both models on the ValuesML d
 # Train RoBERTa-large (default)
 python3 -m stage1_value_inference.train
 
-# Train DeBERTa-v3-large
+# Train DeBERTa-v3-base
 python3 -m stage1_value_inference.train --model deberta
 ```
 
 | Parameter | Value |
 |:----------|:------|
-| Learning rate | 2e-5 |
-| Epochs | 5 (with early stopping, patience=2) |
-| Batch size | 8 |
+| Learning rate | 7e-6 |
+| Epochs | 3 (with early stopping, patience=2) |
+| Per-device batch size | 8 |
+| Gradient accumulation | 2 (effective batch size = 16) |
+| Weight decay | 0.01 |
+| Warmup ratio | 0.2 |
+| Adam epsilon | 1e-6 |
+| Max gradient norm | 0.3 |
 | Loss | BCEWithLogitsLoss |
 | Metric | Macro F1 |
-| Estimated time | ~2-4 hours per model (GPU) |
+| Precision | fp32 (stability for DeBERTa) |
+| Estimated time | ~2-4 hours per model (hardware-dependent) |
 
 RoBERTa saves to `checkpoints/best_model/`, DeBERTa saves to `checkpoints/deberta_best_model/`. When `ENSEMBLE_ENABLED=True` in `config.py`, simulation runs automatically load and ensemble both models.
 
@@ -511,25 +517,25 @@ print(f"Guardian chose: {result['person_b']['selected_label']}")
 
 ## Simulation Results
 
-### Baseline Run (Pretrained DeBERTa, No Fine-Tuning)
+### Latest Full Run (from Generated Output)
 
 | Metric | Value |
 |:-------|:------|
-| Scenarios tested | 100 |
-| Decision shifts (A₁ ≠ A₂) | 8–22* |
-| Shift rate | 8–22%* |
-| Device | MPS (Apple Silicon) |
-| Elapsed time | ~388s |
+| Scenarios tested | 12,000 |
+| Decision shifts (A₁ ≠ A₂) | 9,990 |
+| Shift rate | 83.25% |
+| Random seed | 42 |
+| Elapsed time | ~220s |
 
-*\* Range reflects variance across runs due to the random classification head.*
+*From `outputs/decision_shift_report.md` (generated run artifact).* 
 
 ### Sample Decision Shifts
 
 | Scenario | Situation | Explorer Chose | Guardian Chose |
 |:---------|:----------|:---------------|:---------------|
-| 3814 | Betty deciding whether to ask subordinate Dave out | moral (freedom) | immoral (workplace norms) |
-| 9459 | John wants noisy sister to be quiet | immoral (direct action) | moral (respectful approach) |
-| 10834 | Juan under oppressive dictator | immoral (rebellion) | moral (structured resistance) |
+| 11331 | Max just got his license and wants to drive fast | immoral | moral |
+| 4759 | Donald is drafted into military service | immoral | moral |
+| 10343 | Devin responds to a court child-support order | immoral | moral |
 
 ### Value Dimensions Driving Divergence
 
@@ -537,12 +543,12 @@ The following dimensions appeared most frequently in shifted decisions:
 
 | Value Dimension | Appearances in Shifts |
 |:----------------|:---------------------:|
-| Self-direction: thought (attained) | Most frequent |
-| Stimulation (attained) | Most frequent |
-| Conformity: rules (attained/constrained) | Most frequent |
-| Tradition (attained) | Most frequent |
+| Self-direction: action attained | 10,795 |
+| Benevolence: caring attained | 6,320 |
+| Self-direction: thought attained | 4,273 |
+| Stimulation attained | 4,254 |
 
-> **After fine-tuning**, the shift rate is expected to increase to **40–70%+** as the value vectors become semantically meaningful rather than near-random.
+> Current full-run results show strong persona-conditioned divergence across the complete 12,000-scenario benchmark.
 
 ---
 
@@ -551,7 +557,7 @@ The following dimensions appeared most frequently in shifted decisions:
 ### `decision_shift_report.md`
 
 A human-readable Markdown report containing:
-- Summary statistics (shift rate, confidence intervals)
+- Summary statistics (shift rate, counts, runtime)
 - Top-10 most dramatic decision shifts with full breakdowns
 - Value dimension divergence analysis
 - Complete persona profiles with net-preference rankings
@@ -562,13 +568,13 @@ A machine-readable JSON file with one entry per scenario:
 
 ```json
 {
-  "scenario_id": 3814,
-  "situation": "Betty thinks her assistant Dave from work is cute...",
-  "intention": "Betty wants to decide whether to ask Dave out or not.",
-  "norm": "It's inappropriate to be attracted to a subordinate at work.",
+  "scenario_id": 10476,
+  "situation": "Joe is working an sales job for an insurance company.",
+  "intention": "Joe wants to impress a date when discussing his work.",
+  "norm": "People shouldn't brag about manipulating people for money.",
   "candidates": [
     {
-      "action": "Betty decides not to act on her feelings...",
+      "action": "Joe explains how it is hard work and that he wants to give people the best plans.",
       "label": "moral",
       "V_a": [0.52, 0.48, 0.51, ...]
     }
@@ -577,18 +583,18 @@ A machine-readable JSON file with one entry per scenario:
     "persona": "Explorer",
     "selected_action": "...",
     "selected_label": "moral",
-    "utility_scores": { "moral": 8.734, "immoral": 8.724 },
-    "top_driving_values": ["Self-direction: thought attained", "Stimulation attained"]
+    "utility_scores": { "moral": 0.621413, "immoral": 0.521705 },
+    "top_driving_values": ["Benevolence: caring attained", "Achievement attained"]
   },
   "person2": {
     "persona": "Guardian",
     "selected_action": "...",
-    "selected_label": "immoral",
-    "utility_scores": { "moral": 8.018, "immoral": 8.019 },
-    "top_driving_values": ["Conformity: rules attained", "Tradition attained"]
+    "selected_label": "moral",
+    "utility_scores": { "moral": 0.499946, "immoral": 0.206488 },
+    "top_driving_values": ["Benevolence: caring attained", "Achievement attained"]
   },
-  "decision_shifted": true,
-  "shift_magnitude": 0.0055
+  "decision_shifted": false,
+  "shift_magnitude": 0.196583
 }
 ```
 
@@ -619,7 +625,7 @@ claude  # Start Claude Code
 
 | Limitation | Impact | Mitigation |
 |:-----------|:-------|:-----------|
-| **Unfinetuned model** | Low shift rate (~8%) due to random classification head | Fine-tune with `python3 -m stage1_value_inference.train` |
+| **Linear utility function** | Cannot capture non-linear value interactions and complex trade-offs | Replace with learned utility network (MLP/attention) |
 | **Binary action choice** | Only moral vs. immoral; no multi-action scenarios | Integrate ValueActionLens (14,784 value-informed actions) |
 | **No cross-cultural variation** | Persona vectors are culture-agnostic | Add culture-specific persona modifiers from ValueActionLens |
 | **Static personas** | Personas don't adapt to context | Implement context-dependent persona weighting |
@@ -657,7 +663,7 @@ claude  # Start Claude Code
    - [HuggingFace](https://huggingface.co/roberta-large)
 
 6. **DeBERTa-v3**: He, P., Gao, J., & Chen, W. (2023). *DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with Gradient-Disentangled Embedding Sharing.* ICLR 2023.
-   - [HuggingFace](https://huggingface.co/microsoft/deberta-v3-large)
+  - [HuggingFace](https://huggingface.co/microsoft/deberta-v3-base)
 
 ---
 

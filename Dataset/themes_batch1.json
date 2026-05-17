@@ -1,0 +1,52 @@
+[
+  {
+    "theme_id": "TH001",
+    "theme": "resource allocation dilemmas",
+    "primary_higher_order": "Self-Transcendence",
+    "secondary_higher_order": "Conservation",
+    "potential_value_tensions": [
+      ["Benevolence", "Security"],
+      ["Universalism", "Conformity"]
+    ]
+  },
+  {
+    "theme_id": "TH002",
+    "theme": "adopting new workplace methods",
+    "primary_higher_order": "Openness to Change",
+    "secondary_higher_order": "Conservation",
+    "potential_value_tensions": [
+      ["Self-Direction", "Tradition"],
+      ["Stimulation", "Conformity"]
+    ]
+  },
+  {
+    "theme_id": "TH003",
+    "theme": "recognition for group achievements",
+    "primary_higher_order": "Self-Enhancement",
+    "secondary_higher_order": "Self-Transcendence",
+    "potential_value_tensions": [
+      ["Achievement", "Benevolence"],
+      ["Power", "Universalism"]
+    ]
+  },
+  {
+    "theme_id": "TH004",
+    "theme": "balancing personal enjoyment and obligations",
+    "primary_higher_order": "Openness to Change",
+    "secondary_higher_order": "Conservation",
+    "potential_value_tensions": [
+      ["Hedonism", "Conformity"],
+      ["Stimulation", "Tradition"]
+    ]
+  },
+  {
+    "theme_id": "TH005",
+    "theme": "leadership succession decisions",
+    "primary_higher_order": "Self-Enhancement",
+    "secondary_higher_order": "Conservation",
+    "potential_value_tensions": [
+      ["Power", "Tradition"],
+      ["Achievement", "Security"]
+    ]
+  }
+]

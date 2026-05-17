@@ -1,0 +1,1802 @@
+[
+  {
+    "vsw_id": "VSW_0000",
+    "profile_index": 0,
+    "binary_profile": "0000000000",
+    "active_values_count": 0,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0001",
+    "profile_index": 1,
+    "binary_profile": "0000000001",
+    "active_values_count": 1,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0003",
+    "profile_index": 3,
+    "binary_profile": "0000000011",
+    "active_values_count": 2,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0004",
+    "profile_index": 4,
+    "binary_profile": "0000000100",
+    "active_values_count": 1,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0007",
+    "profile_index": 7,
+    "binary_profile": "0000000111",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0010",
+    "profile_index": 10,
+    "binary_profile": "0000001010",
+    "active_values_count": 2,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0015",
+    "profile_index": 15,
+    "binary_profile": "0000001111",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0016",
+    "profile_index": 16,
+    "binary_profile": "0000010000",
+    "active_values_count": 1,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0024",
+    "profile_index": 24,
+    "binary_profile": "0000011000",
+    "active_values_count": 2,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0026",
+    "profile_index": 26,
+    "binary_profile": "0000011010",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0031",
+    "profile_index": 31,
+    "binary_profile": "0000011111",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0040",
+    "profile_index": 40,
+    "binary_profile": "0000101000",
+    "active_values_count": 2,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0050",
+    "profile_index": 50,
+    "binary_profile": "0000110010",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0058",
+    "profile_index": 58,
+    "binary_profile": "0000111010",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0063",
+    "profile_index": 63,
+    "binary_profile": "0000111111",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0064",
+    "profile_index": 64,
+    "binary_profile": "0001000000",
+    "active_values_count": 1,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0072",
+    "profile_index": 72,
+    "binary_profile": "0001001000",
+    "active_values_count": 2,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0076",
+    "profile_index": 76,
+    "binary_profile": "0001001100",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0101",
+    "profile_index": 101,
+    "binary_profile": "0001100101",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0110",
+    "profile_index": 110,
+    "binary_profile": "0001101110",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0112",
+    "profile_index": 112,
+    "binary_profile": "0001110000",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0127",
+    "profile_index": 127,
+    "binary_profile": "0001111111",
+    "active_values_count": 7,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0130",
+    "profile_index": 130,
+    "binary_profile": "0010000010",
+    "active_values_count": 2,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0146",
+    "profile_index": 146,
+    "binary_profile": "0010010010",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0147",
+    "profile_index": 147,
+    "binary_profile": "0010010011",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0173",
+    "profile_index": 173,
+    "binary_profile": "0010101101",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0178",
+    "profile_index": 178,
+    "binary_profile": "0010110010",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0192",
+    "profile_index": 192,
+    "binary_profile": "0011000000",
+    "active_values_count": 2,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0194",
+    "profile_index": 194,
+    "binary_profile": "0011000010",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0207",
+    "profile_index": 207,
+    "binary_profile": "0011001111",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0214",
+    "profile_index": 214,
+    "binary_profile": "0011010110",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0225",
+    "profile_index": 225,
+    "binary_profile": "0011100001",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0250",
+    "profile_index": 250,
+    "binary_profile": "0011111010",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0255",
+    "profile_index": 255,
+    "binary_profile": "0011111111",
+    "active_values_count": 8,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0256",
+    "profile_index": 256,
+    "binary_profile": "0100000000",
+    "active_values_count": 1,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0264",
+    "profile_index": 264,
+    "binary_profile": "0100001000",
+    "active_values_count": 2,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0266",
+    "profile_index": 266,
+    "binary_profile": "0100001010",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0271",
+    "profile_index": 271,
+    "binary_profile": "0100001111",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0282",
+    "profile_index": 282,
+    "binary_profile": "0100011010",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0292",
+    "profile_index": 292,
+    "binary_profile": "0100100100",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0316",
+    "profile_index": 316,
+    "binary_profile": "0100111100",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0325",
+    "profile_index": 325,
+    "binary_profile": "0101000101",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0359",
+    "profile_index": 359,
+    "binary_profile": "0101100111",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0361",
+    "profile_index": 361,
+    "binary_profile": "0101101001",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0379",
+    "profile_index": 379,
+    "binary_profile": "0101111011",
+    "active_values_count": 7,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0385",
+    "profile_index": 385,
+    "binary_profile": "0110000001",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0387",
+    "profile_index": 387,
+    "binary_profile": "0110000011",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0409",
+    "profile_index": 409,
+    "binary_profile": "0110011001",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0413",
+    "profile_index": 413,
+    "binary_profile": "0110011101",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0424",
+    "profile_index": 424,
+    "binary_profile": "0110101000",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0453",
+    "profile_index": 453,
+    "binary_profile": "0111000101",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0459",
+    "profile_index": 459,
+    "binary_profile": "0111001011",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0477",
+    "profile_index": 477,
+    "binary_profile": "0111011101",
+    "active_values_count": 7,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0490",
+    "profile_index": 490,
+    "binary_profile": "0111101010",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0509",
+    "profile_index": 509,
+    "binary_profile": "0111111101",
+    "active_values_count": 8,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0511",
+    "profile_index": 511,
+    "binary_profile": "0111111111",
+    "active_values_count": 9,
+    "profile": {
+      "Self-Direction": 0,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0513",
+    "profile_index": 513,
+    "binary_profile": "1000000001",
+    "active_values_count": 2,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0517",
+    "profile_index": 517,
+    "binary_profile": "1000000101",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0527",
+    "profile_index": 527,
+    "binary_profile": "1000001111",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0528",
+    "profile_index": 528,
+    "binary_profile": "1000010000",
+    "active_values_count": 2,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0533",
+    "profile_index": 533,
+    "binary_profile": "1000010101",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0545",
+    "profile_index": 545,
+    "binary_profile": "1000100001",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0564",
+    "profile_index": 564,
+    "binary_profile": "1000110100",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0572",
+    "profile_index": 572,
+    "binary_profile": "1000111100",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0575",
+    "profile_index": 575,
+    "binary_profile": "1000111111",
+    "active_values_count": 7,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0584",
+    "profile_index": 584,
+    "binary_profile": "1001001000",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0599",
+    "profile_index": 599,
+    "binary_profile": "1001010111",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0610",
+    "profile_index": 610,
+    "binary_profile": "1001100010",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0617",
+    "profile_index": 617,
+    "binary_profile": "1001101001",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0655",
+    "profile_index": 655,
+    "binary_profile": "1010001111",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0664",
+    "profile_index": 664,
+    "binary_profile": "1010011000",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0665",
+    "profile_index": 665,
+    "binary_profile": "1010011001",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0698",
+    "profile_index": 698,
+    "binary_profile": "1010111010",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0702",
+    "profile_index": 702,
+    "binary_profile": "1010111110",
+    "active_values_count": 7,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0704",
+    "profile_index": 704,
+    "binary_profile": "1011000000",
+    "active_values_count": 3,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0709",
+    "profile_index": 709,
+    "binary_profile": "1011000101",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0741",
+    "profile_index": 741,
+    "binary_profile": "1011100101",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0758",
+    "profile_index": 758,
+    "binary_profile": "1011110110",
+    "active_values_count": 7,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0765",
+    "profile_index": 765,
+    "binary_profile": "1011111101",
+    "active_values_count": 8,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 0,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0773",
+    "profile_index": 773,
+    "binary_profile": "1100000101",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0775",
+    "profile_index": 775,
+    "binary_profile": "1100000111",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0798",
+    "profile_index": 798,
+    "binary_profile": "1100011110",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0810",
+    "profile_index": 810,
+    "binary_profile": "1100101010",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0816",
+    "profile_index": 816,
+    "binary_profile": "1100110000",
+    "active_values_count": 4,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0845",
+    "profile_index": 845,
+    "binary_profile": "1101001101",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0852",
+    "profile_index": 852,
+    "binary_profile": "1101010100",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0859",
+    "profile_index": 859,
+    "binary_profile": "1101011011",
+    "active_values_count": 7,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0876",
+    "profile_index": 876,
+    "binary_profile": "1101101100",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0892",
+    "profile_index": 892,
+    "binary_profile": "1101111100",
+    "active_values_count": 7,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0893",
+    "profile_index": 893,
+    "binary_profile": "1101111101",
+    "active_values_count": 8,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 0,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0914",
+    "profile_index": 914,
+    "binary_profile": "1110010010",
+    "active_values_count": 5,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0922",
+    "profile_index": 922,
+    "binary_profile": "1110011010",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0950",
+    "profile_index": 950,
+    "binary_profile": "1110110110",
+    "active_values_count": 7,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_0959",
+    "profile_index": 959,
+    "binary_profile": "1110111111",
+    "active_values_count": 9,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 0,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0965",
+    "profile_index": 965,
+    "binary_profile": "1111000101",
+    "active_values_count": 6,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0975",
+    "profile_index": 975,
+    "binary_profile": "1111001111",
+    "active_values_count": 8,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_0986",
+    "profile_index": 986,
+    "binary_profile": "1111011010",
+    "active_values_count": 7,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 0,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 0,
+      "Benevolence": 1,
+      "Universalism": 0
+    }
+  },
+  {
+    "vsw_id": "VSW_1005",
+    "profile_index": 1005,
+    "binary_profile": "1111101101",
+    "active_values_count": 8,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 0,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 0,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_1015",
+    "profile_index": 1015,
+    "binary_profile": "1111110111",
+    "active_values_count": 9,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 0,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  },
+  {
+    "vsw_id": "VSW_1023",
+    "profile_index": 1023,
+    "binary_profile": "1111111111",
+    "active_values_count": 10,
+    "profile": {
+      "Self-Direction": 1,
+      "Stimulation": 1,
+      "Hedonism": 1,
+      "Achievement": 1,
+      "Power": 1,
+      "Security": 1,
+      "Conformity": 1,
+      "Tradition": 1,
+      "Benevolence": 1,
+      "Universalism": 1
+    }
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "vsw_id": "VSW_0194",
+    "description": [
+      "Self-Direction: LOW. The person does not prioritize personal autonomy or independence.",
+      "Stimulation: LOW. The person is not particularly interested in exploring new experiences or taking risks.",
+      "Hedonism: HIGH. The person highly values indulging in pleasurable activities.",
+      "Achievement: HIGH. The person prioritizes personal success or achievement.",
+      "Power: LOW. The person is not particularly interested in holding power or control over others.",
+      "Security: LOW. The person does not highly value stability and predictability.",
+      "Conformity: LOW. The person does not prioritize following rules and norms.",
+      "Tradition: LOW. The person is not particularly interested in preserving cultural heritage or tradition.",
+      "Benevolence: HIGH. The person values morality and doing what is right.",
+      "Universalism: LOW. The person does not value the well-being and rights of all individuals equally."
+    ]
+  },
+  {
+    "vsw_id": "VSW_0207",
+    "description": [
+      "Self-Direction: LOW. The person does not prioritize personal autonomy or independence.",
+      "Stimulation: LOW. The person is not particularly interested in exploring new experiences or taking risks.",
+      "Hedonism: HIGH. The person highly values indulging in pleasurable activities.",
+      "Achievement: HIGH. The person prioritizes personal success or achievement.",
+      "Power: LOW. The person is not particularly interested in holding power or control over others.",
+      "Security: LOW. The person does not highly value stability and predictability.",
+      "Conformity: HIGH. The person prioritizes following rules and norms.",
+      "Tradition: HIGH. The person is particularly interested in preserving cultural heritage or tradition.",
+      "Benevolence: HIGH. The person values morality and doing what is right.",
+      "Universalism: HIGH. The person values the well-being and rights of all individuals equally."
+    ]
+  },
+  {
+    "vsw_id": "VSW_0214",
+    "description": [
+      "Self-Direction: LOW. The person does not prioritize personal autonomy or independence.",
+      "Stimulation: LOW. The person is not particularly interested in exploring new experiences or taking risks.",
+      "Hedonism: HIGH. The person highly values indulging in pleasurable activities.",
+      "Achievement: HIGH. The person prioritizes personal success or achievement.",
+      "Power: LOW. The person is not particularly interested in holding power or control over others.",
+      "Security: HIGH. The person highly values stability and predictability.",
+      "Conformity: LOW. The person does not prioritize following rules and norms.",
+      "Tradition: HIGH. The person is particularly interested in preserving cultural heritage or tradition.",
+      "Benevolence: HIGH. The person values morality and doing what is right.",
+      "Universalism: LOW. The person does not value the well-being and rights of all individuals equally."
+    ]
+  },
+  {
+    "vsw_id": "VSW_0225",
+    "description": [
+      "Self-Direction: LOW. The person does not prioritize personal autonomy or independence.",
+      "Stimulation: LOW. The person is not particularly interested in exploring new experiences or taking risks.",
+      "Hedonism: HIGH. The person highly values indulging in pleasurable activities.",
+      "Achievement: HIGH. The person prioritizes personal success or achievement.",
+      "Power: HIGH. The person is particularly interested in holding power or control over others.",
+      "Security: LOW. The person does not highly value stability and predictability.",
+      "Conformity: LOW. The person does not prioritize following rules and norms.",
+      "Tradition: LOW. The person is not particularly interested in preserving cultural heritage or tradition.",
+      "Benevolence: LOW. The person does not value morality and doing what is right.",
+      "Universalism: HIGH. The person values the well-being and rights of all individuals equally."
+    ]
+  },
+  {
+    "vsw_id": "VSW_0250",
+    "description": [
+      "Self-Direction: LOW. The person does not prioritize personal autonomy or independence.",
+      "Stimulation: LOW. The person is not particularly interested in exploring new experiences or taking risks.",
+      "Hedonism: HIGH. The person highly values indulging in pleasurable activities.",
+      "Achievement: HIGH. The person prioritizes personal success or achievement.",
+      "Power: HIGH. The person is particularly interested in holding power or control over others.",
+      "Security: HIGH. The person highly values stability and predictability.",
+      "Conformity: HIGH. The person prioritizes following rules and norms.",
+      "Tradition: LOW. The person is not particularly interested in preserving cultural heritage or tradition.",
+      "Benevolence: HIGH. The person values morality and doing what is right.",
+      "Universalism: LOW. The person does not value the well-being and rights of all individuals equally."
+    ]
+  },
+  {
+    "vsw_id": "VSW_0255",
+    "description": [
+      "Self-Direction: LOW. The person does not prioritize personal autonomy or independence.",
+      "Stimulation: LOW. The person is not particularly interested in exploring new experiences or taking risks.",
+      "Hedonism: HIGH. The person highly values indulging in pleasurable activities.",
+      "Achievement: HIGH. The person prioritizes personal success or achievement.",
+      "Power: HIGH. The person is particularly interested in holding power or control over others.",
+      "Security: HIGH. The person highly values stability and predictability.",
+      "Conformity: HIGH. The person prioritizes following rules and norms.",
+      "Tradition: HIGH. The person is particularly interested in preserving cultural heritage or tradition.",
+      "Benevolence: HIGH. The person values morality and doing what is right.",
+      "Universalism: HIGH. The person values the well-being and rights of all individuals equally."
+    ]
+  },
+  {
+    "vsw_id": "VSW_0256",
+    "description": [
+      "Self-Direction: LOW. The person does not prioritize personal autonomy or independence.",
+      "Stimulation: HIGH. The person is particularly interested in exploring new experiences or taking risks.",
+      "Hedonism: LOW. The person does not highly value indulging in pleasurable activities.",
+      "Achievement: LOW. The person does not prioritize personal success or achievement.",
+      "Power: LOW. The person is not particularly interested in holding power or control over others.",
+      "Security: LOW. The person does not highly value stability and predictability.",
+      "Conformity: LOW. The person does not prioritize following rules and norms.",
+      "Tradition: LOW. The person is not particularly interested in preserving cultural heritage or tradition.",
+      "Benevolence: LOW. The person does not value morality and doing what is right.",
+      "Universalism: LOW. The person does not value the well-being and rights of all individuals equally."
+    ]
+  },
+  {
+    "vsw_id": "VSW_0264",
+    "description": [
+      "Self-Direction: LOW. The person does not prioritize personal autonomy or independence.",
+      "Stimulation: HIGH. The person is particularly interested in exploring new experiences or taking risks.",
+      "Hedonism: LOW. The person does not highly value indulging in pleasurable activities.",
+      "Achievement: LOW. The person does not prioritize personal success or achievement.",
+      "Power: LOW. The person is not particularly interested in holding power or control over others.",
+      "Security: LOW. The person does not highly value stability and predictability.",
+      "Conformity: HIGH. The person prioritizes following rules and norms.",
+      "Tradition: LOW. The person is not particularly interested in preserving cultural heritage or tradition.",
+      "Benevolence: LOW. The person does not value morality and doing what is right.",
+      "Universalism: LOW. The person does not value the well-being and rights of all individuals equally."
+    ]
+  },
+  {
+    "vsw_id": "VSW_0266",
+    "description": [
+      "Self-Direction: LOW. The person does not prioritize personal autonomy or independence.",
+      "Stimulation: HIGH. The person is particularly interested in exploring new experiences or taking risks.",
+      "Hedonism: LOW. The person does not highly value indulging in pleasurable activities.",
+      "Achievement: LOW. The person does not prioritize personal success or achievement.",
+      "Power: LOW. The person is not particularly interested in holding power or control over others.",
+      "Security: LOW. The person does not highly value stability and predictability.",
+      "Conformity: HIGH. The person prioritizes following rules and norms.",
+      "Tradition: LOW. The person is not particularly interested in preserving cultural heritage or tradition.",
+      "Benevolence: HIGH. The person values morality and doing what is right.",
+      "Universalism: LOW. The person does not value the well-being and rights of all individuals equally."
+    ]
+  }
+]

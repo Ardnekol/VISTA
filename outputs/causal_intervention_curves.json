@@ -1,0 +1,6152 @@
+[
+  {
+    "scenario_id": 3523,
+    "intervened_dimension": "Conformity: rules (attained)",
+    "initial_decision": "immoral",
+    "flip_point_found": true,
+    "flip_threshold": 0.01,
+    "sweep_data": [
+      {
+        "intervened_value": 0.0,
+        "u_moral": 0.846943199634552,
+        "u_immoral": 0.8469452261924744,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.01,
+        "u_moral": 0.8470681309700012,
+        "u_immoral": 0.8469868302345276,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.02,
+        "u_moral": 0.84719318151474,
+        "u_immoral": 0.8470283150672913,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.03,
+        "u_moral": 0.8473181128501892,
+        "u_immoral": 0.8470699191093445,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.04,
+        "u_moral": 0.8474430441856384,
+        "u_immoral": 0.8471114039421082,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.05,
+        "u_moral": 0.8475680947303772,
+        "u_immoral": 0.8471528887748718,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.06,
+        "u_moral": 0.8476930260658264,
+        "u_immoral": 0.847194492816925,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.07,
+        "u_moral": 0.8478180766105652,
+        "u_immoral": 0.8472359776496887,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.08,
+        "u_moral": 0.8479430079460144,
+        "u_immoral": 0.8472775816917419,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.09,
+        "u_moral": 0.8480679392814636,
+        "u_immoral": 0.8473190665245056,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.1,
+        "u_moral": 0.8481929898262024,
+        "u_immoral": 0.8473606705665588,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.11,
+        "u_moral": 0.8483179211616516,
+        "u_immoral": 0.8474021553993225,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.12,
+        "u_moral": 0.8484429717063904,
+        "u_immoral": 0.8474437594413757,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.13,
+        "u_moral": 0.8485679030418396,
+        "u_immoral": 0.8474852442741394,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.14,
+        "u_moral": 0.8486928343772888,
+        "u_immoral": 0.8475267291069031,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.15,
+        "u_moral": 0.8488178849220276,
+        "u_immoral": 0.8475683331489563,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.16,
+        "u_moral": 0.8489428162574768,
+        "u_immoral": 0.84760981798172,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.17,
+        "u_moral": 0.8490678668022156,
+        "u_immoral": 0.8476514220237732,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.18,
+        "u_moral": 0.8491927981376648,
+        "u_immoral": 0.8476929068565369,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.19,
+        "u_moral": 0.849317729473114,
+        "u_immoral": 0.8477343916893005,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.2,
+        "u_moral": 0.8494427800178528,
+        "u_immoral": 0.8477759957313538,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.21,
+        "u_moral": 0.849567711353302,
+        "u_immoral": 0.8478174805641174,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.22,
+        "u_moral": 0.8496926426887512,
+        "u_immoral": 0.8478590846061707,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.23,
+        "u_moral": 0.84981769323349,
+        "u_immoral": 0.8479005694389343,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.24,
+        "u_moral": 0.8499426245689392,
+        "u_immoral": 0.847942054271698,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.25,
+        "u_moral": 0.850067675113678,
+        "u_immoral": 0.8479836583137512,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.26,
+        "u_moral": 0.8501926064491272,
+        "u_immoral": 0.8480251431465149,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.27,
+        "u_moral": 0.8503175377845764,
+        "u_immoral": 0.8480667471885681,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.28,
+        "u_moral": 0.8504425883293152,
+        "u_immoral": 0.8481082320213318,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.29,
+        "u_moral": 0.8505675196647644,
+        "u_immoral": 0.848149836063385,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.3,
+        "u_moral": 0.8506925702095032,
+        "u_immoral": 0.8481913208961487,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.31,
+        "u_moral": 0.8508175015449524,
+        "u_immoral": 0.8482328057289124,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.32,
+        "u_moral": 0.8509424328804016,
+        "u_immoral": 0.8482744097709656,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.33,
+        "u_moral": 0.8510674834251404,
+        "u_immoral": 0.8483158946037292,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.34,
+        "u_moral": 0.8511924147605896,
+        "u_immoral": 0.8483574986457825,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.35000000000000003,
+        "u_moral": 0.8513173460960388,
+        "u_immoral": 0.8483989834785461,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.36,
+        "u_moral": 0.8514423966407776,
+        "u_immoral": 0.8484404683113098,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.37,
+        "u_moral": 0.8515673279762268,
+        "u_immoral": 0.848482072353363,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.38,
+        "u_moral": 0.8516923785209656,
+        "u_immoral": 0.8485235571861267,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.39,
+        "u_moral": 0.8518173098564148,
+        "u_immoral": 0.8485651612281799,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.4,
+        "u_moral": 0.851942241191864,
+        "u_immoral": 0.8486066460609436,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.41000000000000003,
+        "u_moral": 0.8520672917366028,
+        "u_immoral": 0.8486481308937073,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.42,
+        "u_moral": 0.852192223072052,
+        "u_immoral": 0.8486897349357605,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.43,
+        "u_moral": 0.8523172736167908,
+        "u_immoral": 0.8487312197685242,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.44,
+        "u_moral": 0.85244220495224,
+        "u_immoral": 0.8487728238105774,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.45,
+        "u_moral": 0.8525671362876892,
+        "u_immoral": 0.8488143086433411,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.46,
+        "u_moral": 0.852692186832428,
+        "u_immoral": 0.8488559126853943,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.47000000000000003,
+        "u_moral": 0.8528171181678772,
+        "u_immoral": 0.848897397518158,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.48,
+        "u_moral": 0.852942168712616,
+        "u_immoral": 0.8489388823509216,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.49,
+        "u_moral": 0.8530671000480652,
+        "u_immoral": 0.8489804863929749,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5,
+        "u_moral": 0.8531920313835144,
+        "u_immoral": 0.8490219712257385,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.51,
+        "u_moral": 0.8533170819282532,
+        "u_immoral": 0.8490635752677917,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.52,
+        "u_moral": 0.8534420132637024,
+        "u_immoral": 0.8491050601005554,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.53,
+        "u_moral": 0.8535669445991516,
+        "u_immoral": 0.8491465449333191,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.54,
+        "u_moral": 0.8536919951438904,
+        "u_immoral": 0.8491881489753723,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.55,
+        "u_moral": 0.8538169264793396,
+        "u_immoral": 0.849229633808136,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.56,
+        "u_moral": 0.8539419770240784,
+        "u_immoral": 0.8492712378501892,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5700000000000001,
+        "u_moral": 0.8540669083595276,
+        "u_immoral": 0.8493127226829529,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.58,
+        "u_moral": 0.8541918396949768,
+        "u_immoral": 0.8493543267250061,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.59,
+        "u_moral": 0.8543168902397156,
+        "u_immoral": 0.8493958115577698,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6,
+        "u_moral": 0.8544418215751648,
+        "u_immoral": 0.8494372963905334,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.61,
+        "u_moral": 0.8545668721199036,
+        "u_immoral": 0.8494789004325867,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.62,
+        "u_moral": 0.8546918034553528,
+        "u_immoral": 0.8495203852653503,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.63,
+        "u_moral": 0.854816734790802,
+        "u_immoral": 0.8495619893074036,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.64,
+        "u_moral": 0.8549417853355408,
+        "u_immoral": 0.8496034741401672,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.65,
+        "u_moral": 0.85506671667099,
+        "u_immoral": 0.8496449589729309,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.66,
+        "u_moral": 0.8551916480064392,
+        "u_immoral": 0.8496865630149841,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.67,
+        "u_moral": 0.855316698551178,
+        "u_immoral": 0.8497280478477478,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.68,
+        "u_moral": 0.8554416298866272,
+        "u_immoral": 0.849769651889801,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6900000000000001,
+        "u_moral": 0.855566680431366,
+        "u_immoral": 0.8498111367225647,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.7000000000000001,
+        "u_moral": 0.8556916117668152,
+        "u_immoral": 0.8498526215553284,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.71,
+        "u_moral": 0.8558165431022644,
+        "u_immoral": 0.8498942255973816,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.72,
+        "u_moral": 0.8559415936470032,
+        "u_immoral": 0.8499357104301453,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.73,
+        "u_moral": 0.8560665249824524,
+        "u_immoral": 0.8499773144721985,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.74,
+        "u_moral": 0.8561915755271912,
+        "u_immoral": 0.8500187993049622,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.75,
+        "u_moral": 0.8563165068626404,
+        "u_immoral": 0.8500604033470154,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.76,
+        "u_moral": 0.8564414381980896,
+        "u_immoral": 0.850101888179779,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.77,
+        "u_moral": 0.8565664887428284,
+        "u_immoral": 0.8501433730125427,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.78,
+        "u_moral": 0.8566914200782776,
+        "u_immoral": 0.850184977054596,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.79,
+        "u_moral": 0.8568164706230164,
+        "u_immoral": 0.8502264618873596,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8,
+        "u_moral": 0.8569414019584656,
+        "u_immoral": 0.8502680659294128,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.81,
+        "u_moral": 0.8570663332939148,
+        "u_immoral": 0.8503095507621765,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8200000000000001,
+        "u_moral": 0.8571913838386536,
+        "u_immoral": 0.8503510355949402,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8300000000000001,
+        "u_moral": 0.8573163151741028,
+        "u_immoral": 0.8503926396369934,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.84,
+        "u_moral": 0.857441246509552,
+        "u_immoral": 0.8504341244697571,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.85,
+        "u_moral": 0.8575662970542908,
+        "u_immoral": 0.8504757285118103,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.86,
+        "u_moral": 0.85769122838974,
+        "u_immoral": 0.850517213344574,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.87,
+        "u_moral": 0.8578162789344788,
+        "u_immoral": 0.8505586981773376,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.88,
+        "u_moral": 0.857941210269928,
+        "u_immoral": 0.8506003022193909,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.89,
+        "u_moral": 0.8580661416053772,
+        "u_immoral": 0.8506417870521545,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9,
+        "u_moral": 0.858191192150116,
+        "u_immoral": 0.8506833910942078,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.91,
+        "u_moral": 0.8583161234855652,
+        "u_immoral": 0.8507248759269714,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.92,
+        "u_moral": 0.858441174030304,
+        "u_immoral": 0.8507664799690247,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.93,
+        "u_moral": 0.8585661053657532,
+        "u_immoral": 0.8508079648017883,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9400000000000001,
+        "u_moral": 0.8586910367012024,
+        "u_immoral": 0.850849449634552,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9500000000000001,
+        "u_moral": 0.8588160872459412,
+        "u_immoral": 0.8508910536766052,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.96,
+        "u_moral": 0.8589410185813904,
+        "u_immoral": 0.8509325385093689,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.97,
+        "u_moral": 0.8590660691261292,
+        "u_immoral": 0.8509741425514221,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.98,
+        "u_moral": 0.8591910004615784,
+        "u_immoral": 0.8510156273841858,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.99,
+        "u_moral": 0.8593159317970276,
+        "u_immoral": 0.8510571122169495,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 1.0,
+        "u_moral": 0.8594409823417664,
+        "u_immoral": 0.8510987162590027,
+        "decision": "moral"
+      }
+    ]
+  },
+  {
+    "scenario_id": 7553,
+    "intervened_dimension": "Conformity: rules (attained)",
+    "initial_decision": "immoral",
+    "flip_point_found": false,
+    "flip_threshold": null,
+    "sweep_data": [
+      {
+        "intervened_value": 0.0,
+        "u_moral": 0.5499919056892395,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.01,
+        "u_moral": 0.5499919056892395,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.02,
+        "u_moral": 0.5499919056892395,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.03,
+        "u_moral": 0.5499919056892395,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.04,
+        "u_moral": 0.5499919056892395,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.05,
+        "u_moral": 0.5499919056892395,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.06,
+        "u_moral": 0.5499919056892395,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.07,
+        "u_moral": 0.5499919056892395,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.08,
+        "u_moral": 0.5499919056892395,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.09,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.1,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.11,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.12,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.13,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.14,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.15,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.16,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.17,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.18,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.19,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.2,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.21,
+        "u_moral": 0.5499919652938843,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.22,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.23,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.24,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.25,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.26,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.27,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.28,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.29,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.3,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.31,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.32,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.33,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.34,
+        "u_moral": 0.549992024898529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.35000000000000003,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.36,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.37,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.38,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.39,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.4,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.41000000000000003,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.42,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.43,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.44,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.45,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.46,
+        "u_moral": 0.5499920845031738,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.47000000000000003,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.48,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.49,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.5,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.51,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.52,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.53,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.54,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.55,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.56,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.5700000000000001,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.58,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.59,
+        "u_moral": 0.5499921441078186,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.6,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.61,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.62,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.63,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.64,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.65,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.66,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.67,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.68,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.6900000000000001,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.7000000000000001,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.71,
+        "u_moral": 0.5499922037124634,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.72,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.73,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.74,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.75,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.76,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.77,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.78,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.79,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.81,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8200000000000001,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8300000000000001,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.84,
+        "u_moral": 0.5499922633171082,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.85,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.86,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.87,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.88,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.89,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.91,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.92,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.93,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9400000000000001,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9500000000000001,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.96,
+        "u_moral": 0.5499923229217529,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.97,
+        "u_moral": 0.5499923825263977,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.98,
+        "u_moral": 0.5499923825263977,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.99,
+        "u_moral": 0.5499923825263977,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 1.0,
+        "u_moral": 0.5499923825263977,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      }
+    ]
+  },
+  {
+    "scenario_id": 8436,
+    "intervened_dimension": "Conformity: rules (attained)",
+    "initial_decision": "moral",
+    "flip_point_found": false,
+    "flip_threshold": null,
+    "sweep_data": [
+      {
+        "intervened_value": 0.0,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.01,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.02,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.03,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.04,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.05,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.06,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.07,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.08,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.09,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.1,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.11,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.800011932849884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.12,
+        "u_moral": 0.8000203371047974,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.13,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.14,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.15,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.16,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.17,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.18,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.19,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.2,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.21,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.22,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.23,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.24,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.25,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.26,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.27,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.28,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.29,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.3,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.31,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.32,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.33,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000119924545288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.34,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.35000000000000003,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.36,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.37,
+        "u_moral": 0.8000203967094421,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.38,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.39,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.4,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.41000000000000003,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.42,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.43,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.44,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.45,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.46,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.47000000000000003,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.48,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.49,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.51,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.52,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.53,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.54,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.55,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.56,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000120520591736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5700000000000001,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.58,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.59,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.61,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.62,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.63,
+        "u_moral": 0.8000204563140869,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.64,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.65,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.66,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.67,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.68,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6900000000000001,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.7000000000000001,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.71,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.72,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.73,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.74,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.75,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.76,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.77,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.78,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121116638184,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.79,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.81,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8200000000000001,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8300000000000001,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.84,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.85,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.86,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.87,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.88,
+        "u_moral": 0.8000205159187317,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.89,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.91,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.92,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.93,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9400000000000001,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9500000000000001,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.96,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.97,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.98,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.99,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 1.0,
+        "u_moral": 0.8000205755233765,
+        "u_immoral": 0.8000121712684631,
+        "decision": "moral"
+      }
+    ]
+  },
+  {
+    "scenario_id": 9887,
+    "intervened_dimension": "Conformity: rules (attained)",
+    "initial_decision": "immoral",
+    "flip_point_found": false,
+    "flip_threshold": null,
+    "sweep_data": [
+      {
+        "intervened_value": 0.0,
+        "u_moral": 0.5997029542922974,
+        "u_immoral": 0.5997105836868286,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.01,
+        "u_moral": 0.5997030138969421,
+        "u_immoral": 0.5997105836868286,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.02,
+        "u_moral": 0.5997030138969421,
+        "u_immoral": 0.5997106432914734,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.03,
+        "u_moral": 0.5997030735015869,
+        "u_immoral": 0.5997107028961182,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.04,
+        "u_moral": 0.5997030735015869,
+        "u_immoral": 0.5997107028961182,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.05,
+        "u_moral": 0.5997030735015869,
+        "u_immoral": 0.5997107625007629,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.06,
+        "u_moral": 0.5997031331062317,
+        "u_immoral": 0.5997107625007629,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.07,
+        "u_moral": 0.5997031331062317,
+        "u_immoral": 0.5997108221054077,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.08,
+        "u_moral": 0.5997031927108765,
+        "u_immoral": 0.5997108817100525,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.09,
+        "u_moral": 0.5997031927108765,
+        "u_immoral": 0.5997108817100525,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.1,
+        "u_moral": 0.5997032523155212,
+        "u_immoral": 0.5997109413146973,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.11,
+        "u_moral": 0.5997032523155212,
+        "u_immoral": 0.5997109413146973,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.12,
+        "u_moral": 0.599703311920166,
+        "u_immoral": 0.599711000919342,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.13,
+        "u_moral": 0.599703311920166,
+        "u_immoral": 0.599711000919342,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.14,
+        "u_moral": 0.5997033715248108,
+        "u_immoral": 0.5997110605239868,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.15,
+        "u_moral": 0.5997033715248108,
+        "u_immoral": 0.5997111201286316,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.16,
+        "u_moral": 0.5997033715248108,
+        "u_immoral": 0.5997111201286316,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.17,
+        "u_moral": 0.5997034311294556,
+        "u_immoral": 0.5997111797332764,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.18,
+        "u_moral": 0.5997034311294556,
+        "u_immoral": 0.5997111797332764,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.19,
+        "u_moral": 0.5997034907341003,
+        "u_immoral": 0.5997112393379211,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.2,
+        "u_moral": 0.5997034907341003,
+        "u_immoral": 0.5997112393379211,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.21,
+        "u_moral": 0.5997035503387451,
+        "u_immoral": 0.5997112989425659,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.22,
+        "u_moral": 0.5997035503387451,
+        "u_immoral": 0.5997113585472107,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.23,
+        "u_moral": 0.5997036099433899,
+        "u_immoral": 0.5997113585472107,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.24,
+        "u_moral": 0.5997036099433899,
+        "u_immoral": 0.5997114181518555,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.25,
+        "u_moral": 0.5997036099433899,
+        "u_immoral": 0.5997114181518555,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.26,
+        "u_moral": 0.5997036695480347,
+        "u_immoral": 0.5997114777565002,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.27,
+        "u_moral": 0.5997036695480347,
+        "u_immoral": 0.5997114777565002,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.28,
+        "u_moral": 0.5997037291526794,
+        "u_immoral": 0.599711537361145,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.29,
+        "u_moral": 0.5997037291526794,
+        "u_immoral": 0.5997115969657898,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.3,
+        "u_moral": 0.5997037887573242,
+        "u_immoral": 0.5997115969657898,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.31,
+        "u_moral": 0.5997037887573242,
+        "u_immoral": 0.5997116565704346,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.32,
+        "u_moral": 0.599703848361969,
+        "u_immoral": 0.5997116565704346,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.33,
+        "u_moral": 0.599703848361969,
+        "u_immoral": 0.5997117161750793,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.34,
+        "u_moral": 0.599703848361969,
+        "u_immoral": 0.5997117161750793,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.35000000000000003,
+        "u_moral": 0.5997039079666138,
+        "u_immoral": 0.5997117757797241,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.36,
+        "u_moral": 0.5997039079666138,
+        "u_immoral": 0.5997118353843689,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.37,
+        "u_moral": 0.5997039675712585,
+        "u_immoral": 0.5997118353843689,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.38,
+        "u_moral": 0.5997039675712585,
+        "u_immoral": 0.5997118949890137,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.39,
+        "u_moral": 0.5997040271759033,
+        "u_immoral": 0.5997118949890137,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.4,
+        "u_moral": 0.5997040271759033,
+        "u_immoral": 0.5997119545936584,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.41000000000000003,
+        "u_moral": 0.5997040867805481,
+        "u_immoral": 0.5997119545936584,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.42,
+        "u_moral": 0.5997040867805481,
+        "u_immoral": 0.5997120141983032,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.43,
+        "u_moral": 0.5997041463851929,
+        "u_immoral": 0.599712073802948,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.44,
+        "u_moral": 0.5997041463851929,
+        "u_immoral": 0.599712073802948,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.45,
+        "u_moral": 0.5997041463851929,
+        "u_immoral": 0.5997121334075928,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.46,
+        "u_moral": 0.5997042059898376,
+        "u_immoral": 0.5997121334075928,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.47000000000000003,
+        "u_moral": 0.5997042059898376,
+        "u_immoral": 0.5997121930122375,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.48,
+        "u_moral": 0.5997042655944824,
+        "u_immoral": 0.5997121930122375,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.49,
+        "u_moral": 0.5997042655944824,
+        "u_immoral": 0.5997122526168823,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.5,
+        "u_moral": 0.5997043251991272,
+        "u_immoral": 0.5997123122215271,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.51,
+        "u_moral": 0.5997043251991272,
+        "u_immoral": 0.5997123122215271,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.52,
+        "u_moral": 0.599704384803772,
+        "u_immoral": 0.5997123718261719,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.53,
+        "u_moral": 0.599704384803772,
+        "u_immoral": 0.5997123718261719,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.54,
+        "u_moral": 0.599704384803772,
+        "u_immoral": 0.5997124314308167,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.55,
+        "u_moral": 0.5997044444084167,
+        "u_immoral": 0.5997124314308167,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.56,
+        "u_moral": 0.5997044444084167,
+        "u_immoral": 0.5997124910354614,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.5700000000000001,
+        "u_moral": 0.5997045040130615,
+        "u_immoral": 0.5997125506401062,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.58,
+        "u_moral": 0.5997045040130615,
+        "u_immoral": 0.5997125506401062,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.59,
+        "u_moral": 0.5997045636177063,
+        "u_immoral": 0.599712610244751,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.6,
+        "u_moral": 0.5997045636177063,
+        "u_immoral": 0.599712610244751,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.61,
+        "u_moral": 0.5997046232223511,
+        "u_immoral": 0.5997126698493958,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.62,
+        "u_moral": 0.5997046232223511,
+        "u_immoral": 0.5997126698493958,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.63,
+        "u_moral": 0.5997046232223511,
+        "u_immoral": 0.5997127294540405,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.64,
+        "u_moral": 0.5997046828269958,
+        "u_immoral": 0.5997127890586853,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.65,
+        "u_moral": 0.5997046828269958,
+        "u_immoral": 0.5997127890586853,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.66,
+        "u_moral": 0.5997047424316406,
+        "u_immoral": 0.5997128486633301,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.67,
+        "u_moral": 0.5997047424316406,
+        "u_immoral": 0.5997128486633301,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.68,
+        "u_moral": 0.5997048020362854,
+        "u_immoral": 0.5997129082679749,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.6900000000000001,
+        "u_moral": 0.5997048020362854,
+        "u_immoral": 0.5997129082679749,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.7000000000000001,
+        "u_moral": 0.5997048616409302,
+        "u_immoral": 0.5997129678726196,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.71,
+        "u_moral": 0.5997048616409302,
+        "u_immoral": 0.5997130274772644,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.72,
+        "u_moral": 0.5997048616409302,
+        "u_immoral": 0.5997130274772644,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.73,
+        "u_moral": 0.599704921245575,
+        "u_immoral": 0.5997130870819092,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.74,
+        "u_moral": 0.599704921245575,
+        "u_immoral": 0.5997130870819092,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.75,
+        "u_moral": 0.5997049808502197,
+        "u_immoral": 0.599713146686554,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.76,
+        "u_moral": 0.5997049808502197,
+        "u_immoral": 0.599713146686554,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.77,
+        "u_moral": 0.5997050404548645,
+        "u_immoral": 0.5997132062911987,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.78,
+        "u_moral": 0.5997050404548645,
+        "u_immoral": 0.5997132658958435,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.79,
+        "u_moral": 0.5997051000595093,
+        "u_immoral": 0.5997132658958435,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8,
+        "u_moral": 0.5997051000595093,
+        "u_immoral": 0.5997133255004883,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.81,
+        "u_moral": 0.599705159664154,
+        "u_immoral": 0.5997133255004883,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8200000000000001,
+        "u_moral": 0.599705159664154,
+        "u_immoral": 0.5997133851051331,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8300000000000001,
+        "u_moral": 0.599705159664154,
+        "u_immoral": 0.5997133851051331,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.84,
+        "u_moral": 0.5997052192687988,
+        "u_immoral": 0.5997134447097778,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.85,
+        "u_moral": 0.5997052192687988,
+        "u_immoral": 0.5997135043144226,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.86,
+        "u_moral": 0.5997052788734436,
+        "u_immoral": 0.5997135043144226,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.87,
+        "u_moral": 0.5997052788734436,
+        "u_immoral": 0.5997135639190674,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.88,
+        "u_moral": 0.5997053384780884,
+        "u_immoral": 0.5997135639190674,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.89,
+        "u_moral": 0.5997053384780884,
+        "u_immoral": 0.5997136235237122,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9,
+        "u_moral": 0.5997053980827332,
+        "u_immoral": 0.5997136831283569,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.91,
+        "u_moral": 0.5997053980827332,
+        "u_immoral": 0.5997136831283569,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.92,
+        "u_moral": 0.5997053980827332,
+        "u_immoral": 0.5997137427330017,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.93,
+        "u_moral": 0.5997054576873779,
+        "u_immoral": 0.5997137427330017,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9400000000000001,
+        "u_moral": 0.5997054576873779,
+        "u_immoral": 0.5997138023376465,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9500000000000001,
+        "u_moral": 0.5997055172920227,
+        "u_immoral": 0.5997138023376465,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.96,
+        "u_moral": 0.5997055172920227,
+        "u_immoral": 0.5997138619422913,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.97,
+        "u_moral": 0.5997055768966675,
+        "u_immoral": 0.599713921546936,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.98,
+        "u_moral": 0.5997055768966675,
+        "u_immoral": 0.599713921546936,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.99,
+        "u_moral": 0.5997056365013123,
+        "u_immoral": 0.5997139811515808,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 1.0,
+        "u_moral": 0.5997056365013123,
+        "u_immoral": 0.5997139811515808,
+        "decision": "immoral"
+      }
+    ]
+  },
+  {
+    "scenario_id": 1814,
+    "intervened_dimension": "Conformity: rules (attained)",
+    "initial_decision": "immoral",
+    "flip_point_found": false,
+    "flip_threshold": null,
+    "sweep_data": [
+      {
+        "intervened_value": 0.0,
+        "u_moral": 0.5499870181083679,
+        "u_immoral": 0.5499957203865051,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.01,
+        "u_moral": 0.5499870181083679,
+        "u_immoral": 0.5499957799911499,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.02,
+        "u_moral": 0.5499870777130127,
+        "u_immoral": 0.5499957799911499,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.03,
+        "u_moral": 0.5499871373176575,
+        "u_immoral": 0.5499957799911499,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.04,
+        "u_moral": 0.5499871373176575,
+        "u_immoral": 0.5499957799911499,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.05,
+        "u_moral": 0.5499871969223022,
+        "u_immoral": 0.5499958395957947,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.06,
+        "u_moral": 0.5499871969223022,
+        "u_immoral": 0.5499958395957947,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.07,
+        "u_moral": 0.549987256526947,
+        "u_immoral": 0.5499958395957947,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.08,
+        "u_moral": 0.549987256526947,
+        "u_immoral": 0.5499958395957947,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.09,
+        "u_moral": 0.5499873161315918,
+        "u_immoral": 0.5499958395957947,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.1,
+        "u_moral": 0.5499873161315918,
+        "u_immoral": 0.5499958992004395,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.11,
+        "u_moral": 0.5499873757362366,
+        "u_immoral": 0.5499958992004395,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.12,
+        "u_moral": 0.5499874353408813,
+        "u_immoral": 0.5499958992004395,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.13,
+        "u_moral": 0.5499874353408813,
+        "u_immoral": 0.5499958992004395,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.14,
+        "u_moral": 0.5499874949455261,
+        "u_immoral": 0.5499958992004395,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.15,
+        "u_moral": 0.5499874949455261,
+        "u_immoral": 0.5499959588050842,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.16,
+        "u_moral": 0.5499875545501709,
+        "u_immoral": 0.5499959588050842,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.17,
+        "u_moral": 0.5499875545501709,
+        "u_immoral": 0.5499959588050842,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.18,
+        "u_moral": 0.5499876141548157,
+        "u_immoral": 0.5499959588050842,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.19,
+        "u_moral": 0.5499876737594604,
+        "u_immoral": 0.549996018409729,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.2,
+        "u_moral": 0.5499876737594604,
+        "u_immoral": 0.549996018409729,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.21,
+        "u_moral": 0.5499877333641052,
+        "u_immoral": 0.549996018409729,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.22,
+        "u_moral": 0.5499877333641052,
+        "u_immoral": 0.549996018409729,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.23,
+        "u_moral": 0.54998779296875,
+        "u_immoral": 0.549996018409729,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.24,
+        "u_moral": 0.54998779296875,
+        "u_immoral": 0.5499960780143738,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.25,
+        "u_moral": 0.5499878525733948,
+        "u_immoral": 0.5499960780143738,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.26,
+        "u_moral": 0.5499878525733948,
+        "u_immoral": 0.5499960780143738,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.27,
+        "u_moral": 0.5499879121780396,
+        "u_immoral": 0.5499960780143738,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.28,
+        "u_moral": 0.5499879717826843,
+        "u_immoral": 0.5499960780143738,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.29,
+        "u_moral": 0.5499879717826843,
+        "u_immoral": 0.5499961376190186,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.3,
+        "u_moral": 0.5499880313873291,
+        "u_immoral": 0.5499961376190186,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.31,
+        "u_moral": 0.5499880313873291,
+        "u_immoral": 0.5499961376190186,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.32,
+        "u_moral": 0.5499880909919739,
+        "u_immoral": 0.5499961376190186,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.33,
+        "u_moral": 0.5499880909919739,
+        "u_immoral": 0.5499961972236633,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.34,
+        "u_moral": 0.5499881505966187,
+        "u_immoral": 0.5499961972236633,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.35000000000000003,
+        "u_moral": 0.5499882102012634,
+        "u_immoral": 0.5499961972236633,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.36,
+        "u_moral": 0.5499882102012634,
+        "u_immoral": 0.5499961972236633,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.37,
+        "u_moral": 0.5499882698059082,
+        "u_immoral": 0.5499961972236633,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.38,
+        "u_moral": 0.5499882698059082,
+        "u_immoral": 0.5499962568283081,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.39,
+        "u_moral": 0.549988329410553,
+        "u_immoral": 0.5499962568283081,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.4,
+        "u_moral": 0.549988329410553,
+        "u_immoral": 0.5499962568283081,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.41000000000000003,
+        "u_moral": 0.5499883890151978,
+        "u_immoral": 0.5499962568283081,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.42,
+        "u_moral": 0.5499883890151978,
+        "u_immoral": 0.5499962568283081,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.43,
+        "u_moral": 0.5499884486198425,
+        "u_immoral": 0.5499963164329529,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.44,
+        "u_moral": 0.5499885082244873,
+        "u_immoral": 0.5499963164329529,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.45,
+        "u_moral": 0.5499885082244873,
+        "u_immoral": 0.5499963164329529,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.46,
+        "u_moral": 0.5499885678291321,
+        "u_immoral": 0.5499963164329529,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.47000000000000003,
+        "u_moral": 0.5499885678291321,
+        "u_immoral": 0.5499963164329529,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.48,
+        "u_moral": 0.5499886274337769,
+        "u_immoral": 0.5499963760375977,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.49,
+        "u_moral": 0.5499886274337769,
+        "u_immoral": 0.5499963760375977,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.5,
+        "u_moral": 0.5499886870384216,
+        "u_immoral": 0.5499963760375977,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.51,
+        "u_moral": 0.5499886870384216,
+        "u_immoral": 0.5499963760375977,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.52,
+        "u_moral": 0.5499887466430664,
+        "u_immoral": 0.5499964356422424,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.53,
+        "u_moral": 0.5499888062477112,
+        "u_immoral": 0.5499964356422424,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.54,
+        "u_moral": 0.5499888062477112,
+        "u_immoral": 0.5499964356422424,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.55,
+        "u_moral": 0.549988865852356,
+        "u_immoral": 0.5499964356422424,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.56,
+        "u_moral": 0.549988865852356,
+        "u_immoral": 0.5499964356422424,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.5700000000000001,
+        "u_moral": 0.5499889254570007,
+        "u_immoral": 0.5499964952468872,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.58,
+        "u_moral": 0.5499889254570007,
+        "u_immoral": 0.5499964952468872,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.59,
+        "u_moral": 0.5499889850616455,
+        "u_immoral": 0.5499964952468872,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.6,
+        "u_moral": 0.5499890446662903,
+        "u_immoral": 0.5499964952468872,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.61,
+        "u_moral": 0.5499890446662903,
+        "u_immoral": 0.5499964952468872,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.62,
+        "u_moral": 0.5499891042709351,
+        "u_immoral": 0.549996554851532,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.63,
+        "u_moral": 0.5499891042709351,
+        "u_immoral": 0.549996554851532,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.64,
+        "u_moral": 0.5499891638755798,
+        "u_immoral": 0.549996554851532,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.65,
+        "u_moral": 0.5499891638755798,
+        "u_immoral": 0.549996554851532,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.66,
+        "u_moral": 0.5499892234802246,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.67,
+        "u_moral": 0.5499892234802246,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.68,
+        "u_moral": 0.5499892830848694,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.6900000000000001,
+        "u_moral": 0.5499893426895142,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.7000000000000001,
+        "u_moral": 0.5499893426895142,
+        "u_immoral": 0.5499966144561768,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.71,
+        "u_moral": 0.5499894022941589,
+        "u_immoral": 0.5499966740608215,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.72,
+        "u_moral": 0.5499894022941589,
+        "u_immoral": 0.5499966740608215,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.73,
+        "u_moral": 0.5499894618988037,
+        "u_immoral": 0.5499966740608215,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.74,
+        "u_moral": 0.5499894618988037,
+        "u_immoral": 0.5499966740608215,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.75,
+        "u_moral": 0.5499895215034485,
+        "u_immoral": 0.5499966740608215,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.76,
+        "u_moral": 0.5499895215034485,
+        "u_immoral": 0.5499967336654663,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.77,
+        "u_moral": 0.5499895811080933,
+        "u_immoral": 0.5499967336654663,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.78,
+        "u_moral": 0.549989640712738,
+        "u_immoral": 0.5499967336654663,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.79,
+        "u_moral": 0.549989640712738,
+        "u_immoral": 0.5499967336654663,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8,
+        "u_moral": 0.5499897003173828,
+        "u_immoral": 0.5499967336654663,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.81,
+        "u_moral": 0.5499897003173828,
+        "u_immoral": 0.5499967932701111,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8200000000000001,
+        "u_moral": 0.5499897599220276,
+        "u_immoral": 0.5499967932701111,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8300000000000001,
+        "u_moral": 0.5499897599220276,
+        "u_immoral": 0.5499967932701111,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.84,
+        "u_moral": 0.5499898195266724,
+        "u_immoral": 0.5499967932701111,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.85,
+        "u_moral": 0.5499898791313171,
+        "u_immoral": 0.5499968528747559,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.86,
+        "u_moral": 0.5499898791313171,
+        "u_immoral": 0.5499968528747559,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.87,
+        "u_moral": 0.5499899387359619,
+        "u_immoral": 0.5499968528747559,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.88,
+        "u_moral": 0.5499899387359619,
+        "u_immoral": 0.5499968528747559,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.89,
+        "u_moral": 0.5499899983406067,
+        "u_immoral": 0.5499968528747559,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9,
+        "u_moral": 0.5499899983406067,
+        "u_immoral": 0.5499969124794006,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.91,
+        "u_moral": 0.5499900579452515,
+        "u_immoral": 0.5499969124794006,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.92,
+        "u_moral": 0.5499900579452515,
+        "u_immoral": 0.5499969124794006,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.93,
+        "u_moral": 0.5499901175498962,
+        "u_immoral": 0.5499969124794006,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9400000000000001,
+        "u_moral": 0.549990177154541,
+        "u_immoral": 0.5499969124794006,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9500000000000001,
+        "u_moral": 0.549990177154541,
+        "u_immoral": 0.5499969720840454,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.96,
+        "u_moral": 0.5499902367591858,
+        "u_immoral": 0.5499969720840454,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.97,
+        "u_moral": 0.5499902367591858,
+        "u_immoral": 0.5499969720840454,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.98,
+        "u_moral": 0.5499902963638306,
+        "u_immoral": 0.5499969720840454,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.99,
+        "u_moral": 0.5499902963638306,
+        "u_immoral": 0.5499970316886902,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 1.0,
+        "u_moral": 0.5499903559684753,
+        "u_immoral": 0.5499970316886902,
+        "decision": "immoral"
+      }
+    ]
+  },
+  {
+    "scenario_id": 4064,
+    "intervened_dimension": "Conformity: rules (attained)",
+    "initial_decision": "moral",
+    "flip_point_found": false,
+    "flip_threshold": null,
+    "sweep_data": [
+      {
+        "intervened_value": 0.0,
+        "u_moral": 0.5500093102455139,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.01,
+        "u_moral": 0.5500093698501587,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.02,
+        "u_moral": 0.5500094890594482,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.03,
+        "u_moral": 0.5500096082687378,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.04,
+        "u_moral": 0.5500096678733826,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.05,
+        "u_moral": 0.5500097870826721,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.06,
+        "u_moral": 0.5500098466873169,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.07,
+        "u_moral": 0.5500099658966064,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.08,
+        "u_moral": 0.550010085105896,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.09,
+        "u_moral": 0.5500101447105408,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.1,
+        "u_moral": 0.5500102639198303,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.11,
+        "u_moral": 0.5500103235244751,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.12,
+        "u_moral": 0.5500104427337646,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.13,
+        "u_moral": 0.5500105619430542,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.14,
+        "u_moral": 0.550010621547699,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.15,
+        "u_moral": 0.5500107407569885,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.16,
+        "u_moral": 0.5500108003616333,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.17,
+        "u_moral": 0.5500109195709229,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.18,
+        "u_moral": 0.5500109791755676,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.19,
+        "u_moral": 0.5500110983848572,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.2,
+        "u_moral": 0.5500112175941467,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.21,
+        "u_moral": 0.5500112771987915,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.22,
+        "u_moral": 0.550011396408081,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.23,
+        "u_moral": 0.5500114560127258,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.24,
+        "u_moral": 0.5500115752220154,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.25,
+        "u_moral": 0.5500116944313049,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.26,
+        "u_moral": 0.5500117540359497,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.27,
+        "u_moral": 0.5500118732452393,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.28,
+        "u_moral": 0.550011932849884,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.29,
+        "u_moral": 0.5500120520591736,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.3,
+        "u_moral": 0.5500121712684631,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.31,
+        "u_moral": 0.5500122308731079,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.32,
+        "u_moral": 0.5500123500823975,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.33,
+        "u_moral": 0.5500124096870422,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.34,
+        "u_moral": 0.5500125288963318,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.35000000000000003,
+        "u_moral": 0.5500126481056213,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.36,
+        "u_moral": 0.5500127077102661,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.37,
+        "u_moral": 0.5500128269195557,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.38,
+        "u_moral": 0.5500128865242004,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.39,
+        "u_moral": 0.55001300573349,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.4,
+        "u_moral": 0.5500131249427795,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.41000000000000003,
+        "u_moral": 0.5500131845474243,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.42,
+        "u_moral": 0.5500133037567139,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.43,
+        "u_moral": 0.5500133633613586,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.44,
+        "u_moral": 0.5500134825706482,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.45,
+        "u_moral": 0.550013542175293,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.46,
+        "u_moral": 0.5500136613845825,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.47000000000000003,
+        "u_moral": 0.5500137805938721,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.48,
+        "u_moral": 0.5500138401985168,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.49,
+        "u_moral": 0.5500139594078064,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5,
+        "u_moral": 0.5500140190124512,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.51,
+        "u_moral": 0.5500141382217407,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.52,
+        "u_moral": 0.5500142574310303,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.53,
+        "u_moral": 0.550014317035675,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.54,
+        "u_moral": 0.5500144362449646,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.55,
+        "u_moral": 0.5500144958496094,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.56,
+        "u_moral": 0.5500146150588989,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5700000000000001,
+        "u_moral": 0.5500147342681885,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.58,
+        "u_moral": 0.5500147938728333,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.59,
+        "u_moral": 0.5500149130821228,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6,
+        "u_moral": 0.5500149726867676,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.61,
+        "u_moral": 0.5500150918960571,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.62,
+        "u_moral": 0.5500152111053467,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.63,
+        "u_moral": 0.5500152707099915,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.64,
+        "u_moral": 0.550015389919281,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.65,
+        "u_moral": 0.5500154495239258,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.66,
+        "u_moral": 0.5500155687332153,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.67,
+        "u_moral": 0.5500156879425049,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.68,
+        "u_moral": 0.5500157475471497,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6900000000000001,
+        "u_moral": 0.5500158667564392,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.7000000000000001,
+        "u_moral": 0.550015926361084,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.71,
+        "u_moral": 0.5500160455703735,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.72,
+        "u_moral": 0.5500161051750183,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.73,
+        "u_moral": 0.5500162243843079,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.74,
+        "u_moral": 0.5500163435935974,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.75,
+        "u_moral": 0.5500164031982422,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.76,
+        "u_moral": 0.5500165224075317,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.77,
+        "u_moral": 0.5500165820121765,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.78,
+        "u_moral": 0.5500167012214661,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.79,
+        "u_moral": 0.5500168204307556,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8,
+        "u_moral": 0.5500168800354004,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.81,
+        "u_moral": 0.5500169992446899,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8200000000000001,
+        "u_moral": 0.5500170588493347,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8300000000000001,
+        "u_moral": 0.5500171780586243,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.84,
+        "u_moral": 0.5500172972679138,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.85,
+        "u_moral": 0.5500173568725586,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.86,
+        "u_moral": 0.5500174760818481,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.87,
+        "u_moral": 0.5500175356864929,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.88,
+        "u_moral": 0.5500176548957825,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.89,
+        "u_moral": 0.550017774105072,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9,
+        "u_moral": 0.5500178337097168,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.91,
+        "u_moral": 0.5500179529190063,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.92,
+        "u_moral": 0.5500180125236511,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.93,
+        "u_moral": 0.5500181317329407,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9400000000000001,
+        "u_moral": 0.5500182509422302,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9500000000000001,
+        "u_moral": 0.550018310546875,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.96,
+        "u_moral": 0.5500184297561646,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.97,
+        "u_moral": 0.5500184893608093,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.98,
+        "u_moral": 0.5500186085700989,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.99,
+        "u_moral": 0.5500186681747437,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 1.0,
+        "u_moral": 0.5500187873840332,
+        "u_immoral": 0.5499964952468872,
+        "decision": "moral"
+      }
+    ]
+  },
+  {
+    "scenario_id": 1041,
+    "intervened_dimension": "Conformity: rules (attained)",
+    "initial_decision": "moral",
+    "flip_point_found": false,
+    "flip_threshold": null,
+    "sweep_data": [
+      {
+        "intervened_value": 0.0,
+        "u_moral": 0.9499279856681824,
+        "u_immoral": 0.9499061107635498,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.01,
+        "u_moral": 0.9499282240867615,
+        "u_immoral": 0.9499064683914185,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.02,
+        "u_moral": 0.9499284625053406,
+        "u_immoral": 0.9499067664146423,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.03,
+        "u_moral": 0.9499287009239197,
+        "u_immoral": 0.949907124042511,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.04,
+        "u_moral": 0.9499289393424988,
+        "u_immoral": 0.9499074220657349,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.05,
+        "u_moral": 0.9499291777610779,
+        "u_immoral": 0.9499077796936035,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.06,
+        "u_moral": 0.9499293565750122,
+        "u_immoral": 0.9499080777168274,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.07,
+        "u_moral": 0.9499295949935913,
+        "u_immoral": 0.949908435344696,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.08,
+        "u_moral": 0.9499298334121704,
+        "u_immoral": 0.9499087333679199,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.09,
+        "u_moral": 0.9499300718307495,
+        "u_immoral": 0.9499090909957886,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.1,
+        "u_moral": 0.9499303102493286,
+        "u_immoral": 0.9499093890190125,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.11,
+        "u_moral": 0.9499305486679077,
+        "u_immoral": 0.9499097466468811,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.12,
+        "u_moral": 0.9499307870864868,
+        "u_immoral": 0.949910044670105,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.13,
+        "u_moral": 0.9499309659004211,
+        "u_immoral": 0.9499104022979736,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.14,
+        "u_moral": 0.9499312043190002,
+        "u_immoral": 0.9499107003211975,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.15,
+        "u_moral": 0.9499314427375793,
+        "u_immoral": 0.9499110579490662,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.16,
+        "u_moral": 0.9499316811561584,
+        "u_immoral": 0.94991135597229,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.17,
+        "u_moral": 0.9499319195747375,
+        "u_immoral": 0.9499117136001587,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.18,
+        "u_moral": 0.9499321579933167,
+        "u_immoral": 0.9499120116233826,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.19,
+        "u_moral": 0.949932336807251,
+        "u_immoral": 0.9499123692512512,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.2,
+        "u_moral": 0.9499325752258301,
+        "u_immoral": 0.9499126672744751,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.21,
+        "u_moral": 0.9499328136444092,
+        "u_immoral": 0.9499130249023438,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.22,
+        "u_moral": 0.9499330520629883,
+        "u_immoral": 0.9499133229255676,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.23,
+        "u_moral": 0.9499332904815674,
+        "u_immoral": 0.9499136805534363,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.24,
+        "u_moral": 0.9499335289001465,
+        "u_immoral": 0.9499139785766602,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.25,
+        "u_moral": 0.9499337077140808,
+        "u_immoral": 0.9499143362045288,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.26,
+        "u_moral": 0.9499339461326599,
+        "u_immoral": 0.9499146938323975,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.27,
+        "u_moral": 0.949934184551239,
+        "u_immoral": 0.9499149918556213,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.28,
+        "u_moral": 0.9499344229698181,
+        "u_immoral": 0.94991534948349,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.29,
+        "u_moral": 0.9499346613883972,
+        "u_immoral": 0.9499156475067139,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.3,
+        "u_moral": 0.9499348998069763,
+        "u_immoral": 0.9499160051345825,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.31,
+        "u_moral": 0.9499350786209106,
+        "u_immoral": 0.9499163031578064,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.32,
+        "u_moral": 0.9499353170394897,
+        "u_immoral": 0.949916660785675,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.33,
+        "u_moral": 0.9499355554580688,
+        "u_immoral": 0.9499169588088989,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.34,
+        "u_moral": 0.949935793876648,
+        "u_immoral": 0.9499173164367676,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.35000000000000003,
+        "u_moral": 0.949936032295227,
+        "u_immoral": 0.9499176144599915,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.36,
+        "u_moral": 0.9499362707138062,
+        "u_immoral": 0.9499179720878601,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.37,
+        "u_moral": 0.9499364495277405,
+        "u_immoral": 0.949918270111084,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.38,
+        "u_moral": 0.9499366879463196,
+        "u_immoral": 0.9499186277389526,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.39,
+        "u_moral": 0.9499369263648987,
+        "u_immoral": 0.9499189257621765,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.4,
+        "u_moral": 0.9499371647834778,
+        "u_immoral": 0.9499192833900452,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.41000000000000003,
+        "u_moral": 0.9499374032020569,
+        "u_immoral": 0.949919581413269,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.42,
+        "u_moral": 0.949937641620636,
+        "u_immoral": 0.9499199390411377,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.43,
+        "u_moral": 0.9499378204345703,
+        "u_immoral": 0.9499202370643616,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.44,
+        "u_moral": 0.9499380588531494,
+        "u_immoral": 0.9499205946922302,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.45,
+        "u_moral": 0.9499382972717285,
+        "u_immoral": 0.9499208927154541,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.46,
+        "u_moral": 0.9499385356903076,
+        "u_immoral": 0.9499212503433228,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.47000000000000003,
+        "u_moral": 0.9499387741088867,
+        "u_immoral": 0.9499215483665466,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.48,
+        "u_moral": 0.9499390125274658,
+        "u_immoral": 0.9499219059944153,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.49,
+        "u_moral": 0.9499391913414001,
+        "u_immoral": 0.9499222040176392,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5,
+        "u_moral": 0.9499394297599792,
+        "u_immoral": 0.9499225616455078,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.51,
+        "u_moral": 0.9499396681785583,
+        "u_immoral": 0.9499229192733765,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.52,
+        "u_moral": 0.9499399065971375,
+        "u_immoral": 0.9499232172966003,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.53,
+        "u_moral": 0.9499401450157166,
+        "u_immoral": 0.949923574924469,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.54,
+        "u_moral": 0.9499403834342957,
+        "u_immoral": 0.9499238729476929,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.55,
+        "u_moral": 0.94994056224823,
+        "u_immoral": 0.9499242305755615,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.56,
+        "u_moral": 0.9499408006668091,
+        "u_immoral": 0.9499245285987854,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5700000000000001,
+        "u_moral": 0.9499410390853882,
+        "u_immoral": 0.949924886226654,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.58,
+        "u_moral": 0.9499412775039673,
+        "u_immoral": 0.9499251842498779,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.59,
+        "u_moral": 0.9499415159225464,
+        "u_immoral": 0.9499255418777466,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6,
+        "u_moral": 0.9499417543411255,
+        "u_immoral": 0.9499258399009705,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.61,
+        "u_moral": 0.9499419331550598,
+        "u_immoral": 0.9499261975288391,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.62,
+        "u_moral": 0.9499421715736389,
+        "u_immoral": 0.949926495552063,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.63,
+        "u_moral": 0.949942409992218,
+        "u_immoral": 0.9499268531799316,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.64,
+        "u_moral": 0.9499426484107971,
+        "u_immoral": 0.9499271512031555,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.65,
+        "u_moral": 0.9499428868293762,
+        "u_immoral": 0.9499275088310242,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.66,
+        "u_moral": 0.9499431252479553,
+        "u_immoral": 0.949927806854248,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.67,
+        "u_moral": 0.9499433040618896,
+        "u_immoral": 0.9499281644821167,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.68,
+        "u_moral": 0.9499435424804688,
+        "u_immoral": 0.9499284625053406,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6900000000000001,
+        "u_moral": 0.9499437808990479,
+        "u_immoral": 0.9499288201332092,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.7000000000000001,
+        "u_moral": 0.949944019317627,
+        "u_immoral": 0.9499291181564331,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.71,
+        "u_moral": 0.949944257736206,
+        "u_immoral": 0.9499294757843018,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.72,
+        "u_moral": 0.9499444961547852,
+        "u_immoral": 0.9499297738075256,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.73,
+        "u_moral": 0.9499447345733643,
+        "u_immoral": 0.9499301314353943,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.74,
+        "u_moral": 0.9499449133872986,
+        "u_immoral": 0.9499304294586182,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.75,
+        "u_moral": 0.9499451518058777,
+        "u_immoral": 0.9499307870864868,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.76,
+        "u_moral": 0.9499453902244568,
+        "u_immoral": 0.9499311447143555,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.77,
+        "u_moral": 0.9499456286430359,
+        "u_immoral": 0.9499314427375793,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.78,
+        "u_moral": 0.949945867061615,
+        "u_immoral": 0.949931800365448,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.79,
+        "u_moral": 0.9499461054801941,
+        "u_immoral": 0.9499320983886719,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8,
+        "u_moral": 0.9499462842941284,
+        "u_immoral": 0.9499324560165405,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.81,
+        "u_moral": 0.9499465227127075,
+        "u_immoral": 0.9499327540397644,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8200000000000001,
+        "u_moral": 0.9499467611312866,
+        "u_immoral": 0.9499331116676331,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8300000000000001,
+        "u_moral": 0.9499469995498657,
+        "u_immoral": 0.9499334096908569,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.84,
+        "u_moral": 0.9499472379684448,
+        "u_immoral": 0.9499337673187256,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.85,
+        "u_moral": 0.9499474763870239,
+        "u_immoral": 0.9499340653419495,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.86,
+        "u_moral": 0.9499476552009583,
+        "u_immoral": 0.9499344229698181,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.87,
+        "u_moral": 0.9499478936195374,
+        "u_immoral": 0.949934720993042,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.88,
+        "u_moral": 0.9499481320381165,
+        "u_immoral": 0.9499350786209106,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.89,
+        "u_moral": 0.9499483704566956,
+        "u_immoral": 0.9499353766441345,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9,
+        "u_moral": 0.9499486088752747,
+        "u_immoral": 0.9499357342720032,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.91,
+        "u_moral": 0.9499488472938538,
+        "u_immoral": 0.949936032295227,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.92,
+        "u_moral": 0.9499490261077881,
+        "u_immoral": 0.9499363899230957,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.93,
+        "u_moral": 0.9499492645263672,
+        "u_immoral": 0.9499366879463196,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9400000000000001,
+        "u_moral": 0.9499495029449463,
+        "u_immoral": 0.9499370455741882,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9500000000000001,
+        "u_moral": 0.9499497413635254,
+        "u_immoral": 0.9499373435974121,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.96,
+        "u_moral": 0.9499499797821045,
+        "u_immoral": 0.9499377012252808,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.97,
+        "u_moral": 0.9499502182006836,
+        "u_immoral": 0.9499379992485046,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.98,
+        "u_moral": 0.9499503970146179,
+        "u_immoral": 0.9499383568763733,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.99,
+        "u_moral": 0.949950635433197,
+        "u_immoral": 0.9499386548995972,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 1.0,
+        "u_moral": 0.9499508738517761,
+        "u_immoral": 0.9499390125274658,
+        "decision": "moral"
+      }
+    ]
+  },
+  {
+    "scenario_id": 7258,
+    "intervened_dimension": "Conformity: rules (attained)",
+    "initial_decision": "immoral",
+    "flip_point_found": true,
+    "flip_threshold": 0.01,
+    "sweep_data": [
+      {
+        "intervened_value": 0.0,
+        "u_moral": 0.6404209733009338,
+        "u_immoral": 0.640447735786438,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.01,
+        "u_moral": 0.6407545804977417,
+        "u_immoral": 0.640499472618103,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.02,
+        "u_moral": 0.6410882472991943,
+        "u_immoral": 0.6405512094497681,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.03,
+        "u_moral": 0.6414218544960022,
+        "u_immoral": 0.6406029462814331,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.04,
+        "u_moral": 0.6417554616928101,
+        "u_immoral": 0.6406546831130981,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.05,
+        "u_moral": 0.6420890688896179,
+        "u_immoral": 0.6407064199447632,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.06,
+        "u_moral": 0.6424226760864258,
+        "u_immoral": 0.6407581567764282,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.07,
+        "u_moral": 0.6427563428878784,
+        "u_immoral": 0.6408098936080933,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.08,
+        "u_moral": 0.6430899500846863,
+        "u_immoral": 0.6408616304397583,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.09,
+        "u_moral": 0.6434235572814941,
+        "u_immoral": 0.6409133672714233,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.1,
+        "u_moral": 0.6437572240829468,
+        "u_immoral": 0.6409651041030884,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.11,
+        "u_moral": 0.6440908312797546,
+        "u_immoral": 0.6410168409347534,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.12,
+        "u_moral": 0.6444244384765625,
+        "u_immoral": 0.6410685777664185,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.13,
+        "u_moral": 0.6447581052780151,
+        "u_immoral": 0.6411203145980835,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.14,
+        "u_moral": 0.645091712474823,
+        "u_immoral": 0.6411720514297485,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.15,
+        "u_moral": 0.6454253196716309,
+        "u_immoral": 0.6412237882614136,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.16,
+        "u_moral": 0.6457589268684387,
+        "u_immoral": 0.6412755250930786,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.17,
+        "u_moral": 0.6460925340652466,
+        "u_immoral": 0.6413272619247437,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.18,
+        "u_moral": 0.6464262008666992,
+        "u_immoral": 0.6413789987564087,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.19,
+        "u_moral": 0.6467598080635071,
+        "u_immoral": 0.6414307355880737,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.2,
+        "u_moral": 0.6470934152603149,
+        "u_immoral": 0.6414824724197388,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.21,
+        "u_moral": 0.6474270820617676,
+        "u_immoral": 0.6415342688560486,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.22,
+        "u_moral": 0.6477606892585754,
+        "u_immoral": 0.6415860056877136,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.23,
+        "u_moral": 0.6480942964553833,
+        "u_immoral": 0.6416377425193787,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.24,
+        "u_moral": 0.6484279632568359,
+        "u_immoral": 0.6416894793510437,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.25,
+        "u_moral": 0.6487615704536438,
+        "u_immoral": 0.6417412161827087,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.26,
+        "u_moral": 0.6490951776504517,
+        "u_immoral": 0.6417929530143738,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.27,
+        "u_moral": 0.6494288444519043,
+        "u_immoral": 0.6418446898460388,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.28,
+        "u_moral": 0.6497623920440674,
+        "u_immoral": 0.6418964266777039,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.29,
+        "u_moral": 0.65009605884552,
+        "u_immoral": 0.6419481635093689,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.3,
+        "u_moral": 0.6504296660423279,
+        "u_immoral": 0.6419999003410339,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.31,
+        "u_moral": 0.6507632732391357,
+        "u_immoral": 0.642051637172699,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.32,
+        "u_moral": 0.6510969400405884,
+        "u_immoral": 0.6421034336090088,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.33,
+        "u_moral": 0.6514305472373962,
+        "u_immoral": 0.6421551704406738,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.34,
+        "u_moral": 0.6517641544342041,
+        "u_immoral": 0.6422069072723389,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.35000000000000003,
+        "u_moral": 0.6520978212356567,
+        "u_immoral": 0.6422586441040039,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.36,
+        "u_moral": 0.6524314284324646,
+        "u_immoral": 0.642310380935669,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.37,
+        "u_moral": 0.6527650356292725,
+        "u_immoral": 0.642362117767334,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.38,
+        "u_moral": 0.6530987024307251,
+        "u_immoral": 0.642413854598999,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.39,
+        "u_moral": 0.653432309627533,
+        "u_immoral": 0.6424655914306641,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.4,
+        "u_moral": 0.6537659168243408,
+        "u_immoral": 0.6425173282623291,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.41000000000000003,
+        "u_moral": 0.6540995240211487,
+        "u_immoral": 0.6425690650939941,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.42,
+        "u_moral": 0.6544331312179565,
+        "u_immoral": 0.6426208019256592,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.43,
+        "u_moral": 0.6547667980194092,
+        "u_immoral": 0.6426725387573242,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.44,
+        "u_moral": 0.655100405216217,
+        "u_immoral": 0.6427242755889893,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.45,
+        "u_moral": 0.6554340124130249,
+        "u_immoral": 0.6427760124206543,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.46,
+        "u_moral": 0.6557676792144775,
+        "u_immoral": 0.6428277492523193,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.47000000000000003,
+        "u_moral": 0.6561012864112854,
+        "u_immoral": 0.6428794860839844,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.48,
+        "u_moral": 0.6564348936080933,
+        "u_immoral": 0.6429312229156494,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.49,
+        "u_moral": 0.6567685604095459,
+        "u_immoral": 0.6429829597473145,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5,
+        "u_moral": 0.6571021676063538,
+        "u_immoral": 0.6430346965789795,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.51,
+        "u_moral": 0.6574357748031616,
+        "u_immoral": 0.6430864334106445,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.52,
+        "u_moral": 0.6577693819999695,
+        "u_immoral": 0.6431381702423096,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.53,
+        "u_moral": 0.6581029891967773,
+        "u_immoral": 0.6431899070739746,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.54,
+        "u_moral": 0.65843665599823,
+        "u_immoral": 0.6432416439056396,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.55,
+        "u_moral": 0.6587702631950378,
+        "u_immoral": 0.6432933807373047,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.56,
+        "u_moral": 0.6591038703918457,
+        "u_immoral": 0.6433451175689697,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5700000000000001,
+        "u_moral": 0.6594375371932983,
+        "u_immoral": 0.6433969140052795,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.58,
+        "u_moral": 0.6597711443901062,
+        "u_immoral": 0.6434486508369446,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.59,
+        "u_moral": 0.6601047515869141,
+        "u_immoral": 0.6435003876686096,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6,
+        "u_moral": 0.6604384183883667,
+        "u_immoral": 0.6435521245002747,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.61,
+        "u_moral": 0.6607720255851746,
+        "u_immoral": 0.6436038613319397,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.62,
+        "u_moral": 0.6611056327819824,
+        "u_immoral": 0.6436555981636047,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.63,
+        "u_moral": 0.6614392995834351,
+        "u_immoral": 0.6437073349952698,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.64,
+        "u_moral": 0.6617728471755981,
+        "u_immoral": 0.6437590718269348,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.65,
+        "u_moral": 0.6621065139770508,
+        "u_immoral": 0.6438108086585999,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.66,
+        "u_moral": 0.6624401211738586,
+        "u_immoral": 0.6438625454902649,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.67,
+        "u_moral": 0.6627737283706665,
+        "u_immoral": 0.6439142823219299,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.68,
+        "u_moral": 0.6631073951721191,
+        "u_immoral": 0.6439660787582397,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6900000000000001,
+        "u_moral": 0.663441002368927,
+        "u_immoral": 0.6440178155899048,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.7000000000000001,
+        "u_moral": 0.6637746095657349,
+        "u_immoral": 0.6440695524215698,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.71,
+        "u_moral": 0.6641082763671875,
+        "u_immoral": 0.6441212892532349,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.72,
+        "u_moral": 0.6644418835639954,
+        "u_immoral": 0.6441730260848999,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.73,
+        "u_moral": 0.6647754907608032,
+        "u_immoral": 0.6442247629165649,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.74,
+        "u_moral": 0.6651091575622559,
+        "u_immoral": 0.64427649974823,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.75,
+        "u_moral": 0.6654427647590637,
+        "u_immoral": 0.644328236579895,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.76,
+        "u_moral": 0.6657763719558716,
+        "u_immoral": 0.6443799734115601,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.77,
+        "u_moral": 0.6661099791526794,
+        "u_immoral": 0.6444317102432251,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.78,
+        "u_moral": 0.6664435863494873,
+        "u_immoral": 0.6444834470748901,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.79,
+        "u_moral": 0.6667772531509399,
+        "u_immoral": 0.6445351839065552,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8,
+        "u_moral": 0.6671108603477478,
+        "u_immoral": 0.6445869207382202,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.81,
+        "u_moral": 0.6674444675445557,
+        "u_immoral": 0.6446386575698853,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8200000000000001,
+        "u_moral": 0.6677781343460083,
+        "u_immoral": 0.6446903944015503,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8300000000000001,
+        "u_moral": 0.6681117415428162,
+        "u_immoral": 0.6447421312332153,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.84,
+        "u_moral": 0.668445348739624,
+        "u_immoral": 0.6447938680648804,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.85,
+        "u_moral": 0.6687790155410767,
+        "u_immoral": 0.6448456048965454,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.86,
+        "u_moral": 0.6691126227378845,
+        "u_immoral": 0.6448973417282104,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.87,
+        "u_moral": 0.6694462299346924,
+        "u_immoral": 0.6449490785598755,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.88,
+        "u_moral": 0.6697798371315002,
+        "u_immoral": 0.6450008153915405,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.89,
+        "u_moral": 0.6701134443283081,
+        "u_immoral": 0.6450525522232056,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9,
+        "u_moral": 0.6704471111297607,
+        "u_immoral": 0.6451042890548706,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.91,
+        "u_moral": 0.6707807183265686,
+        "u_immoral": 0.6451560258865356,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.92,
+        "u_moral": 0.6711143255233765,
+        "u_immoral": 0.6452078223228455,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.93,
+        "u_moral": 0.6714479923248291,
+        "u_immoral": 0.6452595591545105,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9400000000000001,
+        "u_moral": 0.671781599521637,
+        "u_immoral": 0.6453112959861755,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9500000000000001,
+        "u_moral": 0.6721152067184448,
+        "u_immoral": 0.6453630328178406,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.96,
+        "u_moral": 0.6724488735198975,
+        "u_immoral": 0.6454147696495056,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.97,
+        "u_moral": 0.6727824807167053,
+        "u_immoral": 0.6454665064811707,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.98,
+        "u_moral": 0.6731160879135132,
+        "u_immoral": 0.6455182433128357,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.99,
+        "u_moral": 0.6734497547149658,
+        "u_immoral": 0.6455699801445007,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 1.0,
+        "u_moral": 0.6737833023071289,
+        "u_immoral": 0.6456217169761658,
+        "decision": "moral"
+      }
+    ]
+  },
+  {
+    "scenario_id": 8526,
+    "intervened_dimension": "Conformity: rules (attained)",
+    "initial_decision": "moral",
+    "flip_point_found": false,
+    "flip_threshold": null,
+    "sweep_data": [
+      {
+        "intervened_value": 0.0,
+        "u_moral": 0.949829638004303,
+        "u_immoral": 0.9497981071472168,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.01,
+        "u_moral": 0.9498303532600403,
+        "u_immoral": 0.9497988820075989,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.02,
+        "u_moral": 0.9498310089111328,
+        "u_immoral": 0.9497995972633362,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.03,
+        "u_moral": 0.9498317241668701,
+        "u_immoral": 0.9498003721237183,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.04,
+        "u_moral": 0.9498323798179626,
+        "u_immoral": 0.9498010873794556,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.05,
+        "u_moral": 0.9498330950737,
+        "u_immoral": 0.9498018622398376,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.06,
+        "u_moral": 0.9498337507247925,
+        "u_immoral": 0.949802577495575,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.07,
+        "u_moral": 0.9498344659805298,
+        "u_immoral": 0.949803352355957,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.08,
+        "u_moral": 0.9498351216316223,
+        "u_immoral": 0.9498040676116943,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.09,
+        "u_moral": 0.9498358368873596,
+        "u_immoral": 0.9498048424720764,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.1,
+        "u_moral": 0.9498364925384521,
+        "u_immoral": 0.9498055577278137,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.11,
+        "u_moral": 0.9498372077941895,
+        "u_immoral": 0.9498063325881958,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.12,
+        "u_moral": 0.949837863445282,
+        "u_immoral": 0.9498070478439331,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.13,
+        "u_moral": 0.9498385787010193,
+        "u_immoral": 0.9498078227043152,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.14,
+        "u_moral": 0.9498392343521118,
+        "u_immoral": 0.9498085379600525,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.15,
+        "u_moral": 0.9498399496078491,
+        "u_immoral": 0.9498093128204346,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.16,
+        "u_moral": 0.9498406052589417,
+        "u_immoral": 0.9498100280761719,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.17,
+        "u_moral": 0.949841320514679,
+        "u_immoral": 0.949810802936554,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.18,
+        "u_moral": 0.9498419761657715,
+        "u_immoral": 0.9498115181922913,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.19,
+        "u_moral": 0.949842631816864,
+        "u_immoral": 0.9498122930526733,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.2,
+        "u_moral": 0.9498433470726013,
+        "u_immoral": 0.9498130083084106,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.21,
+        "u_moral": 0.9498440027236938,
+        "u_immoral": 0.9498137831687927,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.22,
+        "u_moral": 0.9498447179794312,
+        "u_immoral": 0.94981449842453,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.23,
+        "u_moral": 0.9498453736305237,
+        "u_immoral": 0.9498152732849121,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.24,
+        "u_moral": 0.949846088886261,
+        "u_immoral": 0.9498159885406494,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.25,
+        "u_moral": 0.9498467445373535,
+        "u_immoral": 0.9498167634010315,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.26,
+        "u_moral": 0.9498474597930908,
+        "u_immoral": 0.9498174786567688,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.27,
+        "u_moral": 0.9498481154441833,
+        "u_immoral": 0.9498182535171509,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.28,
+        "u_moral": 0.9498488306999207,
+        "u_immoral": 0.9498189687728882,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.29,
+        "u_moral": 0.9498494863510132,
+        "u_immoral": 0.9498197436332703,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.3,
+        "u_moral": 0.9498502016067505,
+        "u_immoral": 0.9498204588890076,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.31,
+        "u_moral": 0.949850857257843,
+        "u_immoral": 0.9498212337493896,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.32,
+        "u_moral": 0.9498515725135803,
+        "u_immoral": 0.949821949005127,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.33,
+        "u_moral": 0.9498522281646729,
+        "u_immoral": 0.949822723865509,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.34,
+        "u_moral": 0.9498529434204102,
+        "u_immoral": 0.9498234391212463,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.35000000000000003,
+        "u_moral": 0.9498535990715027,
+        "u_immoral": 0.9498242139816284,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.36,
+        "u_moral": 0.94985431432724,
+        "u_immoral": 0.9498249292373657,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.37,
+        "u_moral": 0.9498549699783325,
+        "u_immoral": 0.9498257040977478,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.38,
+        "u_moral": 0.9498556852340698,
+        "u_immoral": 0.9498264193534851,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.39,
+        "u_moral": 0.9498563408851624,
+        "u_immoral": 0.9498271942138672,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.4,
+        "u_moral": 0.9498570561408997,
+        "u_immoral": 0.9498279094696045,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.41000000000000003,
+        "u_moral": 0.9498577117919922,
+        "u_immoral": 0.9498286843299866,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.42,
+        "u_moral": 0.9498584270477295,
+        "u_immoral": 0.9498293995857239,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.43,
+        "u_moral": 0.949859082698822,
+        "u_immoral": 0.949830174446106,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.44,
+        "u_moral": 0.9498597979545593,
+        "u_immoral": 0.9498308897018433,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.45,
+        "u_moral": 0.9498604536056519,
+        "u_immoral": 0.9498316645622253,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.46,
+        "u_moral": 0.9498611688613892,
+        "u_immoral": 0.9498323798179626,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.47000000000000003,
+        "u_moral": 0.9498618245124817,
+        "u_immoral": 0.9498331546783447,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.48,
+        "u_moral": 0.9498624801635742,
+        "u_immoral": 0.949833869934082,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.49,
+        "u_moral": 0.9498631954193115,
+        "u_immoral": 0.9498346447944641,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5,
+        "u_moral": 0.949863851070404,
+        "u_immoral": 0.9498353600502014,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.51,
+        "u_moral": 0.9498645663261414,
+        "u_immoral": 0.9498361349105835,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.52,
+        "u_moral": 0.9498652219772339,
+        "u_immoral": 0.9498368501663208,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.53,
+        "u_moral": 0.9498659372329712,
+        "u_immoral": 0.9498376250267029,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.54,
+        "u_moral": 0.9498665928840637,
+        "u_immoral": 0.9498383402824402,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.55,
+        "u_moral": 0.949867308139801,
+        "u_immoral": 0.9498390555381775,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.56,
+        "u_moral": 0.9498679637908936,
+        "u_immoral": 0.9498398303985596,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.5700000000000001,
+        "u_moral": 0.9498686790466309,
+        "u_immoral": 0.9498405456542969,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.58,
+        "u_moral": 0.9498693346977234,
+        "u_immoral": 0.949841320514679,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.59,
+        "u_moral": 0.9498700499534607,
+        "u_immoral": 0.9498420357704163,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6,
+        "u_moral": 0.9498707056045532,
+        "u_immoral": 0.9498428106307983,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.61,
+        "u_moral": 0.9498714208602905,
+        "u_immoral": 0.9498435258865356,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.62,
+        "u_moral": 0.9498720765113831,
+        "u_immoral": 0.9498443007469177,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.63,
+        "u_moral": 0.9498727917671204,
+        "u_immoral": 0.949845016002655,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.64,
+        "u_moral": 0.9498734474182129,
+        "u_immoral": 0.9498457908630371,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.65,
+        "u_moral": 0.9498741626739502,
+        "u_immoral": 0.9498465061187744,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.66,
+        "u_moral": 0.9498748183250427,
+        "u_immoral": 0.9498472809791565,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.67,
+        "u_moral": 0.94987553358078,
+        "u_immoral": 0.9498479962348938,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.68,
+        "u_moral": 0.9498761892318726,
+        "u_immoral": 0.9498487710952759,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.6900000000000001,
+        "u_moral": 0.9498769044876099,
+        "u_immoral": 0.9498494863510132,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.7000000000000001,
+        "u_moral": 0.9498775601387024,
+        "u_immoral": 0.9498502612113953,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.71,
+        "u_moral": 0.9498782753944397,
+        "u_immoral": 0.9498509764671326,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.72,
+        "u_moral": 0.9498789310455322,
+        "u_immoral": 0.9498517513275146,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.73,
+        "u_moral": 0.9498796463012695,
+        "u_immoral": 0.949852466583252,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.74,
+        "u_moral": 0.9498803019523621,
+        "u_immoral": 0.949853241443634,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.75,
+        "u_moral": 0.9498809576034546,
+        "u_immoral": 0.9498539566993713,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.76,
+        "u_moral": 0.9498816728591919,
+        "u_immoral": 0.9498547315597534,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.77,
+        "u_moral": 0.9498823285102844,
+        "u_immoral": 0.9498554468154907,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.78,
+        "u_moral": 0.9498830437660217,
+        "u_immoral": 0.9498562216758728,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.79,
+        "u_moral": 0.9498836994171143,
+        "u_immoral": 0.9498569369316101,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8,
+        "u_moral": 0.9498844146728516,
+        "u_immoral": 0.9498577117919922,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.81,
+        "u_moral": 0.9498850703239441,
+        "u_immoral": 0.9498584270477295,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8200000000000001,
+        "u_moral": 0.9498857855796814,
+        "u_immoral": 0.9498592019081116,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.8300000000000001,
+        "u_moral": 0.9498864412307739,
+        "u_immoral": 0.9498599171638489,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.84,
+        "u_moral": 0.9498871564865112,
+        "u_immoral": 0.949860692024231,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.85,
+        "u_moral": 0.9498878121376038,
+        "u_immoral": 0.9498614072799683,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.86,
+        "u_moral": 0.9498885273933411,
+        "u_immoral": 0.9498621821403503,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.87,
+        "u_moral": 0.9498891830444336,
+        "u_immoral": 0.9498628973960876,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.88,
+        "u_moral": 0.9498898983001709,
+        "u_immoral": 0.9498636722564697,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.89,
+        "u_moral": 0.9498905539512634,
+        "u_immoral": 0.949864387512207,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9,
+        "u_moral": 0.9498912692070007,
+        "u_immoral": 0.9498651623725891,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.91,
+        "u_moral": 0.9498919248580933,
+        "u_immoral": 0.9498658776283264,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.92,
+        "u_moral": 0.9498926401138306,
+        "u_immoral": 0.9498666524887085,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.93,
+        "u_moral": 0.9498932957649231,
+        "u_immoral": 0.9498673677444458,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9400000000000001,
+        "u_moral": 0.9498940110206604,
+        "u_immoral": 0.9498681426048279,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.9500000000000001,
+        "u_moral": 0.9498946666717529,
+        "u_immoral": 0.9498688578605652,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.96,
+        "u_moral": 0.9498953819274902,
+        "u_immoral": 0.9498696327209473,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.97,
+        "u_moral": 0.9498960375785828,
+        "u_immoral": 0.9498703479766846,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.98,
+        "u_moral": 0.9498967528343201,
+        "u_immoral": 0.9498711228370667,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.99,
+        "u_moral": 0.9498974084854126,
+        "u_immoral": 0.949871838092804,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 1.0,
+        "u_moral": 0.9498981237411499,
+        "u_immoral": 0.949872612953186,
+        "decision": "moral"
+      }
+    ]
+  },
+  {
+    "scenario_id": 5683,
+    "intervened_dimension": "Conformity: rules (attained)",
+    "initial_decision": "immoral",
+    "flip_point_found": true,
+    "flip_threshold": 0.98,
+    "sweep_data": [
+      {
+        "intervened_value": 0.0,
+        "u_moral": 0.9391747713088989,
+        "u_immoral": 0.9392068386077881,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.01,
+        "u_moral": 0.9391751885414124,
+        "u_immoral": 0.9392068982124329,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.02,
+        "u_moral": 0.9391756057739258,
+        "u_immoral": 0.9392069578170776,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.03,
+        "u_moral": 0.9391759634017944,
+        "u_immoral": 0.9392069578170776,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.04,
+        "u_moral": 0.9391763210296631,
+        "u_immoral": 0.9392070770263672,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.05,
+        "u_moral": 0.9391767382621765,
+        "u_immoral": 0.9392070770263672,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.06,
+        "u_moral": 0.9391770958900452,
+        "u_immoral": 0.939207136631012,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.07,
+        "u_moral": 0.9391775131225586,
+        "u_immoral": 0.9392071962356567,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.08,
+        "u_moral": 0.9391778707504272,
+        "u_immoral": 0.9392072558403015,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.09,
+        "u_moral": 0.9391782283782959,
+        "u_immoral": 0.9392073154449463,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.1,
+        "u_moral": 0.9391786456108093,
+        "u_immoral": 0.9392073750495911,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.11,
+        "u_moral": 0.9391790628433228,
+        "u_immoral": 0.9392074346542358,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.12,
+        "u_moral": 0.9391794204711914,
+        "u_immoral": 0.9392074942588806,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.13,
+        "u_moral": 0.9391797780990601,
+        "u_immoral": 0.9392075538635254,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.14,
+        "u_moral": 0.9391801953315735,
+        "u_immoral": 0.9392076134681702,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.15,
+        "u_moral": 0.9391805529594421,
+        "u_immoral": 0.9392076730728149,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.16,
+        "u_moral": 0.9391809701919556,
+        "u_immoral": 0.9392077326774597,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.17,
+        "u_moral": 0.9391813278198242,
+        "u_immoral": 0.9392077922821045,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.18,
+        "u_moral": 0.9391817450523376,
+        "u_immoral": 0.9392078518867493,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.19,
+        "u_moral": 0.9391821026802063,
+        "u_immoral": 0.939207911491394,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.2,
+        "u_moral": 0.9391825199127197,
+        "u_immoral": 0.9392079710960388,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.21,
+        "u_moral": 0.9391828775405884,
+        "u_immoral": 0.9392080307006836,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.22,
+        "u_moral": 0.939183235168457,
+        "u_immoral": 0.9392080903053284,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.23,
+        "u_moral": 0.9391836524009705,
+        "u_immoral": 0.9392081499099731,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.24,
+        "u_moral": 0.9391840696334839,
+        "u_immoral": 0.9392082095146179,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.25,
+        "u_moral": 0.9391844272613525,
+        "u_immoral": 0.9392082691192627,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.26,
+        "u_moral": 0.9391847848892212,
+        "u_immoral": 0.9392083287239075,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.27,
+        "u_moral": 0.9391852021217346,
+        "u_immoral": 0.9392083883285522,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.28,
+        "u_moral": 0.9391855597496033,
+        "u_immoral": 0.9392083883285522,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.29,
+        "u_moral": 0.9391859769821167,
+        "u_immoral": 0.9392085075378418,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.3,
+        "u_moral": 0.9391863346099854,
+        "u_immoral": 0.9392085075378418,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.31,
+        "u_moral": 0.939186692237854,
+        "u_immoral": 0.9392085671424866,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.32,
+        "u_moral": 0.9391871094703674,
+        "u_immoral": 0.9392086267471313,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.33,
+        "u_moral": 0.9391875267028809,
+        "u_immoral": 0.9392086863517761,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.34,
+        "u_moral": 0.9391878843307495,
+        "u_immoral": 0.9392087459564209,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.35000000000000003,
+        "u_moral": 0.9391882419586182,
+        "u_immoral": 0.9392088055610657,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.36,
+        "u_moral": 0.9391886591911316,
+        "u_immoral": 0.9392088651657104,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.37,
+        "u_moral": 0.9391890168190002,
+        "u_immoral": 0.9392089247703552,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.38,
+        "u_moral": 0.9391894340515137,
+        "u_immoral": 0.939208984375,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.39,
+        "u_moral": 0.9391897916793823,
+        "u_immoral": 0.9392090439796448,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.4,
+        "u_moral": 0.9391902089118958,
+        "u_immoral": 0.9392091035842896,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.41000000000000003,
+        "u_moral": 0.9391905665397644,
+        "u_immoral": 0.9392091631889343,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.42,
+        "u_moral": 0.9391909837722778,
+        "u_immoral": 0.9392092227935791,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.43,
+        "u_moral": 0.9391913414001465,
+        "u_immoral": 0.9392092823982239,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.44,
+        "u_moral": 0.9391916990280151,
+        "u_immoral": 0.9392093420028687,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.45,
+        "u_moral": 0.9391921162605286,
+        "u_immoral": 0.9392094016075134,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.46,
+        "u_moral": 0.939192533493042,
+        "u_immoral": 0.9392094612121582,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.47000000000000003,
+        "u_moral": 0.9391928911209106,
+        "u_immoral": 0.939209520816803,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.48,
+        "u_moral": 0.9391932487487793,
+        "u_immoral": 0.9392095804214478,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.49,
+        "u_moral": 0.9391936659812927,
+        "u_immoral": 0.9392096400260925,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.5,
+        "u_moral": 0.9391940236091614,
+        "u_immoral": 0.9392096996307373,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.51,
+        "u_moral": 0.9391944408416748,
+        "u_immoral": 0.9392096996307373,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.52,
+        "u_moral": 0.9391947984695435,
+        "u_immoral": 0.9392098188400269,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.53,
+        "u_moral": 0.9391951560974121,
+        "u_immoral": 0.9392098188400269,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.54,
+        "u_moral": 0.9391955733299255,
+        "u_immoral": 0.9392098784446716,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.55,
+        "u_moral": 0.939195990562439,
+        "u_immoral": 0.9392099380493164,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.56,
+        "u_moral": 0.9391963481903076,
+        "u_immoral": 0.9392099976539612,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.5700000000000001,
+        "u_moral": 0.9391967058181763,
+        "u_immoral": 0.939210057258606,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.58,
+        "u_moral": 0.9391971230506897,
+        "u_immoral": 0.9392101168632507,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.59,
+        "u_moral": 0.9391974806785583,
+        "u_immoral": 0.9392101764678955,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.6,
+        "u_moral": 0.9391978979110718,
+        "u_immoral": 0.9392102360725403,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.61,
+        "u_moral": 0.9391982555389404,
+        "u_immoral": 0.9392102956771851,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.62,
+        "u_moral": 0.9391986727714539,
+        "u_immoral": 0.9392103552818298,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.63,
+        "u_moral": 0.9391990303993225,
+        "u_immoral": 0.9392104148864746,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.64,
+        "u_moral": 0.9391994476318359,
+        "u_immoral": 0.9392104744911194,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.65,
+        "u_moral": 0.9391998052597046,
+        "u_immoral": 0.9392105340957642,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.66,
+        "u_moral": 0.9392001628875732,
+        "u_immoral": 0.9392105937004089,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.67,
+        "u_moral": 0.9392005801200867,
+        "u_immoral": 0.9392106533050537,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.68,
+        "u_moral": 0.9392009973526001,
+        "u_immoral": 0.9392107129096985,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.6900000000000001,
+        "u_moral": 0.9392013549804688,
+        "u_immoral": 0.9392107725143433,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.7000000000000001,
+        "u_moral": 0.9392017126083374,
+        "u_immoral": 0.939210832118988,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.71,
+        "u_moral": 0.9392021298408508,
+        "u_immoral": 0.9392108917236328,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.72,
+        "u_moral": 0.9392024874687195,
+        "u_immoral": 0.9392109513282776,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.73,
+        "u_moral": 0.9392029047012329,
+        "u_immoral": 0.9392110109329224,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.74,
+        "u_moral": 0.9392032623291016,
+        "u_immoral": 0.9392110705375671,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.75,
+        "u_moral": 0.9392036199569702,
+        "u_immoral": 0.9392111301422119,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.76,
+        "u_moral": 0.9392040371894836,
+        "u_immoral": 0.9392111301422119,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.77,
+        "u_moral": 0.9392044544219971,
+        "u_immoral": 0.9392112493515015,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.78,
+        "u_moral": 0.9392048120498657,
+        "u_immoral": 0.9392112493515015,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.79,
+        "u_moral": 0.9392051696777344,
+        "u_immoral": 0.9392113089561462,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8,
+        "u_moral": 0.9392055869102478,
+        "u_immoral": 0.939211368560791,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.81,
+        "u_moral": 0.9392059445381165,
+        "u_immoral": 0.9392114281654358,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8200000000000001,
+        "u_moral": 0.9392063617706299,
+        "u_immoral": 0.9392114877700806,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.8300000000000001,
+        "u_moral": 0.9392067193984985,
+        "u_immoral": 0.9392115473747253,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.84,
+        "u_moral": 0.939207136631012,
+        "u_immoral": 0.9392116069793701,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.85,
+        "u_moral": 0.9392074942588806,
+        "u_immoral": 0.9392116665840149,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.86,
+        "u_moral": 0.939207911491394,
+        "u_immoral": 0.9392117261886597,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.87,
+        "u_moral": 0.9392082691192627,
+        "u_immoral": 0.9392117857933044,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.88,
+        "u_moral": 0.9392086267471313,
+        "u_immoral": 0.9392118453979492,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.89,
+        "u_moral": 0.9392090439796448,
+        "u_immoral": 0.939211905002594,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9,
+        "u_moral": 0.9392094612121582,
+        "u_immoral": 0.9392119646072388,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.91,
+        "u_moral": 0.9392098188400269,
+        "u_immoral": 0.9392120242118835,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.92,
+        "u_moral": 0.9392101764678955,
+        "u_immoral": 0.9392120838165283,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.93,
+        "u_moral": 0.9392105937004089,
+        "u_immoral": 0.9392121434211731,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9400000000000001,
+        "u_moral": 0.9392109513282776,
+        "u_immoral": 0.9392122030258179,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.9500000000000001,
+        "u_moral": 0.939211368560791,
+        "u_immoral": 0.9392122626304626,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.96,
+        "u_moral": 0.9392117261886597,
+        "u_immoral": 0.9392123222351074,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.97,
+        "u_moral": 0.9392120838165283,
+        "u_immoral": 0.9392123818397522,
+        "decision": "immoral"
+      },
+      {
+        "intervened_value": 0.98,
+        "u_moral": 0.9392125010490417,
+        "u_immoral": 0.939212441444397,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 0.99,
+        "u_moral": 0.9392129182815552,
+        "u_immoral": 0.9392125010490417,
+        "decision": "moral"
+      },
+      {
+        "intervened_value": 1.0,
+        "u_moral": 0.9392132759094238,
+        "u_immoral": 0.9392125606536865,
+        "decision": "moral"
+      }
+    ]
+  }
+]

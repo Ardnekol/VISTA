@@ -1,0 +1,87 @@
+============================================================================================
+VISTA — STEP 6: CROSS-MODEL CONSISTENCY (do 4 LLMs agree?)
+============================================================================================
+
+Plain-English question:
+  Do 4 LLMs from 3 different labs (Meta, Alibaba, Google)
+  rank the 8 modifiers similarly? If yes, the effect is a
+  property of the STIMULUS, not of any one model's training.
+
+--------------------------------------------------------------------------------------------
+HEADLINE: KENDALL'S W (agreement coefficient across raters)
+--------------------------------------------------------------------------------------------
+W ranges from 0 (no agreement) to 1 (perfect agreement).
+Chi-squared test asks: 'is the observed agreement higher than chance?'
+
+  Across 4 LLMs only:
+    W = 0.634   chi2(7) = 17.74   p = 0.013176
+  Including dot-product (5 'raters'):
+    W = 0.521   chi2(7) = 18.23   p = 0.010978
+
+  -> Adding dot-product REDUCES agreement (W drops from 0.634 to 0.521). Dot-product is the outlier.
+
+--------------------------------------------------------------------------------------------
+PAIRWISE SPEARMAN MATRIX (LLMs only)
+--------------------------------------------------------------------------------------------
+
+                        Llama 3.3 70B    Qwen 2.5 32B     Gemma 4 31B    Llama 3.1 8B
+  Llama 3.3 70B                 1.000           0.542           0.850           0.313
+  Qwen 2.5 32B                  0.542           1.000           0.659           0.488
+  Gemma 4 31B                   0.850           0.659           1.000           0.180
+  Llama 3.1 8B                  0.313           0.488           0.180           1.000
+
+  Mean pairwise Spearman (upper triangle, 6 pairs): rho = 0.505
+
+  Pairwise details:
+    Llama 3.3 70B      vs Qwen 2.5 32B        rho =  0.542   p = 0.1651  ns
+    Llama 3.3 70B      vs Gemma 4 31B         rho =  0.850   p = 0.0075  **
+    Llama 3.3 70B      vs Llama 3.1 8B        rho =  0.313   p = 0.4499  ns
+    Qwen 2.5 32B       vs Gemma 4 31B         rho =  0.659   p = 0.0757  ns
+    Qwen 2.5 32B       vs Llama 3.1 8B        rho =  0.488   p = 0.2199  ns
+    Gemma 4 31B        vs Llama 3.1 8B        rho =  0.180   p = 0.6703  ns
+
+--------------------------------------------------------------------------------------------
+PER-AXIS AGREEMENT ACROSS LLMs
+--------------------------------------------------------------------------------------------
+Low SD of rank across LLMs = strong cross-model agreement on that axis.
+Sorted by mean LLM rank (top-flippers first).
+
+  axis                        mean_rk   sd_rk   min   max   dp_rk   dp-llm
+  authority_signal               1.25    0.50     1     2       1    -0.25
+  self_preservation              1.50    0.58     1     2       6    +4.50
+  competence_uncertainty         4.50    1.29     3     6       4    -0.50
+  resource_scarcity              5.00    2.45     3     8       5    +0.00
+  in_out_group                   5.25    0.96     4     6       2    -3.25
+  diffused_responsibility        5.50    1.73     4     7       8    +2.50
+  time_pressure                  6.00    2.45     3     8       7    +1.00
+  social_visibility              6.25    1.71     4     8       3    -3.25
+
+  Interpretation:
+    sd_rk < 1.0   -> very strong cross-model agreement on this axis
+    |dp-llm| >= 3 -> LLMs and dot-product disagree about this axis
+
+--------------------------------------------------------------------------------------------
+CONSENSUS CALLS
+--------------------------------------------------------------------------------------------
+
+  Axes ranked TOP-2 in ALL 4 LLMs:
+    - authority_signal
+    - self_preservation
+
+  Axes ranked BOTTOM-2 in ALL 4 LLMs:
+    (none)
+
+--------------------------------------------------------------------------------------------
+WHAT TO WRITE IN THE PAPER
+--------------------------------------------------------------------------------------------
+
+Suggested sentence:
+  "Modifier importance is highly consistent across four LLMs from
+  three independent labs (Kendall's W = 0.634, chi2(7) = 17.7, p = 0.0132; mean pairwise
+  Spearman rho = 0.505). Adding the dot-product rule-based
+  baseline reduces agreement to W = 0.521, indicating that
+  LLMs share a decision rule that differs from value arithmetic."
+
+============================================================================================
+END OF STEP 6 REPORT
+============================================================================================

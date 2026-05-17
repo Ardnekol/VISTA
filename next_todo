@@ -1,0 +1,303 @@
+============================================================
+VISTA — Next Steps for EMNLP Paper Analysis
+============================================================
+
+CLAIM TO PROVE:
+"Situational modifiers are also a part of decision making in
+addition to scenario and the person's Schwartz value profile."
+
+DATA AVAILABLE:
+- 4 LLM analysis reports (Llama 3.3 70B, Qwen 2.5 32B, Gemma4 31B, Llama 3.1 8B)
+- 1 dot-product rule-based baseline report
+- 8,550 rows each (950 baseline + 7,600 modifier rows)
+- 8 modifier axes, 10 scenarios, profile strength 0-9 HIGH values
+
+KEY OBSERVATIONS FROM EXISTING DATA:
+- LLM flip rates: 8.3% (Llama70B), 6.6% (Qwen), 8.9% (Gemma), 2.0% (Llama8B)
+- Dot-product flip rate: 19.9% (over-predicts vs LLMs)
+- All 3 large LLMs put Self-Preservation and Authority in top 2 axes
+- Dot-product ranks Self-Preservation #6 — qualitative disagreement
+- Dot-product mathematically forces 0% flips at 8-9 HIGH profiles
+- LLMs flip 5-20% at 8-9 HIGH — "impossible flips" under value-only model
+
+============================================================
+STEP 1 — ESTABLISH A NOISE FLOOR (PARAPHRASE/SEED TEST)
+============================================================
+
+WHAT TO DO:
+- Pick ~100 of the 950 baseline rows (no modifier attached).
+- For each, write 3-5 paraphrased versions that mean the SAME thing.
+  Example: "Would you accept the offer?" -> "Do you accept the offer?"
+           -> "Should you take this offer?"
+  No new information, just different wording.
+- Re-run each LLM on all paraphrased versions.
+- For each row, count how often the decision changes purely because
+  the wording changed (or temperature/seed if sampled).
+- Aggregate to get a "noise flip rate" per model.
+
+WHY IT MATTERS:
+LLMs are well-known to flip answers just because you reword a prompt.
+If wording-only changes already flip 5% of decisions, our 6-9% modifier
+rate is barely above noise and the paper falls apart. If the noise
+floor is 1%, then 6-9% is clearly a real signal. This is the #1 reviewer
+attack on this kind of work. Final claim becomes: "modifier flips
+occur at X%, paraphrase noise at Y%, X significantly larger than Y."
+
+PRIORITY: HIGHEST (defends against the #1 reviewer objection)
+EFFORT: Medium (requires new LLM runs)
+
+============================================================
+STEP 2 — "IMPOSSIBLE FLIPS" HEADLINE TEST
+============================================================
+
+WHAT TO DO:
+- For every modifier row, we already have two flip indicators:
+  dot-product flip (yes/no) and LLM flip (yes/no).
+- Create a new column:
+  impossible_flip = (dot_product_flip == NO) AND (LLM_flip == YES)
+- Stratify by profile strength (0 HIGH -> 9 HIGH).
+  Build a table: rows = profile strength, columns = each LLM,
+  cells = % of impossible flips.
+- Zoom in on 8 HIGH and 9 HIGH rows specifically. Here dot-product
+  score is mathematically guaranteed to predict no flip
+  (0/320 and 0/160 cells in the dot-product report).
+- Yet LLMs flip these cases:
+  Llama70B: 10.6% (8H), 15.6% (9H)
+  Gemma:    20.3% (8H), 15.6% (9H)
+  Qwen:     10.3% (8H), 5.0%  (9H)
+  Llama8B:  0.6%  (8H), 0.0%  (9H)
+
+WHY IT MATTERS:
+Dot-product is a stand-in for "decision fully determined by
+value x scenario." When it predicts zero flips but LLM flips anyway,
+those flips CANNOT be explained by value profile alone. That is
+exactly our claim — modifiers contribute something BEYOND values
+and scenarios — restated in unfalsifiable form. One simple table
+or bar chart of this is the most powerful single piece of evidence
+in the paper, because the reader doesn't need to trust our statistics;
+the dot-product baseline is 0% by construction.
+
+PRIORITY: HIGHEST (headline figure of the paper)
+EFFORT: Low (pure reanalysis of existing data)
+
+============================================================
+STEP 3 — MCNEMAR PAIRED TEST (PER MODEL, PER AXIS)
+============================================================
+
+WHAT TO DO:
+For each (model, axis) combination, build a 2x2 table:
+
+                          | modifier -> A | modifier -> B
+  baseline -> A           | A (no change) | B (flipped A->B)
+  baseline -> B           | C (flipped B->A) | D (no change)
+
+- Run McNemar's test: null hypothesis is B = C (flips happen
+  equally in both directions, i.e., modifier has no systematic effect).
+- Report p-value, odds ratio (B/C), and 95% CI on the odds ratio.
+- Do this for all 9 axes x 4 models = 36 tests.
+- Apply Bonferroni or Benjamini-Hochberg correction for multiple comparisons.
+
+WHY IT MATTERS:
+"8.3% of decisions flipped" is a description, not a test.
+A reviewer asks: how do I know that's not chance? McNemar is the
+textbook test for paired binary outcomes (same row, two conditions:
+baseline vs modifier), which is exactly our design. The odds ratio
+with CI gives an effect-size number we can compare meaningfully
+across axes and models: "Authority signals shift decisions 3.2x more
+than baseline, 95% CI [2.1, 4.8]". This is the language reviewers
+expect; without it the paper looks like exploratory data analysis,
+not hypothesis testing.
+
+PRIORITY: HIGH (standard statistical legitimacy)
+EFFORT: Low (pure reanalysis)
+
+============================================================
+STEP 4 — MIXED-EFFECTS LOGISTIC REGRESSION (VARIANCE DECOMPOSITION)
+============================================================
+
+WHAT TO DO:
+- Pool all 8,550 rows into one dataset (per model).
+- Fit a logistic regression. Outcome = binary decision made by LLM.
+  Predictors:
+    * scenario (categorical, 10 levels)
+    * value_profile (10 Schwartz value scores, or count of HIGH values)
+    * modifier_axis (categorical, 8 levels + "none")
+    * Random intercept per profile_id (controls for repeated profiles)
+- Fit a REDUCED model that omits the modifier_axis term.
+- Compare full vs reduced models with a likelihood-ratio test (LR test).
+- Report p-value, delta AIC, delta BIC.
+
+WHY IT MATTERS:
+Our claim has three pieces: scenario, value profile, AND modifier.
+The LR test answers the precise question: "After scenario and value
+profile already explain what they can, does adding a modifier term
+significantly improve the model's fit?" If yes (low p-value,
+large delta AIC), then modifiers explain variance that scenario
+and values cannot — which is the claim in formal statistical form.
+This is the single result that maps most directly onto the claim
+wording and is the strongest single sentence in the results section.
+
+PRIORITY: HIGHEST (the formal version of the exact claim)
+EFFORT: Low-Medium
+
+============================================================
+STEP 5 — AXIS-RANKING DIVERGENCE (LLM vs DOT-PRODUCT)
+============================================================
+
+WHAT TO DO:
+- For each model, rank the 8 modifier axes from highest flip rate (1)
+  to lowest (8).
+- Do the same for the dot-product baseline.
+- Compute Spearman rank correlation between LLM ranking and
+  dot-product ranking, per model.
+- Build a side-by-side table showing each axis's rank in each model.
+- Highlight axes where rank differs by >= 3 positions
+  (qualitative disagreements).
+
+EXPECTED FINDING:
+Dot-product ranks: Authority(1), In/Out-Group(2), Social Vis(3),
+  Competence(4), Scarcity(5), Self-Pres(6), Time(7), Diffused(8)
+Llama70B ranks: Self-Pres(1), Authority(2), Scarcity(3), ...
+Self-Preservation jumps from #6 (dot-product) to #1/#2 (all 3 large LLMs).
+
+WHY IT MATTERS:
+A reviewer might say: "Maybe the LLM is just a noisy dot-product."
+If true, LLM axis ranking would match dot-product ranking. But LLMs
+put Self-Preservation at #1/#2 while dot-product puts it at #6.
+That's not a noisy version of the same thing — it's a DIFFERENT
+decision rule. This rules out the simplest competing explanation
+for our data and lets us claim the LLM is integrating modifiers
+in a non-trivial way.
+
+PRIORITY: HIGH (kills the "LLM = noisy dot-product" objection)
+EFFORT: Low
+
+============================================================
+STEP 6 — CROSS-MODEL CONSISTENCY
+============================================================
+
+WHAT TO DO:
+- Take the 8-axis ranking for each of the 4 LLMs.
+- Compute pairwise Spearman rho between every pair of models
+  (6 pairs total). Build a 4x4 correlation matrix.
+- Report average pairwise rho.
+- Flag axes that consistently appear in top 2 or bottom 2
+  across all models.
+
+EXPECTED FINDING:
+Self-Preservation and Authority are top 2 across Llama (Meta),
+Qwen (Alibaba), and Gemma (Google) — three different labs,
+three different training pipelines.
+
+WHY IT MATTERS:
+If only Llama produced the Self-Preservation effect, a reviewer
+could say "this is an artifact of Meta's specific RLHF process."
+But Llama (Meta), Qwen (Alibaba), and Gemma (Google) are trained
+by three different labs with three different alignment pipelines
+and three different data mixes. If they AGREE on which axes are
+most influential, the effect is a property of the STIMULUS and
+the underlying social phenomenon, not of any one company's training
+choices. This is built-in independent replication — one of the
+strongest defenses against the "single-model quirk" objection.
+
+PRIORITY: HIGH (built-in independent replication)
+EFFORT: Low
+
+============================================================
+STEP 7 — SCALE EFFECT (DON'T HIDE THE 8B RESULT)
+============================================================
+
+WHAT TO DO:
+- Make a simple line plot:
+  x-axis = log(parameter count), y-axis = overall flip rate.
+  Four points: 8B (2.0%), 32B (6.6%), 31B (8.9%), 70B (8.3%).
+- Repeat per top axis (Self-Preservation, Authority).
+- In the discussion, explicitly address two competing interpretations.
+
+TWO STORIES TO DISCUSS:
+1. CAPABILITY STORY: small models don't fully "understand" the modifiers;
+   sensitivity emerges with capability.
+2. ALIGNMENT STORY: smaller models are more heavily RLHF'd toward
+   "consistent, principled" answers, which suppresses modifier
+   sensitivity. Large models retain more of the social-psychology pull.
+
+WHY IT MATTERS:
+Both interpretations are interesting and publishable. We don't have
+to resolve which is right — speculating is fine. But if we OMIT the
+8B result, a reviewer will run their own experiment and call us on
+it. Including it and naming the two interpretations is more credible
+and gives us a second-order finding worth publishing.
+
+PRIORITY: MEDIUM (defensive — pre-empts reviewer running own check)
+EFFORT: Trivial
+
+============================================================
+STEP 8 — QUALITATIVE AUDIT (THE PART HUMANS READ)
+============================================================
+
+WHAT TO DO:
+- Sample ~50 rows where:
+  (a) profile is strong (4+ HIGH)
+  (b) the modifier is one of the top two axes (Self-Pres or Authority)
+  (c) the LLM flipped its decision
+- If reasoning isn't already captured, re-run those 50 rows with a
+  "explain your reasoning, then answer" prompt.
+- Hand-code each example with a simple checklist:
+  * Did the reasoning CITE the modifier?
+  * Was the reasoning coherent?
+  * Did the model explicitly TRADE OFF the value against the situation?
+- Pick 3-5 representative examples for the paper, including:
+  the prompt, the baseline answer, the modifier-condition answer,
+  and the model's reasoning.
+
+WHY IT MATTERS:
+Statistical results alone can always be dismissed as "the model is
+doing something random and the modifier just happens to correlate
+with the flip." If we can show that in 40 out of 50 cases the model
+explicitly mentions the authority figure or the danger when justifying
+the flip, we've shown the modifier is CAUSALLY DRIVING the decision
+in the model's own reasoning, not just correlated with it. Quoted
+examples also do something statistics cannot: they make the phenomenon
+vivid and undeniable to a reader skimming the paper.
+
+PRIORITY: MEDIUM (makes the phenomenon real to the reader)
+EFFORT: Medium (hand coding)
+
+============================================================
+QUICK SUMMARY TABLE
+============================================================
+
+Step | Effort         | What it buys
+-----|----------------|------------------------------------------------
+  1  | Medium (runs)  | Defends against the #1 reviewer objection
+  2  | Low (reanalysis)| The single strongest figure in the paper
+  3  | Low (reanalysis)| Standard statistical legitimacy
+  4  | Low-Medium     | The formal version of the exact claim
+  5  | Low            | Kills the "LLM = noisy dot-product" objection
+  6  | Low            | Built-in independent replication
+  7  | Trivial        | Defensive — pre-empts reviewer running own check
+  8  | Medium (coding)| Makes the phenomenon real to the reader
+
+IF ONLY TIME FOR THREE: Steps 1, 2, and 4 carry the paper.
+
+============================================================
+EXECUTION ORDER (RECOMMENDED)
+============================================================
+
+Phase 1 (reanalysis of existing data, no new LLM runs):
+  -> Step 2  (impossible flips)
+  -> Step 3  (McNemar)
+  -> Step 4  (mixed-effects regression)
+  -> Step 5  (axis-ranking divergence)
+  -> Step 6  (cross-model consistency)
+  -> Step 7  (scale effect plot)
+
+Phase 2 (new LLM runs required):
+  -> Step 1  (paraphrase noise floor)
+
+Phase 3 (hand work):
+  -> Step 8  (qualitative audit)
+
+============================================================
+END OF NEXT_TODO
+============================================================

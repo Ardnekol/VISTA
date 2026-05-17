@@ -1,0 +1,776 @@
+{
+  "models": [
+    "llama",
+    "qwen"
+  ],
+  "metrics": [
+    {
+      "type": "overall",
+      "key": "overall",
+      "label": "Overall flip rate (modifier rows)",
+      "per_model": {
+        "llama": {
+          "flipped": 628,
+          "total": 7600,
+          "rate": 0.08263157894736842
+        },
+        "qwen": {
+          "flipped": 500,
+          "total": 7600,
+          "rate": 0.06578947368421052
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.016842105263157894,
+          "cohens_h": 0.06435420813778014,
+          "p_value": 7.465233500614232e-05
+        }
+      }
+    },
+    {
+      "type": "overall",
+      "key": "dp_baseline",
+      "label": "Dot-product flip rate (baseline)",
+      "per_model": {
+        "llama": {
+          "flipped": 1515,
+          "total": 7600,
+          "rate": 0.1993421052631579
+        },
+        "qwen": {
+          "flipped": 1515,
+          "total": 7600,
+          "rate": 0.1993421052631579
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.0,
+          "cohens_h": 0.0,
+          "p_value": 1.0
+        }
+      }
+    },
+    {
+      "type": "agreement",
+      "key": "overall_agree",
+      "label": "LLM\u2194DP overall agreement",
+      "per_model": {
+        "llama": {
+          "flipped": 5265,
+          "total": 8550,
+          "rate": 0.6157894736842106
+        },
+        "qwen": {
+          "flipped": 4879,
+          "total": 8550,
+          "rate": 0.5706432748538012
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.04514619883040938,
+          "cohens_h": 0.09193955805561305,
+          "p_value": 1.866910626091567e-09
+        }
+      }
+    },
+    {
+      "type": "agreement",
+      "key": "baseline_agree",
+      "label": "LLM\u2194DP baseline-only agreement",
+      "per_model": {
+        "llama": {
+          "flipped": 529,
+          "total": 950,
+          "rate": 0.5568421052631579
+        },
+        "qwen": {
+          "flipped": 497,
+          "total": 950,
+          "rate": 0.5231578947368422
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.03368421052631576,
+          "cohens_h": 0.06759815887947784,
+          "p_value": 0.1407559421520037
+        }
+      }
+    },
+    {
+      "type": "axis",
+      "key": "authority_signal",
+      "label": "Axis: authority_signal",
+      "per_model": {
+        "llama": {
+          "flipped": 144,
+          "total": 950,
+          "rate": 0.15157894736842106
+        },
+        "qwen": {
+          "flipped": 91,
+          "total": 950,
+          "rate": 0.09578947368421052
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.05578947368421054,
+          "cohens_h": 0.17047953862587462,
+          "p_value": 0.00022138458593801147
+        }
+      }
+    },
+    {
+      "type": "axis",
+      "key": "competence_uncertainty",
+      "label": "Axis: competence_uncertainty",
+      "per_model": {
+        "llama": {
+          "flipped": 60,
+          "total": 950,
+          "rate": 0.06315789473684211
+        },
+        "qwen": {
+          "flipped": 60,
+          "total": 950,
+          "rate": 0.06315789473684211
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.0,
+          "cohens_h": 0.0,
+          "p_value": 1.0
+        }
+      }
+    },
+    {
+      "type": "axis",
+      "key": "diffused_responsibility",
+      "label": "Axis: diffused_responsibility",
+      "per_model": {
+        "llama": {
+          "flipped": 50,
+          "total": 950,
+          "rate": 0.05263157894736842
+        },
+        "qwen": {
+          "flipped": 49,
+          "total": 950,
+          "rate": 0.05157894736842105
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.0010526315789473675,
+          "cohens_h": 0.00473653657060108,
+          "p_value": 0.917781105997125
+        }
+      }
+    },
+    {
+      "type": "axis",
+      "key": "in_out_group",
+      "label": "Axis: in_out_group",
+      "per_model": {
+        "llama": {
+          "flipped": 59,
+          "total": 950,
+          "rate": 0.06210526315789474
+        },
+        "qwen": {
+          "flipped": 45,
+          "total": 950,
+          "rate": 0.04736842105263158
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.01473684210526316,
+          "cohens_h": 0.06492976758833968,
+          "p_value": 0.15794967051913478
+        }
+      }
+    },
+    {
+      "type": "axis",
+      "key": "resource_scarcity",
+      "label": "Axis: resource_scarcity",
+      "per_model": {
+        "llama": {
+          "flipped": 68,
+          "total": 950,
+          "rate": 0.07157894736842105
+        },
+        "qwen": {
+          "flipped": 45,
+          "total": 950,
+          "rate": 0.04736842105263158
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.024210526315789467,
+          "cohens_h": 0.10288553568710268,
+          "p_value": 0.02567991484551868
+        }
+      }
+    },
+    {
+      "type": "axis",
+      "key": "self_preservation",
+      "label": "Axis: self_preservation",
+      "per_model": {
+        "llama": {
+          "flipped": 144,
+          "total": 950,
+          "rate": 0.15157894736842106
+        },
+        "qwen": {
+          "flipped": 122,
+          "total": 950,
+          "rate": 0.12842105263157894
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.023157894736842127,
+          "cohens_h": 0.0667924858068698,
+          "p_value": 0.14579018699160473
+        }
+      }
+    },
+    {
+      "type": "axis",
+      "key": "social_visibility",
+      "label": "Axis: social_visibility",
+      "per_model": {
+        "llama": {
+          "flipped": 54,
+          "total": 950,
+          "rate": 0.056842105263157895
+        },
+        "qwen": {
+          "flipped": 40,
+          "total": 950,
+          "rate": 0.042105263157894736
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.01473684210526316,
+          "cohens_h": 0.06814136215864663,
+          "p_value": 0.1385820591800595
+        }
+      }
+    },
+    {
+      "type": "axis",
+      "key": "time_pressure",
+      "label": "Axis: time_pressure",
+      "per_model": {
+        "llama": {
+          "flipped": 49,
+          "total": 950,
+          "rate": 0.05157894736842105
+        },
+        "qwen": {
+          "flipped": 48,
+          "total": 950,
+          "rate": 0.05052631578947368
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.0010526315789473675,
+          "cohens_h": 0.004782465489560517,
+          "p_value": 0.9169867637971552
+        }
+      }
+    },
+    {
+      "type": "strength",
+      "key": "0",
+      "label": "Profile strength: 0 HIGH",
+      "per_model": {
+        "llama": {
+          "flipped": 11,
+          "total": 80,
+          "rate": 0.1375
+        },
+        "qwen": {
+          "flipped": 3,
+          "total": 80,
+          "rate": 0.0375
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.1,
+          "cohens_h": 0.3700011997098402,
+          "p_value": 0.025204441162505198
+        }
+      }
+    },
+    {
+      "type": "strength",
+      "key": "1",
+      "label": "Profile strength: 1 HIGH",
+      "per_model": {
+        "llama": {
+          "flipped": 26,
+          "total": 400,
+          "rate": 0.065
+        },
+        "qwen": {
+          "flipped": 21,
+          "total": 400,
+          "rate": 0.0525
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.012500000000000004,
+          "cohens_h": 0.053228882226663166,
+          "p_value": 0.45220647147105697
+        }
+      }
+    },
+    {
+      "type": "strength",
+      "key": "2",
+      "label": "Profile strength: 2 HIGH",
+      "per_model": {
+        "llama": {
+          "flipped": 64,
+          "total": 800,
+          "rate": 0.08
+        },
+        "qwen": {
+          "flipped": 46,
+          "total": 800,
+          "rate": 0.0575
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.0225,
+          "cohens_h": 0.08921078867717686,
+          "p_value": 0.07532906309229892
+        }
+      }
+    },
+    {
+      "type": "strength",
+      "key": "3",
+      "label": "Profile strength: 3 HIGH",
+      "per_model": {
+        "llama": {
+          "flipped": 98,
+          "total": 1120,
+          "rate": 0.0875
+        },
+        "qwen": {
+          "flipped": 68,
+          "total": 1120,
+          "rate": 0.060714285714285714
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.02678571428571428,
+          "cohens_h": 0.10266064431551108,
+          "p_value": 0.015527291656312503
+        }
+      }
+    },
+    {
+      "type": "strength",
+      "key": "4",
+      "label": "Profile strength: 4 HIGH",
+      "per_model": {
+        "llama": {
+          "flipped": 75,
+          "total": 1280,
+          "rate": 0.05859375
+        },
+        "qwen": {
+          "flipped": 72,
+          "total": 1280,
+          "rate": 0.05625
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.0023437499999999986,
+          "cohens_h": 0.010074783012537059,
+          "p_value": 0.7988302207224454
+        }
+      }
+    },
+    {
+      "type": "strength",
+      "key": "5",
+      "label": "Profile strength: 5 HIGH",
+      "per_model": {
+        "llama": {
+          "flipped": 131,
+          "total": 1440,
+          "rate": 0.09097222222222222
+        },
+        "qwen": {
+          "flipped": 97,
+          "total": 1440,
+          "rate": 0.06736111111111111
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.02361111111111111,
+          "cohens_h": 0.08768220973128249,
+          "p_value": 0.01895055108527499
+        }
+      }
+    },
+    {
+      "type": "strength",
+      "key": "6",
+      "label": "Profile strength: 6 HIGH",
+      "per_model": {
+        "llama": {
+          "flipped": 96,
+          "total": 1280,
+          "rate": 0.075
+        },
+        "qwen": {
+          "flipped": 90,
+          "total": 1280,
+          "rate": 0.0703125
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.004687499999999997,
+          "cohens_h": 0.018060855751360183,
+          "p_value": 0.6477782789401545
+        }
+      }
+    },
+    {
+      "type": "strength",
+      "key": "7",
+      "label": "Profile strength: 7 HIGH",
+      "per_model": {
+        "llama": {
+          "flipped": 68,
+          "total": 720,
+          "rate": 0.09444444444444444
+        },
+        "qwen": {
+          "flipped": 62,
+          "total": 720,
+          "rate": 0.08611111111111111
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.008333333333333331,
+          "cohens_h": 0.029085942381477103,
+          "p_value": 0.5811345947124269
+        }
+      }
+    },
+    {
+      "type": "strength",
+      "key": "8",
+      "label": "Profile strength: 8 HIGH",
+      "per_model": {
+        "llama": {
+          "flipped": 34,
+          "total": 320,
+          "rate": 0.10625
+        },
+        "qwen": {
+          "flipped": 33,
+          "total": 320,
+          "rate": 0.103125
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.0031250000000000028,
+          "cohens_h": 0.010207669501043681,
+          "p_value": 0.8972669882725623
+        }
+      }
+    },
+    {
+      "type": "strength",
+      "key": "9",
+      "label": "Profile strength: 9 HIGH",
+      "per_model": {
+        "llama": {
+          "flipped": 25,
+          "total": 160,
+          "rate": 0.15625
+        },
+        "qwen": {
+          "flipped": 8,
+          "total": 160,
+          "rate": 0.05
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.10625,
+          "cohens_h": 0.36172874957239826,
+          "p_value": 0.0017790959834338427
+        }
+      }
+    },
+    {
+      "type": "scenario",
+      "key": "SC001_1",
+      "label": "Scenario: SC001_1",
+      "per_model": {
+        "llama": {
+          "flipped": 59,
+          "total": 760,
+          "rate": 0.07763157894736843
+        },
+        "qwen": {
+          "flipped": 71,
+          "total": 760,
+          "rate": 0.09342105263157895
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": -0.01578947368421052,
+          "cohens_h": -0.05651599242248995,
+          "p_value": 0.27107690386119065
+        }
+      }
+    },
+    {
+      "type": "scenario",
+      "key": "SC001_2",
+      "label": "Scenario: SC001_2",
+      "per_model": {
+        "llama": {
+          "flipped": 56,
+          "total": 760,
+          "rate": 0.07368421052631578
+        },
+        "qwen": {
+          "flipped": 42,
+          "total": 760,
+          "rate": 0.05526315789473684
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.018421052631578942,
+          "cohens_h": 0.07519098431785803,
+          "p_value": 0.143704661688977
+        }
+      }
+    },
+    {
+      "type": "scenario",
+      "key": "SC002_1",
+      "label": "Scenario: SC002_1",
+      "per_model": {
+        "llama": {
+          "flipped": 86,
+          "total": 760,
+          "rate": 0.11315789473684211
+        },
+        "qwen": {
+          "flipped": 68,
+          "total": 760,
+          "rate": 0.08947368421052632
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.023684210526315794,
+          "cohens_h": 0.0786168734691477,
+          "p_value": 0.12600176703326627
+        }
+      }
+    },
+    {
+      "type": "scenario",
+      "key": "SC002_2",
+      "label": "Scenario: SC002_2",
+      "per_model": {
+        "llama": {
+          "flipped": 71,
+          "total": 760,
+          "rate": 0.09342105263157895
+        },
+        "qwen": {
+          "flipped": 46,
+          "total": 760,
+          "rate": 0.060526315789473685
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.03289473684210526,
+          "cohens_h": 0.12409327372343165,
+          "p_value": 0.016141864308409026
+        }
+      }
+    },
+    {
+      "type": "scenario",
+      "key": "SC003_1",
+      "label": "Scenario: SC003_1",
+      "per_model": {
+        "llama": {
+          "flipped": 61,
+          "total": 760,
+          "rate": 0.08026315789473684
+        },
+        "qwen": {
+          "flipped": 48,
+          "total": 760,
+          "rate": 0.06315789473684211
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.017105263157894735,
+          "cohens_h": 0.06641063646044931,
+          "p_value": 0.19622747275835284
+        }
+      }
+    },
+    {
+      "type": "scenario",
+      "key": "SC003_2",
+      "label": "Scenario: SC003_2",
+      "per_model": {
+        "llama": {
+          "flipped": 85,
+          "total": 760,
+          "rate": 0.1118421052631579
+        },
+        "qwen": {
+          "flipped": 22,
+          "total": 760,
+          "rate": 0.02894736842105263
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.08289473684210527,
+          "cohens_h": 0.3400545128261721,
+          "p_value": 2.6697843935608034e-10
+        }
+      }
+    },
+    {
+      "type": "scenario",
+      "key": "SC004_1",
+      "label": "Scenario: SC004_1",
+      "per_model": {
+        "llama": {
+          "flipped": 63,
+          "total": 760,
+          "rate": 0.08289473684210526
+        },
+        "qwen": {
+          "flipped": 77,
+          "total": 760,
+          "rate": 0.1013157894736842
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": -0.01842105263157895,
+          "cohens_h": -0.06377759936772043,
+          "p_value": 0.2143160472453749
+        }
+      }
+    },
+    {
+      "type": "scenario",
+      "key": "SC004_2",
+      "label": "Scenario: SC004_2",
+      "per_model": {
+        "llama": {
+          "flipped": 79,
+          "total": 760,
+          "rate": 0.10394736842105264
+        },
+        "qwen": {
+          "flipped": 77,
+          "total": 760,
+          "rate": 0.1013157894736842
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.0026315789473684292,
+          "cohens_h": 0.008671592613650025,
+          "p_value": 0.8657673764378675
+        }
+      }
+    },
+    {
+      "type": "scenario",
+      "key": "SC005_1",
+      "label": "Scenario: SC005_1",
+      "per_model": {
+        "llama": {
+          "flipped": 25,
+          "total": 760,
+          "rate": 0.03289473684210526
+        },
+        "qwen": {
+          "flipped": 23,
+          "total": 760,
+          "rate": 0.030263157894736843
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.002631578947368419,
+          "cohens_h": 0.015051432228555983,
+          "p_value": 0.7692591959124666
+        }
+      }
+    },
+    {
+      "type": "scenario",
+      "key": "SC005_2",
+      "label": "Scenario: SC005_2",
+      "per_model": {
+        "llama": {
+          "flipped": 43,
+          "total": 760,
+          "rate": 0.056578947368421055
+        },
+        "qwen": {
+          "flipped": 26,
+          "total": 760,
+          "rate": 0.034210526315789476
+        }
+      },
+      "pairwise": {
+        "llama_vs_qwen": {
+          "rate_diff": 0.02236842105263158,
+          "cohens_h": 0.1082667206954055,
+          "p_value": 0.036201688931709164
+        }
+      }
+    }
+  ]
+}

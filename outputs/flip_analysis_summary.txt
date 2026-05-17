@@ -1,0 +1,58 @@
+Summary: Do decision flips depend on situational modifiers as well as scenario and Schwartz value profile?
+
+Quick answer
+-------------
+Based on the provided Llama 3.1 (8B) analysis report, there is meaningful evidence that situational modifiers influence decision flips in addition to scenario and the Schwartz-profile strength. Modifier-specific flip rates, the axis×profile interaction, and scenario-level differences all indicate that flips are not explained solely by scenario or profile strength.
+
+What I checked
+--------------
+- Overall flip rates by modifier axis (Analysis 1).
+- Flip rates grouped by profile strength (Analysis 2).
+- Scenario-level flip rates (Analysis 3).
+- Interaction counts for Axis × Profile Strength (Analysis 5).
+- LLM vs dot-product disagreement as a reliability check (Analysis 4).
+
+Key evidence from the report
+----------------------------
+1) Modifier-level differences: Analysis 1 reports substantial variation in flip rates by axis (authority signal 3.3%, self-preservation 2.8%, time pressure 2.3% vs resource scarcity 0.9%). If flips were driven solely by scenario or profile, we would expect more uniformity across modifier axes.
+
+2) Axis × Profile interactions: Analysis 5 shows that different axes flip at different rates depending on profile strength. For weak profiles (0–1 HIGH), Social Visibility and Time Pressure produce high flip rates (8.3% each). For medium profiles, Authority Signal dominates (5.8%). For strong profiles (4+ HIGH), Self-Preservation and Time Pressure still appear but at much lower absolute rates. These interactions indicate a three-way dependence: modifier × profile × scenario context.
+
+3) Scenario heterogeneity: Analysis 3 shows some scenarios (e.g., SC002_2 at 5.7%) have much higher flip rates than others (several at 0%). The presence of scenarios with both high and low flip rates indicates scenario matters; but modifiers remain predictive within profile groups (see Analysis 5), so scenario alone doesn't explain flips.
+
+4) Profile strength gradients: Analysis 2 demonstrates that profiles with few or no HIGH values flip more often (e.g., 0–1 HIGH at 5.0–6.5%) than profiles with strong HIGH counts (≥4 HIGH at ~1.0–2.2%). This supports the idea that profile strength moderates susceptibility to modifiers.
+
+5) Reliability and triangulation: Dot-product flips (19.9%) and LLM flips (2.0%) differ in magnitude; however, the axis and profile trends are visible in the LLM results. Disagreement metrics (Analysis 4) indicate nontrivial differences between methods but not enough to invalidate the observed patterns.
+
+Quantitative interpretation
+---------------------------
+- The modifier axis effect size: the highest axis (Authority Signal, 3.3%) has ~3.7× the flip rate of the lowest (Resource Scarcity, 0.9%). That's a meaningful difference for behavioral data.
+- Profile moderation: Weak profiles flip roughly 3–4× more often than strong profiles in absolute terms (compare 5–6% vs ~1–2%).
+- Combined evidence points to modifiers exerting independent effects beyond scenario and profile. The Axis × Profile table directly shows which modifiers are most potent for which profile strengths.
+
+Caveats and assumptions
+------------------------
+- I relied only on summary counts from the provided report, not raw row-level data. That constrains the statistical tests I can run here.
+- I assume the reported denominators (e.g., 950 per axis, distributions by profile counts) correctly reflect balanced sampling; if sampling is uneven across axes/scenarios, effect sizes may be biased.
+- Dot-product vs LLM disagreement suggests model-specific behavior. We should treat the LLM flip counts as model-dependent outcomes.
+
+Suggested next steps (high value, low risk)
+--------------------------------------------
+1) Produce a contingency table (flip vs no-flip) across Axis × Profile × Scenario using the row-level dataset (if available) and run logistic regression with interactions: flip ~ axis + profile_strength + scenario + axis:profile_strength + (1|scenario) (or use scenario fixed effects). That will test independent effects and interaction significance.
+2) Compute pairwise chi-square tests for each axis within profile groups to confirm the Analysis 5 counts are statistically significant vs chance.
+3) Generate visualizations: heatmap of flip rate by Axis (rows) × Profile strength (columns); bar plots of scenario flip rates with axis breakdowns.
+4) Reconcile LLM vs dot-product: examine examples with disagreement to understand whether disagreements cluster by axis or profile.
+5) If raw data is unavailable, request the CSV of parsed events; I can parse the full report into an event-level CSV if the report contains those details, or you can provide the raw dataset.
+
+Conclusion
+----------
+The report's summaries provide credible support for your claim: situational modifiers affect decision flips over and above scenario and Schwartz-profile strength. The Axis × Profile interaction is the strongest direct evidence. To make the claim statistically rigorous, I recommend running logistic regression on the raw data and creating the suggested visualizations.
+
+Files created
+-------------
+- outputs/flip_analysis_summary.txt  — concise evidence, interpretation, and next steps.
+
+If you'd like, I can now:
+- Run the statistical tests and generate plots (I will need the raw CSV with row-level entries, or tell me where the dataset lives in the repo).
+- Parse any additional model reports into CSV for deeper analysis.
+

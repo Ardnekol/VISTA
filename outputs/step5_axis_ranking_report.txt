@@ -1,0 +1,97 @@
+============================================================================================
+VISTA — STEP 5: AXIS-RANKING DIVERGENCE (LLM vs DOT-PRODUCT)
+============================================================================================
+
+Plain-English question:
+  Are LLMs just a noisy version of dot-product value arithmetic?
+  If yes -> they should rank the 8 modifier axes the same way.
+  If no  -> they're using a different decision rule.
+
+--------------------------------------------------------------------------------------------
+FLIP RATES BY AXIS (per model)
+--------------------------------------------------------------------------------------------
+  axis                         Llama 3.3 70B    Qwen 2.5 32B     Gemma 4 31B    Llama 3.1 8B  Dot-Product (r
+  authority_signal                    15.2%           9.6%          17.9%           3.3%          34.1%
+  competence_uncertainty               6.3%           6.3%           6.7%           1.7%          21.9%
+  diffused_responsibility              5.3%           5.2%           7.7%           1.4%           5.9%
+  in_out_group                         6.2%           4.7%           6.2%           1.9%          26.3%
+  resource_scarcity                    7.2%           4.7%           7.8%           0.9%          21.1%
+  self_preservation                   15.2%          12.8%          13.9%           2.8%          16.1%
+  social_visibility                    5.7%           4.2%           5.7%           1.9%          24.6%
+  time_pressure                        5.2%           5.1%           5.5%           2.3%           9.5%
+
+--------------------------------------------------------------------------------------------
+AXIS RANKS (1 = highest flip rate, 8 = lowest)
+--------------------------------------------------------------------------------------------
+  axis                         Llama 3.3 70B    Qwen 2.5 32B     Gemma 4 31B    Llama 3.1 8B  Dot-Product (r
+  authority_signal                         1               2               1               1               1
+  competence_uncertainty                   4               3               5               6               4
+  diffused_responsibility                  7               4               4               7               8
+  in_out_group                             5               6               6               4               2
+  resource_scarcity                        3               6               3               8               5
+  self_preservation                        1               1               2               2               6
+  social_visibility                        6               8               7               4               3
+  time_pressure                            8               5               8               3               7
+
+--------------------------------------------------------------------------------------------
+SPEARMAN RANK CORRELATION: each LLM vs DOT-PRODUCT
+--------------------------------------------------------------------------------------------
+rho = +1 means perfect agreement; rho = 0 means no relationship;
+rho < 0 means reversed ordering. n = 8 axes.
+
+  Model                     rho          p
+  Llama 3.3 70B           0.467     0.2433
+  Qwen 2.5 32B           -0.132     0.7558
+  Gemma 4 31B             0.167     0.6932
+  Llama 3.1 8B            0.347     0.3993
+
+--------------------------------------------------------------------------------------------
+PAIRWISE LLM-vs-LLM SPEARMAN (preview of Step 6)
+--------------------------------------------------------------------------------------------
+
+  Llama 3.3 70B      vs Qwen 2.5 32B        rho = 0.542, p = 0.1651
+  Llama 3.3 70B      vs Gemma 4 31B         rho = 0.850, p = 0.0075
+  Llama 3.3 70B      vs Llama 3.1 8B        rho = 0.313, p = 0.4499
+  Qwen 2.5 32B       vs Gemma 4 31B         rho = 0.659, p = 0.0757
+  Qwen 2.5 32B       vs Llama 3.1 8B        rho = 0.488, p = 0.2199
+  Gemma 4 31B        vs Llama 3.1 8B        rho = 0.180, p = 0.6703
+
+--------------------------------------------------------------------------------------------
+QUALITATIVE DISAGREEMENTS: |LLM rank - DP rank| >= 3
+--------------------------------------------------------------------------------------------
+These are axes that LLMs and dot-product rank very differently.
+Positive 'rank_shift' = LLM ranks LOWER (less flippy) than DP.
+Negative 'rank_shift' = LLM ranks HIGHER (more flippy) than DP.
+
+  axis                       model                 DP rank   LLM rank    shift
+  diffused_responsibility    Gemma 4 31B                 8          4       -4
+  diffused_responsibility    Qwen 2.5 32B                8          4       -4
+  in_out_group               Gemma 4 31B                 2          6       +4
+  in_out_group               Llama 3.3 70B               2          5       +3
+  in_out_group               Qwen 2.5 32B                2          6       +4
+  resource_scarcity          Llama 3.1 8B                5          8       +3
+  self_preservation          Gemma 4 31B                 6          2       -4
+  self_preservation          Llama 3.1 8B                6          2       -4
+  self_preservation          Llama 3.3 70B               6          1       -5
+  self_preservation          Qwen 2.5 32B                6          1       -5
+  social_visibility          Gemma 4 31B                 3          7       +4
+  social_visibility          Llama 3.3 70B               3          6       +3
+  social_visibility          Qwen 2.5 32B                3          8       +5
+  time_pressure              Llama 3.1 8B                7          3       -4
+
+--------------------------------------------------------------------------------------------
+SELF-PRESERVATION CALL-OUT
+--------------------------------------------------------------------------------------------
+  Dot-product ranks self_preservation at: #6
+  Llama 3.3 70B ranks self_preservation at: #1
+  Qwen 2.5 32B ranks self_preservation at: #1
+  Gemma 4 31B ranks self_preservation at: #2
+  Llama 3.1 8B ranks self_preservation at: #2
+
+  If self_preservation jumps from a low rank in dot-product to a
+  top-2 rank in LLMs, that is direct evidence the LLM uses a
+  decision rule that is NOT value-arithmetic.
+
+============================================================================================
+END OF STEP 5 REPORT
+============================================================================================

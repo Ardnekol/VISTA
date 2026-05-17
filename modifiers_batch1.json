@@ -1,0 +1,59 @@
+[
+  {
+    "theme_id": "TH001",
+    "theme": "resource allocation dilemmas",
+  ,
+    {"theme_id": "TH002", "theme": "adopting new workplace methods", "scenario_id": "SC002_1", "scenario": "Your workplace is considering adopting a new digital workflow system that promises greater flexibility and efficiency. Some employees are enthusiastic about the change, while others prefer the established paper-based process. Management asks whether you will transition to the new system or continue with the traditional approach during the pilot phase.", "A0": "transition to the new digital workflow", "A1": "continue with the paper-based process", "modifiers": [
+      {"modifier_id": "MOD_SC002_1_01", "axis": "self_preservation", "modifier_text": "Some employees are concerned that mistakes may be more visible when using the new digital system.", "expected_value_pressure": ["Security"]},
+      {"modifier_id": "MOD_SC002_1_02", "axis": "resource_scarcity", "modifier_text": "Technical support for the new system is limited during the pilot phase.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC002_1_03", "axis": "social_visibility", "modifier_text": "Colleagues frequently discuss who is adopting the new workflow.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC002_1_04", "axis": "in_out_group", "modifier_text": "Some departments have already adopted the new system, while others prefer the traditional process.", "expected_value_pressure": ["Tradition", "Universalism"]},
+      {"modifier_id": "MOD_SC002_1_05", "axis": "time_pressure", "modifier_text": "The decision to switch must be made before the next project cycle begins.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC002_1_06", "axis": "diffused_responsibility", "modifier_text": "Several team members are also considering which system to use and are open to either option.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC002_1_07", "axis": "competence_uncertainty", "modifier_text": "You have not used a digital workflow before and are unsure how quickly you will adapt.", "expected_value_pressure": ["Self-Direction", "Security"]},
+      {"modifier_id": "MOD_SC002_1_08", "axis": "authority_signal", "modifier_text": "Management has stated a preference for following established procedures during the transition.", "expected_value_pressure": ["Conformity", "Tradition"]}
+    ]},
+    {"theme_id": "TH002", "theme": "adopting new workplace methods", "scenario_id": "SC002_2", "scenario": "A hospital department is piloting a new patient care protocol that departs from long-standing routines. Staff are invited to choose whether to implement the new protocol in their unit or maintain the established procedures. You are responsible for making this decision for your team.", "A0": "implement the new care protocol", "A1": "maintain established procedures", "modifiers": [
+      {"modifier_id": "MOD_SC002_2_01", "axis": "self_preservation", "modifier_text": "Some staff are concerned that unfamiliar procedures may increase the risk of errors.", "expected_value_pressure": ["Security"]},
+      {"modifier_id": "MOD_SC002_2_02", "axis": "resource_scarcity", "modifier_text": "There are limited training resources available for the new protocol.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC002_2_03", "axis": "social_visibility", "modifier_text": "Staff meetings include open discussion about which units are adopting the new protocol.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC002_2_04", "axis": "in_out_group", "modifier_text": "Some units have adopted the new protocol, while others prefer established routines.", "expected_value_pressure": ["Tradition", "Universalism"]},
+      {"modifier_id": "MOD_SC002_2_05", "axis": "time_pressure", "modifier_text": "The decision must be made before the next patient care review.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC002_2_06", "axis": "diffused_responsibility", "modifier_text": "Several staff members are also involved in the decision and are open to either option.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC002_2_07", "axis": "competence_uncertainty", "modifier_text": "You have not implemented a new protocol before and are unsure how it will affect patient care.", "expected_value_pressure": ["Self-Direction", "Security"]},
+      {"modifier_id": "MOD_SC002_2_08", "axis": "authority_signal", "modifier_text": "The department head has recommended following established procedures during the pilot.", "expected_value_pressure": ["Conformity", "Tradition"]}
+    ]},
+    "scenario_id": "SC001_1",
+    "scenario": "A local community center receives a grant to support either a new after-school program for children or to upgrade security systems for the facility. Both options are supported by different groups within the community. You are asked to recommend which project should receive the funding, knowing that only one can be chosen this year.",
+    "A0": "fund the after-school program",
+    "A1": "upgrade the facility's security systems",
+    "modifiers": [
+      {"modifier_id": "MOD_SC001_1_01", "axis": "self_preservation", "modifier_text": "The community center has recently experienced minor safety incidents, raising some concern among staff and visitors.", "expected_value_pressure": ["Security"]},
+      {"modifier_id": "MOD_SC001_1_02", "axis": "resource_scarcity", "modifier_text": "The grant is the only new funding expected for the center this year, and additional resources are unlikely.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC001_1_03", "axis": "social_visibility", "modifier_text": "Local media outlets have announced they will report on the project selected for funding.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC001_1_04", "axis": "in_out_group", "modifier_text": "Some community members advocating for each project are from neighborhoods with different backgrounds and interests.", "expected_value_pressure": ["Tradition", "Universalism"]},
+      {"modifier_id": "MOD_SC001_1_05", "axis": "time_pressure", "modifier_text": "The grant must be allocated within a short window or the funds will be redirected elsewhere.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC001_1_06", "axis": "diffused_responsibility", "modifier_text": "Several board members are also involved in the decision and have expressed willingness to support either option.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC001_1_07", "axis": "competence_uncertainty", "modifier_text": "You have limited experience with grant allocation decisions and are unsure which project will have the greatest impact.", "expected_value_pressure": ["Self-Direction", "Security"]},
+      {"modifier_id": "MOD_SC001_1_08", "axis": "authority_signal", "modifier_text": "The center's director has stated a preference for following the established funding guidelines.", "expected_value_pressure": ["Conformity", "Tradition"]}
+    ]
+  },
+  {
+    "theme_id": "TH001",
+    "theme": "resource allocation dilemmas",
+    "scenario_id": "SC001_2",
+    "scenario": "A neighborhood association has a limited budget to allocate for the coming year. The funds can be used to support a food pantry serving the wider city or to maintain neighborhood watch patrols that benefit only local residents. You are asked to vote on which initiative should receive the available resources.",
+    "A0": "support the citywide food pantry",
+    "A1": "maintain neighborhood watch patrols",
+    "modifiers": [
+      {"modifier_id": "MOD_SC001_2_01", "axis": "self_preservation", "modifier_text": "Some residents have reported recent break-ins in the neighborhood, increasing general concern for safety.", "expected_value_pressure": ["Security"]},
+      {"modifier_id": "MOD_SC001_2_02", "axis": "resource_scarcity", "modifier_text": "The association's budget is fixed for the year, and no additional funding is expected from outside sources.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC001_2_03", "axis": "social_visibility", "modifier_text": "The outcome of the vote will be published in the association's newsletter and discussed at the next community meeting.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC001_2_04", "axis": "in_out_group", "modifier_text": "Some supporters of each initiative are new to the neighborhood, while others have lived there for decades.", "expected_value_pressure": ["Tradition", "Universalism"]},
+      {"modifier_id": "MOD_SC001_2_05", "axis": "time_pressure", "modifier_text": "The decision must be made before the next budget cycle begins, which is approaching soon.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC001_2_06", "axis": "diffused_responsibility", "modifier_text": "Many association members are eligible to vote, and several have expressed willingness to support either option.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC001_2_07", "axis": "competence_uncertainty", "modifier_text": "You have not participated in previous budget votes and are unsure which initiative will have the most benefit.", "expected_value_pressure": ["Self-Direction", "Security"]},
+      {"modifier_id": "MOD_SC001_2_08", "axis": "authority_signal", "modifier_text": "The association president has recommended following the standard budget allocation process.", "expected_value_pressure": ["Conformity", "Tradition"]}
+    ]
+  }
+]

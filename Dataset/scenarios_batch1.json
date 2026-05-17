@@ -1,0 +1,122 @@
+[
+  {
+    "scenario_id": "SC001_1",
+    "theme_id": "TH001",
+    "description": "A local community center receives a grant to support either a new after-school program for children or to upgrade security systems for the facility. Both options are supported by different groups within the community. You are asked to recommend which project should receive the funding, knowing that only one can be chosen this year.",
+    "actor": "you",
+    "A0": "fund the after-school program",
+    "A1": "upgrade the facility's security systems",
+    "latent_value_tensions": [
+      ["Benevolence", "Security"],
+      ["Universalism", "Conformity"]
+    ]
+  },
+  {
+    "scenario_id": "SC001_2",
+    "theme_id": "TH001",
+    "description": "A neighborhood association has a limited budget to allocate for the coming year. The funds can be used to support a food pantry serving the wider city or to maintain neighborhood watch patrols that benefit only local residents. You are asked to vote on which initiative should receive the available resources.",
+    "actor": "you",
+    "A0": "support the citywide food pantry",
+    "A1": "maintain neighborhood watch patrols",
+    "latent_value_tensions": [
+      ["Benevolence", "Security"],
+      ["Universalism", "Conformity"]
+    ]
+  },
+  {
+    "scenario_id": "SC002_1",
+    "theme_id": "TH002",
+    "description": "Your workplace is considering adopting a new digital workflow system that promises greater flexibility and efficiency. Some employees are enthusiastic about the change, while others prefer the established paper-based process. Management asks whether you will transition to the new system or continue with the traditional approach during the pilot phase.",
+    "actor": "you",
+    "A0": "transition to the new digital workflow",
+    "A1": "continue with the paper-based process",
+    "latent_value_tensions": [
+      ["Self-Direction", "Tradition"],
+      ["Stimulation", "Conformity"]
+    ]
+  },
+  {
+    "scenario_id": "SC002_2",
+    "theme_id": "TH002",
+    "description": "A hospital department is piloting a new patient care protocol that departs from long-standing routines. Staff are invited to choose whether to implement the new protocol in their unit or maintain the established procedures. You are responsible for making this decision for your team.",
+    "actor": "you",
+    "A0": "implement the new care protocol",
+    "A1": "maintain established procedures",
+    "latent_value_tensions": [
+      ["Self-Direction", "Tradition"],
+      ["Stimulation", "Conformity"]
+    ]
+  },
+  {
+    "scenario_id": "SC003_1",
+    "theme_id": "TH003",
+    "description": "Your project team has completed a successful collaboration, and management will recognize either the team as a whole or a single member who made the most measurable contributions. You are asked to recommend whether the recognition should go to the group or the individual.",
+    "actor": "you",
+    "A0": "recognize the entire team",
+    "A1": "recognize the top individual contributor",
+    "latent_value_tensions": [
+      ["Achievement", "Benevolence"],
+      ["Power", "Universalism"]
+    ]
+  },
+  {
+    "scenario_id": "SC003_2",
+    "theme_id": "TH003",
+    "description": "A professional association is awarding a prestigious honor. The selection committee can choose to highlight a member's leadership in advancing the field or the member's efforts to foster collaboration and support among peers. You are asked to cast your vote for the award's focus.",
+    "actor": "you",
+    "A0": "vote to honor leadership in advancement",
+    "A1": "vote to honor collaboration and support",
+    "latent_value_tensions": [
+      ["Achievement", "Benevolence"],
+      ["Power", "Universalism"]
+    ]
+  },
+  {
+    "scenario_id": "SC004_1",
+    "theme_id": "TH004",
+    "description": "You have a weekend free from work and must decide whether to attend a social event with friends or fulfill a family obligation at home. Both options are equally feasible, and your decision will affect your relationships and personal satisfaction.",
+    "actor": "you",
+    "A0": "attend the social event with friends",
+    "A1": "fulfill the family obligation at home",
+    "latent_value_tensions": [
+      ["Hedonism", "Conformity"],
+      ["Stimulation", "Tradition"]
+    ]
+  },
+  {
+    "scenario_id": "SC004_2",
+    "theme_id": "TH004",
+    "description": "A community group is organizing a festival. You can volunteer to help with the event, which would be enjoyable and engaging, or you can assist with routine maintenance tasks that are necessary for the group's ongoing activities. Both roles are open to you.",
+    "actor": "you",
+    "A0": "volunteer for the festival event",
+    "A1": "assist with routine maintenance tasks",
+    "latent_value_tensions": [
+      ["Hedonism", "Conformity"],
+      ["Stimulation", "Tradition"]
+    ]
+  },
+  {
+    "scenario_id": "SC005_1",
+    "theme_id": "TH005",
+    "description": "A long-serving leader of a nonprofit is retiring, and the board must choose between promoting an internal candidate who upholds established practices or hiring an external candidate with a record of ambitious innovation. You are asked to vote for the next leader.",
+    "actor": "you",
+    "A0": "promote the internal candidate",
+    "A1": "hire the external candidate",
+    "latent_value_tensions": [
+      ["Power", "Tradition"],
+      ["Achievement", "Security"]
+    ]
+  },
+  {
+    "scenario_id": "SC005_2",
+    "theme_id": "TH005",
+    "description": "A family business is planning for succession. You can recommend a family member who has consistently maintained the business's core values or a younger relative who proposes new strategies for growth. Both candidates are qualified, and your recommendation will influence the decision.",
+    "actor": "you",
+    "A0": "recommend the family member upholding core values",
+    "A1": "recommend the younger relative proposing new strategies",
+    "latent_value_tensions": [
+      ["Power", "Tradition"],
+      ["Achievement", "Security"]
+    ]
+  }
+]

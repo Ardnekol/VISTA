@@ -1,0 +1,92 @@
+============================================================
+VISTA — LLM Decision Analysis Report (Qwen 2.5 32B Instruct)
+============================================================
+
+Dataset: 8,550 total rows
+  Baseline rows:  950
+  Modifier rows:  7,600
+
+Overall flip rates:
+  LLM flips:          500 / 7600  (6.6%)
+  Dot-product flips:  1515  / 7600  (19.9%)
+
+────────────────────────────────────────────────────────────
+ANALYSIS 1: Flip Rate by Modifier Axis
+────────────────────────────────────────────────────────────
+  Axis                                   LLM Flips     Rate
+  ----------------------------------- ------------  -------
+  Self-Preservation (danger/risk)       122/950       12.8%
+  Authority Signal                       91/950        9.6%
+  Competence Uncertainty                 60/950        6.3%
+  Diffused Responsibility                49/950        5.2%
+  Time Pressure                          48/950        5.1%
+  Resource Scarcity                      45/950        4.7%
+  In/Out-Group                           45/950        4.7%
+  Social Visibility                      40/950        4.2%
+
+────────────────────────────────────────────────────────────
+ANALYSIS 2: Flip Rate by Profile Strength
+────────────────────────────────────────────────────────────
+   HIGH values     LLM Flips     Rate  Interpretation
+  ------------  ------------  -------  ------------------------------
+             0      3/80         3.8%  No values → situational
+             1     21/400        5.2%  Weak values → suggestible
+             2     46/800        5.8%  Weak values → suggestible
+             3     68/1120       6.1%  Strong values → resistant
+             4     72/1280       5.6%  Strong values → resistant
+             5     97/1440       6.7%  Strong values → resistant
+             6     90/1280       7.0%  Strong values → resistant
+             7     62/720        8.6%  Strong values → resistant
+             8     33/320       10.3%  Strong values → resistant
+             9      8/160        5.0%  Strong values → resistant
+
+────────────────────────────────────────────────────────────
+ANALYSIS 3: Flip Rate by Scenario
+────────────────────────────────────────────────────────────
+  Scenario      Rate         Flips  Description
+  ---------- -------  ------------  ----------------------------------------
+  SC004_1      10.1%     77/760     You have a weekend free from work and must decide whether to
+  SC004_2      10.1%     77/760     A community group is organizing a festival. You can voluntee
+  SC001_1       9.3%     71/760     A local community center receives a grant to support either 
+  SC002_1       8.9%     68/760     Your workplace is considering adopting a new digital workflo
+  SC003_1       6.3%     48/760     Your project team has completed a successful collaboration, 
+  SC002_2       6.1%     46/760     A hospital department is piloting a new patient care protoco
+  SC001_2       5.5%     42/760     A neighborhood association has a limited budget to allocate 
+  SC005_2       3.4%     26/760     A family business is planning for succession. You can recomm
+  SC005_1       3.0%     23/760     A long-serving leader of a nonprofit is retiring, and the bo
+  SC003_2       2.9%     22/760     A professional association is awarding a prestigious honor. 
+
+────────────────────────────────────────────────────────────
+ANALYSIS 4: LLM vs Dot-Product Agreement
+────────────────────────────────────────────────────────────
+  Overall agreement:              4879/8550    57.1%
+  Baseline agreement:              497/950     52.3%
+  Disagree on WHETHER to flip:    1749/7600    23.0%
+  Opposite flip direction:          49/133     36.8%
+
+────────────────────────────────────────────────────────────
+ANALYSIS 5: Axis × Profile Strength Interaction
+────────────────────────────────────────────────────────────
+(Which modifiers flip weak vs strong profiles?)
+
+  Profile: weak (0-1 HIGH)
+    Self-Preservation (danger/risk)        5/60    (8.3%)
+    Competence Uncertainty                 4/60    (6.7%)
+    Authority Signal                       4/60    (6.7%)
+    Resource Scarcity                      3/60    (5.0%)
+
+  Profile: medium (2-3 HIGH)
+    Self-Preservation (danger/risk)       24/240   (10.0%)
+    Competence Uncertainty                19/240   (7.9%)
+    Authority Signal                      18/240   (7.5%)
+    Social Visibility                     12/240   (5.0%)
+
+  Profile: strong (4+ HIGH)
+    Self-Preservation (danger/risk)       93/650   (14.3%)
+    Authority Signal                      69/650   (10.6%)
+    Time Pressure                         37/650   (5.7%)
+    Competence Uncertainty                37/650   (5.7%)
+
+============================================================
+Report saved to: outputs/analysis_report.txt
+============================================================

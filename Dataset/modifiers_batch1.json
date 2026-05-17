@@ -1,0 +1,182 @@
+[
+  {
+    "theme_id": "TH001",
+    "theme": "resource allocation dilemmas",
+    "scenario_id": "SC001_1",
+    "scenario": "A local community center receives a grant to support either a new after-school program for children or to upgrade security systems for the facility. Both options are supported by different groups within the community. You are asked to recommend which project should receive the funding, knowing that only one can be chosen this year.",
+    "A0": "fund the after-school program",
+    "A1": "upgrade the facility's security systems",
+    "modifiers": [
+      {"modifier_id": "MOD_SC001_1_01", "axis": "self_preservation", "modifier_text": "The community center has recently experienced minor safety incidents, raising some concern among staff and visitors.", "expected_value_pressure": ["Security"]},
+      {"modifier_id": "MOD_SC001_1_02", "axis": "resource_scarcity", "modifier_text": "The grant is the only new funding expected for the center this year, and additional resources are unlikely.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC001_1_03", "axis": "social_visibility", "modifier_text": "Local media outlets have announced they will report on the project selected for funding.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC001_1_04", "axis": "in_out_group", "modifier_text": "Some community members advocating for each project are from neighborhoods with different backgrounds and interests.", "expected_value_pressure": ["Tradition", "Universalism"]},
+      {"modifier_id": "MOD_SC001_1_05", "axis": "time_pressure", "modifier_text": "The grant must be allocated within a short window or the funds will be redirected elsewhere.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC001_1_06", "axis": "diffused_responsibility", "modifier_text": "Several board members are also involved in the decision and have expressed willingness to support either option.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC001_1_07", "axis": "competence_uncertainty", "modifier_text": "You have limited experience with grant allocation decisions and are unsure which project will have the greatest impact.", "expected_value_pressure": ["Self-Direction", "Security"]},
+      {"modifier_id": "MOD_SC001_1_08", "axis": "authority_signal", "modifier_text": "The center's director has stated a preference for following the established funding guidelines.", "expected_value_pressure": ["Conformity", "Tradition"]}
+    ]
+  },
+  {
+    "theme_id": "TH001",
+    "theme": "resource allocation dilemmas",
+    "scenario_id": "SC001_2",
+    "scenario": "A neighborhood association has a limited budget to allocate for the coming year. The funds can be used to support a food pantry serving the wider city or to maintain neighborhood watch patrols that benefit only local residents. You are asked to vote on which initiative should receive the available resources.",
+    "A0": "support the citywide food pantry",
+    "A1": "maintain neighborhood watch patrols",
+    "modifiers": [
+      {"modifier_id": "MOD_SC001_2_01", "axis": "self_preservation", "modifier_text": "Some residents have reported recent break-ins in the neighborhood, increasing general concern for safety.", "expected_value_pressure": ["Security"]},
+      {"modifier_id": "MOD_SC001_2_02", "axis": "resource_scarcity", "modifier_text": "The association's budget is fixed for the year, and no additional funding is expected from outside sources.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC001_2_03", "axis": "social_visibility", "modifier_text": "The outcome of the vote will be published in the association's newsletter and discussed at the next community meeting.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC001_2_04", "axis": "in_out_group", "modifier_text": "Some supporters of each initiative are new to the neighborhood, while others have lived there for decades.", "expected_value_pressure": ["Tradition", "Universalism"]},
+      {"modifier_id": "MOD_SC001_2_05", "axis": "time_pressure", "modifier_text": "The decision must be made before the next budget cycle begins, which is approaching soon.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC001_2_06", "axis": "diffused_responsibility", "modifier_text": "Many association members are eligible to vote, and several have expressed willingness to support either option.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC001_2_07", "axis": "competence_uncertainty", "modifier_text": "You have not participated in previous budget votes and are unsure which initiative will have the most benefit.", "expected_value_pressure": ["Self-Direction", "Security"]},
+      {"modifier_id": "MOD_SC001_2_08", "axis": "authority_signal", "modifier_text": "The association president has recommended following the standard budget allocation process.", "expected_value_pressure": ["Conformity", "Tradition"]}
+    ]
+  },
+  {
+    "theme_id": "TH002",
+    "theme": "adopting new workplace methods",
+    "scenario_id": "SC002_1",
+    "scenario": "Your workplace is considering adopting a new digital workflow system that promises greater flexibility and efficiency. Some employees are enthusiastic about the change, while others prefer the established paper-based process. Management asks whether you will transition to the new system or continue with the traditional approach during the pilot phase.",
+    "A0": "transition to the new digital workflow",
+    "A1": "continue with the paper-based process",
+    "modifiers": [
+      {"modifier_id": "MOD_SC002_1_01", "axis": "self_preservation", "modifier_text": "Some employees are concerned that mistakes may be more visible when using the new digital system.", "expected_value_pressure": ["Security"]},
+      {"modifier_id": "MOD_SC002_1_02", "axis": "resource_scarcity", "modifier_text": "Technical support for the new system is limited during the pilot phase.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC002_1_03", "axis": "social_visibility", "modifier_text": "Colleagues frequently discuss who is adopting the new workflow.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC002_1_04", "axis": "in_out_group", "modifier_text": "Some departments have already adopted the new system, while others prefer the traditional process.", "expected_value_pressure": ["Tradition", "Universalism"]},
+      {"modifier_id": "MOD_SC002_1_05", "axis": "time_pressure", "modifier_text": "The decision to switch must be made before the next project cycle begins.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC002_1_06", "axis": "diffused_responsibility", "modifier_text": "Several team members are also considering which system to use and are open to either option.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC002_1_07", "axis": "competence_uncertainty", "modifier_text": "You have not used a digital workflow before and are unsure how quickly you will adapt.", "expected_value_pressure": ["Self-Direction", "Security"]},
+      {"modifier_id": "MOD_SC002_1_08", "axis": "authority_signal", "modifier_text": "Management has stated a preference for following established procedures during the transition.", "expected_value_pressure": ["Conformity", "Tradition"]}
+    ]
+  },
+  {
+    "theme_id": "TH002",
+    "theme": "adopting new workplace methods",
+    "scenario_id": "SC002_2",
+    "scenario": "A hospital department is piloting a new patient care protocol that departs from long-standing routines. Staff are invited to choose whether to implement the new protocol in their unit or maintain the established procedures. You are responsible for making this decision for your team.",
+    "A0": "implement the new care protocol",
+    "A1": "maintain established procedures",
+    "modifiers": [
+      {"modifier_id": "MOD_SC002_2_01", "axis": "self_preservation", "modifier_text": "Some staff are concerned that unfamiliar procedures may increase the risk of errors.", "expected_value_pressure": ["Security"]},
+      {"modifier_id": "MOD_SC002_2_02", "axis": "resource_scarcity", "modifier_text": "There are limited training resources available for the new protocol.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC002_2_03", "axis": "social_visibility", "modifier_text": "Staff meetings include open discussion about which units are adopting the new protocol.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC002_2_04", "axis": "in_out_group", "modifier_text": "Some units have adopted the new protocol, while others prefer established routines.", "expected_value_pressure": ["Tradition", "Universalism"]},
+      {"modifier_id": "MOD_SC002_2_05", "axis": "time_pressure", "modifier_text": "The decision must be made before the next patient care review.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC002_2_06", "axis": "diffused_responsibility", "modifier_text": "Several staff members are also involved in the decision and are open to either option.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC002_2_07", "axis": "competence_uncertainty", "modifier_text": "You have not implemented a new protocol before and are unsure how it will affect patient care.", "expected_value_pressure": ["Self-Direction", "Security"]},
+      {"modifier_id": "MOD_SC002_2_08", "axis": "authority_signal", "modifier_text": "The department head has recommended following established procedures during the pilot.", "expected_value_pressure": ["Conformity", "Tradition"]}
+    ]
+  },
+  {
+    "theme_id": "TH003",
+    "theme": "recognition for group achievements",
+    "scenario_id": "SC003_1",
+    "scenario": "Your project team has completed a successful collaboration, and management will recognize either the team as a whole or a single member who made the most measurable contributions. You are asked to recommend whether the recognition should go to the group or the individual.",
+    "A0": "recognize the entire team",
+    "A1": "recognize the top individual contributor",
+    "modifiers": [
+      {"modifier_id": "MOD_SC003_1_01", "axis": "self_preservation", "modifier_text": "Some team members worry that group recognition may dilute individual accomplishments important for career advancement.", "expected_value_pressure": ["Achievement"]},
+      {"modifier_id": "MOD_SC003_1_02", "axis": "resource_scarcity", "modifier_text": "There is only one award available, so only one form of recognition can be given.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC003_1_03", "axis": "social_visibility", "modifier_text": "The recognition will be announced at a company-wide meeting.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC003_1_04", "axis": "in_out_group", "modifier_text": "Some team members are from different departments and have varying levels of involvement.", "expected_value_pressure": ["Universalism", "Benevolence"]},
+      {"modifier_id": "MOD_SC003_1_05", "axis": "time_pressure", "modifier_text": "The decision must be made before the end of the quarter.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC003_1_06", "axis": "diffused_responsibility", "modifier_text": "The team leader has left the decision to the group.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC003_1_07", "axis": "competence_uncertainty", "modifier_text": "You have not participated in award decisions before and are unsure what is most valued by the company.", "expected_value_pressure": ["Self-Direction", "Achievement"]},
+      {"modifier_id": "MOD_SC003_1_08", "axis": "authority_signal", "modifier_text": "Management has stated a preference for recognizing measurable results.", "expected_value_pressure": ["Power", "Achievement"]}
+    ]
+  },
+  {
+    "theme_id": "TH003",
+    "theme": "recognition for group achievements",
+    "scenario_id": "SC003_2",
+    "scenario": "A professional association is awarding a prestigious honor. The selection committee can choose to highlight a member's leadership in advancing the field or the member's efforts to foster collaboration and support among peers. You are asked to cast your vote for the award's focus.",
+    "A0": "vote to honor leadership in advancement",
+    "A1": "vote to honor collaboration and support",
+    "modifiers": [
+      {"modifier_id": "MOD_SC003_2_01", "axis": "self_preservation", "modifier_text": "Some members believe that highlighting leadership may overshadow the contributions of others.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC003_2_02", "axis": "resource_scarcity", "modifier_text": "Only one recipient can be chosen for the award.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC003_2_03", "axis": "social_visibility", "modifier_text": "The award ceremony will be broadcast to the entire association.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC003_2_04", "axis": "in_out_group", "modifier_text": "Nominees come from diverse backgrounds and have different reputations among peers.", "expected_value_pressure": ["Universalism", "Benevolence"]},
+      {"modifier_id": "MOD_SC003_2_05", "axis": "time_pressure", "modifier_text": "The vote must be cast before the annual meeting.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC003_2_06", "axis": "diffused_responsibility", "modifier_text": "The committee is large, and many members are undecided.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC003_2_07", "axis": "competence_uncertainty", "modifier_text": "You have not voted in this process before and are unsure which criteria are most important.", "expected_value_pressure": ["Self-Direction", "Achievement"]},
+      {"modifier_id": "MOD_SC003_2_08", "axis": "authority_signal", "modifier_text": "The association president has recommended prioritizing collaborative achievements.", "expected_value_pressure": ["Universalism", "Benevolence"]}
+    ]
+  },
+  {
+    "theme_id": "TH004",
+    "theme": "balancing personal enjoyment and obligations",
+    "scenario_id": "SC004_1",
+    "scenario": "You have a weekend free from work and must decide whether to attend a social event with friends or fulfill a family obligation at home. Both options are equally feasible, and your decision will affect your relationships and personal satisfaction.",
+    "A0": "attend the social event with friends",
+    "A1": "fulfill the family obligation at home",
+    "modifiers": [
+      {"modifier_id": "MOD_SC004_1_01", "axis": "self_preservation", "modifier_text": "You are feeling tired and want to avoid overexertion.", "expected_value_pressure": ["Hedonism"]},
+      {"modifier_id": "MOD_SC004_1_02", "axis": "resource_scarcity", "modifier_text": "You have limited free time this month.", "expected_value_pressure": ["Stimulation", "Conformity"]},
+      {"modifier_id": "MOD_SC004_1_03", "axis": "social_visibility", "modifier_text": "Friends and family will both know which option you choose.", "expected_value_pressure": ["Conformity", "Tradition"]},
+      {"modifier_id": "MOD_SC004_1_04", "axis": "in_out_group", "modifier_text": "Some friends are from outside your usual social circle.", "expected_value_pressure": ["Universalism", "Tradition"]},
+      {"modifier_id": "MOD_SC004_1_05", "axis": "time_pressure", "modifier_text": "The event and the obligation are scheduled at overlapping times.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC004_1_06", "axis": "diffused_responsibility", "modifier_text": "Other family members can help with the obligation if you choose the event.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC004_1_07", "axis": "competence_uncertainty", "modifier_text": "You are unsure which choice will be more fulfilling.", "expected_value_pressure": ["Self-Direction", "Hedonism"]},
+      {"modifier_id": "MOD_SC004_1_08", "axis": "authority_signal", "modifier_text": "A family elder has expressed a preference for you to attend the family obligation.", "expected_value_pressure": ["Tradition", "Conformity"]}
+    ]
+  },
+  {
+    "theme_id": "TH004",
+    "theme": "balancing personal enjoyment and obligations",
+    "scenario_id": "SC004_2",
+    "scenario": "A community group is organizing a festival. You can volunteer to help with the event, which would be enjoyable and engaging, or you can assist with routine maintenance tasks that are necessary for the group's ongoing activities. Both roles are open to you.",
+    "A0": "volunteer for the festival event",
+    "A1": "assist with routine maintenance tasks",
+    "modifiers": [
+      {"modifier_id": "MOD_SC004_2_01", "axis": "self_preservation", "modifier_text": "You are recovering from a recent illness and want to avoid too much activity.", "expected_value_pressure": ["Hedonism"]},
+      {"modifier_id": "MOD_SC004_2_02", "axis": "resource_scarcity", "modifier_text": "There are not enough volunteers for either role.", "expected_value_pressure": ["Stimulation", "Conformity"]},
+      {"modifier_id": "MOD_SC004_2_03", "axis": "social_visibility", "modifier_text": "The group will publicly thank volunteers for both roles.", "expected_value_pressure": ["Conformity", "Tradition"]},
+      {"modifier_id": "MOD_SC004_2_04", "axis": "in_out_group", "modifier_text": "Some volunteers are new to the group.", "expected_value_pressure": ["Universalism", "Tradition"]},
+      {"modifier_id": "MOD_SC004_2_05", "axis": "time_pressure", "modifier_text": "Both roles require a commitment at the same time.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC004_2_06", "axis": "diffused_responsibility", "modifier_text": "Other members can cover your role if you are unavailable.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC004_2_07", "axis": "competence_uncertainty", "modifier_text": "You have not volunteered for either role before and are unsure which is a better fit.", "expected_value_pressure": ["Self-Direction", "Hedonism"]},
+      {"modifier_id": "MOD_SC004_2_08", "axis": "authority_signal", "modifier_text": "The group leader has suggested prioritizing the maintenance tasks.", "expected_value_pressure": ["Tradition", "Conformity"]}
+    ]
+  },
+  {
+    "theme_id": "TH005",
+    "theme": "leadership succession decisions",
+    "scenario_id": "SC005_1",
+    "scenario": "A long-serving leader of a nonprofit is retiring, and the board must choose between promoting an internal candidate who upholds established practices or hiring an external candidate with a record of ambitious innovation. You are asked to vote for the next leader.",
+    "A0": "promote the internal candidate",
+    "A1": "hire the external candidate",
+    "modifiers": [
+      {"modifier_id": "MOD_SC005_1_01", "axis": "self_preservation", "modifier_text": "Some board members are concerned about the risks of changing leadership styles.", "expected_value_pressure": ["Security"]},
+      {"modifier_id": "MOD_SC005_1_02", "axis": "resource_scarcity", "modifier_text": "The organization has limited resources to support a transition.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC005_1_03", "axis": "social_visibility", "modifier_text": "The leadership decision will be announced to all stakeholders.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC005_1_04", "axis": "in_out_group", "modifier_text": "The candidates have different backgrounds and support from different groups.", "expected_value_pressure": ["Tradition", "Universalism"]},
+      {"modifier_id": "MOD_SC005_1_05", "axis": "time_pressure", "modifier_text": "The decision must be made before the current leader retires.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC005_1_06", "axis": "diffused_responsibility", "modifier_text": "The board is large, and many members are undecided.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC005_1_07", "axis": "competence_uncertainty", "modifier_text": "You have not participated in a leadership transition before and are unsure which candidate is best suited.", "expected_value_pressure": ["Self-Direction", "Security"]},
+      {"modifier_id": "MOD_SC005_1_08", "axis": "authority_signal", "modifier_text": "The outgoing leader has recommended the internal candidate.", "expected_value_pressure": ["Tradition", "Conformity"]}
+    ]
+  },
+  {
+    "theme_id": "TH005",
+    "theme": "leadership succession decisions",
+    "scenario_id": "SC005_2",
+    "scenario": "A family business is planning for succession. You can recommend a family member who has consistently maintained the business's core values or a younger relative who proposes new strategies for growth. Both candidates are qualified, and your recommendation will influence the decision.",
+    "A0": "recommend the family member upholding core values",
+    "A1": "recommend the younger relative proposing new strategies",
+    "modifiers": [
+      {"modifier_id": "MOD_SC005_2_01", "axis": "self_preservation", "modifier_text": "Some family members are concerned about the risks of changing leadership.", "expected_value_pressure": ["Security"]},
+      {"modifier_id": "MOD_SC005_2_02", "axis": "resource_scarcity", "modifier_text": "The business has limited resources to support a transition.", "expected_value_pressure": ["Power", "Achievement"]},
+      {"modifier_id": "MOD_SC005_2_03", "axis": "social_visibility", "modifier_text": "The succession decision will be shared with all employees.", "expected_value_pressure": ["Conformity", "Power"]},
+      {"modifier_id": "MOD_SC005_2_04", "axis": "in_out_group", "modifier_text": "The candidates have different backgrounds and support from different branches of the family.", "expected_value_pressure": ["Tradition", "Universalism"]},
+      {"modifier_id": "MOD_SC005_2_05", "axis": "time_pressure", "modifier_text": "The decision must be made before the current leader retires.", "expected_value_pressure": ["Achievement", "Security"]},
+      {"modifier_id": "MOD_SC005_2_06", "axis": "diffused_responsibility", "modifier_text": "The family is large, and many members are undecided.", "expected_value_pressure": ["Benevolence"]},
+      {"modifier_id": "MOD_SC005_2_07", "axis": "competence_uncertainty", "modifier_text": "You have not participated in a succession decision before and are unsure which candidate is best suited.", "expected_value_pressure": ["Self-Direction", "Security"]},
+      {"modifier_id": "MOD_SC005_2_08", "axis": "authority_signal", "modifier_text": "The outgoing leader has recommended the family member upholding core values.", "expected_value_pressure": ["Tradition", "Conformity"]}
+    ]
+  }
+]

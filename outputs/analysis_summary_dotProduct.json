@@ -1,0 +1,313 @@
+{
+  "model": "dotProduct",
+  "total_rows": 8550,
+  "modifier_rows": 7600,
+  "llm_flip_total": 0,
+  "dp_flip_total": 1515,
+  "by_axis": {
+    "self_preservation": {
+      "flipped": 153,
+      "total": 950,
+      "rate": "16.1%"
+    },
+    "resource_scarcity": {
+      "flipped": 200,
+      "total": 950,
+      "rate": "21.1%"
+    },
+    "social_visibility": {
+      "flipped": 234,
+      "total": 950,
+      "rate": "24.6%"
+    },
+    "in_out_group": {
+      "flipped": 250,
+      "total": 950,
+      "rate": "26.3%"
+    },
+    "time_pressure": {
+      "flipped": 90,
+      "total": 950,
+      "rate": "9.5%"
+    },
+    "diffused_responsibility": {
+      "flipped": 56,
+      "total": 950,
+      "rate": "5.9%"
+    },
+    "competence_uncertainty": {
+      "flipped": 208,
+      "total": 950,
+      "rate": "21.9%"
+    },
+    "authority_signal": {
+      "flipped": 324,
+      "total": 950,
+      "rate": "34.1%"
+    }
+  },
+  "by_strength": {
+    "0": {
+      "flipped": 60,
+      "total": 80,
+      "rate": "75.0%"
+    },
+    "1": {
+      "flipped": 184,
+      "total": 400,
+      "rate": "46.0%"
+    },
+    "2": {
+      "flipped": 234,
+      "total": 800,
+      "rate": "29.2%"
+    },
+    "3": {
+      "flipped": 284,
+      "total": 1120,
+      "rate": "25.4%"
+    },
+    "4": {
+      "flipped": 257,
+      "total": 1280,
+      "rate": "20.1%"
+    },
+    "5": {
+      "flipped": 249,
+      "total": 1440,
+      "rate": "17.3%"
+    },
+    "6": {
+      "flipped": 160,
+      "total": 1280,
+      "rate": "12.5%"
+    },
+    "7": {
+      "flipped": 87,
+      "total": 720,
+      "rate": "12.1%"
+    },
+    "8": {
+      "flipped": 0,
+      "total": 320,
+      "rate": "0.0%"
+    },
+    "9": {
+      "flipped": 0,
+      "total": 160,
+      "rate": "0.0%"
+    }
+  },
+  "by_scenario": {
+    "SC001_1": {
+      "flipped": 109,
+      "total": 760,
+      "rate": "14.3%",
+      "brief": "A local community center receives a grant to support either "
+    },
+    "SC001_2": {
+      "flipped": 109,
+      "total": 760,
+      "rate": "14.3%",
+      "brief": "A neighborhood association has a limited budget to allocate "
+    },
+    "SC002_1": {
+      "flipped": 127,
+      "total": 760,
+      "rate": "16.7%",
+      "brief": "Your workplace is considering adopting a new digital workflo"
+    },
+    "SC002_2": {
+      "flipped": 127,
+      "total": 760,
+      "rate": "16.7%",
+      "brief": "A hospital department is piloting a new patient care protoco"
+    },
+    "SC003_1": {
+      "flipped": 208,
+      "total": 760,
+      "rate": "27.4%",
+      "brief": "Your project team has completed a successful collaboration, "
+    },
+    "SC003_2": {
+      "flipped": 203,
+      "total": 760,
+      "rate": "26.7%",
+      "brief": "A professional association is awarding a prestigious honor. "
+    },
+    "SC004_1": {
+      "flipped": 164,
+      "total": 760,
+      "rate": "21.6%",
+      "brief": "You have a weekend free from work and must decide whether to"
+    },
+    "SC004_2": {
+      "flipped": 164,
+      "total": 760,
+      "rate": "21.6%",
+      "brief": "A community group is organizing a festival. You can voluntee"
+    },
+    "SC005_1": {
+      "flipped": 152,
+      "total": 760,
+      "rate": "20.0%",
+      "brief": "A long-serving leader of a nonprofit is retiring, and the bo"
+    },
+    "SC005_2": {
+      "flipped": 152,
+      "total": 760,
+      "rate": "20.0%",
+      "brief": "A family business is planning for succession. You can recomm"
+    }
+  },
+  "agreement": {
+    "overall_agree": {
+      "agree": 8550,
+      "total": 8550,
+      "rate": "100.0%"
+    },
+    "baseline_agree": {
+      "agree": 950,
+      "total": 950,
+      "rate": "100.0%"
+    },
+    "disagree_on_flip": {
+      "count": 7600,
+      "total": 7600,
+      "rate": "100.0%"
+    },
+    "opposite_flip_direction": {
+      "count": 0,
+      "total": 0,
+      "rate": "N/A"
+    }
+  },
+  "interaction": {
+    "weak (0-1 HIGH)": {
+      "self_preservation": {
+        "flipped": 30,
+        "total": 60,
+        "rate": "50.0%"
+      },
+      "resource_scarcity": {
+        "flipped": 20,
+        "total": 60,
+        "rate": "33.3%"
+      },
+      "social_visibility": {
+        "flipped": 40,
+        "total": 60,
+        "rate": "66.7%"
+      },
+      "in_out_group": {
+        "flipped": 40,
+        "total": 60,
+        "rate": "66.7%"
+      },
+      "time_pressure": {
+        "flipped": 16,
+        "total": 60,
+        "rate": "26.7%"
+      },
+      "diffused_responsibility": {
+        "flipped": 16,
+        "total": 60,
+        "rate": "26.7%"
+      },
+      "competence_uncertainty": {
+        "flipped": 38,
+        "total": 60,
+        "rate": "63.3%"
+      },
+      "authority_signal": {
+        "flipped": 44,
+        "total": 60,
+        "rate": "73.3%"
+      }
+    },
+    "medium (2-3 HIGH)": {
+      "self_preservation": {
+        "flipped": 55,
+        "total": 240,
+        "rate": "22.9%"
+      },
+      "resource_scarcity": {
+        "flipped": 62,
+        "total": 240,
+        "rate": "25.8%"
+      },
+      "social_visibility": {
+        "flipped": 80,
+        "total": 240,
+        "rate": "33.3%"
+      },
+      "in_out_group": {
+        "flipped": 92,
+        "total": 240,
+        "rate": "38.3%"
+      },
+      "time_pressure": {
+        "flipped": 24,
+        "total": 240,
+        "rate": "10.0%"
+      },
+      "diffused_responsibility": {
+        "flipped": 14,
+        "total": 240,
+        "rate": "5.8%"
+      },
+      "competence_uncertainty": {
+        "flipped": 76,
+        "total": 240,
+        "rate": "31.7%"
+      },
+      "authority_signal": {
+        "flipped": 115,
+        "total": 240,
+        "rate": "47.9%"
+      }
+    },
+    "strong (4+ HIGH)": {
+      "self_preservation": {
+        "flipped": 68,
+        "total": 650,
+        "rate": "10.5%"
+      },
+      "resource_scarcity": {
+        "flipped": 118,
+        "total": 650,
+        "rate": "18.2%"
+      },
+      "social_visibility": {
+        "flipped": 114,
+        "total": 650,
+        "rate": "17.5%"
+      },
+      "in_out_group": {
+        "flipped": 118,
+        "total": 650,
+        "rate": "18.2%"
+      },
+      "time_pressure": {
+        "flipped": 50,
+        "total": 650,
+        "rate": "7.7%"
+      },
+      "diffused_responsibility": {
+        "flipped": 26,
+        "total": 650,
+        "rate": "4.0%"
+      },
+      "competence_uncertainty": {
+        "flipped": 94,
+        "total": 650,
+        "rate": "14.5%"
+      },
+      "authority_signal": {
+        "flipped": 165,
+        "total": 650,
+        "rate": "25.4%"
+      }
+    }
+  }
+}

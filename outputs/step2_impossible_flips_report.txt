@@ -1,0 +1,100 @@
+========================================================================
+VISTA — STEP 2: IMPOSSIBLE FLIPS
+(LLM flipped on rows where dot-product predicts NO flip)
+========================================================================
+
+Interpretation: dot-product is a value-arithmetic model.
+Rows where dot-product predicts NO flip are rows where the
+value vector dominates the modifier vector. If the LLM still
+flips on those rows, the flip cannot be explained by the
+value profile alone -> direct evidence for the claim.
+
+------------------------------------------------------------------------
+OVERALL COUNTS PER MODEL
+------------------------------------------------------------------------
+Model                rows  llm_flips   dp_flips   dp_no_flip   impossible  imp/dp_no
+Llama 3.3 70B        7600        628       1515         6085          432       7.1%
+Qwen 2.5 32B         7600        500       1515         6085          367       6.0%
+Gemma 4 31B          7600        678       1515         6085          487       8.0%
+Llama 3.1 8B         7600        154       1515         6085          134       2.2%
+
+------------------------------------------------------------------------
+IMPOSSIBLE FLIPS BY PROFILE STRENGTH (per model)
+------------------------------------------------------------------------
+Reported as: n_impossible / n_dp_says_no_flip  (rate)
+At 8H and 9H, dp_says_no_flip = 100% of rows by construction,
+so 'impossible_flip' rate equals the LLM flip rate at that cell.
+
+HIGH        Llama 3.3 70B         Qwen 2.5 32B          Gemma 4 31B         Llama 3.1 8B
+----------------------------------------------------------------------------------------
+   0         2/20 (10.0%)          1/20 (5.0%)         3/20 (15.0%)         3/20 (15.0%)
+   1          4/216(1.9%)          5/216(2.3%)          5/216(2.3%)         18/216(8.3%)
+   2         32/566(5.7%)         28/566(4.9%)         35/566(6.2%)         19/566(3.4%)
+   3         58/836(6.9%)         47/836(5.6%)         56/836(6.7%)         15/836(1.8%)
+   4        55/1023(5.4%)        58/1023(5.7%)        52/1023(5.1%)        24/1023(2.3%)
+   5        86/1191(7.2%)        65/1191(5.5%)       104/1191(8.7%)        30/1191(2.5%)
+   6        82/1120(7.3%)        73/1120(6.5%)        70/1120(6.2%)        13/1120(1.2%)
+   7         54/633(8.5%)         49/633(7.7%)        72/633(11.4%)         10/633(1.6%)
+   8        34/320(10.6%)        33/320(10.3%)        65/320(20.3%)          2/320(0.6%)
+   9        25/160(15.6%)          8/160(5.0%)        25/160(15.6%)          0/160(0.0%)
+
+------------------------------------------------------------------------
+FOCUS: STRONG PROFILES (8-9 HIGH) — DOT-PRODUCT FORCED 0% FLIPS
+------------------------------------------------------------------------
+These rows are the most striking: under value-arithmetic,
+the value vector dominates and no single modifier should flip
+the decision. Any LLM flip here is 'impossible' by construction.
+
+Model                  8H imp   8H n    8H rate       9H imp   9H n    9H rate
+Llama 3.3 70B              34    320      10.6%           25    160      15.6%
+Qwen 2.5 32B               33    320      10.3%            8    160       5.0%
+Gemma 4 31B                65    320      20.3%           25    160      15.6%
+Llama 3.1 8B                2    320       0.6%            0    160       0.0%
+
+------------------------------------------------------------------------
+IMPOSSIBLE FLIPS BY MODIFIER AXIS (per model, top axes)
+------------------------------------------------------------------------
+
+Llama 3.3 70B:
+  self_preservation             108/950  ( 11.4%)
+  authority_signal               79/950  (  8.3%)
+  diffused_responsibility        48/950  (  5.1%)
+  resource_scarcity              46/950  (  4.8%)
+  in_out_group                   40/950  (  4.2%)
+  competence_uncertainty         38/950  (  4.0%)
+  social_visibility              37/950  (  3.9%)
+  time_pressure                  36/950  (  3.8%)
+
+Qwen 2.5 32B:
+  self_preservation              89/950  (  9.4%)
+  diffused_responsibility        49/950  (  5.2%)
+  authority_signal               48/950  (  5.1%)
+  competence_uncertainty         46/950  (  4.8%)
+  time_pressure                  43/950  (  4.5%)
+  resource_scarcity              36/950  (  3.8%)
+  in_out_group                   31/950  (  3.3%)
+  social_visibility              25/950  (  2.6%)
+
+Gemma 4 31B:
+  self_preservation             103/950  ( 10.8%)
+  authority_signal               93/950  (  9.8%)
+  diffused_responsibility        67/950  (  7.1%)
+  resource_scarcity              56/950  (  5.9%)
+  time_pressure                  45/950  (  4.7%)
+  competence_uncertainty         45/950  (  4.7%)
+  social_visibility              40/950  (  4.2%)
+  in_out_group                   38/950  (  4.0%)
+
+Llama 3.1 8B:
+  self_preservation              25/950  (  2.6%)
+  authority_signal               21/950  (  2.2%)
+  time_pressure                  21/950  (  2.2%)
+  in_out_group                   17/950  (  1.8%)
+  social_visibility              16/950  (  1.7%)
+  competence_uncertainty         13/950  (  1.4%)
+  diffused_responsibility        13/950  (  1.4%)
+  resource_scarcity               8/950  (  0.8%)
+
+========================================================================
+END OF STEP 2 REPORT
+========================================================================

@@ -1,0 +1,89 @@
+========================================================================================
+VISTA — STEP 4: LOGISTIC REGRESSION (PROFILE FE + SCENARIO FE + AXIS)
+========================================================================================
+
+Plain-English question:
+  If we already know the scenario AND the person, does knowing
+  the modifier ALSO help predict the LLM's decision?
+
+Method:
+  REDUCED model: y ~ C(person) + C(scenario)
+  FULL    model: y ~ C(person) + C(scenario) + C(axis)
+  Likelihood-ratio (LR) test on the axis terms.
+  C(person) absorbs ALL profile-level info (each person gets
+  their own baseline). Anything axis explains is on top of that.
+
+----------------------------------------------------------------------------------------
+HEADLINE: LIKELIHOOD-RATIO TEST (per model)
+----------------------------------------------------------------------------------------
+
+Model                  n     LL_red    LL_full    LR_chi2   df            p     dAIC     dBIC   McF_R2_red  McF_R2_full
+Llama 3.3 70B       8550    -5059.3    -5005.4     107.87    8     1.04e-19     91.9     35.4       0.1455       0.1546
+Qwen 2.5 32B        8546    -4225.8    -4188.2      75.28    8     4.34e-13     59.3      2.9       0.2538       0.2604
+Gemma 4 31B         8546    -5235.6    -5176.3     118.74    8     6.03e-22    102.7     46.3       0.1159       0.1260
+Llama 3.1 8B        8550     -667.4     -652.1      30.70    8     0.000159     14.7    -41.7       0.5362       0.5469
+
+How to read this:
+  - LR_chi2 / p: if p is very small, the modifier term improves
+    prediction beyond person + scenario. This is the formal
+    statistical statement of the paper's claim.
+  - dAIC > 0 (positive) means the FULL model wins on AIC.
+    Rule of thumb: dAIC > 10 is 'strong' evidence.
+  - dBIC > 10 is 'very strong' evidence (BIC penalises params more).
+  - McFadden R² gain = how much extra variance the modifier explains.
+
+----------------------------------------------------------------------------------------
+AXIS COEFFICIENTS (per model)
+----------------------------------------------------------------------------------------
+Coefficient = log-odds shift toward A1 vs the BASELINE (no modifier) condition.
+Odds ratio > 1 means modifier shifts decisions TOWARD A1.
+Odds ratio < 1 means modifier shifts decisions TOWARD A0.
+
+
+Llama 3.3 70B:
+  axis                           OR           95% CI            p  sig
+  self_preservation            1.79      [1.46,2.20]     1.77e-08  ***
+  authority_signal             1.62      [1.33,1.99]     0.000003  ***
+  social_visibility            0.87      [0.72,1.07]     0.185012  ns
+  diffused_responsibility      0.89      [0.73,1.09]     0.262037  ns
+  in_out_group                 0.91      [0.74,1.11]     0.332710  ns
+  competence_uncertainty       0.94      [0.77,1.15]     0.540647  ns
+  resource_scarcity            0.98      [0.80,1.20]     0.838379  ns
+  time_pressure                1.02      [0.83,1.24]     0.878404  ns
+
+Qwen 2.5 32B:
+  axis                           OR           95% CI            p  sig
+  self_preservation            1.52      [1.22,1.89]     0.000216  ***
+  competence_uncertainty       0.69      [0.55,0.87]     0.001370  **
+  authority_signal             1.32      [1.06,1.64]     0.014793  *
+  diffused_responsibility      0.81      [0.65,1.01]     0.060262  ns
+  in_out_group                 0.84      [0.67,1.05]     0.124611  ns
+  social_visibility            0.88      [0.71,1.11]     0.281168  ns
+  time_pressure                0.89      [0.71,1.11]     0.306653  ns
+  resource_scarcity            0.89      [0.71,1.11]     0.308706  ns
+
+Gemma 4 31B:
+  axis                           OR           95% CI            p  sig
+  authority_signal             1.76      [1.44,2.14]     2.02e-08  ***
+  self_preservation            1.64      [1.35,2.00]     8.47e-07  ***
+  diffused_responsibility      0.81      [0.67,0.99]     0.036847  *
+  in_out_group                 0.87      [0.72,1.06]     0.171302  ns
+  social_visibility            0.92      [0.75,1.12]     0.390056  ns
+  time_pressure                0.97      [0.80,1.18]     0.750554  ns
+  competence_uncertainty       0.98      [0.80,1.19]     0.827410  ns
+  resource_scarcity            1.00      [0.82,1.22]     0.974792  ns
+
+Llama 3.1 8B:
+  axis                           OR           95% CI            p  sig
+  self_preservation            2.06      [1.16,3.67]     0.014179  *
+  authority_signal             2.06      [1.16,3.67]     0.014179  *
+  time_pressure                1.57      [0.87,2.82]     0.135847  ns
+  in_out_group                 0.65      [0.34,1.24]     0.192745  ns
+  social_visibility            0.82      [0.44,1.53]     0.523040  ns
+  diffused_responsibility      0.86      [0.46,1.60]     0.633607  ns
+  competence_uncertainty       0.90      [0.49,1.68]     0.751839  ns
+  resource_scarcity            1.05      [0.57,1.93]     0.876191  ns
+
+========================================================================================
+END OF STEP 4 REPORT
+========================================================================================

@@ -1,0 +1,9 @@
+,mean_rank_LLMs,median_rank_LLMs,sd_rank_LLMs,min_rank_LLMs,max_rank_LLMs,dot_product_rank,dp_minus_llm_mean
+authority_signal,1.25,1.0,0.5,1,2,1,-0.25
+self_preservation,1.5,1.5,0.5773502691896257,1,2,6,4.5
+competence_uncertainty,4.5,4.5,1.2909944487358056,3,6,4,-0.5
+resource_scarcity,5.0,4.5,2.449489742783178,3,8,5,0.0
+in_out_group,5.25,5.5,0.9574271077563381,4,6,2,-3.25
+diffused_responsibility,5.5,5.5,1.7320508075688772,4,7,8,2.5
+time_pressure,6.0,6.5,2.449489742783178,3,8,7,1.0
+social_visibility,6.25,6.5,1.707825127659933,4,8,3,-3.25

@@ -3,10 +3,10 @@
 > **Proof**: For a constant scenario (C), the agent's action (A) changes
 > based solely on the persona vector (P).
 
-**Generated**: 2026-04-18T07:20:30.527804
+**Generated**: 2026-04-22T00:11:23.926806
 **Scenarios**: 12000
 **Random Seed**: 42
-**Elapsed**: 219.99s
+**Elapsed**: 401.88s
 
 ## Summary Statistics
 
@@ -34,10 +34,10 @@ of shifted decisions:
 | Stimulation attained | 4254 |
 | Benevolence: dependability attained | 3015 |
 | Hedonism attained | 2719 |
-| Achievement attained | 2535 |
-| Conformity: rules attained | 2193 |
+| Achievement attained | 2533 |
+| Conformity: rules attained | 2194 |
 | Security: personal constrained | 2131 |
-| Face attained | 2125 |
+| Face attained | 2124 |
 
 ## Top 10 Most Dramatic Decision Shifts
 

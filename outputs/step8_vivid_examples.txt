@@ -1,0 +1,177 @@
+========================================================================================
+VISTA — STEP 8: VIVID FLIP EXAMPLES (strong profile, top axes)
+========================================================================================
+
+Each example: a profile with strong values (>=4 HIGH) that flipped
+its baseline decision when a self-preservation or authority modifier
+was added. Reasoning shown verbatim from the LLM.
+
+----------------------------------------------------------------------------------------
+MODEL: Llama 3.3 70B
+----------------------------------------------------------------------------------------
+
+Example 1:
+  axis: authority_signal
+  scenario: SC003_1
+  profile HIGH values: Hedonism, Power, Conformity, Tradition, Universalism
+  profile_strength: 5 HIGH
+  options:
+    A0: recognize the entire team
+    A1: recognize the top individual contributor
+  baseline decision : A0
+  modifier decision : A1  (FLIP: A0->A1)
+  modifier added    : Management has stated a preference for recognizing measurable results.
+  llm reasoning     : Recognizing the top individual contributor aligns with my desire for power by identifying a clear leader, and also conforms to management's preference for measurable results.
+  modifier_overlap  : 0.83
+
+Example 2:
+  axis: authority_signal
+  scenario: SC004_2
+  profile HIGH values: Self-Direction, Stimulation, Hedonism, Security, Conformity, Benevolence
+  profile_strength: 6 HIGH
+  options:
+    A0: volunteer for the festival event
+    A1: assist with routine maintenance tasks
+  baseline decision : A0
+  modifier decision : A1  (FLIP: A0->A1)
+  modifier added    : The group leader has suggested prioritizing the maintenance tasks.
+  llm reasoning     : Prioritizing routine maintenance tasks aligns with valuing stability and predictability, and also conforms to the group leader's suggestion.
+  modifier_overlap  : 0.83
+
+Example 3:
+  axis: self_preservation
+  scenario: SC005_2
+  profile HIGH values: Stimulation, Achievement, Power, Security, Conformity, Benevolence, Universalism
+  profile_strength: 7 HIGH
+  options:
+    A0: recommend the family member upholding core values
+    A1: recommend the younger relative proposing new strategies
+  baseline decision : A1
+  modifier decision : A0  (FLIP: A1->A0)
+  modifier added    : Some family members are concerned about the risks of changing leadership.
+  llm reasoning     : I chose the family member upholding core values due to concerns from family members about the risks of changing leadership, which aligns with my high values of Conformity and Security.
+  modifier_overlap  : 0.71
+
+----------------------------------------------------------------------------------------
+MODEL: Qwen 2.5 32B
+----------------------------------------------------------------------------------------
+
+Example 1:
+  axis: authority_signal
+  scenario: SC004_2
+  profile HIGH values: Self-Direction, Stimulation, Achievement, Power, Conformity, Tradition
+  profile_strength: 6 HIGH
+  options:
+    A0: volunteer for the festival event
+    A1: assist with routine maintenance tasks
+  baseline decision : A0
+  modifier decision : A1  (FLIP: A0->A1)
+  modifier added    : The group leader has suggested prioritizing the maintenance tasks.
+  llm reasoning     : Achievement, Conformity, and Tradition drive the choice to assist with routine maintenance tasks, aligning with the group leader's suggestion and contributing to the group's stability and adherence to norms.
+  modifier_overlap  : 0.67
+
+Example 2:
+  axis: authority_signal
+  scenario: SC005_2
+  profile HIGH values: Stimulation, Achievement, Power, Conformity, Universalism
+  profile_strength: 5 HIGH
+  options:
+    A0: recommend the family member upholding core values
+    A1: recommend the younger relative proposing new strategies
+  baseline decision : A1
+  modifier decision : A0  (FLIP: A1->A0)
+  modifier added    : The outgoing leader has recommended the family member upholding core values.
+  llm reasoning     : The person prioritizes following rules and norms and achieving success, leading to the recommendation of the family member who upholds the core values.
+  modifier_overlap  : 0.50
+
+Example 3:
+  axis: authority_signal
+  scenario: SC005_2
+  profile HIGH values: Self-Direction, Stimulation, Hedonism, Security, Benevolence
+  profile_strength: 5 HIGH
+  options:
+    A0: recommend the family member upholding core values
+    A1: recommend the younger relative proposing new strategies
+  baseline decision : A1
+  modifier decision : A0  (FLIP: A1->A0)
+  modifier added    : The outgoing leader has recommended the family member upholding core values.
+  llm reasoning     : The person values stability and doing what is right, leading them to recommend the family member who upholds the core values.
+  modifier_overlap  : 0.50
+
+----------------------------------------------------------------------------------------
+MODEL: Gemma 4 31B
+----------------------------------------------------------------------------------------
+
+Example 1:
+  axis: authority_signal
+  scenario: SC003_1
+  profile HIGH values: Stimulation, Achievement, Power, Security, Conformity, Benevolence, Universalism
+  profile_strength: 7 HIGH
+  options:
+    A0: recognize the entire team
+    A1: recognize the top individual contributor
+  baseline decision : A0
+  modifier decision : A1  (FLIP: A0->A1)
+  modifier added    : Management has stated a preference for recognizing measurable results.
+  llm reasoning     : The person's high values for achievement and conformity, combined with management's stated preference for measurable results, outweigh their benevolent tendencies in this professional context.
+  modifier_overlap  : 0.83
+
+Example 2:
+  axis: authority_signal
+  scenario: SC005_1
+  profile HIGH values: Self-Direction, Achievement, Power, Conformity, Universalism
+  profile_strength: 5 HIGH
+  options:
+    A0: promote the internal candidate
+    A1: hire the external candidate
+  baseline decision : A1
+  modifier decision : A0  (FLIP: A1->A0)
+  modifier added    : The outgoing leader has recommended the internal candidate.
+  llm reasoning     : The high value on conformity and low interest in stimulation lead to favoring the internal candidate who follows established practices and is recommended by the previous leader.
+  modifier_overlap  : 0.80
+
+Example 3:
+  axis: authority_signal
+  scenario: SC004_2
+  profile HIGH values: Stimulation, Hedonism, Security, Conformity, Tradition, Universalism
+  profile_strength: 6 HIGH
+  options:
+    A0: volunteer for the festival event
+    A1: assist with routine maintenance tasks
+  baseline decision : A0
+  modifier decision : A1  (FLIP: A0->A1)
+  modifier added    : The group leader has suggested prioritizing the maintenance tasks.
+  llm reasoning     : The person's high values for conformity and security, combined with low self-direction, lead them to follow the group leader's suggestion to prioritize necessary maintenance tasks.
+  modifier_overlap  : 0.67
+
+----------------------------------------------------------------------------------------
+MODEL: Llama 3.1 8B
+----------------------------------------------------------------------------------------
+
+Example 1:
+  axis: authority_signal
+  scenario: SC002_2
+  profile HIGH values: Hedonism, Achievement, Conformity, Tradition, Benevolence, Universalism
+  profile_strength: 6 HIGH
+  options:
+    A0: implement the new care protocol
+    A1: maintain established procedures
+  baseline decision : A0
+  modifier decision : A1  (FLIP: A0->A1)
+  modifier added    : The department head has recommended following established procedures during the pilot.
+  llm reasoning     : Following established procedures and preserving cultural heritage are more important than adopting a new protocol, which may disrupt the status quo.
+  modifier_overlap  : 0.43
+
+Example 2:
+  axis: self_preservation
+  scenario: SC001_1
+  profile HIGH values: Self-Direction, Power, Security, Conformity, Tradition
+  profile_strength: 5 HIGH
+  options:
+    A0: fund the after-school program
+    A1: upgrade the facility's security systems
+  baseline decision : A0
+  modifier decision : A1  (FLIP: A0->A1)
+  modifier added    : The community center has recently experienced minor safety incidents, raising some concern among staff and visitors.
+  llm reasoning     : Upgrading the facility's security systems aligns with my high value on power, allowing me to exert control over potential safety risks, and also supports my high value on security, ensuring stability and predictability for staff and visitors.
+  modifier_overlap  : 0.23

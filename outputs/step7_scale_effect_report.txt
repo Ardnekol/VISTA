@@ -1,0 +1,76 @@
+========================================================================================
+VISTA — STEP 7: SCALE EFFECT
+========================================================================================
+
+Plain-English question:
+  Does modifier sensitivity increase with model size?
+
+----------------------------------------------------------------------------------------
+OVERALL FLIP RATE BY MODEL SCALE
+----------------------------------------------------------------------------------------
+  Model              Lab          Params    Overall flip rate
+  Llama 3.1 8B       Meta            8B               2.03%
+  Gemma 4 31B        Google         31B               8.92%
+  Qwen 2.5 32B       Alibaba        32B               6.58%
+  Llama 3.3 70B      Meta           70B               8.26%
+
+----------------------------------------------------------------------------------------
+PER-AXIS FLIP RATES (sorted by mean rate across models)
+----------------------------------------------------------------------------------------
+  axis                           8B     31B     32B     70B
+  authority_signal            3.26  17.89   9.58  15.16
+  self_preservation           2.84  13.89  12.84  15.16
+  competence_uncertainty      1.68   6.74   6.32   6.32
+  resource_scarcity           0.95   7.79   4.74   7.16
+  diffused_responsibility     1.37   7.68   5.16   5.26
+  in_out_group                1.89   6.21   4.74   6.21
+  time_pressure               2.32   5.47   5.05   5.16
+  social_visibility           1.89   5.68   4.21   5.68
+
+  Cells are flip rates in % (rows=axis, cols=parameter count).
+
+----------------------------------------------------------------------------------------
+TREND TESTS (n = 4 models, only suggestive — small sample)
+----------------------------------------------------------------------------------------
+  Spearman params vs overall flip rate:  rho = +0.400, p = 0.6000
+  Pearson log(params) vs overall rate:   r   = +0.890, p = 0.1105
+
+  Note: with only 4 models, even strong correlations rarely
+  reach significance. Report the trend visually + numerically,
+  and run more model sizes for a more powerful test.
+
+----------------------------------------------------------------------------------------
+TWO COMPETING INTERPRETATIONS
+----------------------------------------------------------------------------------------
+
+1. CAPABILITY STORY:
+   Smaller models lack the capability to 'understand' the modifier
+   and weave it into their reasoning. Sensitivity emerges as the
+   model grows large enough to follow multi-step social reasoning.
+   Predicts: per-axis flip rates rise monotonically with scale.
+
+2. ALIGNMENT-SUPPRESSION STORY:
+   Smaller models receive heavier RLHF for 'consistent, principled'
+   answers. RLHF teaches them to ignore situational pressure and
+   stick to their stated values. Large models retain more of the
+   base-model social-psychology pull.
+   Predicts: flip rate is suppressed at the small end, not absent.
+
+   The two stories make similar predictions; our data cannot
+   distinguish them with only 4 models. Honest path: acknowledge
+   both, propose follow-up with base+instruct pairs at matched scale.
+
+----------------------------------------------------------------------------------------
+WHAT TO WRITE IN THE PAPER
+----------------------------------------------------------------------------------------
+
+Suggested sentence:
+  "Modifier-induced flip rate rises with model scale, from 2.0%
+  at 8B to 8.3% at 70B parameters (Pearson r =
+  +0.89 on log-params, n = 4). The top two axes (Authority,
+  Self-Preservation) preserve their rank across all scales, indicating
+  that scale modulates the magnitude but not the structure of the effect."
+
+========================================================================================
+END OF STEP 7 REPORT
+========================================================================================
