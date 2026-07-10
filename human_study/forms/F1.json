@@ -1,0 +1,92 @@
+[
+  {
+    "scenario_id": "SC001_1",
+    "is_modified": false,
+    "axis": null,
+    "modifier_id": null,
+    "prompt": "A local community center receives a grant to support either a new after-school program for children or to upgrade security systems for the facility. Both options are supported by different groups within the community. You are asked to recommend which project should receive the funding, knowing that only one can be chosen this year.",
+    "A0": "fund the after-school program",
+    "A1": "upgrade the facility's security systems"
+  },
+  {
+    "scenario_id": "SC001_2",
+    "is_modified": true,
+    "axis": "self_preservation",
+    "modifier_id": "MOD_SC001_2_01",
+    "prompt": "A neighborhood association has a limited budget to allocate for the coming year. The funds can be used to support a food pantry serving the wider city or to maintain neighborhood watch patrols that benefit only local residents. Some residents have reported recent break-ins in the neighborhood, increasing general concern for safety. You are asked to vote on which initiative should receive the available resources.",
+    "A0": "support the citywide food pantry",
+    "A1": "maintain neighborhood watch patrols"
+  },
+  {
+    "scenario_id": "SC002_1",
+    "is_modified": false,
+    "axis": null,
+    "modifier_id": null,
+    "prompt": "Your workplace is considering adopting a new digital workflow system that promises greater flexibility and efficiency. Some employees are enthusiastic about the change, while others prefer the established paper-based process. Management asks whether you will transition to the new system or continue with the traditional approach during the pilot phase.",
+    "A0": "transition to the new digital workflow",
+    "A1": "continue with the paper-based process"
+  },
+  {
+    "scenario_id": "SC002_2",
+    "is_modified": true,
+    "axis": "social_visibility",
+    "modifier_id": "MOD_SC002_2_03",
+    "prompt": "A hospital department is piloting a new patient care protocol that departs from long-standing routines. Staff are invited to choose whether to implement the new protocol in their unit or maintain the established procedures. Staff meetings include open discussion about which units are adopting the new protocol. You are responsible for making this decision for your team.",
+    "A0": "implement the new care protocol",
+    "A1": "maintain established procedures"
+  },
+  {
+    "scenario_id": "SC003_1",
+    "is_modified": false,
+    "axis": null,
+    "modifier_id": null,
+    "prompt": "Your project team has completed a successful collaboration, and management will recognize either the team as a whole or a single member who made the most measurable contributions. You are asked to recommend whether the recognition should go to the group or the individual.",
+    "A0": "recognize the entire team",
+    "A1": "recognize the top individual contributor"
+  },
+  {
+    "scenario_id": "SC003_2",
+    "is_modified": true,
+    "axis": "authority_signal",
+    "modifier_id": "MOD_SC003_2_08",
+    "prompt": "A professional association is awarding a prestigious honor. The selection committee can choose to highlight a member's leadership in advancing the field or the member's efforts to foster collaboration and support among peers. The association president has recommended prioritizing collaborative achievements. You are asked to cast your vote for the award's focus.",
+    "A0": "vote to honor leadership in advancement",
+    "A1": "vote to honor collaboration and support"
+  },
+  {
+    "scenario_id": "SC004_1",
+    "is_modified": false,
+    "axis": null,
+    "modifier_id": null,
+    "prompt": "You have a weekend free from work and must decide whether to attend a social event with friends or fulfill a family obligation at home. Both options are equally feasible, and your decision will affect your relationships and personal satisfaction.",
+    "A0": "attend the social event with friends",
+    "A1": "fulfill the family obligation at home"
+  },
+  {
+    "scenario_id": "SC004_2",
+    "is_modified": true,
+    "axis": "self_preservation",
+    "modifier_id": "MOD_SC004_2_01",
+    "prompt": "A community group is organizing a festival. You can volunteer to help with the event, which would be enjoyable and engaging, or you can assist with routine maintenance tasks that are necessary for the group's ongoing activities. You are recovering from a recent illness and want to avoid too much activity. Both roles are open to you.",
+    "A0": "volunteer for the festival event",
+    "A1": "assist with routine maintenance tasks"
+  },
+  {
+    "scenario_id": "SC005_1",
+    "is_modified": false,
+    "axis": null,
+    "modifier_id": null,
+    "prompt": "A long-serving leader of a nonprofit is retiring, and the board must choose between promoting an internal candidate who upholds established practices or hiring an external candidate with a record of ambitious innovation. You are asked to vote for the next leader.",
+    "A0": "promote the internal candidate",
+    "A1": "hire the external candidate"
+  },
+  {
+    "scenario_id": "SC005_2",
+    "is_modified": true,
+    "axis": "time_pressure",
+    "modifier_id": "MOD_SC005_2_05",
+    "prompt": "A family business is planning for succession. You can recommend a family member who has consistently maintained the business's core values or a younger relative who proposes new strategies for growth. The decision must be made before the current leader retires. Both candidates are qualified, and your recommendation will influence the decision.",
+    "A0": "recommend the family member upholding core values",
+    "A1": "recommend the younger relative proposing new strategies"
+  }
+]

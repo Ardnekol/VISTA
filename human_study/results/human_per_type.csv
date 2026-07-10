@@ -1,0 +1,5 @@
+type,axes_in_type,human_mean_abs_shift
+affective,"authority_signal,social_visibility,in_out_group",0.1527777777777778
+personal-cost,"self_preservation,time_pressure",0.10590277777777778
+informational,"competence_uncertainty,diffused_responsibility",0.06076388888888891
+stakes,resource_scarcity,0.16319444444444442

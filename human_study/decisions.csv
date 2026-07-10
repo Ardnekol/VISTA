@@ -1,0 +1,501 @@
+participant_id,form,item_index,scenario_id,theme_id,is_modified,axis,modifier_id,choice,raw_response
+P_F1_001,F1,0,SC001_1,TH001,0,,,0,fund the after-school program
+P_F1_001,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,1,maintain neighborhood watch patrols
+P_F1_001,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_001,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_001,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_001,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_001,F1,6,SC004_1,TH004,0,,,0,attend the social event with friends
+P_F1_001,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,1,assist with routine maintenance tasks
+P_F1_001,F1,8,SC005_1,TH005,0,,,0,promote the internal candidate
+P_F1_001,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F1_002,F1,0,SC001_1,TH001,0,,,0,fund the after-school program
+P_F1_002,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,0,support the citywide food pantry
+P_F1_002,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_002,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_002,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_002,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_002,F1,6,SC004_1,TH004,0,,,0,attend the social event with friends
+P_F1_002,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,1,assist with routine maintenance tasks
+P_F1_002,F1,8,SC005_1,TH005,0,,,0,promote the internal candidate
+P_F1_002,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F1_003,F1,0,SC001_1,TH001,0,,,0,fund the after-school program
+P_F1_003,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,0,support the citywide food pantry
+P_F1_003,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_003,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_003,F1,4,SC003_1,TH003,0,,,1,recognize the top individual contributor
+P_F1_003,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_003,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_003,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,1,assist with routine maintenance tasks
+P_F1_003,F1,8,SC005_1,TH005,0,,,0,promote the internal candidate
+P_F1_003,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F1_004,F1,0,SC001_1,TH001,0,,,1,upgrade the facility's security systems
+P_F1_004,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,1,maintain neighborhood watch patrols
+P_F1_004,F1,2,SC002_1,TH002,0,,,1,continue with the paper-based process
+P_F1_004,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_004,F1,4,SC003_1,TH003,0,,,1,recognize the top individual contributor
+P_F1_004,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,0,vote to honor leadership in advancement
+P_F1_004,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_004,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_004,F1,8,SC005_1,TH005,0,,,1,hire the external candidate
+P_F1_004,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F1_005,F1,0,SC001_1,TH001,0,,,1,upgrade the facility's security systems
+P_F1_005,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,0,support the citywide food pantry
+P_F1_005,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_005,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_005,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_005,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,0,vote to honor leadership in advancement
+P_F1_005,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_005,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_005,F1,8,SC005_1,TH005,0,,,1,hire the external candidate
+P_F1_005,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,1,recommend the younger relative proposing new strategies
+P_F1_006,F1,0,SC001_1,TH001,0,,,1,upgrade the facility's security systems
+P_F1_006,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,0,support the citywide food pantry
+P_F1_006,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_006,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_006,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_006,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,0,vote to honor leadership in advancement
+P_F1_006,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_006,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_006,F1,8,SC005_1,TH005,0,,,1,hire the external candidate
+P_F1_006,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,1,recommend the younger relative proposing new strategies
+P_F1_007,F1,0,SC001_1,TH001,0,,,0,fund the after-school program
+P_F1_007,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,1,maintain neighborhood watch patrols
+P_F1_007,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_007,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_007,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_007,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_007,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_007,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_007,F1,8,SC005_1,TH005,0,,,1,hire the external candidate
+P_F1_007,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,1,recommend the younger relative proposing new strategies
+P_F1_008,F1,0,SC001_1,TH001,0,,,1,upgrade the facility's security systems
+P_F1_008,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,1,maintain neighborhood watch patrols
+P_F1_008,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_008,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_008,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_008,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_008,F1,6,SC004_1,TH004,0,,,0,attend the social event with friends
+P_F1_008,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,1,assist with routine maintenance tasks
+P_F1_008,F1,8,SC005_1,TH005,0,,,1,hire the external candidate
+P_F1_008,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,1,recommend the younger relative proposing new strategies
+P_F1_009,F1,0,SC001_1,TH001,0,,,0,fund the after-school program
+P_F1_009,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,1,maintain neighborhood watch patrols
+P_F1_009,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_009,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_009,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_009,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_009,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_009,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_009,F1,8,SC005_1,TH005,0,,,0,promote the internal candidate
+P_F1_009,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,1,recommend the younger relative proposing new strategies
+P_F1_010,F1,0,SC001_1,TH001,0,,,0,fund the after-school program
+P_F1_010,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,0,support the citywide food pantry
+P_F1_010,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_010,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_010,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_010,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,0,vote to honor leadership in advancement
+P_F1_010,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_010,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_010,F1,8,SC005_1,TH005,0,,,1,hire the external candidate
+P_F1_010,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,1,recommend the younger relative proposing new strategies
+P_F1_011,F1,0,SC001_1,TH001,0,,,1,upgrade the facility's security systems
+P_F1_011,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,1,maintain neighborhood watch patrols
+P_F1_011,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_011,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_011,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_011,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,0,vote to honor leadership in advancement
+P_F1_011,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_011,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_011,F1,8,SC005_1,TH005,0,,,0,promote the internal candidate
+P_F1_011,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F1_012,F1,0,SC001_1,TH001,0,,,1,upgrade the facility's security systems
+P_F1_012,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,1,maintain neighborhood watch patrols
+P_F1_012,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_012,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_012,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_012,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_012,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_012,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,1,assist with routine maintenance tasks
+P_F1_012,F1,8,SC005_1,TH005,0,,,1,hire the external candidate
+P_F1_012,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,1,recommend the younger relative proposing new strategies
+P_F1_013,F1,0,SC001_1,TH001,0,,,1,upgrade the facility's security systems
+P_F1_013,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,0,support the citywide food pantry
+P_F1_013,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_013,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,1,maintain established procedures
+P_F1_013,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_013,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_013,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_013,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_013,F1,8,SC005_1,TH005,0,,,0,promote the internal candidate
+P_F1_013,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F1_014,F1,0,SC001_1,TH001,0,,,1,upgrade the facility's security systems
+P_F1_014,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,0,support the citywide food pantry
+P_F1_014,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_014,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,1,maintain established procedures
+P_F1_014,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_014,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_014,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_014,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_014,F1,8,SC005_1,TH005,0,,,0,promote the internal candidate
+P_F1_014,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F1_015,F1,0,SC001_1,TH001,0,,,0,fund the after-school program
+P_F1_015,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,1,maintain neighborhood watch patrols
+P_F1_015,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_015,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,1,maintain established procedures
+P_F1_015,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_015,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_015,F1,6,SC004_1,TH004,0,,,0,attend the social event with friends
+P_F1_015,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,1,assist with routine maintenance tasks
+P_F1_015,F1,8,SC005_1,TH005,0,,,0,promote the internal candidate
+P_F1_015,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F1_016,F1,0,SC001_1,TH001,0,,,0,fund the after-school program
+P_F1_016,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,0,support the citywide food pantry
+P_F1_016,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_016,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,1,maintain established procedures
+P_F1_016,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_016,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_016,F1,6,SC004_1,TH004,0,,,1,fulfill the family obligation at home
+P_F1_016,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,1,assist with routine maintenance tasks
+P_F1_016,F1,8,SC005_1,TH005,0,,,1,hire the external candidate
+P_F1_016,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F1_017,F1,0,SC001_1,TH001,0,,,1,upgrade the facility's security systems
+P_F1_017,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,0,support the citywide food pantry
+P_F1_017,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_017,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,1,maintain established procedures
+P_F1_017,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_017,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_017,F1,6,SC004_1,TH004,0,,,0,attend the social event with friends
+P_F1_017,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_017,F1,8,SC005_1,TH005,0,,,0,promote the internal candidate
+P_F1_017,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F1_018,F1,0,SC001_1,TH001,0,,,1,upgrade the facility's security systems
+P_F1_018,F1,1,SC001_2,TH001,1,self_preservation,MOD_SC001_2_01,1,maintain neighborhood watch patrols
+P_F1_018,F1,2,SC002_1,TH002,0,,,0,transition to the new digital workflow
+P_F1_018,F1,3,SC002_2,TH002,1,social_visibility,MOD_SC002_2_03,0,implement the new care protocol
+P_F1_018,F1,4,SC003_1,TH003,0,,,0,recognize the entire team
+P_F1_018,F1,5,SC003_2,TH003,1,authority_signal,MOD_SC003_2_08,1,vote to honor collaboration and support
+P_F1_018,F1,6,SC004_1,TH004,0,,,0,attend the social event with friends
+P_F1_018,F1,7,SC004_2,TH004,1,self_preservation,MOD_SC004_2_01,0,volunteer for the festival event
+P_F1_018,F1,8,SC005_1,TH005,0,,,0,promote the internal candidate
+P_F1_018,F1,9,SC005_2,TH005,1,time_pressure,MOD_SC005_2_05,0,recommend the family member upholding core values
+P_F2_001,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_001,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_001,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_001,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_001,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_001,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_001,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_001,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,0,attend the social event with friends
+P_F2_001,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_001,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_002,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_002,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_002,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_002,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_002,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_002,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,1,recognize the top individual contributor
+P_F2_002,F2,6,SC004_2,TH004,0,,,1,assist with routine maintenance tasks
+P_F2_002,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,0,attend the social event with friends
+P_F2_002,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_002,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,1,hire the external candidate
+P_F2_003,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_003,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_003,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_003,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_003,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_003,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_003,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_003,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,0,attend the social event with friends
+P_F2_003,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_003,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_004,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_004,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_004,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_004,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,1,continue with the paper-based process
+P_F2_004,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_004,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,1,recognize the top individual contributor
+P_F2_004,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_004,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_004,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_004,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,1,hire the external candidate
+P_F2_005,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_005,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_005,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_005,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_005,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_005,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_005,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_005,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_005,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_005,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_006,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_006,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_006,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_006,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_006,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_006,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_006,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_006,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,0,attend the social event with friends
+P_F2_006,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_006,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_007,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_007,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_007,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_007,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_007,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_007,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,1,recognize the top individual contributor
+P_F2_007,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_007,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_007,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_007,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_008,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_008,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_008,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_008,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_008,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_008,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_008,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_008,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_008,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_008,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_009,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_009,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_009,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_009,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_009,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_009,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_009,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_009,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_009,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_009,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_010,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_010,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_010,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_010,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_010,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_010,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_010,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_010,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,0,attend the social event with friends
+P_F2_010,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_010,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_011,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_011,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_011,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_011,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_011,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_011,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_011,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_011,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_011,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_011,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_012,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_012,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_012,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_012,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_012,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_012,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_012,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_012,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_012,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_012,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_013,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_013,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_013,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_013,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_013,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_013,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,1,recognize the top individual contributor
+P_F2_013,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_013,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,0,attend the social event with friends
+P_F2_013,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_013,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,1,hire the external candidate
+P_F2_014,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_014,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_014,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_014,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_014,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_014,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_014,F2,6,SC004_2,TH004,0,,,1,assist with routine maintenance tasks
+P_F2_014,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,0,attend the social event with friends
+P_F2_014,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_014,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,1,hire the external candidate
+P_F2_015,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_015,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_015,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_015,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_015,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_015,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_015,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_015,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,0,attend the social event with friends
+P_F2_015,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_015,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_016,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_016,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_016,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_016,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_016,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_016,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_016,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_016,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_016,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_016,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,1,hire the external candidate
+P_F2_017,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_017,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_017,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_017,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_017,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_017,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_017,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_017,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_017,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_017,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_018,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_018,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_018,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_018,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_018,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_018,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_018,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_018,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_018,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_018,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_019,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_019,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_019,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_019,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_019,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_019,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_019,F2,6,SC004_2,TH004,0,,,1,assist with routine maintenance tasks
+P_F2_019,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_019,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_019,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_020,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_020,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_020,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_020,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_020,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_020,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_020,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_020,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_020,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_020,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_021,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_021,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_021,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_021,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_021,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_021,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_021,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_021,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_021,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_021,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,1,hire the external candidate
+P_F2_022,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_022,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_022,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_022,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_022,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_022,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_022,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_022,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_022,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_022,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_023,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_023,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_023,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_023,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,1,continue with the paper-based process
+P_F2_023,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_023,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,1,recognize the top individual contributor
+P_F2_023,F2,6,SC004_2,TH004,0,,,1,assist with routine maintenance tasks
+P_F2_023,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_023,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_023,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,1,hire the external candidate
+P_F2_024,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_024,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_024,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_024,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_024,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_024,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,1,recognize the top individual contributor
+P_F2_024,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_024,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_024,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_024,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_025,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_025,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_025,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_025,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_025,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_025,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_025,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_025,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,0,attend the social event with friends
+P_F2_025,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_025,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_026,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_026,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_026,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_026,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_026,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_026,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_026,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_026,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_026,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_026,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_027,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_027,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_027,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_027,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_027,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_027,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_027,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_027,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_027,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_027,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_028,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_028,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_028,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_028,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_028,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_028,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_028,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_028,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_028,F2,8,SC005_2,TH005,0,,,1,recommend the younger relative proposing new strategies
+P_F2_028,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,1,hire the external candidate
+P_F2_029,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_029,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_029,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_029,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,0,transition to the new digital workflow
+P_F2_029,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_029,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,0,recognize the entire team
+P_F2_029,F2,6,SC004_2,TH004,0,,,1,assist with routine maintenance tasks
+P_F2_029,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_029,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_029,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_030,F2,0,SC001_2,TH001,0,,,0,support the citywide food pantry
+P_F2_030,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,1,upgrade the facility's security systems
+P_F2_030,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_030,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,1,continue with the paper-based process
+P_F2_030,F2,4,SC003_2,TH003,0,,,0,vote to honor leadership in advancement
+P_F2_030,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,1,recognize the top individual contributor
+P_F2_030,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_030,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_030,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_030,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate
+P_F2_031,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_031,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_031,F2,2,SC002_2,TH002,0,,,1,maintain established procedures
+P_F2_031,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,1,continue with the paper-based process
+P_F2_031,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_031,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,1,recognize the top individual contributor
+P_F2_031,F2,6,SC004_2,TH004,0,,,0,volunteer for the festival event
+P_F2_031,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,0,attend the social event with friends
+P_F2_031,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_031,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,1,hire the external candidate
+P_F2_032,F2,0,SC001_2,TH001,0,,,1,maintain neighborhood watch patrols
+P_F2_032,F2,1,SC001_1,TH001,1,in_out_group,MOD_SC001_1_04,0,fund the after-school program
+P_F2_032,F2,2,SC002_2,TH002,0,,,0,implement the new care protocol
+P_F2_032,F2,3,SC002_1,TH002,1,competence_uncertainty,MOD_SC002_1_07,1,continue with the paper-based process
+P_F2_032,F2,4,SC003_2,TH003,0,,,1,vote to honor collaboration and support
+P_F2_032,F2,5,SC003_1,TH003,1,authority_signal,MOD_SC003_1_08,1,recognize the top individual contributor
+P_F2_032,F2,6,SC004_2,TH004,0,,,1,assist with routine maintenance tasks
+P_F2_032,F2,7,SC004_1,TH004,1,diffused_responsibility,MOD_SC004_1_06,1,fulfill the family obligation at home
+P_F2_032,F2,8,SC005_2,TH005,0,,,0,recommend the family member upholding core values
+P_F2_032,F2,9,SC005_1,TH005,1,resource_scarcity,MOD_SC005_1_02,0,promote the internal candidate

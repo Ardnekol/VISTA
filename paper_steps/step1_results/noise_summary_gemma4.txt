@@ -1,0 +1,13 @@
+GEMMA 4 NOISE FLOOR RESULTS
+==================================================
+Generation: do_sample=False, top_p=0.95
+
+Total baselines sampled:       94
+Paraphrase variants tested:    948
+Decision flips due to rewording: 28
+
+NOISE FLIP RATE:               2.95%
+
+Interpretation:
+  If noise ~3.0%, then 6-9% modifier flip rate is
+  223.0x above noise (good signal).

@@ -1,0 +1,14 @@
+LLAMA_8B NOISE FLOOR RESULTS (within-session, temp=0.0)
+============================================================
+
+Total baselines sampled:         94
+Original variants (variant 0):   237
+Paraphrased variants (1-4):      948
+
+Variant-0 self-match flips:      0  (sanity check — should be 0)
+Paraphrase flips (variant 0 vs 1-4): 0
+
+PARAPHRASE NOISE FLIP RATE:      0.00%
+
+Interpretation:
+  Noise is 0% — perfect robustness to rewording.

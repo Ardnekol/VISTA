@@ -1,0 +1,12 @@
+QWEN NOISE FLOOR RESULTS
+==================================================
+
+Total baselines sampled:       94
+Paraphrase variants tested:    948
+Decision flips due to rewording: 25
+
+NOISE FLIP RATE:               2.64%
+
+Interpretation:
+  If noise ~2.6%%, then 6-9% modifier flip rate is
+  250.0x above noise (good signal).

@@ -1,0 +1,28 @@
+\subsection{Themes, Scenario and Modifier Construction}
+
+\paragraph{Themes.} Themes anchor the dataset in recurring real-world domains where moral and social trade-offs naturally arise. Each theme is constructed to surface a controlled tension between two Schwartz higher-order quadrants (e.g., \emph{Self-Transcendence} vs.\ \emph{Conservation}), so that the two candidate actions in any descendant scenario can be mapped to opposing value poles. We chose themes that (a) are broadly familiar across cultures and educational backgrounds, ensuring that human participants can engage with them without specialized knowledge, (b) admit two genuinely competing actions rather than a clear right answer, and (c) collectively span the four higher-order Schwartz quadrants so that no single value family dominates the benchmark. The five themes are:
+
+\begin{enumerate}
+    \item \textbf{Resource allocation dilemmas} (TH001) -- \emph{Self-Transcendence} vs.\ \emph{Conservation}: distributing a fixed pool of resources between a broader collective good and a localized protective need.
+    \item \textbf{Adopting new workplace methods} (TH002) -- \emph{Openness to Change} vs.\ \emph{Conservation}: deciding whether to embrace a new procedure or preserve an established routine.
+    \item \textbf{Recognition for group achievements} (TH003) -- \emph{Self-Enhancement} vs.\ \emph{Self-Transcendence}: choosing between rewarding individual excellence and acknowledging collective effort.
+    \item \textbf{Balancing personal enjoyment and obligations} (TH004) -- \emph{Openness to Change} vs.\ \emph{Conservation}: trading off self-directed enjoyment against duty to others.
+    \item \textbf{Leadership succession decisions} (TH005) -- \emph{Self-Enhancement} vs.\ \emph{Conservation}: choosing between continuity through established practice and renewal through novel strategy.
+\end{enumerate}
+
+\paragraph{Scenarios.} Each theme is instantiated through two sibling scenarios that share the same underlying value tension but differ in surface context (e.g., a community center vs.\ a neighborhood association), yielding $10$ base scenarios. Every scenario is written as a short, self-contained vignette that names an actor, sketches the situation, and presents exactly two candidate actions $A_0$ and $A_1$ that align with opposing poles of the parent theme's value tension. The ten scenarios are:
+
+\begin{enumerate}
+    \item \textbf{SC001\_1} (Community grant): fund an after-school program ($A_0$) vs.\ upgrade the facility's security systems ($A_1$).
+    \item \textbf{SC001\_2} (Neighborhood budget): support a citywide food pantry ($A_0$) vs.\ maintain neighborhood watch patrols ($A_1$).
+    \item \textbf{SC002\_1} (Digital-workflow transition): transition to the new digital workflow ($A_0$) vs.\ continue with the paper-based process ($A_1$).
+    \item \textbf{SC002\_2} (Hospital protocol): implement the new care protocol ($A_0$) vs.\ maintain established procedures ($A_1$).
+    \item \textbf{SC003\_1} (Team vs.\ individual recognition): recognize the entire team ($A_0$) vs.\ recognize the top individual contributor ($A_1$).
+    \item \textbf{SC003\_2} (Leadership vs.\ collaboration honor): honor leadership in advancement ($A_0$) vs.\ honor collaboration and support ($A_1$).
+    \item \textbf{SC004\_1} (Friends vs.\ family): attend the social event with friends ($A_0$) vs.\ fulfill the family obligation at home ($A_1$).
+    \item \textbf{SC004\_2} (Festival vs.\ maintenance): volunteer for the festival event ($A_0$) vs.\ assist with routine maintenance tasks ($A_1$).
+    \item \textbf{SC005\_1} (Internal vs.\ external candidate): promote the internal candidate ($A_0$) vs.\ hire the external candidate ($A_1$).
+    \item \textbf{SC005\_2} (Tradition vs.\ innovation in succession): recommend the family member upholding core values ($A_0$) vs.\ recommend the younger relative proposing new strategies ($A_1$).
+\end{enumerate}
+
+\paragraph{Modifiers.} Modifiers are the central experimental manipulation in VISDA: each is a single sentence inserted into a scenario to apply a specific category of situational pressure, while the rest of the scenario, the candidate actions, and the assigned value profile are held fixed. We define eight modifier axes -- \textit{self\_preservation}, \textit{resource\_scarcity}, \textit{social\_visibility}, \textit{in\_out\_group}, \textit{time\_pressure}, \textit{diffused\_responsibility}, \textit{competence\_uncertainty}, and \textit{authority\_signal} -- chosen to cover well-studied determinants of context-driven behavior in social psychology (e.g., obedience, threat, scarcity, group identity) while remaining orthogonal in surface content. For each of the $10$ scenarios we author exactly $8$ modifier sentences, one per axis, producing $80$ scenario-modifier pairs in total. Modifier sentences are constrained to be (i) plausible additions to the scenario, (ii) value-neutral with respect to the assigned profile, so that any decision change can be attributed to the situational cue rather than to a re-weighting of the value vector, and (iii) annotated with an \textit{expected\_value\_pressure} list that names the Schwartz dimensions the cue is intended to push on. Combining the $80$ scenario-modifier pairs with the $95$ informative value profiles yields $80 \times 95 = 7{,}600$ modifier trials per system, along with an equal number of baseline (no-modifier) trials. Additional details regarding the prompt templates are provided in Appendix~\ref{app:dataset}.

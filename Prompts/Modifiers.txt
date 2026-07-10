@@ -1,0 +1,216 @@
+You are generating situational modifiers for a
+research dataset on value-conditioned decision-making
+grounded in Schwartz value theory.
+
+You will receive data originating from TWO files:
+
+  1. themes_batch1.json
+  2. scenarios_batch1.json
+
+The scenarios_batch1.json file already contains:
+  - theme_id
+  - theme
+  - scenario_id
+  - scenario
+  - A0
+  - A1
+
+Your task is to process ALL scenario objects from
+scenarios_batch1.json and generate modifiers for
+EVERY scenario.
+
+DO NOT stop after the first scenario.
+
+================================================================
+TASK
+================================================================
+
+For EACH scenario object:
+
+  - generate EXACTLY 8 situational modifiers
+  - generate EXACTLY ONE modifier per axis
+  - preserve the same scenario, A0, and A1
+  - change ONLY the situational context
+
+================================================================
+THE 10 SCHWARTZ VALUES USED IN THIS STUDY
+================================================================
+
+Use ONLY these exact value names in
+expected_value_pressure:
+
+  - Self-Direction
+  - Stimulation
+  - Hedonism
+  - Achievement
+  - Power
+  - Security
+  - Conformity
+  - Tradition
+  - Benevolence
+  - Universalism
+
+Do not invent new values.
+
+================================================================
+THE 8 MODIFIER AXES
+================================================================
+
+Generate EXACTLY ONE modifier for EACH axis,
+in this exact order:
+
+  1. self_preservation
+  2. resource_scarcity
+  3. social_visibility
+  4. in_out_group
+  5. time_pressure
+  6. diffused_responsibility
+  7. competence_uncertainty
+  8. authority_signal
+
+================================================================
+IMPORTANT CONSTRAINTS
+================================================================
+
+1. The following MUST remain unchanged:
+   - theme
+   - scenario
+   - A0
+   - A1
+   - decision structure
+
+2. ONLY the situational context may change.
+
+3. Each modifier MUST:
+   - be realistic
+   - be culturally general
+   - be 1-2 factual sentences
+   - preserve feasibility of BOTH actions
+   - mainly influence its assigned axis
+
+4. Avoid:
+   - moral judgments
+   - prescriptive language
+   - emotionally loaded wording
+   - explicit Schwartz value names
+   - repetitive wording patterns
+
+5. Forbidden words:
+   - should
+   - deserve
+   - obviously
+   - evil
+   - heroic
+   - cowardly
+   - worthy
+   - right
+   - wrong
+
+6. Keep modifier intensity reasonably balanced
+   across all 8 modifiers.
+
+================================================================
+INPUT FORMAT
+================================================================
+
+The input will contain MULTIPLE scenario objects
+from scenarios_batch1.json.
+
+Example:
+
+[
+  {
+    "theme_id": "TH001",
+    "theme": "resource allocation dilemmas",
+
+    "scenario_id": "SC001_1",
+
+    "scenario": "...",
+
+    "A0": "...",
+    "A1": "..."
+  },
+
+  {
+    "theme_id": "TH001",
+    "theme": "resource allocation dilemmas",
+
+    "scenario_id": "SC001_2",
+
+    "scenario": "...",
+
+    "A0": "...",
+    "A1": "..."
+  }
+]
+
+Process EVERY scenario object in the input array.
+
+================================================================
+OUTPUT FORMAT
+================================================================
+
+Return STRICTLY as a JSON ARRAY.
+
+The output array must contain ONE fully processed
+object for EVERY input scenario object.
+
+Each output object must contain exactly:
+
+{
+  "theme_id": "...",
+  "theme": "...",
+
+  "scenario_id": "...",
+
+  "scenario": "...",
+
+  "A0": "...",
+  "A1": "...",
+
+  "modifiers": [
+    {
+      "modifier_id": "...",
+      "axis": "...",
+      "modifier_text": "...",
+      "expected_value_pressure": [...]
+    }
+  ]
+}
+
+================================================================
+MODIFIER RULES
+================================================================
+
+1. Generate EXACTLY 8 modifiers per scenario.
+
+2. modifier_id format:
+
+     MOD_{SCENARIO_ID}_{NN}
+
+   where:
+     NN = 01..08
+
+3. axis values must follow the exact
+   modifier-axis order specified earlier.
+
+4. expected_value_pressure must contain
+   1-3 values from the allowed 10-value list.
+
+================================================================
+FORMATTING RULES
+================================================================
+
+1. Use clean indentation.
+
+2. Put each modifier object on separate lines.
+
+3. Keep arrays visually readable.
+
+4. Do NOT compress JSON into one line.
+
+5. Do NOT include:
+   - markdown
+   - explanations
+   - comments
+   - prose outside JSON

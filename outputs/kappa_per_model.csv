@@ -1,0 +1,4 @@
+model,kappa
+dotProduct,0.3
+gemma4,0.3
+llama_8B,0.3

@@ -1,0 +1,594 @@
+{
+  "grid": [
+    0.0,
+    0.1,
+    0.25,
+    0.4,
+    0.49,
+    0.5,
+    0.51,
+    0.6,
+    0.75,
+    0.9,
+    0.99,
+    1.0
+  ],
+  "results": [
+    {
+      "lambda": 0.0,
+      "n_trials": 7600,
+      "n_flips": 0,
+      "flip_rate_pct": 0.0,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 0,
+          "flip_rate_pct": 0.0
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 0,
+          "flip_rate_pct": 0.0
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 0,
+          "flip_rate_pct": 0.0
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 0,
+          "flip_rate_pct": 0.0
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 0,
+          "flip_rate_pct": 0.0
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 0,
+          "flip_rate_pct": 0.0
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 0,
+          "flip_rate_pct": 0.0
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 0,
+          "flip_rate_pct": 0.0
+        }
+      }
+    },
+    {
+      "lambda": 0.1,
+      "n_trials": 7600,
+      "n_flips": 1321,
+      "flip_rate_pct": 17.382,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 153,
+          "flip_rate_pct": 16.105
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 122,
+          "flip_rate_pct": 12.842
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 214,
+          "flip_rate_pct": 22.526
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 222,
+          "flip_rate_pct": 23.368
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 90,
+          "flip_rate_pct": 9.474
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 56,
+          "flip_rate_pct": 5.895
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 208,
+          "flip_rate_pct": 21.895
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 256,
+          "flip_rate_pct": 26.947
+        }
+      }
+    },
+    {
+      "lambda": 0.25,
+      "n_trials": 7600,
+      "n_flips": 1321,
+      "flip_rate_pct": 17.382,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 153,
+          "flip_rate_pct": 16.105
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 122,
+          "flip_rate_pct": 12.842
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 214,
+          "flip_rate_pct": 22.526
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 222,
+          "flip_rate_pct": 23.368
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 90,
+          "flip_rate_pct": 9.474
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 56,
+          "flip_rate_pct": 5.895
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 208,
+          "flip_rate_pct": 21.895
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 256,
+          "flip_rate_pct": 26.947
+        }
+      }
+    },
+    {
+      "lambda": 0.4,
+      "n_trials": 7600,
+      "n_flips": 1321,
+      "flip_rate_pct": 17.382,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 153,
+          "flip_rate_pct": 16.105
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 122,
+          "flip_rate_pct": 12.842
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 214,
+          "flip_rate_pct": 22.526
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 222,
+          "flip_rate_pct": 23.368
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 90,
+          "flip_rate_pct": 9.474
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 56,
+          "flip_rate_pct": 5.895
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 208,
+          "flip_rate_pct": 21.895
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 256,
+          "flip_rate_pct": 26.947
+        }
+      }
+    },
+    {
+      "lambda": 0.49,
+      "n_trials": 7600,
+      "n_flips": 1321,
+      "flip_rate_pct": 17.382,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 153,
+          "flip_rate_pct": 16.105
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 122,
+          "flip_rate_pct": 12.842
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 214,
+          "flip_rate_pct": 22.526
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 222,
+          "flip_rate_pct": 23.368
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 90,
+          "flip_rate_pct": 9.474
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 56,
+          "flip_rate_pct": 5.895
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 208,
+          "flip_rate_pct": 21.895
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 256,
+          "flip_rate_pct": 26.947
+        }
+      }
+    },
+    {
+      "lambda": 0.5,
+      "n_trials": 7600,
+      "n_flips": 1515,
+      "flip_rate_pct": 19.934,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 153,
+          "flip_rate_pct": 16.105
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 200,
+          "flip_rate_pct": 21.053
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 234,
+          "flip_rate_pct": 24.632
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 250,
+          "flip_rate_pct": 26.316
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 90,
+          "flip_rate_pct": 9.474
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 56,
+          "flip_rate_pct": 5.895
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 208,
+          "flip_rate_pct": 21.895
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 324,
+          "flip_rate_pct": 34.105
+        }
+      }
+    },
+    {
+      "lambda": 0.51,
+      "n_trials": 7600,
+      "n_flips": 1515,
+      "flip_rate_pct": 19.934,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 153,
+          "flip_rate_pct": 16.105
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 200,
+          "flip_rate_pct": 21.053
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 234,
+          "flip_rate_pct": 24.632
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 250,
+          "flip_rate_pct": 26.316
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 90,
+          "flip_rate_pct": 9.474
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 56,
+          "flip_rate_pct": 5.895
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 208,
+          "flip_rate_pct": 21.895
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 324,
+          "flip_rate_pct": 34.105
+        }
+      }
+    },
+    {
+      "lambda": 0.6,
+      "n_trials": 7600,
+      "n_flips": 1515,
+      "flip_rate_pct": 19.934,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 153,
+          "flip_rate_pct": 16.105
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 200,
+          "flip_rate_pct": 21.053
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 234,
+          "flip_rate_pct": 24.632
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 250,
+          "flip_rate_pct": 26.316
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 90,
+          "flip_rate_pct": 9.474
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 56,
+          "flip_rate_pct": 5.895
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 208,
+          "flip_rate_pct": 21.895
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 324,
+          "flip_rate_pct": 34.105
+        }
+      }
+    },
+    {
+      "lambda": 0.75,
+      "n_trials": 7600,
+      "n_flips": 1515,
+      "flip_rate_pct": 19.934,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 153,
+          "flip_rate_pct": 16.105
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 200,
+          "flip_rate_pct": 21.053
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 234,
+          "flip_rate_pct": 24.632
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 250,
+          "flip_rate_pct": 26.316
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 90,
+          "flip_rate_pct": 9.474
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 56,
+          "flip_rate_pct": 5.895
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 208,
+          "flip_rate_pct": 21.895
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 324,
+          "flip_rate_pct": 34.105
+        }
+      }
+    },
+    {
+      "lambda": 0.9,
+      "n_trials": 7600,
+      "n_flips": 1515,
+      "flip_rate_pct": 19.934,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 153,
+          "flip_rate_pct": 16.105
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 200,
+          "flip_rate_pct": 21.053
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 234,
+          "flip_rate_pct": 24.632
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 250,
+          "flip_rate_pct": 26.316
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 90,
+          "flip_rate_pct": 9.474
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 56,
+          "flip_rate_pct": 5.895
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 208,
+          "flip_rate_pct": 21.895
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 324,
+          "flip_rate_pct": 34.105
+        }
+      }
+    },
+    {
+      "lambda": 0.99,
+      "n_trials": 7600,
+      "n_flips": 1515,
+      "flip_rate_pct": 19.934,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 153,
+          "flip_rate_pct": 16.105
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 200,
+          "flip_rate_pct": 21.053
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 234,
+          "flip_rate_pct": 24.632
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 250,
+          "flip_rate_pct": 26.316
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 90,
+          "flip_rate_pct": 9.474
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 56,
+          "flip_rate_pct": 5.895
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 208,
+          "flip_rate_pct": 21.895
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 324,
+          "flip_rate_pct": 34.105
+        }
+      }
+    },
+    {
+      "lambda": 1.0,
+      "n_trials": 7600,
+      "n_flips": 2683,
+      "flip_rate_pct": 35.303,
+      "per_axis": {
+        "self_preservation": {
+          "trials": 950,
+          "flips": 316,
+          "flip_rate_pct": 33.263
+        },
+        "resource_scarcity": {
+          "trials": 950,
+          "flips": 304,
+          "flip_rate_pct": 32.0
+        },
+        "social_visibility": {
+          "trials": 950,
+          "flips": 412,
+          "flip_rate_pct": 43.368
+        },
+        "in_out_group": {
+          "trials": 950,
+          "flips": 404,
+          "flip_rate_pct": 42.526
+        },
+        "time_pressure": {
+          "trials": 950,
+          "flips": 240,
+          "flip_rate_pct": 25.263
+        },
+        "diffused_responsibility": {
+          "trials": 950,
+          "flips": 140,
+          "flip_rate_pct": 14.737
+        },
+        "competence_uncertainty": {
+          "trials": 950,
+          "flips": 404,
+          "flip_rate_pct": 42.526
+        },
+        "authority_signal": {
+          "trials": 950,
+          "flips": 463,
+          "flip_rate_pct": 48.737
+        }
+      }
+    }
+  ]
+}

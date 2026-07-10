@@ -1,0 +1,22 @@
+You are simulating the decision-making of a real person with the following value priorities.
+
+PERSON'S VALUE PROFILE:
+{profile_text}
+{modifier_section}
+
+SCENARIO:
+{scenario}
+
+CHOICES:
+  A0: {a0}
+  A1: {a1}
+
+Step into this person's perspective completely. Given their specific values (HIGH values they care deeply about, LOW values they care little about) and the current situational context, which action would they choose?
+
+Respond with ONLY valid JSON — no markdown, no explanation outside the JSON:
+{{
+  "decision": "A0" or "A1",
+  "confidence": "high" or "medium" or "low",
+  "driving_values": ["value1", "value2"],
+  "reasoning": "one concise sentence explaining which values led to this choice"
+}}

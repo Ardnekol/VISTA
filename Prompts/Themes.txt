@@ -1,0 +1,143 @@
+You are generating THEMES for a research dataset on
+value-conditioned decision-making grounded in Schwartz
+value theory.
+
+GOAL:
+Generate themes that can later be used to create neutral
+binary-decision scenarios involving latent value conflicts.
+
+The experiment uses the following 10 Schwartz values:
+
+  - Self-Direction
+  - Stimulation
+  - Hedonism
+  - Achievement
+  - Power
+  - Security
+  - Conformity
+  - Tradition
+  - Benevolence
+  - Universalism
+
+These values belong to the following higher-order categories:
+
+  - Self-Transcendence:
+      Benevolence, Universalism
+
+  - Self-Enhancement:
+      Achievement, Power
+
+  - Openness to Change:
+      Self-Direction, Stimulation, Hedonism
+
+  - Conservation:
+      Security, Conformity, Tradition
+
+REQUIREMENTS:
+
+1. Themes must collectively cover all four
+   higher-order categories.
+
+2. Each theme should support future scenarios
+   where two plausible actions may prioritize
+   different values.
+
+3. Themes should naturally create latent tension
+   between values belonging to at least two
+   different higher-order categories.
+
+4. Themes must be:
+   - realistic
+   - culturally general
+   - emotionally neutral
+   - socially plausible
+   - short (2-6 words)
+
+5. Avoid:
+   - extreme violence
+   - political propaganda
+   - fantasy or science fiction
+   - explicit moral framing
+   - obviously correct choices
+
+6. Use clear, simple language that is easy to
+   understand and expand into future scenarios.
+
+Generate exactly 5 themes.
+
+OUTPUT STRICTLY AS A JSON ARRAY.
+
+Each array element represents ONE theme object.
+
+Each theme object must contain exactly:
+
+  - "theme_id"
+  - "theme"
+  - "primary_higher_order"
+  - "secondary_higher_order"
+  - "potential_value_tensions"
+
+Rules:
+
+1. theme_id format:
+     TH001, TH002, TH003 ...
+
+2. potential_value_tensions must be an array
+   containing pairs of Schwartz values.
+
+3. Use ONLY these Schwartz values:
+     - Self-Direction
+     - Stimulation
+     - Hedonism
+     - Achievement
+     - Power
+     - Security
+     - Conformity
+     - Tradition
+     - Benevolence
+     - Universalism
+
+4. Do NOT include:
+     - markdown
+     - explanations
+     - comments
+     - prose outside the JSON array
+
+5. Save the output into /home/manu/VISTA/Dataset with the relevant file name
+
+Example output format:
+
+[
+  {
+    "theme_id": "TH001",
+    "theme": "sharing limited medical supplies",
+    "primary_higher_order": "Self-Transcendence",
+    "secondary_higher_order": "Conservation",
+    "potential_value_tensions": [
+      ["Benevolence", "Security"],
+      ["Universalism", "Conformity"]
+    ]
+  },
+
+  {
+    "theme_id": "TH002",
+    "theme": "breaking workplace procedures",
+    "primary_higher_order": "Openness to Change",
+    "secondary_higher_order": "Conservation",
+    "potential_value_tensions": [
+      ["Self-Direction", "Tradition"],
+      ["Stimulation", "Conformity"]
+    ]
+  },
+
+  {
+    "theme_id": "TH003",
+    "theme": "public recognition opportunities",
+    "primary_higher_order": "Self-Enhancement",
+    "secondary_higher_order": "Self-Transcendence",
+    "potential_value_tensions": [
+      ["Achievement", "Benevolence"],
+      ["Power", "Universalism"]
+    ]
+  }
+]

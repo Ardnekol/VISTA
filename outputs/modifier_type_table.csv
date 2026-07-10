@@ -1,0 +1,5 @@
+type,human_rate,dotProduct,gemma4,llama_8B
+affective,0.48,0.0,0.0,0.0
+informational,0.52,0.0,0.0,0.0
+personal-cost,0.515,0.0,0.0,0.0
+stakes,0.58,0.0,0.0,0.0

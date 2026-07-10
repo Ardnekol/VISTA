@@ -1,0 +1,11 @@
+Scenarios:
+SC001_1: dot=14.3, llama70=7.8, gemma=2.6, qwen=9.3, human=62.5
+SC001_2: dot=14.3, llama70=7.4, gemma=8.3, qwen=5.5, human=61.111111111111114
+SC002_1: dot=16.7, llama70=11.3, gemma=10.5, qwen=8.9, human=53.125
+SC002_2: dot=16.7, llama70=9.3, gemma=8.3, qwen=6.1, human=58.333333333333336
+SC003_1: dot=27.4, llama70=8.0, gemma=9.5, qwen=6.3, human=62.5
+SC003_2: dot=26.7, llama70=11.2, gemma=10.7, qwen=2.9, human=47.22222222222222
+SC004_1: dot=21.6, llama70=8.3, gemma=10.1, qwen=10.1, human=53.125
+SC004_2: dot=21.6, llama70=10.4, gemma=15.1, qwen=10.1, human=36.11111111111111
+SC005_1: dot=20.0, llama70=3.3, gemma=7.1, qwen=3.0, human=43.75
+SC005_2: dot=20.0, llama70=5.7, gemma=7.0, qwen=3.4, human=38.88888888888889

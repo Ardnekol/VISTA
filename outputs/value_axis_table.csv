@@ -1,0 +1,11 @@
+axis,abs_coef_logodds,model
+self_preservation,0.7233889064318157,Llama 3.1 8B
+authority_signal,0.7233889064318157,Llama 3.1 8B
+self_preservation,0.5832877139160821,Llama 3.3 70B
+authority_signal,0.5652090516003565,Gemma 4 31B
+self_preservation,0.49496165687009813,Gemma 4 31B
+authority_signal,0.48521040809040333,Llama 3.3 70B
+time_pressure,0.44871281272497365,Llama 3.1 8B
+in_out_group,0.4277722009654414,Llama 3.1 8B
+self_preservation,0.4168258289944822,Qwen 2.5 32B
+competence_uncertainty,0.36743612447361773,Qwen 2.5 32B

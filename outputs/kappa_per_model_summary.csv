@@ -1,0 +1,4 @@
+model,mean_kappa,n_participants
+dotProduct,0.000,100
+gemma4,0.000,100
+llama_8B,0.000,100

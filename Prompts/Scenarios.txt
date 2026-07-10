@@ -1,0 +1,144 @@
+You are generating SCENARIOS for a research dataset on
+value-conditioned decision-making grounded in Schwartz
+value theory.
+
+You will receive:
+  - a theme_id
+  - a theme
+  - potential value tensions
+
+Your task is to generate EXACTLY TWO different scenarios
+for the given theme.
+
+Each scenario must describe:
+  - a realistic environment
+  - a triggering situation
+  - one decision-maker addressed as "you"
+  - exactly two mutually exclusive actions:
+      A0 and A1
+
+The experiment uses the following 10 Schwartz values:
+
+  - Self-Direction
+  - Stimulation
+  - Hedonism
+  - Achievement
+  - Power
+  - Security
+  - Conformity
+  - Tradition
+  - Benevolence
+  - Universalism
+
+REQUIREMENTS:
+
+1. Each scenario must:
+   - be 80-150 words long
+   - contain a clear setting
+   - contain at least one other actor or institution
+   - contain a triggering event requiring a decision
+   - address the decision-maker as "you"
+
+2. A0 and A1 must:
+   - be short action phrases
+   - be mutually exclusive
+   - both remain realistically possible
+   - support different latent values
+
+3. The scenarios must remain neutral:
+   - no moral judgments
+   - no emotionally loaded language
+   - no obviously correct action
+   - both actions should appear defensible
+     to a generic reader
+
+4. Future modifiers will later be added.
+   Therefore:
+   - do NOT hardcode time pressure
+   - do NOT hardcode danger
+   - do NOT hardcode authority pressure
+   - do NOT make either action impossible
+
+5. Avoid:
+   - fantasy
+   - science fiction
+   - graphic harm
+   - explicit politics
+   - legal extremes
+   - supernatural elements
+
+6. Use ONLY the provided Schwartz value names
+   when specifying latent tensions.
+
+INPUT FORMAT:
+
+{
+  "theme_id": "{THEME_ID}",
+  "theme": "{THEME}",
+  "potential_value_tensions": [
+    ["Self-Direction", "Security"],
+    ["Stimulation", "Tradition"]
+  ]
+}
+
+OUTPUT STRICTLY AS A JSON ARRAY.
+
+Each array element represents ONE scenario object.
+
+Each scenario object must contain exactly:
+
+  - "scenario_id"
+  - "theme_id"
+  - "description"
+  - "actor"
+  - "A0"
+  - "A1"
+  - "latent_value_tensions"
+
+Rules:
+
+1. scenario_id format:
+     SC001_1
+     SC001_2
+
+2. actor must always be:
+     "you"
+
+3. latent_value_tensions must contain ONLY
+   the allowed 10 Schwartz values.
+
+4. Do NOT include:
+   - markdown
+   - explanations
+   - comments
+   - prose outside the JSON array
+
+Example output format:
+
+[
+  {
+    "scenario_id": "SC001_1",
+    "theme_id": "TH001",
+    "description": "Your company introduces a new internal software system that changes how employees complete daily tasks. Some coworkers are adapting quickly, while others prefer the existing process because it feels more predictable and familiar. Management allows employees to either begin using the new system immediately or continue using the old process during a temporary transition period.",
+    "actor": "you",
+    "A0": "start using the new system",
+    "A1": "continue using the existing process",
+    "latent_value_tensions": [
+      ["Self-Direction", "Security"],
+      ["Stimulation", "Tradition"]
+    ]
+  },
+
+  {
+    "scenario_id": "SC001_2",
+    "theme_id": "TH001",
+    "description": "A community organization begins offering digital tools for coordinating volunteer activities and sharing updates. Some members are interested in trying the new platform because it provides more flexibility and customization, while others prefer the traditional methods that the group has used for years. You are asked whether you want to adopt the new platform or continue participating through the existing process.",
+    "actor": "you",
+    "A0": "adopt the digital platform",
+    "A1": "continue with traditional coordination",
+    "latent_value_tensions": [
+      ["Self-Direction", "Security"],
+      ["Stimulation", "Tradition"]
+    ]
+  }
+]

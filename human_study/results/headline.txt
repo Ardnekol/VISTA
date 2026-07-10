@@ -1,0 +1,25 @@
+=== Human Pilot Headline (N=50) ===
+  participants retained: 50   (no exclusions)
+  matched a retained LLM vsw_id: 6/50  (others have valid profiles but were pruned from the 95 by antagonism rules)
+  total decisions analysed: 500  (50 × 10 minus blanks)
+  pooled mean |Δ P(A1)| across 10 (scenario, axis) cells: 12.4%
+  strongest cell: SC001_1 × in_out_group -> |Δ|=21.2% (base 56% -> mod 34%, n_base=18, n_mod=32)
+  strongest axis (pooled): in_out_group -> mean |Δ|=21.2% across 1 cell(s)
+
+=== Per modifier-type (% mean |Δ|) ===
+  affective     : human  15.3%   (axes: authority_signal,social_visibility,in_out_group)
+  personal-cost : human  10.6%   (axes: self_preservation,time_pressure)
+  informational : human   6.1%   (axes: competence_uncertainty,diffused_responsibility)
+  stakes        : human  16.3%   (axes: resource_scarcity)
+
+=== Spearman ρ over 8 axes (human ranking vs each system) ===
+  Qwen 2.5 32B          : ρ = -0.048   p = 0.910
+  Gemma 4 31B           : ρ = +0.156   p = 0.713
+  Llama 3.1 8B          : ρ = +0.289   p = 0.487
+  Dot-Product (rule)    : ρ = +0.599   p = 0.117
+
+=== LLM mean per-axis flip rates (for reference) ===
+  Qwen 2.5 32B          : mean = 6.6%
+  Gemma 4 31B           : mean = 8.9%
+  Llama 3.1 8B          : mean = 2.0%
+  Dot-Product (rule)    : mean = 19.9%
