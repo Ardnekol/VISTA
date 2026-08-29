@@ -484,9 +484,8 @@ content. Released data is anonymised.
 @inproceedings{manognya2026values,
   title     = {Values Are Not Enough: Situational Modifiers Shape
                Moral Decisions in {LLM}s and Humans},
-  author    = {Manognya, Peddi and Mandloi, Lokendra and
-               Shripad, Joshi Sayali and Dandapat, Sandipan},
-  booktitle = {Proceedings of EMNLP},
+  author    = {Peddi Manognya, Lokendra Mandloi, Joshi Sayali Shripad and Sandipan Dandapat},
+  booktitle = {EMNLP},
   year      = {2026}
 }
 ```
