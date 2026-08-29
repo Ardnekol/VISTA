@@ -4,8 +4,6 @@
 
 ### Values Are Not Enough: Situational Modifiers Shape Moral Decisions in LLMs and Humans
 
-**Peddi Manognya · Lokendra Mandloi · Joshi Sayali Shripad · Sandipan Dandapat**
-Indian Institute of Technology Hyderabad
 
 *Code and data for the **VISDA** benchmark (Value-Informed Scenario-Driven Actions):
 does a fixed value profile still produce the same action when only the situation changes?*
