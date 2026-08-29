@@ -1,0 +1,230 @@
+\begin{thebibliography}{33}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Abdulhai et~al.(2023)Abdulhai, Serapio-Garcia, Crepy, Valter, Canny,
+  and Jaques}]{abdulhai2023moral}
+Marwa Abdulhai, Greg Serapio-Garcia, Cl{\'e}ment Crepy, Daria Valter, John
+  Canny, and Natasha Jaques. 2023.
+\newblock Moral foundations of large language models.
+\newblock In \emph{NeurIPS Workshop on Foundation Models for Decision Making}.
+
+\bibitem[{Backmann et~al.(2025)Backmann, Piedrahita, Tewolde, Mihalcea,
+  Sch{\"o}lkopf, and Jin}]{backmann2025ethics}
+Steffen Backmann, David~Guzman Piedrahita, Emanuel Tewolde, Rada Mihalcea,
+  Bernhard Sch{\"o}lkopf, and Zhijing Jin. 2025.
+\newblock When ethics and payoffs diverge: Llm agents in morally charged social
+  dilemmas.
+\newblock \emph{arXiv preprint arXiv:2505.19212}.
+
+\bibitem[{Bai et~al.(2023)Bai, Bai, Chu et~al.}]{bai2023qwen}
+Jinze Bai, Shuai Bai, Yunfei Chu, and 1 others. 2023.
+\newblock {Qwen} technical report.
+\newblock \emph{arXiv preprint arXiv:2309.16609}.
+
+\bibitem[{Darley and Latan{\'e}(1968)}]{darley1968bystander}
+John~M. Darley and Bibb Latan{\'e}. 1968.
+\newblock Bystander intervention in emergencies: Diffusion of responsibility.
+\newblock \emph{Journal of Personality and Social Psychology}, 8(4):377--383.
+
+\bibitem[{Durmus et~al.(2023)Durmus, Nyugen, Liao, Schiefer, Askell
+  et~al.}]{durmus2023globalopinionqa}
+Esin Durmus, Karina Nyugen, Thomas~I. Liao, Nicholas Schiefer, Amanda Askell,
+  and 1 others. 2023.
+\newblock Towards measuring the representation of subjective global opinions in
+  language models.
+\newblock \emph{arXiv preprint arXiv:2306.16388}.
+
+\bibitem[{Emelin et~al.(2021)Emelin, Le~Bras, Hwang, Forbes, and
+  Choi}]{emelin2021moral}
+Denis Emelin, Ronan Le~Bras, Jena~D. Hwang, Maxwell Forbes, and Yejin Choi.
+  2021.
+\newblock Moral stories: Situated reasoning about norms, intents, actions, and
+  their consequences.
+\newblock In \emph{Proceedings of the 2021 Conference on Empirical Methods in
+  Natural Language Processing}.
+
+\bibitem[{{Gemma Team}(2024)}]{gemma2024}
+{Gemma Team}. 2024.
+\newblock Gemma: Open models based on gemini research and technology.
+\newblock \emph{arXiv preprint arXiv:2403.08295}.
+
+\bibitem[{Guo et~al.(2026)Guo, Yao, Zhou, Yi, and Xie}]{guo2026counterfactual}
+Hanze Guo, Jing Yao, Xiao Zhou, Xiaoyuan Yi, and Xing Xie. 2026.
+\newblock Counterfactual reasoning for steerable pluralistic value alignment of
+  large language models.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  38:122128--122169.
+
+\bibitem[{Haidt(2012)}]{haidt2012righteous}
+Jonathan Haidt. 2012.
+\newblock \emph{The Righteous Mind: Why Good People Are Divided by Politics and
+  Religion}.
+\newblock Pantheon Books.
+
+\bibitem[{Harry et~al.(2026)Harry, Ngong, Nweke, Feng, and
+  Near}]{harry2026beyond}
+Tamunotonye Harry, Ivoline Ngong, Chima Nweke, Yuanyuan Feng, and Joseph Near.
+  2026.
+\newblock Beyond fixed psychological personas: State beats trait, but language
+  models are state-blind.
+\newblock \emph{arXiv preprint arXiv:2601.15395}.
+
+\bibitem[{Hendrycks et~al.(2021)Hendrycks, Burns, Basart, Critch, Li, Song, and
+  Steinhardt}]{hendrycks2021ethics}
+Dan Hendrycks, Collin Burns, Steven Basart, Andrew Critch, Jerry Li, Dawn Song,
+  and Jacob Steinhardt. 2021.
+\newblock Aligning {AI} with shared human values.
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations}.
+
+\bibitem[{Jiao et~al.(2025)Jiao, Li, Chen, Xu, and Xu}]{jiao2025ai}
+Liying Jiao, Chang-Jin Li, Zhen Chen, Hengbin Xu, and Yan Xu. 2025.
+\newblock When ai “possesses” personality: Roles of good and evil
+  personalities influence moral judgment in large language models.
+\newblock \emph{Acta Psychologica Sinica}, 57(6):929.
+
+\bibitem[{Jiaqi et~al.(2025)}]{jiaqi2025comparative}
+Wang Jiaqi and 1 others. 2025.
+\newblock A comparative study of large language models and human personality
+  traits.
+\newblock \emph{arXiv preprint arXiv:2505.14845}.
+
+\bibitem[{Kang et~al.(2023)Kang, Park, Jo, and Bak}]{kang2023values}
+Dongjun Kang, Joonsuk Park, Yohan Jo, and Jinyeong Bak. 2023.
+\newblock From values to opinions: Predicting human behaviors and stances using
+  value-injected large language models.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in
+  Natural Language Processing}.
+
+\bibitem[{Mahajan(2025)}]{mahajan2025mapping}
+Sachit Mahajan. 2025.
+\newblock Mapping moral reasoning in llms: A multi-dimensional analysis of
+  safety principle conflicts.
+\newblock In \emph{Proceedings of the AAAI/ACM conference on AI, ethics, and
+  society}, volume~8, pages 1674--1685.
+
+\bibitem[{Milgram(1963)}]{milgram1963behavioral}
+Stanley Milgram. 1963.
+\newblock Behavioral study of obedience.
+\newblock \emph{The Journal of Abnormal and Social Psychology}, 67(4):371--378.
+
+\bibitem[{Mischel(1968)}]{mischel1968personality}
+Walter Mischel. 1968.
+\newblock \emph{Personality and Assessment}.
+\newblock John Wiley \& Sons, New York, NY.
+
+\bibitem[{Nabizadeh et~al.(2026)Nabizadeh, Walker, Han, McNeill, Wind, and
+  Scofield}]{nabizadeh2026large}
+Davin Nabizadeh, David Walker, Hyemin Han, Laura McNeill, Stefanie Wind, and
+  Jason Scofield. 2026.
+\newblock How do large-language models respond to moral dilemmas? insights from
+  the defining issues test.
+\newblock \emph{AI and Ethics}, 6(2):236.
+
+\bibitem[{Peterson(2025)}]{peterson2025context}
+Jared Peterson. 2025.
+\newblock Context sensitive frames and ai alignment.
+\newblock In \emph{2025 IEEE Conference on Artificial Intelligence (CAI)},
+  pages 1251--1254. IEEE.
+
+\bibitem[{Ross and Nisbett(1991)}]{ross1991person}
+Lee Ross and Richard~E. Nisbett. 1991.
+\newblock \emph{The Person and the Situation: Perspectives of Social
+  Psychology}.
+\newblock McGraw-Hill, New York, NY.
+
+\bibitem[{Samway et~al.(2025)Samway, Kleiman-Weiner, Piedrahita, Mihalcea,
+  Sch{\"o}lkopf, and Jin}]{samway2025language}
+Keenan Samway, Max Kleiman-Weiner, David~Guzman Piedrahita, Rada Mihalcea,
+  Bernhard Sch{\"o}lkopf, and Zhijing Jin. 2025.
+\newblock Are language models consequentialist or deontological moral
+  reasoners?
+\newblock In \emph{Proceedings of the 2025 Conference on Empirical Methods in
+  Natural Language Processing}, pages 30687--30714.
+
+\bibitem[{Santurkar et~al.(2023)Santurkar, Durmus, Ladhak, Lee, Liang, and
+  Hashimoto}]{santurkar2023whose}
+Shibani Santurkar, Esin Durmus, Faisal Ladhak, Cinoo Lee, Percy Liang, and
+  Tatsunori Hashimoto. 2023.
+\newblock Whose opinions do language models reflect?
+\newblock In \emph{Proceedings of the 40th International Conference on Machine
+  Learning}.
+
+\bibitem[{Sauter and Schirmer(2026)}]{sauter2026between}
+Adrian Sauter and Mona Schirmer. 2026.
+\newblock Between rules and reality: On the context sensitivity of llm moral
+  judgment.
+\newblock \emph{arXiv preprint arXiv:2603.23114}.
+
+\bibitem[{Schacht and Lanquillon(2025)}]{schacht2025mapping}
+Sigurd Schacht and Carsten Lanquillon. 2025.
+\newblock Mapping moral reasoning circuits: A mechanistic analysis of ethical
+  decision-making in large language models.
+\newblock In \emph{International Conference on Human-Computer Interaction},
+  pages 97--116. Springer.
+
+\bibitem[{Scherrer et~al.(2023)Scherrer, Shi, Feder, and
+  Blei}]{scherrer2023evaluating}
+Nino Scherrer, Claudia Shi, Amir Feder, and David Blei. 2023.
+\newblock Evaluating the moral beliefs encoded in llms.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  36:51778--51809.
+
+\bibitem[{Schwartz(1992)}]{schwartz1992universals}
+Shalom~H. Schwartz. 1992.
+\newblock Universals in the content and structure of values: Theoretical
+  advances and empirical tests in 20 countries.
+\newblock In \emph{Advances in Experimental Social Psychology}, volume~25,
+  pages 1--65. Elsevier.
+
+\bibitem[{Schwartz(2003)}]{schwartz2003proposal}
+Shalom~H. Schwartz. 2003.
+\newblock A proposal for measuring value orientations across nations.
+\newblock \emph{Questionnaire Package of the European Social Survey}.
+
+\bibitem[{Schwartz et~al.(2012)Schwartz, Cieciuch, Vecchione, Davidov, Fischer,
+  Beierlein, Ramos, Verkasalo, L{\"o}nnqvist, Demirutku
+  et~al.}]{schwartz2012refined}
+Shalom~H. Schwartz, Jan Cieciuch, Michele Vecchione, Eldad Davidov, Ronald
+  Fischer, Constanze Beierlein, Alice Ramos, Markku Verkasalo, Jan-Erik
+  L{\"o}nnqvist, Kursad Demirutku, and 1 others. 2012.
+\newblock Refining the theory of basic individual values.
+\newblock \emph{Journal of Personality and Social Psychology}, 103(4):663--688.
+
+\bibitem[{Soni et~al.(2025)Soni, Nilsson, Mahwish, Varadarajan, Schwartz, and
+  Boyd}]{soni2025we}
+Nikita Soni, August~H{\aa}kan Nilsson, Syeda Mahwish, Vasudha Varadarajan,
+  H~Andrew Schwartz, and Ryan Boyd. 2025.
+\newblock Who we are, where we are: Mental health at the intersection of
+  person, situation, and large language models.
+\newblock In \emph{Proceedings of the 10th Workshop on Computational
+  Linguistics and Clinical Psychology (CLPsych 2025)}, pages 300--313.
+
+\bibitem[{Sorensen et~al.(2024)Sorensen, Jiang, Hwang, Levine, Pyatkin, West,
+  Dziri, Lu, Rao, Bhagavatula et~al.}]{sorensen2024value}
+Taylor Sorensen, Liwei Jiang, Jena~D. Hwang, Sydney Levine, Valentina Pyatkin,
+  Peter West, Nouha Dziri, Ximing Lu, Kavel Rao, Chandra Bhagavatula, and 1
+  others. 2024.
+\newblock Value kaleidoscope: Engaging {AI} with pluralistic human values,
+  rights, and duties.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~38, pages 19937--19947.
+
+\bibitem[{Tajfel and Turner(1979)}]{tajfel1979integrative}
+Henri Tajfel and John~C. Turner. 1979.
+\newblock An integrative theory of intergroup conflict.
+\newblock In William~G. Austin and Stephen Worchel, editors, \emph{The Social
+  Psychology of Intergroup Relations}, pages 33--47. Brooks/Cole, Monterey, CA.
+
+\bibitem[{Touvron et~al.(2023)Touvron, Lavril, Izacard
+  et~al.}]{touvron2023llama}
+Hugo Touvron, Thibaut Lavril, Gautier Izacard, and 1 others. 2023.
+\newblock {LLaMA}: Open and efficient foundation language models.
+\newblock \emph{arXiv preprint arXiv:2302.13971}.
+
+\bibitem[{Zajonc(1965)}]{zajonc1965social}
+Robert~B. Zajonc. 1965.
+\newblock Social facilitation.
+\newblock \emph{Science}, 149(3681):269--274.
+
+\end{thebibliography}

@@ -39,15 +39,15 @@
 
 \newcommand{\Vsw}{\mathbf{V}_{\!\textsc{SW}}}
 
-\title{Values Are Not Enough: Situational Modifiers Shape Value-Based Decisions in LLMs and Humans}
+\title{Values Are Not Enough: Situational Modifiers Shape Moral Decisions in LLMs and Humans}
 
 \author{
   \textbf{Peddi Manognya}, 
-  \textbf{Joshi Sayali Shripad}, 
   \textbf{Lokendra Mandloi}, 
+  \textbf{Joshi Sayali Shripad}, 
   \textbf{Sandipan Dandapat} \\
   Indian Institute of Technology Hyderabad \\
-  \small\texttt{\{cs24mtech12020, cs24mtech12003, cs24mtech11024\}@iith.ac.in} \\
+  \small\texttt{\{cs24mtech12020, cs24mtech11024, cs24mtech12003\}@iith.ac.in} \\
   \small\texttt{sdandapat@cse.iith.ac.in}
 }
 
@@ -57,9 +57,9 @@
 \begin{abstract}
 \noindent
 Personal values alone cannot fully explain moral decisions.
-They are often treated as the main driver of moral choice, yet situational pressures can still shift actions when values are fixed. To study this effect, we introduce VISDA (\textbf{V}alue-\textbf{I}nformed \textbf{S}cenario- \textbf{D}riven \textbf{A}ctions), a dataset of 80 binary moral scenarios across various themes. Each scenario is augmented with eight situational modifier axes designed to capture contextual pressures on decision-making. Keeping value profiles constant, we evaluate three open-weight LLMs (Gemma 4 31B, Qwen 2.5 32B, LLaMA 3.1 8B), a utility-based mathematical baseline over 95 Schwartz profiles, and humans for their decisions under modifiers.
-% ($N=50$; PVQ-21).
-Each scenario is augmented with eight situational modifier axes designed to capture contextual pressures on decision-making, whereas LLMs reverse decisions (\textit{flips}) less frequently (2.03\%-8.92\%), with larger models showing greater sensitivity. Authority and self-preservation modifiers drive most flips and remain statistically significant after correction. Humans show a larger pooled shift ($|\Delta P(A)|=12.36\%$) and prioritize stakes and affective modifiers, while LLMs overweight personal-cost modifiers. This work reveals axis-level misalignment between human and LLM sensitivity to situational moral factors.
+They are often treated as the main driver of moral choice, yet situational pressures can still shift actions when values are fixed. To study this effect, we introduce VISDA (\textbf{V}alue-\textbf{I}nformed \textbf{S}cenario-\textbf{D}riven \textbf{A}ctions), a dataset of 80 binary moral scenarios across various themes.  
+Keeping value profiles constant, we evaluate three open-weight LLMs (Gemma 4 31B, Qwen 2.5 32B, LLaMA 3.1 8B), a utility-based mathematical baseline over 95 Schwartz profiles, and humans for their decisions under modifiers.
+Each scenario is augmented with eight situational modifier axes designed to capture contextual pressures on decision-making. LLMs reverse decisions (\textit{flips}) less frequently (2.03\%-8.92\%), with larger models showing greater sensitivity. In LLMs, authority and self-preservation modifiers drive most flips and remain statistically significant. Humans showed a showed a pooled shift ($12.36\%$) in their decisions. Humans prioritized stakes and affective modifiers, while LLMs overweight personal-cost modifiers. This work reveals axis-level misalignment between human and LLM sensitivity to situational moral factors.
 % \footnote{Code, dataset, and analysis pipeline: \url{https://github.com/Ardnekol/VISTA}.}
 \end{abstract}
 
@@ -68,7 +68,7 @@ Each scenario is augmented with eight situational modifier axes designed to capt
 
 \begin{figure}[t]
   \includegraphics[width=1\columnwidth]{TDL.pdf}
-  \caption{Schematic illustration of situation-driven decision flips. A fixed Schwartz value profile is paired with a baseline scenario and then independently augmented with Modifier axes. By comparing decisions before and after modifier insertion, we measures how contextual pressures alter model and human choices while holding values constant.}
+  \caption{Schematic illustration of situation-driven decision flips. A fixed Schwartz value profile is paired with a baseline scenario and then independently augmented with Modifier axes. By comparing decisions before and after modifier insertion, we measure how contextual pressures alter model and human choices while holding values constant.}
   \label{fig:TDL}
 \end{figure}
 
@@ -107,7 +107,7 @@ Current LLM evaluations of value-driven moral reasoning inadequately capture sit
 To study how situational changes affect decisions under a fixed value profile, we introduce \textbf{VISDA} (Value‑Informed Scenario‑Driven Actions), a dataset of 80 binary moral scenarios with systematically designed situational modifiers. As shown in Figure~\ref{fig:TDL}, each scenario pairs two actions with modifier sentences (e.g., emotional pressure, personal cost, social expectations, stakes), and situation-driven change is measured via a \emph{decision-flip} metric. Using matched Schwartz value profiles \citep{schwartz1992universals}, we evaluate a utility baseline, three open‑weight LLM families (LLaMA, Gemma, Qwen), and decisions of $50$ human participants of the survey. The effect of situational modifiers on altering decisions across LLMs is observed to be minimal: the utility baseline flips 19.93\%, whereas LLMs exhibit a flip rate less than 10\%. While LLMs detect modifiers sometimes, they redistribute pressure across modifier axes differently from humans. This shows that moral behavior cannot be fully explained by value profiles alone, as situational pressures substantially impact decisions.
 % ; humans are more responsive to affective modifiers than current LLMs. 
 %Overall, value profiles alone do not fully predict moral behavior.
-The primary contributions of the paper includes:
+The primary contributions of the paper include:
 \begin{itemize}[leftmargin=*,noitemsep, topsep=0pt]
     \item We introduce a new evaluation framework for measuring how situational context alters moral decisions under fixed value profiles.
     \item We propose the decision-flip metric as a direct measure of situation-driven behavioral change.
@@ -169,19 +169,21 @@ The work most closely related to ours is \citet{harry2026beyond}, which introduc
 \section{Data Curation}
 \label{sec:method}
 
+% This section describes how we construct VISDA: the underlying value representation (Section\ref{sec:value-rep}) and the five linked components that make up the dataset (Section\ref{sec:dataset}).
+
 \subsection{Value Representation}
 \label{sec:value-rep}
 
-We adopt classic Schwartz's theory with $10$ universal value dimensions as in \citep{schwartz1992universals}. Each value takes a binary state $\in \{0,1\}$ (low or high), yielding a value vector $\Vsw \in \{0,1\}^{10}$. Although the full space contains \(2^{10} = 1024\) possible value profiles, we evaluate a curated subset of $95$ representative profiles selected through a semi-automated curation process to ensure diversity across value combinations. The complete list is provided in Appendix~\ref{app:profiles}.
+We adopt classic Schwartz's theory with $10$ universal value dimensions as in \citep{schwartz1992universals}. Each value takes a binary state $\in \{0,1\}$ (LOW or HIGH), yielding a value vector $\Vsw \in \{0,1\}^{10}$. Although the full space contains \(2^{10} = 1024\) possible value profiles, we evaluate a curated subset of $95$ representative profiles selected through a semi-automated curation process to ensure diversity across value combinations. The complete list is provided in Appendix~\ref{app:profiles}.
 
 \subsection{The VISDA Dataset}
 \label{sec:dataset}
 
 VISDA is built around five linked components: \emph{themes}, \emph{scenarios}, \emph{modifiers}, \emph{value profiles}, and \emph{profile descriptions}.
-Themes, scenarios and modifiers are generated through prompts, followed by manual verification to keep only items that are plausible and consistent with the dataset design.
+We generated themes, scenarios, and modifiers by prompting a 70B-parameter LLaMA model, following the LLaMA architecture and training setup \citep{touvron2023llama}. The prompt responses are then verified manually to keep only items that are plausible and consistent with the dataset design.
 The exact prompts used to generate these components are given in Appendix~\ref{app:dataset}.
 % The \emph{eight modifier axes} are predefined situational pressures drawn from established socio-psychological constructs and each modifier instantiates one familiar kind of context (e.g., authority, scarcity, or time pressure). For value profiles, we enumerate all binary value vectors, remove any profiles that contain mutually antagonistic values (for example, Power-Universalism, Achievement-Benevolence, or Openness-to-Change-Conservation), and retain a curated subset. For profile descriptions, we prompt an LLM to turn each binary value vector into a short natural-language description and then manually check the result for accuracy. 
-Table~\ref{tab:visda_sample} shows one concrete chain of data spanning all five components, which serves as a running example throughout the paper.
+
 
 \begin{table*}[t]
 \centering
@@ -189,24 +191,46 @@ Table~\ref{tab:visda_sample} shows one concrete chain of data spanning all five 
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{p{0.16\linewidth} p{0.78\linewidth}}
 \toprule
-\textbf{Component} & \textbf{Sample entry} \\
+\textbf{Component} & \textbf{Sample entries} \\
 \midrule
-Theme & \texttt{TH004} — \emph{balancing personal enjoyment and obligations}; primary quadrant: Openness to Change; secondary quadrant: Conservation; potential value tensions: \{(Hedonism, Conformity), (Stimulation, Tradition)\}. \\
+
+Theme &
+\texttt{TH001}, \texttt{TH002}, \ldots, \texttt{TH004} — \emph{balancing personal enjoyment and obligations}; primary quadrant: Openness to Change; secondary quadrant: Conservation; potential value tensions: \{(Hedonism, Conformity), (Stimulation, Tradition)\}. \\
+
 \addlinespace
-Scenario & \texttt{SC004\_2} — A community group is organizing a festival. You can volunteer to help with the event, which would be enjoyable and engaging, or you can assist with routine maintenance tasks that are necessary for the group's ongoing activities. Both roles are open to you. $A_0$: volunteer for the festival event $A_1$: assist with routine maintenance tasks. Latent value tensions inherited from \texttt{TH004}. \\
+
+Scenarios &
+\texttt{SC004\_1} — \{Scenario description\} \\
+& \texttt{SC004\_2} — A community group is organizing a festival. You can volunteer to help with the event, which would be enjoyable and engaging, or assist with routine maintenance tasks necessary for the group's ongoing activities. Both roles are open to you. \\
+& \hspace{1em}$A_0$: volunteer for the festival event \quad $A_1$: assist with routine maintenance tasks. \\
+
 \addlinespace
-Modifier & \texttt{MOD\_SC004\_2\_01} — axis: \emph{self\_preservation}; modifier\_text: ``\emph{You are recovering from a recent illness and want to avoid too much activity.}''; expected\_value\_pressure: \{Hedonism\}. \\
+
+Modifiers &
+\texttt{MOD\_SC004\_2\_01} — axis: \emph{self\_preservation}; modifier\_text: ``\emph{You are recovering from a recent illness and want to avoid too much activity.}''; expected\_value\_pressure: \{Hedonism\}. \\
+& \texttt{MOD\_SC004\_2\_02} — \{Another modifier\} \\
+& \ldots \\
+
 \addlinespace
-Value profile & \texttt{VSW\_037} — binary vector $[0,0,0,1,1,1,1,0,1,1]$ over (Self-Direction, Stimulation, Hedonism, Achievement, Power, Security, Conformity, Tradition, Benevolence, Universalism); active\_values\_count = 6. \\
+
+Value profile &
+\texttt{VSW\_037} — binary vector $[0,0,0,1,1,1,1,0,1,1]$ over (Self-Direction, Stimulation, Hedonism, Achievement, Power, Security, Conformity, Tradition, Benevolence, Universalism); active\_values\_count = 6. \\
+
 \addlinespace
-Profile description & ``You strongly value achievement and demonstrating competence. You value power and the ability to influence others. \ldots You strongly value universal concern for others.'' (10 sentences, one per Schwartz value, LLM-generated and reviewed.) \\
+
+Profile description &
+``You strongly value achievement and demonstrating competence. You value power and the ability to influence others. \ldots You strongly value universal concern for others.'' (10 sentences, one per Schwartz value, LLM-generated and reviewed.) \\
+
 \bottomrule
 \end{tabular}
-\caption{One concrete row of VISDA, traced from theme down to the natural-language profile description that is shown to the LLM. The same five-component structure repeats for every scenario-modifier-profile combination in the dataset.}
-\label{tab:visda_sample}
-\end{table*}
 
-\paragraph{(i) Themes:} A theme is a short moral or social setting designed to create tension between two of Schwartz's four higher-order quadrants: \emph{Openness-to-Change}, \emph{Self-Enhancement}, \emph{Conservation}, and \emph{Self-Transcendence} \citep{schwartz1992universals}. Each theme is tagged with a primary and a secondary quadrant showing which parts of the circumplex the tension spans (e.g., the theme \texttt{TH004} (\emph{balancing personal enjoyment and obligations}) in Table~\ref{tab:visda_sample} pits between the higher order values of \emph{Openness to Change} against \emph{Conservation}, with potential value tensions such as \{(Hedonism, Conformity), (Stimulation, Tradition)\}). The final set of themes includes resource allocation, workplace dynamics, recognition, personal choice, and leader succession. For each theme, \texttt{potential\_value\_tensions} are also listed which specify the Schwartz-value pairs that motivate the theme with underlying moral tension.
+\caption{Illustrative structure of VISDA showing multiple identifiers per component. Themes expand into multiple scenarios, each scenario admits multiple modifiers, and these combine with value profiles to form dataset instances. Only a subset is shown for clarity.}
+
+\label{tab:visda_structure}
+\end{table*}
+Table~\ref{tab:visda_structure} shows one concrete chain of data spanning all five components, which serves as a running example throughout the paper.
+
+\paragraph{(i) Themes:} A theme is a short moral or social setting designed to create tension between two of Schwartz's four higher-order quadrants: \emph{Openness-to-Change}, \emph{Self-Enhancement}, \emph{Conservation}, and \emph{Self-Transcendence} \citep{schwartz1992universals}. Each theme is tagged with a primary and a secondary quadrant showing which parts of the circumplex the tension spans (e.g., the theme \texttt{TH004} (\emph{balancing personal enjoyment and obligations}) in Table~\ref{tab:visda_structure} pits between the higher order values of \emph{Openness to Change} against \emph{Conservation}, with potential value tensions such as \{(Hedonism, Conformity), (Stimulation, Tradition)\}). The final set of themes includes resource allocation, workplace dynamics, recognition, personal choice, and leader succession. For each theme, \texttt{potential\_value\_tensions} are also listed which specify the Schwartz-value pairs that motivate the theme with underlying moral tension.
 
 %The final set of themes is: 
 %\begin{enumerate}[leftmargin=2em,nosep]
@@ -218,8 +242,10 @@ Profile description & ``You strongly value achievement and demonstrating compete
 %\end{enumerate}  
 %\texttt{potential\_value\_tensions} are also listed for each theme, that specify the Schwartz-value pairs that motivate the theme.
 
-\paragraph{(ii) Scenarios:} 
-Scenarios instantiate a theme as a concrete decision-making situation involving an actor and competing actions. Each theme is expanded into two scenarios, giving 10 base scenarios. Generated scenarios satisfy four constraints:
+% \paragraph{(ii) Scenarios:} 
+% Scenarios instantiate a theme as a concrete decision-making situation involving an actor and competing actions. Each theme is expanded into two scenarios, giving 10 base scenarios. Generated scenarios satisfy four constraints:
+
+\paragraph{(ii) Scenarios:} Each scenario turns a theme into a concrete decision-making situation with an actor and competing actions. We use 5 themes, each expanded into 2 scenarios, resulting in 10 base scenarios. The generated scenarios follow four constraints:
 
 \begin{enumerate}[label=(\alph*),leftmargin=2em,itemsep=0pt,topsep=2pt,parsep=0pt]
   \item Both actions must be plausible and socially acceptable.
@@ -228,7 +254,18 @@ Scenarios instantiate a theme as a concrete decision-making situation involving 
   \item Modifier sentences must not repeat an action label verbatim or introduce a covert third option.
 \end{enumerate}
 
-\textbf{(iii) Modifiers:} Modifiers introduce contextual pressure intended to shift or amplify value preferences within a scenario. Each scneario is paired with 8 contextual modifiers, and are organised in our analysis (Section~\ref{sec:analysis}) into four broader pressure types: \emph{authority\_signal} \citep{milgram1963behavioral}, \emph{self\_preservation} (self-interest under threat), \emph{social\_visibility} (audience effects, \citealp{zajonc1965social}), \emph{in\_out\_group} (social identity, \citealp{tajfel1979integrative}), \emph{resource\_scarcity} (stakes / scarcity heuristic), \emph{time\_pressure} (cognitive load and dual-process effects), \emph{diffused\_responsibility} (bystander effect, \citealp{darley1968bystander}), and \emph{competence\_uncertainty} (epistemic uncertainty). We use these eight axes because they cover the four pressure types and each has a well-attested behavioural signature in humans, making them suitable probes for human-LLM comparison. For every (scenario, axis) cell, the prompt asks for one modifier sentence to be included as modifier\_text and expected\_value\_pressure annotation, along with this tuple in the dataset. The \texttt{expected\_value\_pressure} annotation is used \emph{only} by the utility baseline (Section~\ref{sec:utility}); the LLMs and the human participants see only the natural-language modifier text.
+% \textbf{(iii) Modifiers:} Modifiers introduce contextual pressure intended to shift or amplify value preferences within a scenario. Each scneario is paired with 8 contextual modifiers, and are organised in our analysis (Section~\ref{sec:analysis}) into four broader pressure types: \emph{authority\_signal} \citep{milgram1963behavioral}, \emph{self\_preservation} (self-interest under threat), \emph{social\_visibility} (audience effects, \citealp{zajonc1965social}), \emph{in\_out\_group} (social identity, \citealp{tajfel1979integrative}), \emph{resource\_scarcity} (stakes / scarcity heuristic), \emph{time\_pressure} (cognitive load and dual-process effects), \emph{diffused\_responsibility} (bystander effect, \citealp{darley1968bystander}), and \emph{competence\_uncertainty} (epistemic uncertainty). We use these eight axes because they cover the four pressure types and each has a well-attested behavioural signature in humans, making them suitable probes for human-LLM comparison. For every (scenario, axis) cell, the prompt asks for one modifier sentence to be included as modifier\_text and expected\_value\_pressure annotation, along with this tuple in the dataset. The \texttt{expected\_value\_pressure} annotation is used \emph{only} by the utility baseline (Section~\ref{sec:utility}); the LLMs and the human participants see only the natural-language modifier text.
+\textbf{(iii) Modifiers:}\phantomsection\label{sec:modify} Modifiers introduce contextual pressure intended to shift or amplify value preferences within a scenario. Each scenario is paired with 8 contextual modifiers. These are organised in our analysis (Section~\ref{sec:analysis}) into four broader pressure types:
+
+{\raggedright
+\begin{itemize}[leftmargin=*, noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+  \item \emph{Stakes}: \emph{resource\_scarcity} (stakes / scarcity heuristic)
+  \item \emph{Affective}: \emph{authority\_signal} \citep{milgram1963behavioral}, \emph{social\_visibility} (audience effects, \citealp{zajonc1965social}), \emph{in\_out\_group} (social identity, \citealp{tajfel1979integrative})
+  \item \emph{Personal-cost}: \emph{self\_preservation} (self-interest under threat), \emph{time\_pressure} (cognitive load and dual-process effects)
+  \item \emph{Informational}: \emph{diffused\_responsibility} (bystander effect, \citealp{darley1968bystander}), \emph{competence\_uncertainty} (epistemic uncertainty)
+\end{itemize}\par}
+\label{sec:modifiers}
+We use these eight axes because they cover diverse forms of contextual pressure, and each has a well-attested behavioural signature in humans, making them suitable probes for human-LLM comparison. For every (scenario, axis) pair, the prompt generates one modifier sentence (modifier\_text) along with an \texttt{expected\_value\_pressure} annotation. This annotation is used \emph{only} by the utility baseline (Section~\ref{sec:utility}); LLMs and human participants see only the natural-language modifier text.
 
 \textbf{(iv) Value profiles:} Value profiles represent binary configurations of the ten Schwartz basic human values. From all $1024$ binary profiles, we remove combinations that violate the main Schwartz antagonisms, such as jointly maximal Power and Universalism, jointly maximal Achievement and Benevolence, and jointly maximal Openness-to-Change and Conservation. This yields 95 retained profiles.
 
@@ -245,49 +282,55 @@ $\mathbf{V}_{A_i} \in \mathbb{R}^{10}$, with one dimension for each Schwartz bas
 Given a value profile
 $\mathbf{V}_{sw} \in \{0,1\}^{10}$,
 the utility of an action is computed using a direct dot product:
-\[
-U(A_i \mid \mathbf{V}_{sw})
-=
-\mathbf{V}_{sw}^{\top}\mathbf{V}_{A_i}.
-\]
+\begin{equation}\label{eq:U}
+U(A_i \mid \mathbf{V}_{sw}) = \mathbf{V}_{sw}^{\top}\mathbf{V}_{A_i}.
+\end{equation}
 The predicted action is then selected as:
-\[
+\begin{equation}\label{eq:argmax}
 \hat{A}(\mathbf{V}_{sw})
 =
 \arg\max_{A_i \in \{A_0,A_1\}}
-U(A_i \mid \mathbf{V}_{sw}).
-\]
+U(A_i \mid \mathbf{V}_{sw})
+\end{equation}
 
 
-To incorporate contextual influence, each modifier $m$ is annotated with an indicator vector
-$\boldsymbol{\delta}_m \in \{0,1\}^{10}$ marking the Schwartz values it pressures, derived from the dataset's \textit{expected\_value\_pressure} field. The modifier saturatingly boosts the profile weight on those dimensions:
-\[
-\tilde{\mathbf{V}}_{sw}^{\,m}
+To incorporate contextual influence, each modifier $m$ introduces an additive perturbation vector 
+$\boldsymbol{\delta}_m \in \mathbb{R}^{10}$, constructed directly from the annotated 
+\textit{expected\_value\_pressure} fields in the dataset. 
+The modifier-adjusted action representation becomes:
+
+\begin{equation}
+\label{eq:modified_vector}
+\mathbf{V}_{A_i}^{\,m}
 =
-\min\!\bigl(\mathbf{1},\; \mathbf{V}_{sw} + \lambda\,\boldsymbol{\delta}_m\bigr),
-\]
-where the $\min$ is componentwise and $\lambda \in [0,1]$ controls the modifier strength ($\lambda = 0.5$ is chosen to model a moderate influence; see App.~\ref{app:lambda_sweep} for the full sweep and breakpoint analysis). The clip at $\mathbf{1}$ prevents already-high values from accumulating influence beyond the maximum encoded weight.
+\min \left(
+\mathbf{V}_{A_i}
++
+\lambda \boldsymbol{\delta}_m,
+\, 1
+\right)
+\end{equation}
+
+where $\lambda \in [0,1]$ controls the modifier strength 
+($\lambda = 0.5$ is chosen to model a moderate influence; see Appendix~\ref{app:lambda_sweep} for the full sweep and breakpoint analysis). 
+To prevent already-high values from crossing the maximum weight, we clip the value of $\mathbf{V}_{A_i}^{\,m}$ at $1$.
+
 The modifier-conditioned utility is therefore:
-\[
+
+\begin{equation}
+\label{eq:Um}
 U_m(A_i)
 =
-\tilde{\mathbf{V}}_{sw}^{\,m\,\top}\mathbf{V}_{A_i}.
-\]
-A \emph{behavioral flip} is recorded whenever the utility-maximizing action changes between the original and modifier-conditioned settings:
-\[
-\arg\max_{A_i} U(A_i)
-\neq
-\arg\max_{A_i} U_m(A_i).
-\]
-We set $\lambda = 0.5$. Because profile weights and action alignments are both binary, the utility-baseline flip rate is piecewise constant in $\lambda$ with breakpoints exactly at $\lambda = 0.5$ and $\lambda = 1.0$; $\lambda = 0.5$ is the entry point of the moderate-pressure plateau, large enough to register two-value contextual pressure but small enough to preserve an asymmetry between modifier-driven pressure and intrinsic profile weight. The full sweep is reported in Appendix~\ref{app:lambda_sweep}.
+\mathbf{V}_{SW}^{\top}
+\mathbf{V}_{A_i}^{\,m}
+\end{equation}
 
-% \subsection{Utility-based Mathematical Baseline}
+A \emph{behavioral flip} is recorded whenever the utility-maximizing action changes between the original and modifier-conditioned settings, as formalized in Eq.~\eqref{eq:flip}.
 
-% Decision-making is modeled through a simple utility-maximization baseline defined over the Schwartz value space.
+% As a baseline, we model decision-making as utility maximization in the Schwartz value space.
 % Each candidate action is represented by a 10-dimensional value vector
-% $\mathbf{V}_{A_i} \in \mathbb{R}^{10}$,
-% where each dimension corresponds to one of the canonical Schwartz values.
-
+% $\mathbf{V}_{A_i} \in \mathbb{R}^{10}$, with one dimension for each Schwartz basic value. Each entry quantifies how strongly the action reflects the corresponding Schwartz's value, guided by the scenario’s \textit{potential\_value\_tensions}.
+% %where each action vector $\mathbf{V}_{A_i}$ is a specified value-alignment representation indicating the degree to which each action expresses the corresponding Schwartz values (borrowed from the \textit{potential\_value\_tensions} from the scenario). 
 % Given a value profile
 % $\mathbf{V}_{sw} \in \{0,1\}^{10}$,
 % the utility of an action is computed using a direct dot product:
@@ -303,48 +346,41 @@ We set $\lambda = 0.5$. Because profile weights and action alignments are both b
 % \arg\max_{A_i \in \{A_0,A_1\}}
 % U(A_i \mid \mathbf{V}_{sw}).
 % \]
-% The action vectors $\mathbf{V}_{A_i}$ are manually specified value-alignment representations indicating the degree to which each action expresses the corresponding Schwartz values.
 
-% To incorporate contextual influence, each modifier $m$
-% introduces an additive perturbation vector
-% $\boldsymbol{\delta}_m \in \mathbb{R}^{10}$,
-% constructed directly from the annotated
-% \texttt{expected\_value\_pressure} fields in the dataset. The modifier-adjusted action representation becomes:
+
+% To incorporate contextual influence, each modifier $m$ is annotated with an indicator vector
+% $\boldsymbol{\delta}_m \in \{0,1\}^{10}$ marking the Schwartz values it pressures, derived from the dataset's \textit{expected\_value\_pressure} field. The modifier saturatingly boosts the profile weight on those dimensions:
 % \[
-% \mathbf{V}_{A_i}^{\,m}
+% \tilde{\mathbf{V}}_{sw}^{\,m}
 % =
-% \mathbf{V}_{A_i}
-% +
-% \lambda \boldsymbol{\delta}_m,
+% \min\!\bigl(\mathbf{1},\; \mathbf{V}_{sw} + \lambda\,\boldsymbol{\delta}_m\bigr),
 % \]
-% where $\lambda$ controls the modifier strength.
-% In our experiments, we set $\lambda = 0.5$ to model a moderate contextual influence.
-
+% where the $\min$ is componentwise and $\lambda \in [0,1]$ controls the modifier strength. The clip at $\mathbf{1}$ prevents already-high values from accumulating influence beyond the maximum encoded weight.
 % The modifier-conditioned utility is therefore:
 % \[
 % U_m(A_i)
 % =
-% \mathbf{V}_{sw}^{\top}\mathbf{V}_{A_i}^{\,m}.
+% \tilde{\mathbf{V}}_{sw}^{\,m\,\top}\mathbf{V}_{A_i}.
 % \]
-% The selected action corresponds to the utility-maximizing choice:
-% \[
-% A^* = \arg\max_{A_i} U(A_i),
-% \]
-% with an analogous definition under the modifier-conditioned setting using \(U_m(A_i)\).
-% A \emph{decision flip} is recorded whenever the utility-maximizing action changes between the original and modifier-conditioned settings:
+% A \emph{behavioral flip} is recorded whenever the utility-maximizing action changes between the original and modifier-conditioned settings:
 % \[
 % \arg\max_{A_i} U(A_i)
 % \neq
 % \arg\max_{A_i} U_m(A_i).
 % \]
+% We set $\lambda = 0.5$. Because profile weights and action alignments are both binary, the utility-baseline flip rate is piecewise constant in $\lambda$ with breakpoints exactly at $\lambda = 0.5$ and $\lambda = 1.0$; $\lambda = 0.5$ is the entry point of the moderate-pressure plateau, large enough to register two-value contextual pressure but small enough to preserve an asymmetry between modifier-driven pressure and intrinsic profile weight. The full sweep is reported in Appendix~\ref{app:lambda_sweep}.
+
 
 \subsection{LLM Evaluation Pipeline}
 
-We evaluate three open-weight instruction-tuned LLMs: LLaMA 3.1 8B-Instruct \citep{touvron2023llama}, Gemma 4 31B-Instruct \citep{gemma2024}, and Qwen 2.5 32B-Instruct \citep{bai2023qwen}. All three models are deployed locally on cluster of 4 NVIDIA A100 GPU nodes and queried with greedy decoding (temperature $=0$), which reduces variability of outputs and ensure reproducibility across runs.
+We evaluate three open-weight instruction-tuned LLMs: LLaMA3.1 8B-Instruct \citep{touvron2023llama}, Gemma4 31B-Instruct \citep{gemma2024}, and Qwen2.5 32B-Instruct \citep{bai2023qwen}. 
+% All three models are deployed on cluster of 4 NVIDIA A100 GPU nodes where \texttt{Ollama} v\footnote{\url{https://github.com/ollama/ollama}}, acts as a local orchestrator providing a uniform inference API across models and keeping all queries on-premises and queried with greedy decoding (temperature $=0$), which reduces variability of outputs and ensure reproducibility across runs.
+
+All three models are deployed on a cluster of four NVIDIA A100 GPU nodes, with a local Ollama\footnote{\url{https://github.com/ollama/ollama}} acting as the on-premises orchestrator. Ollama exposes a uniform inference API across the models, so all queries remain local and are served through the same connectable endpoint, then decoded greedily (temperature $=0$), which reduces output variability and ensures reproducibility across runs.
 
 For each $(\Vsw, S, M)$ tuple, where $S$ denotes a scenario and $M$ a modifier, we construct an evaluation prompt for the LLM consisting of the value-profile description, the scenario text, the corresponding \textit{modifier\_text} in the modified condition, and the two candidate actions $A_0$ and $A_1$. The model is instructed to select exactly one action by responding with a single token: \texttt{A0} or \texttt{A1}.
 \[
-f_{LLM}(\Vsw, S, M) \in \{A_0, A_1\},
+f_{LLM}(\Vsw, S, M) \in \{A_0, A_1\}
 \]
 
 Each model is first evaluated on the 10 base scenarios (5 themes $\times$ 2 scenarios) across all 95 value profiles, yielding 950 baseline decisions per model. We then evaluate the same models on the modifier-augmented scenarios (5 themes $\times$ 2 scenarios $\times$ 8 modifiers $\times$ 95 profiles), resulting in 7,600 modified trials per model and 22,800 trials across all three LLMs.
@@ -355,7 +391,14 @@ Each model is first evaluated on the 10 base scenarios (5 themes $\times$ 2 scen
 
 \subsection{Human Study}
 \label{sec:human-study}
-We collected value profiles and moral decisions from 50 participants through a questionnaire-based study. The questionnaire contained three blocks: PVQ-21 inventory to estimate Schwartz values, six forced-choice value trade-offs questions, and the SDS-10 social-desirability scale. PVQ items were scored with participant-mean centering following Schwartz's recommended procedure. Participants were then presented with the generated scenarios along with the associated value modifiers, and their decisions for both ($A_1$) and ($A_0$) settings were recorded. The human study contributes approximately $50 \times 10 = 500$ decisions. Each participant saw a given scenario only once, either in its baseline form or with the modifier that produced the strongest LLM flip for that scenario, but never both, and we recorded the resulting decision. We subsequently analyze the participants' value profiles, their correlation with the selected actions, and compare these patterns with the corresponding LLM responses for the same scenarios.
+
+We collected value profiles and moral decisions from 50 participants\footnote{Participants varied across age groups, gender, and profession, and voluntarily agreed to contribute to the study. All data was collected anonymously.} through an English-language questionnaire study. Two questionnaire forms were created.
+
+The questionnaire consisted of three blocks: the PVQ-21 ~\citep{schwartz2012refined} inventory to estimate Schwartz values, six forced-choice value trade-off questions (Appendix~\ref{app:block_b}), and the SDS-10 social-desirability scale ~\cite{strahan1972short}. PVQ items were scored using participant-mean centering following Schwartz’s recommended procedure.
+
+Participants were then presented with the generated scenarios and associated value modifiers, and their decisions for both ($A_1$) and ($A_0$) settings were recorded. Each participant saw a given scenario only once, either in its original form or in the modifier-augmented version, but never both. We then compared the A1-choice rates between the two questionnaire forms.
+
+The study produced approximately $50 \times 10 = 500$ decisions. For each scenario, we selected the modifier that produced the largest decision shift in the LLM experiments. These modifiers were shown to participants to enable a direct comparison between human and LLM sensitivity to value-based changes. Finally, we analyzed the relationship between participants’ value profiles and their selected actions, and compared these patterns with the corresponding LLM responses on the same scenarios.
 
 
 % After the value blocks, participants answered 10 randomized decision items: one baseline and one modified sibling scenario from each of the five themes. The two forms counterbalanced which sibling scenario appeared with a modifier, so no participant ever saw the same scenario both with and without a modifier. This between-subjects design avoids demand effects and memory-based consistency pressure, but it means that human ``flips'' are estimated as a population shift \( |\Delta P(A1)| \), not as within-person reversals.
@@ -371,16 +414,20 @@ For a system $s$, let $f_s(\Vsw,S,M)$ denote the action selected under value pro
 \[
 F_s(\Vsw,S,M) =
 \]
-\[
- \mathbb{I}\!\left[f_s(\Vsw,S,\varnothing) \neq f_s(\Vsw,S,M)\right]
-\]
+\begin{equation}\label{eq:flip}
+\mathbb{I}\!\left[
+f_s(\mathbf{V}_{sw}, S, \varnothing)
+\neq
+f_s(\mathbf{V}_{sw}, S, M)
+\right]
+\end{equation}
 The system-level flip rate is computed as the mean of $F_s$ across all valid $(\Vsw,S,M)$ tuples. Intuitively, a flip occurs when the selected action changes after introducing a situational modifier while keeping the underlying value profile fixed.
 
-\section{Results \& Analysis}
+\section{Results and Analysis}
 \label{sec:analysis}
 
 \subsection{System-Level Flip Rates}
-The effect of situational modifiers on decisions is evaluated by computing \emph{decision-flip rates}. Table~\ref{tab:flip_rates} reports the resulting flip counts and flip rates across all evaluated systems.
+The effect of situational modifiers on decisions is evaluated by computing \emph{decision-flip} rates. Table~\ref{tab:flip_rates} reports the resulting flip counts and flip rates across all evaluated systems.
 
 % The utility baseline’s high flip rate follows from its additive construction: modifiers act as fixed perturbation vectors, so even small shifts can cross the decision boundary when action utilities are close. LLMs exhibit lower flip rates, suggesting that they integrate modifiers with scenario semantics and learned norms rather than applying purely linear value addition. This implies that alignment evaluation should measure how models weight situational pressures, not only whether they express the intended values.
 
@@ -397,7 +444,7 @@ The effect of situational modifiers on decisions is evaluated by computing \emph
     Qwen 2.5 32B & 7{,}600 & 500 & 6.58\% \\
     LLaMA 3.1 8B & 7{,}600 & 154 & 2.03\% \\
     \hline
-    Human pilot ($N=50$) & 500 & 31 & 12.36\%$^\dagger$ \\
+    Human pilot ($N=50$) & 500 & 31 & 12.36\% \\
     \hline
   \end{tabular}
   \caption{Decision-flip rates by system. \textbf{Trials} is the number of modifier trials per model: 7,600 for each LLM. See \ref{sec:human-study} for the human-pilot trial procedure.}
@@ -414,7 +461,9 @@ The effect of situational modifiers on decisions is evaluated by computing \emph
   \includegraphics[width=0.48\linewidth]{heatmap_scenario_axis.png} \hfill
   \includegraphics[width=0.48\linewidth]{heatmap_scenario_axis_qwen.png}
   \captionsetup{justification=centering,singlelinecheck=false}
-  \caption{Per-(scenario, axis) flip-rate heatmap. Left: Gemma 4 31B. Right: Qwen 2.5 32B. Both models concentrate flips on the \texttt{self\_preservation} and \texttt{authority\_signal} axes; \texttt{SC004\_2 + self\_preservation} is the strongest cell in both (42.1\% Gemma, 31.6\% Qwen).}
+  \caption{Per-(scenario, axis) flip-rate heatmap. \textbf{Left:} Gemma 4 31B. \textbf{Right:} Qwen 2.5 32B. 
+  % Both models concentrate flips on the \texttt{self\_preservation} and \texttt{authority\_signal} axes; 
+\\  \texttt{ SC004\_2 + self\_preservation} is the strongest cell in both (42.1\% Gemma, 31.6\% Qwen).}
   \label{fig:heatmaps}
 \end{figure*}
 
@@ -427,61 +476,93 @@ The effect of situational modifiers on decisions is evaluated by computing \emph
 % How did the modifiers impact the decisions? 
 
 \subsection{Per-Axis Flip Rates}
-What is the impact of modifiers on the decisions?
-Per-axis flip rates for each model reveal the answer (Figure~\ref{fig:spider}).
+Figure~\ref{fig:spider} presents per-axis decision-flip rates for all evaluated systems. 
+%What is the impact of modifiers on the decisions?
+%Per-axis flip rates for each model reveal the answer (Figure~\ref{fig:spider}).
+Across LLMs, \emph{authority signal} and \emph{self-preservation} caused the most decision changes, accounting for 30-40\% of flips. The mathematical baseline also highlighted \emph{authority\_signal} and \emph{in\_out\_group}. Overall, LLMs responded more to authority and self-threat modifiers, while humans responded most to \emph{in\_out\_group}, \emph{authority signal}, and \emph{resource scarcity}. This shows a mismatch between human and LLM behavior.
 
-Across the LLMs, the modifiers \emph{authority signal} and \emph{self-preservation} cause the most decision changes, accounting for 30--40\% of flips. The mathematical baseline highlights \emph{authority signal} and \emph{in-out-group}, showing that LLMs respond more to authority and self-threat than to identity-based modifiers, while human responses peak on \emph{in-out-group}, \emph{authority signal}, and \emph{resource scarcity}, indicating a human--LLM mismatch.
+% Directional effects of these are examined using McNemar's exact test on paired baseline-versus-modifier outcomes within each (model, axis) cell, followed by Benjamini-Hochberg FDR correction over the eight axes. Additional statistical methodology is described in Appendix~\ref{app:lr}.
+We compare each model’s decision before and after a modifier for every axis, using McNemar’s exact test \cite{mcnemar1947note, 
+fagerland2013mcnemar} to see whether the change is statistically meaningful. Then we adjust those eight axis-level tests for multiple comparisons with Benjamini-Hochberg FDR \cite{benjamini1995controlling}. More details are in Appendix~\ref{app:lr}.
 
-Directional effects of these are examined using McNemar's exact test on paired baseline-versus-modifier outcomes within each (model, axis) cell, followed by Benjamini-Hochberg FDR correction over the eight axes. Additional statistical methodology is described in Appendix~\ref{app:lr}.
-
-% Across the LLMs, the modifiers \emph{authority signal} and \emph{self-preservation} cause the most decision changes, accounting for about 30--40\% of flips. The mathematical baseline instead highlights \emph{authority signal} and \emph{in-out-group}, showing that LLMs respond more to authority and self-threat than to identity-based modifiers, while human responses peak on \emph{in-out-group}, \emph{authority signal}, and \emph{resource scarcity}, indicating a human--LLM mismatch.
+% Across the LLMs, the modifiers \emph{authority signal} and \emph{self-preservation} cause the most decision changes, accounting for about 30-40\% of flips. The mathematical baseline instead highlights \emph{authority signal} and \emph{in-out-group}, showing that LLMs respond more to authority and self-threat than to identity-based modifiers, while human responses peak on \emph{in-out-group}, \emph{authority signal}, and \emph{resource scarcity}, indicating a human-LLM mismatch.
 
 
 % Across all LLMs, \emph{authority signal} and \emph{self-preservation} produce the highest flip rates, together accounting for roughly 30-40\% of decision flips. The utility-based mathematical baseline instead ranks \emph{authority signal} and \emph{in-out-group} highest, indicating a divergence from LLM behavior: learned models are comparatively more sensitive to direct authority and self-threat signals than to identity-based modifiers. Humans peak on a different set of axes (\emph{in-out-group}, \emph{authority signal}, \emph{resource scarcity}), foreshadowing the human-LLM miscalibration analyzed in later subsections.
 
 
 
-\subsection{Per-Scenario Flip Distribution Heatmap}
+\subsection{Per-Scenario Flip Distribution Analysis}
 
 The variation of modifier sensitivity across scenarios is visualized as per-(scenario, axis) flip-rate heatmaps (as in Figure~\ref{fig:heatmaps}). Both Gemma 4 31B and Qwen 2.5 32B exhibit highly similar concentration patterns. In particular, Scenario \texttt{SC004\_2} + modifier \texttt{self\_preservation} is the strongest cell in both models, reaching 42.1\% for Gemma and 31.6\% for Qwen. 
 
 Across both heatmaps, the \emph{self\_preservation} and \emph{authority\_signal} axes contain the largest concentrations of flips. This suggests that modifier effects are not uniformly distributed, but instead clustered around specific scenario-pressure combinations.
 
+\subsection{Modifier-Type Pressure Analysis}
 
-\subsection{Paraphrase Noise Floor}
-\label{sec:noise}
+We group the eight modifier axes into four pressure types, namely Stakes, Affective, Personal-cost, and Informational, to examine whether different kinds of situational pressure produce distinct decision-shift patterns. Table~\ref{tab:modifier_type} reports the mean decision shift across all scenario-axis pairs, while Figure ~\ref{fig:modifier_type} shows how these shifts vary across systems and modifier axes. Humans react most to \emph{stakes} and \emph{affective} pressures, while Gemma and Qwen are more responsive to \emph{personal-cost} pressures. LLaMA is relatively flat across categories. Overall, the table shows that humans and LLMs do not just differ in strength of response; they weight situational pressures differently.
 
-To verify that decision flips are not simply due to prompt-paraphrase instability, we evaluate four meaning-preserving paraphrases for a stratified sample of $95$ baseline $(\Vsw,\text{scenario})$ cells per model. We hold the value profile, candidate actions, response format, and decoding settings fixed. A noise flip is counted when a paraphrased scenario changes the original baseline decision.
 
-The resulting noise rates are much lower than the modifier-induced flip rates in Table~\ref{tab:flip_rates}: $2.95\%$ vs.\ $8.92\%$ for Gemma 4 31B, $2.64\%$ vs.\ $6.58\%$ for Qwen 2.5 32B, and $0.00\%$ vs.\ $2.03\%$ for LLaMA 3.1 8B. A two-proportion $z$-test rejects equality for all three models ($z>4.5$, $p<10^{-5}$). This suggests that modifier-induced flips are not explained by surface-form sensitivity. Moreover, paraphrase flips are localized to a single scenario for each model, whereas modifier-induced flips occur across all ten scenarios.
+% Humans prioritize \emph{stakes} and \emph{affective} pressures (about 16\% and 15\% flip rates), whereas \emph{personal-cost} and \emph{informational} pressures have weaker effects (11\% and 6\%). The LLMs show a different pattern: Gemma 4 31B and Qwen 2.5 32B are most swayed by \emph{personal-cost} pressures (about 10\% and 9\%), especially self-preservation, and they are less influenced by stakes. LLaMA 3.1 8B shows little sensitivity to any modifier type (at most 2.6\%). In summary, LLMs do not simply react less than humans; they prioritize different pressures, paying less attention to resource scarcity and more attention to personal threats.
 
-\subsection{Profile-Strength Moderation}
+% Humans are most sensitive to \emph{stakes} ($16.3\%$) and \emph{affective} ($15.3\%$) modifiers, while \emph{personal-cost} ($10.6\%$) and \emph{informational} ($6.1\%$) effects are weaker. In contrast, Gemma 4 31B and Qwen 2.5 32B react most strongly to \emph{personal-cost} framings ($9.7\%$ and $8.9\%$), especially self\_preservation, and under-react to \emph{stakes}. LLaMA 3.1 8B remains nearly flat across all modifier types ($\leq 2.6\%$). Overall, LLMs do not merely exhibit weaker human-like sensitivity; they systematically re-weight modifier categories, underestimating material scarcity while overemphasizing self-preservation cues.
 
-When a profile contains 8--9 of 10 active values, decision-change rates vary across systems:
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig_human_vs_llm_type.png}
+\caption{Mean decision shift (\%) by modifier category, humans (N=50) vs.\ the three LLMs. Humans react most to \emph{stakes} (resource scarcity) and \emph{affective} framings; mid-size LLMs invert this and react most to \emph{personal-cost} framings.}
+\label{fig:modifier_type}
+\end{figure}
 
-\begin{center}
-\small
-\begin{tabular}{lrr}
-\hline
-\textbf{System} & \textbf{Strength-8} & \textbf{Strength-9} \\
-\hline
-Mathematical baseline & 0\% & 0\% \\
-Gemma 4 31B & 20.3\% & 15.6\% \\
-Qwen 2.5 32B & 10.3\% & 5.0\% \\
-LLaMA 3.1 8B & 0.6\% & 0.0\% \\
-\hline
-\end{tabular}
-\end{center}
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{4pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{p{2.5cm}cccc}
+\toprule
+\textbf{Type} & \textbf{Human} & \textbf{Gemma} & \textbf{Qwen} & \textbf{Llama8B} \\
+\midrule
+stakes & \textbf{16.3\%} &  7.8\% &  4.7\% & 0.9\% \\
+affective & \textbf{15.3\%} &  9.9\% &  6.2\% & 2.4\% \\
+personal-cost & 10.6\% &  9.7\% &  8.9\% & 2.6\% \\
+informational &  6.1\% &  7.2\% &  5.7\% & 1.5\% \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Modifier-type pressure across systems. Humans place material stakes and affective framings well above personal-cost and informational ones; LLMs blur this distinction.}
+\label{tab:modifier_type}
+\end{table}
 
-A full breakdown by profile strength is in Appendix~\ref{app:strength}.
 
-These results show that high profile strength does not remove modifier effects, but it changes how strongly each system responds. The baseline stays fixed, LLaMA remains close to zero, and the larger LLMs still show non-trivial sensitivity at the strongest profile levels.
 
+% \subsection{Cross-Model Consistency}
+% \label{sec:crossmodel}
+
+% For each model we rank the eight modifier axes by flip rate, then compare the rankings pairwise. We use Spearman's rank correlation $\rho$ (where $\rho = +1$ means two models prioritise the axes in exactly the same order and $\rho = 0$ means no relationship), and report the associated $p$-value (the probability of seeing this $\rho$ by chance under the null of no agreement; smaller is stronger evidence). Across all three LLMs, the same two axes occupy the top two positions: \texttt{authority\_signal} and \texttt{self\_preservation}. Pairwise correlations are summarised in Table~\ref{tab:crossmodel-spearman}.
+
+% \begin{table}[h]
+% \centering
+% \small
+% \begin{tabular}{lccc}
+% \toprule
+%                   & Gemma 31B & Qwen 32B & Utility \\
+% \midrule
+% LLaMA 8B          & 0.18      & 0.49     & 0.35 \\
+% Gemma 4 31B       & -       & 0.66     & 0.17 \\
+% Qwen 2.5 32B      &           & -      & $-0.13$ \\
+% \bottomrule
+% \end{tabular}
+% \caption{Pairwise Spearman $\rho$ between the eight-axis modifier rankings. The two mid-scale instruction-tuned models agree most strongly with each other; none of the LLM-vs-utility correlations is significant ($p > 0.39$ throughout).}
+% \label{tab:crossmodel-spearman}
+% \end{table}
+
+% Gemma 4 31B and Qwen 2.5 32B produce the most similar ordering ($\rho = 0.66$, $p = 0.076$). LLaMA 3.1 8B sits farther from both, consistent with its lower overall flip rate compressing rank differences. The additive utility baseline yields a different ordering - no LLM-vs-utility correlation reaches significance (max $\rho = 0.35$, $p = 0.40$) - so the shared structure in the LLM rankings does not appear to reduce to additive value-arithmetic, though we leave a stronger interpretation to future work.
 
 \subsection{Cross-Model Consistency}
 \label{sec:crossmodel}
 
-For each model we rank the eight modifier axes by flip rate and compare rankings pairwise using Spearman's $\rho$ ($+1$ = identical ordering, $0$ = no relationship; $p$ is the probability of the observed $\rho$ under the null of no agreement). The same two axes --- \texttt{authority\_signal} and \texttt{self\_preservation} --- occupy the top two positions for every LLM. Pairwise correlations are shown in Table~\ref{tab:crossmodel-spearman}: the two mid-scale models agree most strongly (Gemma vs Qwen, $\rho = 0.66$, $p = 0.076$), while no LLM-vs-utility correlation reaches significance (max $\rho = 0.35$, $p = 0.40$). The shared structure across LLMs therefore does not appear to reduce to additive value-arithmetic, though we leave a stronger interpretation to future work.
+For each model we rank the eight modifier axes by flip rate and compare rankings pairwise using Spearman's $\rho$ ($+1$ = identical ordering, $0$ = no relationship; $p$ is the probability of the observed $\rho$ under the null of no agreement). The same two axes - \texttt{authority\_signal} and \texttt{self\_preservation} - occupy the top two positions for every LLM. Pairwise correlations are shown in Table~\ref{tab:crossmodel-spearman}: the two mid-scale models agree most strongly (Gemma vs Qwen, $\rho = 0.66$, $p = 0.076$), while no LLM-vs-utility correlation reaches significance (max $\rho = 0.35$, $p = 0.40$). 
+% The shared structure across LLMs therefore does not appear to reduce to additive value-arithmetic, though we leave a stronger interpretation to future work.
 
 \begin{table}[h]
 \centering
@@ -491,18 +572,47 @@ For each model we rank the eight modifier axes by flip rate and compare rankings
                   & Gemma 31B & Qwen 32B & Utility \\
 \midrule
 LLaMA 8B          & 0.18      & 0.49     & 0.35 \\
-Gemma 4 31B       & ---       & 0.66     & 0.17 \\
-Qwen 2.5 32B      &           & ---      & $-0.13$ \\
+Gemma 4 31B       & -       & 0.66     & 0.17 \\
+Qwen 2.5 32B      &           & -      & $-0.13$ \\
 \bottomrule
 \end{tabular}
-\caption{Pairwise Spearman $\rho$ between the eight-axis modifier rankings. No LLM-vs-utility correlation is significant ($p > 0.39$ throughout).}
+\caption{Pairwise Spearman $\rho$ between the eight-axis modifier rankings. }
+% No LLM-vs-utility correlation is significant ($p > 0.39$ throughout).
 \label{tab:crossmodel-spearman}
 \end{table}
+
+\subsection{Profile-Strength Moderation}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrr}
+\hline
+\textbf{System} & \textbf{Strength-8} & \textbf{Strength-9} \\
+\hline
+Mathematical baseline & 0\% & 0\% \\
+LLaMA 3.1 8B & 0.6\% & 0.0\% \\
+Qwen 2.5 32B & 10.3\% & 5.0\% \\
+Gemma 4 31B & 20.3\% & 15.6\% \\
+\hline
+\end{tabular}
+\caption{Decision-change rates for high-strength value profiles (8-9 active values) across the mathematical baseline and LLMs.}
+\label{tab:high_strength_profiles}
+\end{table}
+
+When a value profile contains 8-9 of 10 active values, decision-change rates vary across systems as shown in Table \ref{tab:high_strength_profiles}.
+These results shows that high profile strength does not remove modifier effects, but it changes how strongly each system responds. The baseline stays fixed, LLaMA remains close to zero, and the larger LLMs still show non-trivial sensitivity at the strongest profile levels.
+
+% A full breakdown by profile strength is in Appendix~\ref{app:strength}.
+
+
+% When a value profile contains $8$ or $9$ of $10$ active values, the utility-based mathematical baseline is locked by construction: the active-value dot product dominates the modifier perturbation, so the baseline flips on \emph{zero} such trials. The LLMs do not behave this way. Gemma 4 31B flips 20.3\% of strength-8 and 15.6\% of strength-9 trials; Qwen 2.5 32B flips 10.3\% and 5.0\%; LLaMA 3.1 8B flips only 0.6\% and 0.0\%. A full breakdown by profile strength is in Appendix~\ref{app:strength}.
+
 
 \subsection{Modifier-Driven Flips on Strong Value Profiles}
 \label{sec:impossible}
 
-On profiles with $8$ or $9$ HIGH values, the additive utility baseline flips on $0\%$ of trials by construction: under the annotated value and modifier vectors no single modifier overrides the active value contributions in $U(A_i\mid\Vsw)$. The LLMs do not behave this way (Table~\ref{tab:impossible-flips}). We call such reversals \emph{rule-inconsistent flips}, in the baseline-relative sense that they cannot be produced by the additive rule we tested.
+The person's value profiles with $8$ or $9$ HIGH values, the additive utility baseline flips on $0\%$ of trials by construction: under the annotated value and modifier vectors no single modifier overrides the active value contributions in $U(A_i\mid\Vsw)$. In contrast, the LLMs still produce flips under these conditions, as reported in Table~\ref{tab:impossible-flips}. We call such reversals \emph{rule-inconsistent flips}, in the baseline-relative sense that they cannot be produced by the additive rule we tested.
 
 \begin{table}[h]
 \centering
@@ -522,100 +632,66 @@ Utility      &  0.0\% (0)         &  0.0\% (0)  \\
 \label{tab:impossible-flips}
 \end{table}
 
-These rule-inconsistent flips are concentrated on the same two axes that dominate the overall rankings, \texttt{authority\_signal} and \texttt{self\_preservation} (\S\ref{sec:crossmodel}). Axes more closely tied to Schwartz dimensions of the profile, such as \texttt{in\_out\_group} or \texttt{resource\_scarcity}, produce far fewer such departures. Two representative cases illustrate the pattern: (i) in a recognition scenario, Gemma initially selects team recognition for a profile high in universalism and benevolence; once a modifier states that management prefers measurable results, the same profile is re-decided toward individual recognition, with the model citing managerial preference rather than the agent's values; (ii) in a succession scenario, an authority modifier endorsing the internal candidate flips the decision in that direction even on profiles whose values would otherwise favour the external candidate.
+These flips are concentrated on the same two axes that dominate the overall rankings: \texttt{authority\_signal} and \texttt{self\_preservation} (Section~\ref{sec:crossmodel}). Axes more closely tied to Schwartz values, such as \texttt{in\_out\_group} and \texttt{resource\_scarcity}, produce far fewer such reversals.
 
-We do not read this as evidence of richer contextual reasoning. The opposite reading is equally compatible: on the very profiles where a value-aligned system should be most stable, the LLMs in our setup remain susceptible to single-sentence cues, concentrated on authority and self-preservation framings. Alternative explanations --- imperfections in the annotated vectors, or richer additive formulations we did not test --- are not ruled out, so we flag the pattern as a concern worth follow-up rather than a confirmed failure mode.
-\subsection{Modifier-Type Pressure Analysis}
+Two examples illustrate the pattern. In a recognition scenario, Gemma initially chooses team recognition for a profile high in universalism and benevolence. After adding a modifier stating that management prefers measurable results, the model switches to individual recognition and justifies the decision using managerial preference instead of the profile values. In a succession scenario, an authority modifier supporting the internal candidate flips the decision in that direction, even for profiles whose values otherwise favor the external candidate.
 
-We group the eight modifier axes into four pressure types to examine whether different kinds of situational pressure produce distinct decision-shift patterns:
-{\raggedright
-\begin{itemize}[leftmargin=*, noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
-  \item \emph{Stakes}: resource\_scarcity
-  \item \emph{Affective}: authority\_signal, social\_visibility, in\_out\_group
-  \item \emph{Personal-cost}: self\_preservation, time\_pressure
-  \item \emph{Informational}: diffused\_responsibility, competence\_uncertainty
-\end{itemize}\par}
-\vspace{-0.75em}
-Table~\ref{tab:modifier_type} reports the mean decision shift across all scenario-axis pairs, while Figure~4 shows how these shifts vary across systems and modifier axes.
-
-Humans react most to \emph{stakes} and \emph{affective} pressures, while Gemma and Qwen are more responsive to \emph{personal-cost} pressures. LLaMA 3.1 8B is relatively flat across categories. Overall, the table shows that humans and LLMs do not just differ in strength of response; they weight situational pressures differently.
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{fig_human_vs_llm_type.png}
-\caption{Mean decision shift (\%) by modifier category, humans (N=50) vs.\ the three LLMs. Humans react most to \emph{stakes} (resource scarcity) and \emph{affective} framings; mid-size LLMs invert this and react most to \emph{personal-cost} framings.}
-\label{fig:modifier_type}
-\end{figure}
-
-\begin{table}[t]
-\centering\footnotesize
-\setlength{\tabcolsep}{4pt}
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{@{}lrrrr@{}}
-\toprule
-\textbf{Type} & \textbf{Human} & \textbf{Gemma} & \textbf{Qwen} & \textbf{Llama8B} \\
-\midrule
-stakes (resource\_scarcity)       & \textbf{16.3\%} &  7.8\% &  4.7\% & 0.9\% \\
-affective (auth/social/in-out)    & \textbf{15.3\%} &  9.9\% &  6.2\% & 2.4\% \\
-personal-cost (self-pres/time)    & 10.6\%          &  9.7\% &  8.9\% & 2.6\% \\
-informational (diffused/comp)     &  6.1\%          &  7.2\% &  5.7\% & 1.5\% \\
-\bottomrule
-\end{tabular}%
-}
-\caption{Modifier-type pressure across systems. Humans place material stakes and affective framings well above personal-cost and informational ones; LLMs blur this distinction.}
-\label{tab:modifier_type}
-\end{table}
+We do not interpret these flips as evidence of better contextual reasoning. Instead, they suggest that even strongly value-aligned profiles remain sensitive to short authority and self-preservation cues. At the same time, we do not rule out alternative explanations, such as imperfections in the annotated vectors or richer additive formulations that were not tested. We therefore present this pattern as an important observation for further study rather than a confirmed failure mode.
 
 \subsection{Human Pilot Comparison}
 
-The human pilot ($N=50$, 500 decisions) shows a pooled between-subjects decision shift of $12.36\%$ (Table~\ref{tab:flip_rates}). Humans are more modifier-sensitive than any of the LLMs (LLaMA: 2.03\%, Qwen: 6.58\%, Gemma 4: 8.92\%).
+The human pilot study involved $50$ participants and a total of $500$ decisions. 
+The participant pool included 24 Engineering graduates, 14 Medical personnel, and 12 other profession individuals. There were $39$ participants in the 18-25 age group, $7$ participants in the 25-35 age group, and $2$ participants each in the 35-45 and 45+ age groups. The participants comprised 28 males and 22 females.
 
-\paragraph{Axis profile differs from LLMs.}
-The human \emph{ordering} of modifier importance diverges sharply from every LLM. Humans react most to \texttt{in\_out\_group} (21.2\%), \texttt{authority\_signal} (18.1\%), and \texttt{resource\_scarcity} (16.3\%); mid-scale LLMs instead concentrate their flips on \texttt{self\_preservation} and \texttt{authority\_signal}. Table~\ref{tab:human-spearman} reports Spearman rank correlations ($\rho$ = $+1$ identical axis ordering, $0$ unrelated) between the human per-axis ordering and each system:
+% The pilot study shows a pooled between-subjects decision shift of $12.36\%$ (cf. Table~\ref{tab:flip_rates}): each participant saw either the unmodified scenario or its modifier-augmented version, and we measure the change in the $A_1$-choice rate across the two arms.
+The pilot study shows a 12.36\% pooled shift in decisions (Table~\ref{tab:flip_rates}). 
+Humans are more modifier-sensitive than any of the LLMs (LLaMA: $2.03\%$, Qwen: $6.58\%$, Gemma 4: $8.92\%$), but still well below the additive utility baseline ($19.93\%$). This places human behavior roughly between the least sensitive LLM and the rule-based additive baseline. Even the most responsive LLM (Gemma 4) shows only about three-quarters of the preference-shift rate observed in humans.
 
-\begin{table}[h]
-\centering
-\small
-\begin{tabular}{lrr}
-\toprule
-System              & $\rho$  & $p$ \\
-\midrule
-LLaMA 3.1 8B        & $+0.29$ & 0.49 \\
-Gemma 4 31B         & $+0.16$ & 0.71 \\
-Qwen 2.5 32B        & $-0.05$ & 0.91 \\
-Additive utility    & $+0.60$ & 0.12 \\
-\bottomrule
-\end{tabular}
-\caption{Spearman rank correlation between human and system per-axis modifier impact (8 axes). No correlation reaches significance, but the additive utility baseline shows the closest rank match.}
-\label{tab:human-spearman}
-\end{table}
+% but less so than the additive utility baseline (19.93\%).
 
-\paragraph{Reading.}
-LLMs detect that modifiers matter, but redistribute the pressure across axes in a way that does not match the human profile. The closer (though still non-significant) match between humans and the utility baseline suggests that the human ordering, where present, is somewhat better explained by additive value-arithmetic than by any single LLM.
+% The human pilot ($N=50$, 500 decisions) shows a pooled between-subjects decision shift of $12.36\%$ (Table~\ref{tab:flip_rates}), placing humans well above LLaMA 3.1 8B (2.03\%) and above Qwen 2.5 32B (6.58\%), in the same range as Gemma 4 31B (8.92\%), and below the additive utility baseline (19.93\%). Per-axis, however, the human profile diverges sharply from every LLM: humans react most to in\_out\_group (21.2\%), authority\_signal (18.1\%) and resource\_scarcity (16.3\%), whereas mid-size LLMs concentrate their flips on self\_preservation and authority\_signal. Spearman rank correlations between the human per-axis ordering and each LLM are non-significant ($\rho = +0.16$ Gemma, $-0.05$ Qwen, $+0.29$ LLaMA 8B; all $p > 0.1$), while the additive utility baseline shows the strongest rank match with humans ($\rho = +0.60$). The takeaway is that LLMs detect that modifiers matter, but redistribute the pressure across axes in a way that does not match human sensitivity.
 
-% \subsection{Qualitative Error Analysis}
-% \label{sec:qualitative-main}
+\subsection{Paraphrase Noise Study}
+\label{sec:noise}
 
-% We manually inspected high-strength flips on the dominant LLM axes. In \texttt{SC003\_1} (team vs.\ individual recognition), Gemma shifted from team recognition to the individual contributor after management emphasized measurable results, reflecting authority- and achievement-driven reweighting. In \texttt{SC005\_1} (internal vs.\ external succession), an authority modifier reversed the model from hiring externally to promoting internally when continuity was endorsed by the outgoing leader. In \texttt{SC004\_2} (festival vs.\ maintenance), a conformity/security-heavy profile switched from volunteering for the festival to maintenance after a leader prioritized routine tasks.
+We evaluate four meaning-preserving paraphrases for a stratified sample of 95 baseline (VSW, scenario) cells per model to test whether decision flips are caused by prompt-paraphrase instability. We keep the value profile, candidate actions, response format, and decoding settings fixed. A noise flip is counted when a paraphrased scenario changes the original baseline decision.
 
-% These cases show that the flips are usually context-sensitive rather than random instability, meaning that a zero-flip model would be overly rigid. However, the aggregate axis rankings reveal a systematic mismatch: LLMs overweight authority and self-preservation, whereas humans respond more strongly to stakes and in-group framing. The issue is therefore not that LLMs flip, but that they flip for a different distribution of situational reasons.
-
+The noise rates are much lower than the modifier-induced flip rates in Table~2: 2.95\% vs.\ 8.92\% for Gemma 4 31B, 2.64\% vs.\ 6.58\% for Qwen 2.5 32B, and 0.00\% vs.\ 2.03\% for LLaMA 3.1 8B. A two-proportion z-test rejects equality for all three models ($z > 4.5$, $p < 10^{-5}$). This suggests that modifier-induced flips are not caused by surface-form sensitivity. In addition, paraphrase flips appear in only one scenario per model, while modifier-induced flips occur across all ten scenarios.
+Overall, the results show that the observed flips are driven by the modifier content rather than by paraphrase noise or surface-level prompt variation.
 \section{Conclusion}
 \label{sec:conclusion}
-Personal values are necessary but not sufficient predictors of action in LLMs and (provisionally) in humans. Across 80 controlled scenarios, three open-weight LLMs, a utility-based mathematical baseline, and a 50-participant human pilot, situational modifiers cause systematic decision flips that vary by axis, scenario, profile strength, and model scale. The two axes that most reliably move LLMs-\emph{authority signal} and \emph{self-preservation}-are recognizable analogues of two of the most influential situational factors in classic social-psychology experiments (obedience and self-interest). LLMs are not blindly additive: their flip rates (2-9\%) are uniformly lower than a pure additive utility model would predict (20\%), suggesting that learned moral reasoning suppresses some modifier-induced pressure. Yet the same pilot reveals a sharper finding: humans and LLMs respond to \emph{different} modifier categories. Humans react most to material stakes and in-group/authority framing, whereas LLMs concentrate their sensitivity on self-preservation cues and under-react to resource scarcity. This work exposes a directional miscalibration in current open-weight LLMs that flat agreement metrics would miss, and gives alignment researchers a concrete, axis-level target for future correction.
+Personal values are necessary but not sufficient predictors of action in LLMs and humans. Through the experiments we observed, the decision flips by situational modifiers vary by axis, scenario, profile strength, and model scale. 
+The experiments also show that different modifier categories influence humans and LLMs in different ways.
+% The experiments reveal a sharper finding: humans and LLMs respond to \emph{different} modifier categories. 
+The two axes that most reliably changed LLM decisions were \emph{authority signal} and \emph{self-preservation}.
+% , which resemble obedience and self-interest in classic social psychology.
+% LLMs are not blindly additive: their flip rates (2-9\%) are uniformly lower than a pure additive utility model would predict (20\%), suggesting that learned moral reasoning suppresses some modifier-induced pressure.
+Humans react most to \textit{ material stakes} and \textit{in-group/authority framing}.
+% , whereas LLMs concentrate their sensitivity on self-preservation cues and under-react to resource scarcity. 
+This work concludes the misalignment of value preferences in human and current open-weight LLMs. 
+% that flat agreement metrics would miss, and gives alignment researchers a concrete, axis-level target for future correction.
+
+% \section{Conclusion}
+% \label{sec:conclusion}
+% Personal values do not fully predict moral action. Holding value profiles fixed, situational modifiers flip decisions in LLMs (2-9\%), humans (12\%), and the utility baseline (20\%); the lower LLM rates show that learned moral reasoning damps some additive pressure. The sharper finding is directional: humans react most to \emph{stakes} and \emph{affective} framing, while LLMs concentrate on \emph{self-preservation} and under-react to resource scarcity. Current open-weight LLMs are therefore not state-blind but state-miscalibrated - an axis-level target that flat agreement metrics would miss.
+
 
 \section*{Limitations}
 \label{sec:limitations}
-\textbf{Open-weight models only.} Closed-weight frontier models (GPT-4, Claude, Gemini) may show different scale and modifier patterns, and may alter the human-LLM divergence we report.\\[2pt]
-\textbf{Sample diversity.} Data was collected from a convenience sample of college students, staff, and acquaintances, sharing a single educational and cultural context; broader replication is necessary before generality claims.\\[2pt]
-\textbf{Value taxonomy.} We use the classic Schwartz 10-value framework rather than the 19-value refined theory \citep{schwartz2012refined}; fine-grained distinctions (e.g., humility, face, societal vs.\ interpersonal conformity) collapse into broader categories and may obscure value-specific modifier effects.\\[2pt]
-\textbf{Modifier authorship.} Modifiers were authored by the research team across 8 categorical axes; this introduces selection bias. A crowdsourced or LLM-augmented modifier-generation procedure with adversarial validation is a clear next step.\\[2pt]
+\textbf{Open-weight models only.} Closed-weight frontier models (GPT-4, Claude, Gemini) may show different patterns with modifiers, and may alter the human-LLM divergence we report.\\[2pt]
+% \textbf{Sample diversity.} Data was collected from a convenience sample of college students, staff, and acquaintances, sharing a single educational and cultural context; broader replication is necessary before generality claims.\\[2pt]
+\textbf{Value taxonomy.} We use the classic Schwartz 10-value framework rather than the 19-value refined theory \citep{schwartz2012refined}; fine-grained distinctions (e.g., humility, face, societal vs.\ interpersonal conformity) collapse into broader categories and may alter value-specific modifier effects.\\[2pt]
+% \textbf{Modifier authorship.} Modifiers were authored by the research team across 8 categorical axes; this introduces selection bias. A crowdsourced or LLM-augmented modifier-generation procedure with adversarial validation is a clear next step.\\[2pt]
 \textbf{Binary value representation.} Real-world values are continuous; our binary encoding follows precedent \citep{sorensen2024value} but coarsens the signal, and pruning antagonism-violating combinations further constrains the profile space.
 
+\section*{AI usage Statement}
+The help of AI assistants was taken in writing the paper, due to our non-native skill in English language.
 \section*{Ethics Statement}
 \label{sec:ethics}
 
-The human study was approved by IIT Hyderabad institutional review and conducted under informed consent with the right to withdraw. Sessions took $\sim$12 minutes; we collected only coarse demographics (profession, gender, age band) and response data, with no personally identifying information. Participants were not deceived, and scenarios were pre-screened to avoid distressing content. Anonymized data and analysis code are released for replication. We report descriptive patterns of situational sensitivity and make no normative claim that any value or action is preferable.
+% The human study was approved by IIT Hyderabad institutional review and conducted under informed consent with the right to withdraw. Sessions took $\sim$12 minutes; we collected only coarse demographics (profession, gender, age band) and response data, with no personally identifying information. Participants were not deceived, and scenarios were pre-screened to avoid distressing content. Anonymized data and analysis code are released for replication. We report descriptive patterns of situational sensitivity and make no normative claim that any value or action is preferable.
+
+Participants voluntarily took part in the study with informed consent and the option to withdraw at any time. We collected only coarse demographic information (profession, gender, and age band) along with response data, with no personally identifiable information. Participants were not deceived, and scenarios were pre-screened to avoid distressing content. Anonymized data and analysis code are released for replication. We report descriptive patterns of situational sensitivity and make no normative claims about preferred values or actions.
 
 % =====================================================================
 % References and Appendix Section
@@ -626,7 +702,7 @@ The human study was approved by IIT Hyderabad institutional review and conducted
 % References and Appendix Section
 % =====================================================================
 
-\clearpage
+% \clearpage
 \bibliographystyle{acl_natbib}
 \bibliography{refs}
 
@@ -666,9 +742,9 @@ LLaMA 3.1 8B & self\_preservation & 0.723 & 2.06 & 0.014 \\
 
 For each LLM we fit a logistic regression predicting whether a trial produced a decision \emph{flip} with fixed effects for person and scenario and categorical predictors for each modifier axis. Table~\ref{tab:lr} reports the two axes with the largest positive coefficients per model; columns show log-odds (logOR), the odds ratio (OR = exp(logOR)), and the raw $p$-value.
 
-\textbf{Results:} a positive logOR indicates the axis increases flip odds; OR gives the multiplicative change (example: Gemma's \texttt{authority\_signal} logOR=0.565 → OR≈1.76, i.e., ≈76\% higher odds of flipping when an authority cue is present). Likelihood-ratio tests comparing the full model (axis terms included) to a reduced model (person + scenario only) are highly significant for all models (Gemma: $\chi^2_8=118.74$, $p\approx6\times10^{-22}$; Qwen: $\chi^2_8=75.28$, $p\approx4.3\times10^{-13}$; LLaMA: $\chi^2_8=30.70$, $p\approx1.6\times10^{-4}$), indicating axis predictors add explanatory power.
+\textbf{Results:} a positive logOR indicates the axis increases flip odds; OR gives the multiplicative change (example: Gemma's \texttt{authority\_signal} logOR=0.565 $\rightarrow$ OR$\approx$1.76, i.e., $\approx$76\% higher odds of flipping when an authority cue is present). Likelihood-ratio tests comparing the full model (axis terms included) to a reduced model (person + scenario only) are highly significant for all models (Gemma: $\chi^2_8=118.74$, $p\approx6\times10^{-22}$; Qwen: $\chi^2_8=75.28$, $p\approx4.3\times10^{-13}$; LLaMA: $\chi^2_8=30.70$, $p\approx1.6\times10^{-4}$), indicating axis predictors add explanatory power.
 
-\textbf{Interpretation and reporting:} reported effects are moderate (ORs ≈1.3–2.1) — modifiers substantially increase flip odds but do not deterministically produce flips. 
+\textbf{Interpretation and reporting:} reported effects are moderate (ORs $\approx$1.3–2.1) — modifiers substantially increase flip odds but do not deterministically produce flips. 
 
 \section{Profile-Strength Breakdown}
 \label{app:strength}
@@ -694,7 +770,7 @@ For each LLM we fit a logistic regression predicting whether a trial produced a 
 \label{tab:strength}
 \end{table}
 
-The two large models (Gemma and Qwen) show a roughly increasing flip rate with profile strength, peaking at strength~8 - precisely the regime where a utility-based decision rule has no degrees of freedom to flip. LLaMA~3.1~8B does not exhibit this pattern; its flip rate is uniformly low and decreases with strength.
+The two models (Gemma and Qwen) show a roughly increasing flip rate with profile strength, peaking at strength~8 - precisely the regime where a utility-based decision rule has no degrees of freedom to flip. LLaMA~8B does not exhibit this pattern; its flip rate is uniformly low and decreases with strength.
 
 \begin{table}[t]
 \centering
@@ -722,12 +798,12 @@ SC005\_2 & 20.0 &  6.8 &  3.4 & 1.3 & 11.1 \\
 \label{tab:per_scenario}
 \end{table}
 
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.95\textwidth]{per_scenario_flip_rates.png}
+\includegraphics[width=\columnwidth]{per_scenario_flip_rates.png}
 \caption{Per-scenario flip rates across systems. The utility-based mathematical baseline (DP) is uniformly above all LLMs; human per-scenario $|\Delta P(A1)|$ values are reported in Table~\ref{tab:per_scenario}.}
 \label{fig:per_scenario}
-\end{figure*}
+\end{figure}
 
 \section{Human Pilot: Per-Cell Decision Shift}
 \label{app:human_cells}
@@ -827,10 +903,10 @@ Two observations follow. First, humans and Gemma are well-matched on \texttt{aut
 
 % The pooled mean drops modestly (12.4\% $\rightarrow$ 9.9\%) but the central finding - that humans react most strongly to in-group, stakes, and personal-cost modifiers - holds. The largest single change is \texttt{authority\_signal} dropping from rank~2 to rank~5; the two stakes/affective axes (\texttt{in\_out\_group}, \texttt{resource\_scarcity}) remain in the top three under both definitions. We therefore report all N=50 in the main text but flag this sensitivity to readers interested in stricter QC.
 
-\section{Paraphrase Noise Floor: Full Results}
+\section{Paraphrase Noise Study:}
 \label{app:noise}
 
-To verify that modifier-induced flips are not artefacts of surface-form sensitivity, we sample 94 baseline $(\Vsw,\text{scenario})$ cells per model and generate four meaning-preserving paraphrases per cell, holding the value profile, action set, decoding settings (\texttt{do\_sample=False}, \texttt{top\_p=0.95}, temperature $=0$), and response format fixed. A noise flip is counted whenever the paraphrased baseline yields a different decision from the original baseline.
+To verify that modifier-induced flips are not artefacts of surface-form sensitivity, we sample 95 baseline $(\Vsw,\text{scenario})$ cells per model and generate four meaning-preserving paraphrases per cell, holding the value profile, action set, decoding settings (\texttt{do\_sample=False}, temperature $=0$), and response format fixed. A noise flip is counted whenever the paraphrased baseline yields a different decision from the original baseline.
 
 \begin{table}[t]
 \centering
@@ -864,8 +940,8 @@ Paraphrase flips are also \emph{localized}: for every model, the 28 (or 25, or 0
  & \textbf{Gemma 31B} & \textbf{Qwen 32B} & \textbf{Llama 8B} \\
 \hline
 Gemma 31B & 1.00 & 0.66 & 0.18 \\
-Qwen 32B  & 0.66 & 1.00 & 0.49 \\
-Llama 8B  & 0.18 & 0.49 & 1.00 \\
+Qwen  32B & 0.66 & 1.00 & 0.49 \\
+Llama 8B & 0.18 & 0.49 & 1.00 \\
 \hline
 \end{tabular}
 \caption{Pairwise Spearman $\rho$ across the per-axis (8-axis) flip-rate ordering of each LLM. The two $\geq 30$B models (Gemma, Qwen) agree closely; LLaMA 3.1 8B is an outlier, consistent with the scale finding.}
@@ -910,29 +986,32 @@ At strength~$\geq 8$ the additive baseline is \emph{locked}: the dot-product mar
 \section{Qualitative Examples}
 \label{app:qualitative}
 
-\paragraph{Example 1 (Gemma 4 31B, \texttt{authority\_signal}, $A_0 \to A_1$).}
+\paragraph{Example 1 (Gemma , \texttt{authority\_signal}, $A_0 \to A_1$).}
 Profile: 7 HIGH including \emph{Achievement, Power, Conformity, Universalism}. Scenario SC003\_1 (team vs.\ individual recognition). Baseline decision: $A_0$ (recognize the entire team). Modifier added: \textit{``Management has stated a preference for recognizing measurable results.''} Modified decision: $A_1$ (recognize the top individual contributor). Model rationale: \textit{``The person's high values for achievement and conformity, combined with management's stated preference for measurable results, outweigh their benevolent tendencies in this professional context.''}
 
-\paragraph{Example 2 (Gemma 4 31B, \texttt{authority\_signal}, $A_1 \to A_0$).}
+\paragraph{Example 2 (Gemma , \texttt{authority\_signal}, $A_1 \to A_0$).}
 Profile: 5 HIGH including \emph{Conformity, Universalism}. Scenario SC005\_1 (internal vs.\ external candidate). Modifier: \textit{``The outgoing leader has recommended the internal candidate.''} Baseline $A_1$ (hire external) $\to$ modified $A_0$ (promote internal). Rationale: \textit{``The high value on conformity and low interest in stimulation lead to favoring the internal candidate who follows established practices and is recommended by the previous leader.''} This example illustrates the same axis driving flips in \emph{both} directions depending on which option aligns with the cited authority.
 
-\paragraph{Example 3 (Gemma 4 31B, \texttt{authority\_signal}, $A_0 \to A_1$).}
+\paragraph{Example 3 (Gemma , \texttt{authority\_signal}, $A_0 \to A_1$).}
 Profile: 6 HIGH including \emph{Conformity, Tradition, Security}. Scenario SC004\_2 (festival vs.\ maintenance). Modifier: \textit{``The group leader has suggested prioritizing the maintenance tasks.''} Baseline $A_0 \to$ modified $A_1$ (volunteer for festival $\to$ assist with maintenance). Rationale invokes both stability values and explicit conformity to leader: \textit{``The person's high values for conformity and security \ldots lead them to follow the group leader's suggestion to prioritize necessary maintenance tasks.''}
 
-\onecolumn
 \section{Modifier Strength Sensitivity ($\lambda$ Sweep)}
 \label{app:lambda_sweep}
 
-To justify the choice of $\lambda = 0.5$ in Section~\ref{sec:utility}, we sweep $\lambda$ over $[0,1]$ on the full 7{,}600-trial utility-baseline grid (95 profiles $\times$ 10 scenarios $\times$ 8 modifier axes) and record the resulting flip rate. Because profile weights $\mathbf{V}_{sw}\in\{0,1\}^{10}$ and per-action alignments are both binary, baseline utility margins $U(A_0)-U(A_1)$ are integers in $\{-2,-1,0,+1,+2\}$, and the modifier-induced shift in a side's score is bounded by $\lambda\,|\mathcal{P}_m|$, where $\mathcal{P}_m$ is the set of pressured Schwartz values for modifier $m$ (typically $|\mathcal{P}_m|\!\in\!\{1,2\}$). A flip therefore requires the perturbation to cross an integer score gap, which makes the flip rate a step function of $\lambda$ rather than a smooth curve.
+This appendix explains why we set the modifier strength to $\lambda = 0.5$ in Section~\ref{sec:utility}.
 
-Table~\ref{tab:lambda_sweep} reports flip counts on a finer grid spanning the breakpoints. The sweep exposes exactly three plateaus:
+\paragraph{What we did.} We re-ran the utility baseline on all 7{,}600 trials (95 profiles $\times$ 10 scenarios $\times$ 8 modifiers) for several values of $\lambda$ between $0$ and $1$, and recorded the overall flip rate.
+
+\paragraph{What we found.} The flip rate does not change smoothly with $\lambda$. Instead, it stays flat over wide ranges and jumps at two specific points (Table~\ref{tab:lambda_sweep}):
 \begin{itemize}[leftmargin=*, noitemsep, topsep=2pt, partopsep=0pt, parsep=0pt]
-  \item $\lambda \in (0, 0.5)$ -- flip rate $17.38\%$. The boost is too small to flip any 1-margin decision; flips occur only where the baseline is an exact tie.
-  \item $\lambda \in [0.5, 1.0)$ -- flip rate $19.93\%$. A two-value pressure ($|\mathcal{P}_m|=2$) now contributes at least $2\lambda \geq 1.0$ and can cross a unit margin; single-value pressures still cannot.
-  \item $\lambda = 1.0$ -- flip rate $35.30\%$. A single pressured low value is boosted all the way to $1.0$, so $|\mathcal{P}_m|=1$ pressures also cross unit margins, and the modifier becomes functionally indistinguishable from upgrading the profile itself.
+  \item For $\lambda$ below $0.5$: flip rate is $17.38\%$. The modifier is too weak to change any decision unless the two actions were already tied.
+  \item For $\lambda$ between $0.5$ and $1.0$: flip rate is $19.93\%$. The modifier is now strong enough to flip decisions where one action was leading by one point, but only when the modifier pressures two values at once.
+  \item At $\lambda = 1.0$: flip rate jumps to $35.30\%$. Even a single pressured value is boosted all the way to its maximum, which makes the modifier just as influential as the underlying value profile.
 \end{itemize}
 
-We adopt $\lambda = 0.5$ as the smallest value entering the moderate-pressure plateau: large enough to register substantive (two-value) contextual pressure on non-tied profiles, while preserving an asymmetry between modifier-driven pressure and intrinsic profile weight, which collapses at $\lambda = 1$. The companion script that produced these numbers and the raw per-axis breakdown are released with the code at \texttt{tools/lambda\_sweep.py} and \texttt{outputs/lambda\_sweep.json}.
+\paragraph{Why the jumps happen.} Every value in our setup is either $0$ or $1$, so each action's score is a small integer ($0$, $1$, or $2$). A modifier can only flip a decision if it pushes one action's score past the other's, and that requires crossing a whole integer step. This is why $\lambda$ behaves like a threshold rather than a dial.
+
+\paragraph{Why we picked $\lambda = 0.5$.} It is the smallest value in the middle range, where the modifier is strong enough to change real (non-tied) decisions, but not so strong that it overrides the value profile itself (which happens at $\lambda = 1.0$). The script that produced these numbers is released at \texttt{tools/lambda\_sweep.py}, with raw outputs in \texttt{outputs/lambda\_sweep.json}.
 
 \begin{table}[t]
 \centering\footnotesize
@@ -954,7 +1033,7 @@ $\lambda$ & Trials & Flips & Flip rate \\
 1.00        & 7{,}600 & 2{,}683 & 35.30\% \\
 \bottomrule
 \end{tabular}
-\caption{Utility-baseline flip rate as a function of modifier strength $\lambda$ across the full 7{,}600-trial grid. The flip rate is piecewise constant with breakpoints exactly at $\lambda = 0.5$ and $\lambda = 1.0$. The selected value $\lambda = 0.5$ is the entry of the moderate plateau.}
+\caption{Flip rate of the utility baseline as the modifier strength $\lambda$ varies. The rate is flat over wide ranges of $\lambda$ and jumps only at $0.5$ and $1.0$. We use $\lambda = 0.5$.}
 \label{tab:lambda_sweep}
 \end{table}
 
@@ -1446,6 +1525,39 @@ FORMATTING RULES
    - prose outside JSON
 \end{lstlisting}
 
+\section{Human Study: Value Trade-offs}
+\label{app:block_b}
+
+After the PVQ-21 questions, participants answered six forced-choice items. Each item shows two short statements that reflect different Schwartz values, and the participant must pick the one that feels more important to them.
+
+\paragraph{Instruction shown to participants.}
+\begin{quote}\itshape
+For each pair below, pick the one that is more important to you. Both may feel important - but please choose only one.
+\end{quote}
+
+The six pairs are listed in Table~\ref{tab:block_b}. Each pair targets one value-vs-value choice (for example, B1 asks the participant to choose between Tradition and Self-Direction).
+
+\begin{table*}[t]
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}c p{0.32\linewidth} p{0.32\linewidth} p{0.22\linewidth}@{}}
+\toprule
+\textbf{\#} & \textbf{Option A} & \textbf{Option B} & \textbf{Values compared} \\
+\midrule
+Q1 & Following the traditions I grew up with & Choosing my own path, even if it goes against tradition & Tradition vs.\ Self-Direction \\
+Q2 & Feeling safe in my daily life & Having new experiences and adventures & Security vs.\ Stimulation \\
+Q3 & Being known as successful in my field & Helping people close to me, even if no one notices & Achievement vs.\ Benevolence \\
+Q4 & Having power and influence over others & Working for fairness and equal rights for everyone & Power vs.\ Universalism \\
+Q5 & Behaving properly and meeting what others expect & Enjoying life and having fun & Conformity vs.\ Hedonism \\
+Q6 & Being humble and not seeking attention & Showing my skills so others recognize me & Tradition vs.\ Achievement \\
+\bottomrule
+\end{tabular}
+\caption{The six forced-choice items shown to participants.}
+\label{tab:block_b}
+\end{table*}
+
+We use answers with the PVQ-21 scores to set each participant's final binary value profile (HIGH or LOW on each of the ten Schwartz values) used in Section~\ref{sec:analysis}.
+
 
 \end{document}
-

@@ -1,9 +1,9 @@
 ,mean_rank_LLMs,median_rank_LLMs,sd_rank_LLMs,min_rank_LLMs,max_rank_LLMs,dot_product_rank,dp_minus_llm_mean
-authority_signal,1.25,1.0,0.5,1,2,1,-0.25
-self_preservation,1.5,1.5,0.5773502691896257,1,2,6,4.5
-competence_uncertainty,4.5,4.5,1.2909944487358056,3,6,4,-0.5
-resource_scarcity,5.0,4.5,2.449489742783178,3,8,5,0.0
-in_out_group,5.25,5.5,0.9574271077563381,4,6,2,-3.25
-diffused_responsibility,5.5,5.5,1.7320508075688772,4,7,8,2.5
-time_pressure,6.0,6.5,2.449489742783178,3,8,7,1.0
-social_visibility,6.25,6.5,1.707825127659933,4,8,3,-3.25
+authority_signal,1.5,1.5,0.5345224838248488,1,2,1,-0.5
+self_preservation,1.5,1.0,0.7559289460184544,1,3,6,4.5
+resource_scarcity,4.75,4.5,1.8322507626258087,3,8,5,0.25
+competence_uncertainty,5.0,4.5,1.6035674514745464,3,8,4,-1.0
+diffused_responsibility,5.125,5.0,1.807721533549109,2,7,8,2.875
+in_out_group,5.25,5.5,1.4880476182856899,3,7,2,-3.25
+social_visibility,5.75,6.0,1.9086270308410553,3,8,3,-2.75
+time_pressure,6.5,7.0,1.8516401995451028,3,8,7,0.5

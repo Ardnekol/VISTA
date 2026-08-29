@@ -32,6 +32,10 @@ MODELS = {
     "Qwen 2.5 32B":  OUT_DIR / "outputs" / "master_llm_decisions_qwen.csv",
     "Gemma 4 31B":   OUT_DIR / "master_llm_decisions_gemma4.csv",
     "Llama 3.1 8B":  OUT_DIR / "master_llm_decisions_llama_8B.csv",
+    "Haiku 4.5":     OUT_DIR / "master_llm_decisions_haiku.csv",
+    "GPT-4.1-mini":  OUT_DIR / "master_llm_decisions_gpt41mini.csv",
+    "GPT-5-mini":    OUT_DIR / "master_llm_decisions_gpt5mini.csv",
+    "Sonnet 5":      OUT_DIR / "master_llm_decisions_sonnet.csv",
 }
 
 REPORT_PATH = OUT_DIR / "step3_mcnemar_report.txt"

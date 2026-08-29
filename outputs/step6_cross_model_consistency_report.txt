@@ -14,31 +14,57 @@ W ranges from 0 (no agreement) to 1 (perfect agreement).
 Chi-squared test asks: 'is the observed agreement higher than chance?'
 
   Across 4 LLMs only:
-    W = 0.634   chi2(7) = 17.74   p = 0.013176
+    W = 0.590   chi2(7) = 33.04   p = 0.000026
   Including dot-product (5 'raters'):
-    W = 0.521   chi2(7) = 18.23   p = 0.010978
+    W = 0.522   chi2(7) = 32.91   p = 0.000028
 
-  -> Adding dot-product REDUCES agreement (W drops from 0.634 to 0.521). Dot-product is the outlier.
+  -> Adding dot-product REDUCES agreement (W drops from 0.590 to 0.522). Dot-product is the outlier.
 
 --------------------------------------------------------------------------------------------
 PAIRWISE SPEARMAN MATRIX (LLMs only)
 --------------------------------------------------------------------------------------------
 
-                        Llama 3.3 70B    Qwen 2.5 32B     Gemma 4 31B    Llama 3.1 8B
-  Llama 3.3 70B                 1.000           0.542           0.850           0.313
-  Qwen 2.5 32B                  0.542           1.000           0.659           0.488
-  Gemma 4 31B                   0.850           0.659           1.000           0.180
-  Llama 3.1 8B                  0.313           0.488           0.180           1.000
+                        Llama 3.3 70B    Qwen 2.5 32B     Gemma 4 31B    Llama 3.1 8B       Haiku 4.5    GPT-4.1-mini      GPT-5-mini        Sonnet 5
+  Llama 3.3 70B                 1.000           0.542           0.850           0.313           0.898           0.587           0.735           0.482
+  Qwen 2.5 32B                  0.542           1.000           0.659           0.488           0.671           0.180           0.590           0.602
+  Gemma 4 31B                   0.850           0.659           1.000           0.180           0.929           0.429           0.778           0.743
+  Llama 3.1 8B                  0.313           0.488           0.180           1.000           0.180           0.683           0.410           0.235
+  Haiku 4.5                     0.898           0.671           0.929           0.180           1.000           0.452           0.647           0.695
+  GPT-4.1-mini                  0.587           0.180           0.429           0.683           0.452           1.000           0.599           0.299
+  GPT-5-mini                    0.735           0.590           0.778           0.410           0.647           0.599           1.000           0.367
+  Sonnet 5                      0.482           0.602           0.743           0.235           0.695           0.299           0.367           1.000
 
-  Mean pairwise Spearman (upper triangle, 6 pairs): rho = 0.505
+  Mean pairwise Spearman (upper triangle, 6 pairs): rho = 0.544
 
   Pairwise details:
     Llama 3.3 70B      vs Qwen 2.5 32B        rho =  0.542   p = 0.1651  ns
     Llama 3.3 70B      vs Gemma 4 31B         rho =  0.850   p = 0.0075  **
     Llama 3.3 70B      vs Llama 3.1 8B        rho =  0.313   p = 0.4499  ns
+    Llama 3.3 70B      vs Haiku 4.5           rho =  0.898   p = 0.0024  **
+    Llama 3.3 70B      vs GPT-4.1-mini        rho =  0.587   p = 0.1262  ns
+    Llama 3.3 70B      vs GPT-5-mini          rho =  0.735   p = 0.0378  *
+    Llama 3.3 70B      vs Sonnet 5            rho =  0.482   p = 0.2265  ns
     Qwen 2.5 32B       vs Gemma 4 31B         rho =  0.659   p = 0.0757  ns
     Qwen 2.5 32B       vs Llama 3.1 8B        rho =  0.488   p = 0.2199  ns
+    Qwen 2.5 32B       vs Haiku 4.5           rho =  0.671   p = 0.0687  ns
+    Qwen 2.5 32B       vs GPT-4.1-mini        rho =  0.180   p = 0.6703  ns
+    Qwen 2.5 32B       vs GPT-5-mini          rho =  0.590   p = 0.1234  ns
+    Qwen 2.5 32B       vs Sonnet 5            rho =  0.602   p = 0.1140  ns
     Gemma 4 31B        vs Llama 3.1 8B        rho =  0.180   p = 0.6703  ns
+    Gemma 4 31B        vs Haiku 4.5           rho =  0.929   p = 0.0009  ***
+    Gemma 4 31B        vs GPT-4.1-mini        rho =  0.429   p = 0.2894  ns
+    Gemma 4 31B        vs GPT-5-mini          rho =  0.778   p = 0.0229  *
+    Gemma 4 31B        vs Sonnet 5            rho =  0.743   p = 0.0349  *
+    Llama 3.1 8B       vs Haiku 4.5           rho =  0.180   p = 0.6703  ns
+    Llama 3.1 8B       vs GPT-4.1-mini        rho =  0.683   p = 0.0621  ns
+    Llama 3.1 8B       vs GPT-5-mini          rho =  0.410   p = 0.3135  ns
+    Llama 3.1 8B       vs Sonnet 5            rho =  0.235   p = 0.5754  ns
+    Haiku 4.5          vs GPT-4.1-mini        rho =  0.452   p = 0.2604  ns
+    Haiku 4.5          vs GPT-5-mini          rho =  0.647   p = 0.0831  ns
+    Haiku 4.5          vs Sonnet 5            rho =  0.695   p = 0.0559  ns
+    GPT-4.1-mini       vs GPT-5-mini          rho =  0.599   p = 0.1168  ns
+    GPT-4.1-mini       vs Sonnet 5            rho =  0.299   p = 0.4713  ns
+    GPT-5-mini         vs Sonnet 5            rho =  0.367   p = 0.3705  ns
 
 --------------------------------------------------------------------------------------------
 PER-AXIS AGREEMENT ACROSS LLMs
@@ -47,14 +73,14 @@ Low SD of rank across LLMs = strong cross-model agreement on that axis.
 Sorted by mean LLM rank (top-flippers first).
 
   axis                        mean_rk   sd_rk   min   max   dp_rk   dp-llm
-  authority_signal               1.25    0.50     1     2       1    -0.25
-  self_preservation              1.50    0.58     1     2       6    +4.50
-  competence_uncertainty         4.50    1.29     3     6       4    -0.50
-  resource_scarcity              5.00    2.45     3     8       5    +0.00
-  in_out_group                   5.25    0.96     4     6       2    -3.25
-  diffused_responsibility        5.50    1.73     4     7       8    +2.50
-  time_pressure                  6.00    2.45     3     8       7    +1.00
-  social_visibility              6.25    1.71     4     8       3    -3.25
+  authority_signal               1.50    0.53     1     2       1    -0.50
+  self_preservation              1.50    0.76     1     3       6    +4.50
+  resource_scarcity              4.75    1.83     3     8       5    +0.25
+  competence_uncertainty         5.00    1.60     3     8       4    -1.00
+  diffused_responsibility        5.12    1.81     2     7       8    +2.88
+  in_out_group                   5.25    1.49     3     7       2    -3.25
+  social_visibility              5.75    1.91     3     8       3    -2.75
+  time_pressure                  6.50    1.85     3     8       7    +0.50
 
   Interpretation:
     sd_rk < 1.0   -> very strong cross-model agreement on this axis
@@ -66,7 +92,6 @@ CONSENSUS CALLS
 
   Axes ranked TOP-2 in ALL 4 LLMs:
     - authority_signal
-    - self_preservation
 
   Axes ranked BOTTOM-2 in ALL 4 LLMs:
     (none)
@@ -77,9 +102,9 @@ WHAT TO WRITE IN THE PAPER
 
 Suggested sentence:
   "Modifier importance is highly consistent across four LLMs from
-  three independent labs (Kendall's W = 0.634, chi2(7) = 17.7, p = 0.0132; mean pairwise
-  Spearman rho = 0.505). Adding the dot-product rule-based
-  baseline reduces agreement to W = 0.521, indicating that
+  three independent labs (Kendall's W = 0.590, chi2(7) = 33.0, p = 0.0000; mean pairwise
+  Spearman rho = 0.544). Adding the dot-product rule-based
+  baseline reduces agreement to W = 0.522, indicating that
   LLMs share a decision rule that differs from value arithmetic."
 
 ============================================================================================
