@@ -165,14 +165,14 @@ point of the moderate-pressure plateau. Reproduce with [`tools/lambda_sweep.py`]
 
 | System | Access | Runner script |
 |:-------|:-------|:--------------|
-| Gemma 4 31B-Instruct | Open-weight, local Ollama | `llm_decision_analysis.py` |
-| Qwen 2.5 32B-Instruct | Open-weight, local Ollama | `llm_decision_analysis_qwen.py` |
-| LLaMA 3.1 8B-Instruct | Open-weight, local Ollama | `llm_decision_analysis_llama.py` |
-| Claude Haiku 4.5 | Hosted API | `run_batch_haiku.py` |
-| Claude Sonnet 5 | Hosted API | `run_batch_sonnet.py` |
-| GPT-4.1-mini | Hosted API | `run_batch_gpt41mini.py` |
-| GPT-5-mini | Hosted API | `run_batch_gpt5mini.py` |
-| Utility baseline (dot product) | Analytic | `value_decision_analysis.py` |
+| Gemma 4 31B-Instruct | Open-weight, local Ollama | `config/llm_decision_analysis.py` |
+| Qwen 2.5 32B-Instruct | Open-weight, local Ollama | `config/llm_decision_analysis_qwen.py` |
+| LLaMA 3.1 8B-Instruct | Open-weight, local Ollama | `config/llm_decision_analysis_llama.py` |
+| Claude Haiku 4.5 | Hosted API | `config/run_batch_haiku.py` |
+| Claude Sonnet 5 | Hosted API | `config/run_batch_sonnet.py` |
+| GPT-4.1-mini | Hosted API | `config/run_batch_gpt41mini.py` |
+| GPT-5-mini | Hosted API | `config/run_batch_gpt5mini.py` |
+| Utility baseline (dot product) | Analytic | `config/value_decision_analysis.py` |
 | Human pilot (N = 50) | Questionnaire | `human_study/` |
 
 Open-weight models were served on 4× NVIDIA A100 nodes through a local
@@ -251,54 +251,66 @@ VISTA/
 │   └── profile_description*.json     #   natural-language profile renderings
 │
 ├── Prompts/                          # GENERATION PROMPTS (verbatim, as in the appendix)
-│   ├── Themes.txt · Scenarios.txt · Modifiers.txt · "Decision Evaluation.txt"
+│   └── Themes.txt · Scenarios.txt · Modifiers.txt · "Decision Evaluation.txt"
 │
-├── llm_decision_analysis.py          # RUNNERS — open-weight (Gemma) via Ollama
-├── llm_decision_analysis_qwen.py     #   Qwen 2.5 32B
-├── llm_decision_analysis_llama.py    #   LLaMA 3.1 8B
-├── run_batch_haiku.py                # RUNNERS — closed models via hosted APIs
-├── run_batch_sonnet.py
-├── run_batch_gpt41mini.py
-├── run_batch_gpt5mini.py
-├── value_decision_analysis.py        # Utility (dot-product) baseline
-├── merge_and_analyze.py              # Merge batch outputs → master_llm_decisions_*.csv
+├── config/                           # ALL RUNNERS & ANALYSIS CODE
+│   ├── config.py                     #   shared constants
+│   │
+│   ├── llm_decision_analysis.py      #   RUNNERS — open-weight via Ollama (Gemma)
+│   ├── llm_decision_analysis_qwen.py #     Qwen 2.5 32B
+│   ├── llm_decision_analysis_llama.py#     LLaMA 3.1 8B
+│   ├── run_batch_haiku.py            #   RUNNERS — closed models via hosted APIs
+│   ├── run_batch_sonnet.py
+│   ├── run_batch_gpt41mini.py
+│   ├── run_batch_gpt5mini.py
+│   ├── run_all_batches.py            #   batch orchestration
+│   ├── value_decision_analysis.py    #   utility (dot-product) baseline
+│   ├── merge_and_analyze.py          #   merge batches → master_llm_decisions_*.csv
+│   │
+│   ├── step2_impossible_flips.py     #   ANALYSIS — rule-inconsistent flips
+│   ├── step3_mcnemar.py              #     McNemar exact tests + BH-FDR
+│   ├── step4_mixed_effects.py        #     logistic regression (person + scenario FE)
+│   ├── step5_axis_ranking.py         #     axis-ranking divergence
+│   ├── step6_cross_model_consistency.py #  Kendall's W + pairwise Spearman
+│   ├── step7_scale_effect.py         #     scale effects
+│   ├── step8_qualitative_audit.py    #     strong-profile flip audit
+│   │
+│   ├── make_fig_*.py · make_heatmaps_separate.py · make_figures_extended.py
+│   └── *.sh                          #   SLURM / loop submission helpers
 │
-├── step2_impossible_flips.py         # ANALYSIS — rule-inconsistent flips
-├── step3_mcnemar.py                  #   McNemar exact tests + BH-FDR
-├── step4_mixed_effects.py            #   Logistic regression (person + scenario fixed effects)
-├── step5_axis_ranking.py             #   Axis-ranking divergence
-├── step6_cross_model_consistency.py  #   Kendall's W + pairwise Spearman
-├── step7_scale_effect.py             #   Scale effects
-├── step8_qualitative_audit.py        #   Strong-profile flip audit
-│
-├── tools/                            # FIGURES & TABLES
+├── tools/                            # FIGURES & DERIVED TABLES
 │   ├── lambda_sweep.py               #   λ sensitivity sweep for the utility baseline
-│   ├── compute_human_flips.py        #   Human |ΔP(A1)| per cell
+│   ├── compute_human_flips.py        #   human |ΔP(A1)| per cell
+│   ├── compute_kappa_and_tables.py   #   agreement statistics
 │   ├── per_scenario_table.py · plot_per_scenario.py
-│   └── make_*_figure*.py             #   Paper figures
+│   └── make_*_figure*.py · make_*_circumplex.py
 │
 ├── human_study/                      # HUMAN PILOT (N = 50)
 │   ├── instruments.md                #   PVQ-21, 6 trade-offs, SDS-10
-│   ├── forms/F1.json · forms/F2.json #   The two counterbalanced forms
-│   ├── analysis_ready.csv            #   Anonymised responses
-│   ├── human_binary_profiles.csv     #   Derived binary Schwartz profiles
-│   ├── results/                      #   Per-axis / per-type / per-cell outputs
-│   └── tools/                        #   Form building, binarisation, analysis
+│   ├── forms/F1.json · forms/F2.json #   the two counterbalanced forms
+│   ├── analysis_ready.csv            #   anonymised responses
+│   ├── human_binary_profiles.csv     #   derived binary Schwartz profiles
+│   ├── decisions.csv · value_profiles.csv
+│   ├── results/                      #   per-axis / per-type / per-cell outputs
+│   └── tools/                        #   form building, binarisation, analysis (Python + R)
 │
-├── paper_steps/step1_scripts/        # PARAPHRASE NOISE CONTROL
-│   └── step1_rerun_paraphrases_ollama.py
+├── paper_steps/                      # PARAPHRASE NOISE CONTROL (Appendix F)
+│   ├── step1_scripts/                #   paraphrase generation & re-run
+│   └── step1_results/                #   baseline samples, paraphrases, noise summaries
 │
 ├── outputs/                          # ALL RESULTS
 │   ├── master_llm_decisions_*.csv    #   8,550 rows per system (950 baseline + 7,600 modifier)
-│   ├── step3_mcnemar_table.csv       #   Per-(model, axis) tests
-│   ├── step4_axis_coefficients.csv   #   Logistic-regression coefficients
-│   ├── step6_*                       #   Cross-model consistency
-│   └── figs_separate/                #   Per-model heatmaps
+│   ├── outputs/                      #   Qwen 2.5 32B + Llama 3.3 70B master files
+│   ├── step2..step8 *.csv / *.txt    #   statistical analysis outputs
+│   ├── figs_separate/                #   per-model heatmaps + TDL.pdf (paper figures)
+│   ├── fig_per_scenario_all.png      #   per-scenario heatmap across all systems
+│   ├── fig_spider_all.png · modifier_type_plot.png
+│   └── *_results_report.md           #   per-model run reports
 │
 └── paper_versions/                   # PAPER SOURCE
     ├── camera_ready.tex              #   ← the current version
     ├── refs.bib
-    └── fig_*.png · heatmap_*.png
+    └── acl.sty · acl_natbib.bst
 ```
 
 ### Result-file schema
@@ -323,9 +335,9 @@ d = d[d.condition != "BASELINE"]
 print((d.llm_changed_from_baseline == "YES").mean() * 100)   # 10.83
 ```
 
-> **Legacy directories.** `stage1_value_inference/`, `stage2_action_selection/`, and
-> `simulation/` belong to an earlier RoBERTa/DeBERTa prototype and are **not** part of this
-> paper's pipeline. They are kept for history only.
+> **Note on `config/`.** Despite the name, `config/` holds the full pipeline — the model
+> runners, the utility baseline, the merge step, and the `step2`–`step8` analyses — not just
+> configuration. `config/config.py` is the shared-constants module.
 
 ---
 
@@ -356,31 +368,35 @@ files, so **the full analysis can be reproduced without re-querying any model.**
 
 ```bash
 # 1. Statistics (Appendix B)
-python3 step3_mcnemar.py            # McNemar exact tests + BH-FDR      → Table 6
-python3 step4_mixed_effects.py      # Logistic regression               → Table 7
+python3 config/step3_mcnemar.py          # McNemar exact tests + BH-FDR      → Table 6
+python3 config/step4_mixed_effects.py    # Logistic regression               → Table 7
 
 # 2. Structure (Sections 5.5–5.7, Appendices G–H)
-python3 step6_cross_model_consistency.py   # Kendall's W, Spearman      → Tables 4, 13
-python3 step2_impossible_flips.py          # Rule-inconsistent flips    → Tables 6, 14
+python3 config/step6_cross_model_consistency.py  # Kendall's W, Spearman     → Tables 4, 13
+python3 config/step2_impossible_flips.py         # Rule-inconsistent flips   → Tables 6, 14
 
 # 3. Baseline sensitivity (Appendix J)
-python3 tools/lambda_sweep.py              # λ sweep                    → Table 15
+python3 tools/lambda_sweep.py                    # λ sweep                   → Table 15
 
 # 4. Human study (Appendices E–F)
-python3 tools/compute_human_flips.py       # |ΔP(A1)| per cell          → Tables 10, 11
+python3 tools/compute_human_flips.py             # |ΔP(A1)| per cell         → Tables 10, 11
 ```
+
+> **Run from the repository root.** Several scripts under `config/` resolve their data paths
+> from a hard-coded `OUT_DIR`. If you cloned this repo to a different location, update that
+> constant at the top of the affected `step*.py` files before running them.
 
 To re-run inference from scratch:
 
 ```bash
 # Open-weight (needs Ollama serving gemma4:31b, qwen2.5:32b, llama3.1:8b)
-python3 llm_decision_analysis.py           # then _qwen.py, _llama.py
+python3 config/llm_decision_analysis.py      # then _qwen.py, _llama.py
 
 # Closed models (needs API keys)
-python3 run_batch_haiku.py                 # then sonnet / gpt41mini / gpt5mini
+python3 config/run_batch_haiku.py            # then sonnet / gpt41mini / gpt5mini
 
 # Merge batch outputs into the master schema
-python3 merge_and_analyze.py
+python3 config/merge_and_analyze.py
 ```
 
 ### Decision prompt
@@ -418,13 +434,13 @@ Recorded here **as configured in the scripts**, so reproduction runs match the r
 
 | System | Settings | Source |
 |:-------|:---------|:-------|
-| Gemma 4 31B | `temperature=0.3` | `llm_decision_analysis.py` |
-| Qwen 2.5 32B | `temperature=0.3`, `top_p=0.9` | `llm_decision_analysis_qwen.py` |
-| LLaMA 3.1 8B | `temperature=0.3`, `top_p=0.9` | `llm_decision_analysis_llama.py` |
-| Claude Haiku 4.5 | `temperature=0` (greedy) | `run_batch_haiku.py` |
-| GPT-4.1-mini | `temperature=0` (greedy) | `run_batch_gpt41mini.py` |
-| GPT-5-mini | provider default — reasoning models reject a custom temperature | `run_batch_gpt5mini.py` |
-| Claude Sonnet 5 | provider default — rejects non-default sampling params | `run_batch_sonnet.py` |
+| Gemma 4 31B | `temperature=0.3` | `config/llm_decision_analysis.py` |
+| Qwen 2.5 32B | `temperature=0.3`, `top_p=0.9` | `config/llm_decision_analysis_qwen.py` |
+| LLaMA 3.1 8B | `temperature=0.3`, `top_p=0.9` | `config/llm_decision_analysis_llama.py` |
+| Claude Haiku 4.5 | `temperature=0` (greedy) | `config/run_batch_haiku.py` |
+| GPT-4.1-mini | `temperature=0` (greedy) | `config/run_batch_gpt41mini.py` |
+| GPT-5-mini | provider default — reasoning models reject a custom temperature | `config/run_batch_gpt5mini.py` |
+| Claude Sonnet 5 | provider default — rejects non-default sampling params | `config/run_batch_sonnet.py` |
 | Paraphrase control | `temperature=0.0`, `top_p=0.95` | `paper_steps/step1_scripts/step1_rerun_paraphrases_ollama.py` |
 
 ---
